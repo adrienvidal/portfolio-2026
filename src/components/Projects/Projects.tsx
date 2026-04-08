@@ -10,7 +10,7 @@ export default function Projects() {
         <p className="section-sub"></p>
         <div className="projects-grid">
           {projects.items.map((p) => (
-            <ProjectCard key={p.title} {...p} roleLabel={projects.roleLabel} resultLabel={projects.resultLabel} />
+            <ProjectCard key={p.title} {...p} roleLabel={projects.roleLabel} resultLabel={projects.resultLabel} linkLabel={projects.linkLabel} />
           ))}
         </div>
       </div>

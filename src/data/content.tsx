@@ -104,29 +104,61 @@ export const process = {
 }
 
 // ─── Projects ────────────────────────────────────────────────────────────────
-// CHANGEMENTS :
-// - Résultats reformulés en bénéfices perçus crédibles (sans inventer de chiffres)
-// - Secteurs plus explicites pour que le client s'y reconnaisse
-// - Ajout d'un contexte "Contexte :" pour ancrer chaque cas
+// INSTRUCTION : Remplacer les images placeholder et les liens par les vrais assets.
+// link: null = projet confidentiel (NDA), lien string = projet public.
 export const projects = {
   title: 'Projets récents',
   roleLabel: 'Mission :',
   resultLabel: 'Ce que ça a changé :',
+  linkLabel: 'Voir le projet →',
   items: [
     {
       title: 'Landing e-commerce — mode premium',
+      tags: ['React', 'SCSS', 'Mobile-first'],
       role: 'Refonte complète de la page produit principale, optimisation du tunnel mobile',
       result: 'Parcours simplifié, friction réduite sur mobile, expérience cohérente avec le positionnement premium de la marque',
+      image: 'https://placehold.co/600x380/f1f5f9/94a3b8?text=Aperçu',
+      link: null, // NDA
     },
     {
       title: 'Tunnel de contenu — groupe média',
+      tags: ['React', 'Next.js', 'Headless CMS'],
       role: 'Intégration headless, composants React réutilisables, optimisation des temps de chargement',
       result: 'Pages éditorialisées livrées plus vite par les équipes, sans dépendre de la DSI',
+      image: 'https://placehold.co/600x380/f1f5f9/94a3b8?text=Aperçu',
+      link: null, // NDA
     },
     {
       title: 'Page acquisition — SaaS B2B',
+      tags: ['React', 'TypeScript', 'A/B test'],
       role: 'Wireframe IA + intégration React / Next, itérations sur les hypothèses growth',
       result: 'Trois variantes testées en deux semaines, cycle de décision produit accéléré',
+      image: 'https://placehold.co/600x380/f1f5f9/94a3b8?text=Aperçu',
+      link: 'https://à-remplacer.com',
+    },
+    {
+      title: 'Landing page — startup fintech',
+      tags: ['Next.js', 'TypeScript', 'Framer Motion'],
+      role: 'Conception et développement from scratch, animation des sections hero et features',
+      result: 'Mise en ligne en 7 jours, page cohérente avec la charte et optimisée pour le paid',
+      image: 'https://placehold.co/600x380/f1f5f9/94a3b8?text=Aperçu',
+      link: 'https://à-remplacer.com',
+    },
+    {
+      title: 'App de gestion interne — logistique',
+      tags: ['React', 'TypeScript', 'REST API'],
+      role: 'Développement d\'une interface de suivi et de gestion des stocks en temps réel',
+      result: 'Gain de temps opérationnel, moins d\'erreurs de saisie, adoption rapide par les équipes',
+      image: 'https://placehold.co/600x380/f1f5f9/94a3b8?text=Aperçu',
+      link: null, // NDA
+    },
+    {
+      title: 'E-commerce — cosmétiques bio',
+      tags: ['Shopify', 'React', 'Performance'],
+      role: 'Refonte du thème, optimisation Core Web Vitals, intégration des avis produits',
+      result: 'Score Lighthouse amélioré, expérience d\'achat fluide sur mobile, catalogue mis à jour facilement',
+      image: 'https://placehold.co/600x380/f1f5f9/94a3b8?text=Aperçu',
+      link: 'https://à-remplacer.com',
     },
   ],
 }
