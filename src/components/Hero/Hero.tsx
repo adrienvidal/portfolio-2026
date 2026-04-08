@@ -15,13 +15,11 @@ export default function Hero() {
         </div>
       </div>
       <div className="hero__right">
-        <div
+        <img
           className="hero__avatar"
-          role="img"
-          aria-label="Portrait d'Adrien, développeur front-end freelance"
-        >
-          <span className="hero__avatar-letter">A</span>
-        </div>
+          src="/adrien-profil.png"
+          alt="Portrait d'Adrien, développeur front-end freelance"
+        />
       </div>
     </div>
   )
