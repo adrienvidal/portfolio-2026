@@ -4,7 +4,7 @@ import './Services.scss'
 const services = [
   {
     icon: <path strokeLinecap="round" strokeLinejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />,
-    title: 'Landing pages premium React / Next',
+    title: 'Landing pages premium',
     items: ['Structure optimisée conversion', 'Composants réutilisables', 'Responsive mobile premium', 'Performance Core Web Vitals'],
     delay: '5 à 10 jours',
     proof: 'Pages pensées pour acquisition et ROAS',
@@ -23,20 +23,20 @@ const services = [
     delay: '2 à 5 jours',
     proof: 'Itérations accélérées sans surcharge produit',
   },
-  {
-    icon: <path strokeLinecap="round" strokeLinejoin="round" d="M4 5a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM14 5a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1h-4a1 1 0 01-1-1V5zM4 15a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1H5a1 1 0 01-1-1v-4zM14 15a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1h-4a1 1 0 01-1-1v-4z" />,
-    title: 'Industrialisation front CMS / headless',
-    items: ['Composants modulaires', 'Design system léger', 'Intégration CMS headless', 'Documentation auto-rédigée'],
-    delay: '1 à 2 semaines',
-    proof: 'Scaling rapide des équipes marketing',
-  },
-  {
-    icon: <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />,
-    title: 'QA front + automatisation IA',
-    items: ['Checklists QA', 'Prompts de recette', 'Documentation Jira / Notion', "Détection rapide d'anomalies"],
-    delay: '2 à 4 jours',
-    proof: 'Production plus fiable et plus rapide',
-  },
+  // {
+  //   icon: <path strokeLinecap="round" strokeLinejoin="round" d="M4 5a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM14 5a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1h-4a1 1 0 01-1-1V5zM4 15a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1H5a1 1 0 01-1-1v-4zM14 15a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1h-4a1 1 0 01-1-1v-4z" />,
+  //   title: 'Industrialisation front CMS / headless',
+  //   items: ['Composants modulaires', 'Design system léger', 'Intégration CMS headless', 'Documentation auto-rédigée'],
+  //   delay: '1 à 2 semaines',
+  //   proof: 'Scaling rapide des équipes marketing',
+  // },
+  // {
+  //   icon: <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />,
+  //   title: 'QA front + automatisation IA',
+  //   items: ['Checklists QA', 'Prompts de recette', 'Documentation Jira / Notion', "Détection rapide d'anomalies"],
+  //   delay: '2 à 4 jours',
+  //   proof: 'Production plus fiable et plus rapide',
+  // },
 ]
 
 export default function Services() {

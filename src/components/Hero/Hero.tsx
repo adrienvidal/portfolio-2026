@@ -4,10 +4,9 @@ export default function Hero() {
   return (
     <div className="hero">
       <div className="hero__left">
-        <h1 className="hero__title">Développeur front-end qui booste vos conversions</h1>
+        <h1 className="hero__title">Développeur React & TypeScript Fullstack</h1>
         <p className="hero__sub">
-          Landing pages React / Next, UX premium et automatisation IA pour transformer
-          vos briefs marketing en résultats.
+          Refonte, Landing, MVP, intégrations complexes, je vous accompagne dans la réalisation de votre projet digital.
         </p>
         <div className="hero__btns">
           <a href="#reservation" className="btn-blue">Parlons de votre projet</a>
