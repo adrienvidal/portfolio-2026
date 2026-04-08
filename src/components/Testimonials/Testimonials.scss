@@ -1,0 +1,45 @@
+.testi-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.testi-card {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 28px 24px;
+
+  &__quote-icon {
+    width: 28px;
+    height: 20px;
+    margin-bottom: 18px;
+    color: #93c5fd;
+  }
+
+  &__quote {
+    font-size: 15px;
+    color: var(--gray);
+    font-style: italic;
+    line-height: 1.65;
+    margin-bottom: 24px;
+  }
+
+  &__author-name {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 2px;
+  }
+
+  &__author-role {
+    font-size: 13px;
+    color: var(--gray2);
+  }
+}
+
+@media (max-width: 900px) {
+  .testi-grid {
+    grid-template-columns: 1fr;
+  }
+}

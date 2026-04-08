@@ -1,0 +1,42 @@
+.about {
+  &__layout {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+  }
+
+  &__avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: #f1f5f9;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__avatar-letter {
+    font-size: 40px;
+    font-weight: 800;
+    color: var(--blue);
+  }
+
+  &__text {
+    flex: 1;
+  }
+
+  &__bio {
+    font-size: 15px;
+    color: var(--gray);
+    line-height: 1.75;
+  }
+}
+
+@media (max-width: 900px) {
+  .about__layout {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}

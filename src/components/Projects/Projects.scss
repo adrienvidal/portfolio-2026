@@ -1,0 +1,41 @@
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.project-card {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 28px 24px;
+
+  &__title {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 14px;
+  }
+
+  &__line {
+    font-size: 14px;
+    color: var(--gray);
+    margin-bottom: 10px;
+    line-height: 1.5;
+
+    strong {
+      color: var(--ink);
+      font-weight: 600;
+    }
+  }
+
+  &__result-val {
+    color: var(--blue-text);
+  }
+}
+
+@media (max-width: 900px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
