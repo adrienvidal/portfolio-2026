@@ -257,6 +257,55 @@ export const reservation = {
   },
 }
 
+// ─── Lab ─────────────────────────────────────────────────────────────────────
+export const lab = {
+  title: 'Lab',
+  sub: 'Projets perso — outils, expérimentations, trucs construits pour un besoin réel ou juste pour voir.',
+  backLabel: '← Retour',
+  statusLabels: {
+    live: 'Live',
+    wip: 'En cours',
+    archived: 'Archivé',
+  },
+  items: [
+    {
+      title: 'Palette gen',
+      description: 'Générateur de palettes de couleurs cohérentes à partir d\'un mot-clé. Pratique quand on démarre un projet sans charte définie.',
+      tags: ['React', 'CSS', 'Color theory'],
+      status: 'live' as const,
+      link: 'https://github.com',
+    },
+    {
+      title: 'devlog',
+      description: 'Un petit journal de bord local pour noter ce que j\'apprends chaque jour. Markdown, sans compte, sans cloud.',
+      tags: ['Electron', 'TypeScript', 'SQLite'],
+      status: 'wip' as const,
+      link: null,
+    },
+    {
+      title: 'component-cli',
+      description: 'CLI pour scaffolder des composants React avec SCSS co-localisé, typage et barrel export en une commande.',
+      tags: ['Node.js', 'CLI', 'TypeScript'],
+      status: 'live' as const,
+      link: 'https://github.com',
+    },
+    {
+      title: 'bookshelf',
+      description: 'Dashboard perso pour suivre mes lectures — en cours, terminées, abandonées. Avec une note et une citation par livre.',
+      tags: ['React', 'Supabase', 'TypeScript'],
+      status: 'wip' as const,
+      link: null,
+    },
+    {
+      title: 'og-preview',
+      description: 'Outil pour prévisualiser les balises Open Graph d\'une URL sans avoir à partager le lien sur Slack.',
+      tags: ['Vite', 'React', 'API'],
+      status: 'archived' as const,
+      link: 'https://github.com',
+    },
+  ],
+}
+
 // ─── Footer ──────────────────────────────────────────────────────────────────
 // CHANGEMENT : Retrait du lien "Créez votre site avec Lovable" — signal amateurisme
 export const footer = {

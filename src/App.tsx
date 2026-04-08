@@ -1,3 +1,4 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './styles/main.scss'
 import Nav from './components/Nav/Nav'
 import Hero from './components/Hero/Hero'
@@ -9,8 +10,9 @@ import Projects from './components/Projects/Projects'
 import CtaFinal from './components/CtaFinal/CtaFinal'
 import Reservation from './components/Reservation/Reservation'
 import Footer from './components/Footer/Footer'
+import Lab from './pages/Lab/Lab'
 
-export default function App() {
+function Home() {
   return (
     <>
       <Nav />
@@ -24,5 +26,16 @@ export default function App() {
       <Reservation />
       <Footer />
     </>
+  )
+}
+
+export default function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/lab" element={<Lab />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
