@@ -40,10 +40,11 @@
   }
 
   &__avatar {
-    width: 280px;
-    height: 280px;
+    width: 340px;
+    height: 340px;
     border-radius: 50%;
     object-fit: cover;
+    object-position: center -109px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
   }
 }
@@ -62,6 +63,11 @@
 
     &__btns {
       justify-content: center;
+    }
+
+    &__avatar {
+      width: 280px;
+      height: 280px;
     }
 
     &__sub {
