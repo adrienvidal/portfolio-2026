@@ -1,12 +1,11 @@
 import { useState } from 'react'
+import { reservation } from '../../data/content'
 import Calendar from './Calendar'
 import TimeSlots from './TimeSlots'
 import ContactForm, { type FormData } from './ContactForm'
 import './Reservation.scss'
 
 type Step = 1 | 2 | 3
-
-const STEP_LABELS = ['Date', 'Créneau', 'Infos']
 
 export default function Reservation() {
   const [step, setStep] = useState<Step>(1)
@@ -30,9 +29,9 @@ export default function Reservation() {
     return (
       <div className="resa" id="reservation">
         <div className="resa-success">
-          <div className="resa-success__check">✓</div>
-          <div className="resa-success__title">Demande envoyée !</div>
-          <p className="resa-success__sub">Merci, on revient vers vous rapidement pour confirmer le créneau choisi.</p>
+          <div className="resa-success__check">{reservation.success.check}</div>
+          <div className="resa-success__title">{reservation.success.title}</div>
+          <p className="resa-success__sub">{reservation.success.sub}</p>
         </div>
       </div>
     )
@@ -40,11 +39,11 @@ export default function Reservation() {
 
   return (
     <div className="resa" id="reservation">
-      <h2 className="resa__title">Réservez un créneau</h2>
-      <p className="resa__sub">Choisissez une date, un créneau, puis répondez à quelques questions.</p>
+      <h2 className="resa__title">{reservation.title}</h2>
+      <p className="resa__sub">{reservation.sub}</p>
 
       <div className="stepper">
-        {STEP_LABELS.map((label, i) => {
+        {reservation.stepLabels.map((label, i) => {
           const n = (i + 1) as Step
           const isActive = step === n
           return (
@@ -68,7 +67,7 @@ export default function Reservation() {
             onNextMonth={nextMonth}
           />
           <div className="form-actions form-actions--end" style={{ marginTop: 32 }}>
-            <button className="btn-next btn-next--auto" onClick={() => setStep(2)}>Suivant →</button>
+            <button className="btn-next btn-next--auto" onClick={() => setStep(2)}>{reservation.nav.next}</button>
           </div>
         </div>
       )}
@@ -77,8 +76,8 @@ export default function Reservation() {
         <div>
           <TimeSlots selected={selectedTime} onSelect={setSelectedTime} />
           <div className="form-actions" style={{ marginTop: 32 }}>
-            <button className="btn-back" onClick={() => setStep(1)}>← Retour</button>
-            <button className="btn-next" onClick={() => setStep(3)}>Suivant →</button>
+            <button className="btn-back" onClick={() => setStep(1)}>{reservation.nav.back}</button>
+            <button className="btn-next" onClick={() => setStep(3)}>{reservation.nav.next}</button>
           </div>
         </div>
       )}
@@ -87,8 +86,8 @@ export default function Reservation() {
         <div>
           <ContactForm data={formData} onChange={setFormData} />
           <div className="form-actions">
-            <button className="btn-back" onClick={() => setStep(2)}>← Retour</button>
-            <button className="btn-next" onClick={() => setSubmitted(true)}>Envoyer ma demande</button>
+            <button className="btn-back" onClick={() => setStep(2)}>{reservation.nav.back}</button>
+            <button className="btn-next" onClick={() => setSubmitted(true)}>{reservation.nav.submit}</button>
           </div>
         </div>
       )}

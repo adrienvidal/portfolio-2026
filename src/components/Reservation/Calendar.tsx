@@ -1,5 +1,6 @@
-const MONTHS = ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre']
-const WEEKDAYS = ['Lun', 'Mar', 'Mer', 'Jeu', 'Ven', 'Sam', 'Dim']
+import { reservation } from '../../data/content'
+
+const { months: MONTHS, weekdays: WEEKDAYS } = reservation.calendar
 
 interface SelectedDay { y: number; m: number; d: number }
 

@@ -1,15 +1,15 @@
+import { nav } from '../../data/content'
 import './Nav.scss'
 
 export default function Nav() {
   return (
     <nav className="nav">
-      <a href="#" className="nav__logo">Adrien Vidal - Développeur Web Freelance</a>
+      <a href="#" className="nav__logo">{nav.logo}</a>
       <ul className="nav__links">
-        <li><a href="#services">Services</a></li>
-        <li><a href="#processus">Processus</a></li>
-        <li><a href="#projets">Projets</a></li>
-        <li><a href="#a-propos">À propos</a></li>
-        <li><a href="#reservation" className="nav__cta">Parlons de votre projet</a></li>
+        {nav.links.map((link) => (
+          <li key={link.href}><a href={link.href}>{link.label}</a></li>
+        ))}
+        <li><a href={nav.cta.href} className="nav__cta">{nav.cta.label}</a></li>
       </ul>
     </nav>
   )

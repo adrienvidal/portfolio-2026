@@ -4,9 +4,10 @@ interface ServiceCardProps {
   items: string[]
   delay: string
   proof: string
+  delayLabel: string
 }
 
-export default function ServiceCard({ icon, title, items, delay, proof }: ServiceCardProps) {
+export default function ServiceCard({ icon, title, items, delay, proof, delayLabel }: ServiceCardProps) {
   return (
     <div className="service-card">
       <div className="service-card__icon-wrap">
@@ -22,7 +23,7 @@ export default function ServiceCard({ icon, title, items, delay, proof }: Servic
       </ul>
       <div className="service-card__footer">
         <div className="service-card__delay">
-          <strong>Délai :</strong> <span>{delay}</span>
+          <strong>{delayLabel}</strong> <span>{delay}</span>
         </div>
         <div className="service-card__proof">{proof}</div>
       </div>
