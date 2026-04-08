@@ -3,7 +3,7 @@ import './Nav.scss'
 export default function Nav() {
   return (
     <nav className="nav">
-      <a href="#" className="nav__logo">Adrien Vidal Developpeur Web Full Stack</a>
+      <a href="#" className="nav__logo">Adrien Vidal - Développeur Web / AI-augmented</a>
       <ul className="nav__links">
         <li><a href="#services">Services</a></li>
         <li><a href="#processus">Processus</a></li>
