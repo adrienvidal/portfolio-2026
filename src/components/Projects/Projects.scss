@@ -95,8 +95,42 @@
   }
 }
 
+.projects-lab-teaser {
+  margin-top: 40px;
+  padding: 20px 28px;
+  background: var(--blue-pale);
+  border: 1px solid #bfdbfe;
+  border-radius: var(--radius);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+
+  span {
+    font-size: 14px;
+    color: var(--ink2);
+  }
+
+  &__link {
+    white-space: nowrap;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--blue-text);
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
 @media (max-width: 900px) {
   .projects-grid {
     grid-template-columns: 1fr;
+  }
+
+  .projects-lab-teaser {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }

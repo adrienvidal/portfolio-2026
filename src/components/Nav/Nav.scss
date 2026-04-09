@@ -36,6 +36,19 @@
     }
   }
 
+  &__lab {
+    color: var(--blue-text) !important;
+    border: 1px solid var(--blue-text) !important;
+    padding: 4px 12px !important;
+    border-radius: 20px !important;
+    font-size: 13px !important;
+
+    &:hover {
+      background: var(--blue-pale) !important;
+      color: var(--blue-dark) !important;
+    }
+  }
+
   &__cta {
     background: var(--blue) !important;
     color: #fff !important;

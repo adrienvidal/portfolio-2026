@@ -7,6 +7,7 @@ export const nav = {
     { label: 'Projets', href: '#projets' },
     { label: 'À propos', href: '#a-propos' },
     { label: 'Blog', href: '/blog' },
+    { label: 'Lab', href: '/lab', className: 'nav__lab' },
   ],
   cta: { label: 'Réserver un call', href: '#reservation' },
 }
@@ -112,6 +113,11 @@ export const projects = {
   roleLabel: 'Mission :',
   resultLabel: 'Ce que ça a changé :',
   linkLabel: 'Voir le projet →',
+  labTeaser: {
+    text: 'Je construis aussi des outils et des projets perso — des trucs que j\'utilise moi-même.',
+    cta: 'Voir le Lab →',
+    href: '/lab',
+  },
   items: [
     {
       title: 'Landing e-commerce — mode premium',

@@ -15,7 +15,7 @@ export default function Nav() {
       <a href="#" className="nav__logo">{nav.logo}</a>
       <ul className="nav__links">
         {nav.links.map((link) => (
-          <li key={link.href}><NavLink href={link.href}>{link.label}</NavLink></li>
+          <li key={link.href}><NavLink href={link.href} className={link.className}>{link.label}</NavLink></li>
         ))}
         <li><NavLink href={nav.cta.href} className="nav__cta">{nav.cta.label}</NavLink></li>
       </ul>
