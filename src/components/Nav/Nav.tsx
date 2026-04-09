@@ -1,5 +1,13 @@
+import { Link } from 'react-router-dom'
 import { nav } from '../../data/content'
 import './Nav.scss'
+
+function NavLink({ href, className, children }: { href: string; className?: string; children: React.ReactNode }) {
+  if (href.startsWith('/')) {
+    return <Link to={href} className={className}>{children}</Link>
+  }
+  return <a href={href} className={className}>{children}</a>
+}
 
 export default function Nav() {
   return (
@@ -7,9 +15,9 @@ export default function Nav() {
       <a href="#" className="nav__logo">{nav.logo}</a>
       <ul className="nav__links">
         {nav.links.map((link) => (
-          <li key={link.href}><a href={link.href}>{link.label}</a></li>
+          <li key={link.href}><NavLink href={link.href}>{link.label}</NavLink></li>
         ))}
-        <li><a href={nav.cta.href} className="nav__cta">{nav.cta.label}</a></li>
+        <li><NavLink href={nav.cta.href} className="nav__cta">{nav.cta.label}</NavLink></li>
       </ul>
     </nav>
   )
