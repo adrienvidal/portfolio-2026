@@ -1,16 +1,11 @@
 import { useState } from 'react'
 
-interface ProjectImage {
-  desktop: string
-  mobile: string
-}
-
 interface ProjectCardProps {
   title: string
   tags: string[]
   role: string
   result: string
-  images: ProjectImage[]
+  images: string[]
   link: string | null
   roleLabel: string
   resultLabel: string
@@ -26,10 +21,7 @@ export default function ProjectCard({ title, tags, role, result, images, link, r
   return (
     <div className="project-card">
       <div className="project-card__img-wrap">
-        <picture>
-          <source media="(max-width: 900px)" srcSet={images[current].mobile} />
-          <img className="project-card__img" src={images[current].desktop} alt={`${title} — ${current + 1}`} loading="lazy" />
-        </picture>
+        <img className="project-card__img" src={images[current]} alt={`${title} — ${current + 1}`} loading="lazy" />
         {images.length > 1 && (
           <>
             <button className="project-card__nav project-card__nav--prev" onClick={prev} aria-label="Image précédente">‹</button>

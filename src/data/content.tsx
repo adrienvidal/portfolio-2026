@@ -120,13 +120,57 @@ export const projects = {
   },
   items: [
     {
+      title: 'Chanel Allure Sport — page produit',
+      tags: ['React', 'SCSS', 'Responsive'],
+      role: 'Développement de la page produit, intégration des assets de la marque, adaptation desktop et mobile',
+      result: 'Rendu premium cohérent sur tous les supports, dans les contraintes techniques Chanel',
+      images: [
+        '/projects/allure-sport/chanel-allure-desk.webp',
+        '/projects/allure-sport/chanel-allure-mob.webp',
+      ],
+      link: null, // NDA
+    },
+    {
+      title: 'Chanel Chance — expérience multi-vues',
+      tags: ['React', 'SCSS', 'Animation'],
+      role: 'Développement d\'une expérience interactive multi-vues pour la collection Chance, desktop et mobile',
+      result: 'Expérience immersive livrée dans les délais, cohérente avec l\'identité visuelle de la collection',
+      images: [
+        '/projects/chance/chanel-chance-desk0.webp',
+        '/projects/chance/chanel-chance-mob0.webp',
+        '/projects/chance/chanel-chance-desk1.webp',
+        '/projects/chance/chanel-chance-mob1.webp',
+        '/projects/chance/chanel-chance-desk2.webp',
+        '/projects/chance/chanel-chance-mob2.webp',
+        '/projects/chance/chanel-chance-desk3.webp',
+        '/projects/chance/chanel-chance-mob3.webp',
+      ],
+      link: null, // NDA
+    },
+    {
+      title: 'Chanel Coco Crush — expérience Tinder mobile',
+      tags: ['React', 'Mobile-first', 'Animation'],
+      role: 'Développement d\'une mécanique de swipe gamifiée pour la collection Coco Crush, exclusivement mobile',
+      result: 'Interaction fluide et engageante, expérience ludique au service de la découverte produit',
+      images: [
+        '/projects/coco-crush-tinder/chanel-cococrush-mob0.webp',
+        '/projects/coco-crush-tinder/chanel-cococrush-mob1.webp',
+        '/projects/coco-crush-tinder/chanel-cococrush-mob1-2.webp',
+        '/projects/coco-crush-tinder/chanel-cococrush-mob2.webp',
+        '/projects/coco-crush-tinder/chanel-cococrush-mob3.webp',
+      ],
+      link: null, // NDA
+    },
+    {
       title: 'Landing e-commerce — mode premium',
       tags: ['React', 'SCSS', 'Mobile-first'],
       role: 'Refonte complète de la page produit principale, optimisation du tunnel mobile',
       result: 'Parcours simplifié, friction réduite sur mobile, expérience cohérente avec le positionnement premium de la marque',
       images: [
-        { desktop: 'https://placehold.co/1200x760/f1f5f9/94a3b8?text=Desktop+1', mobile: 'https://placehold.co/390x280/f1f5f9/94a3b8?text=Mobile+1' },
-        { desktop: 'https://placehold.co/1200x760/f1f5f9/94a3b8?text=Desktop+2', mobile: 'https://placehold.co/390x280/f1f5f9/94a3b8?text=Mobile+2' },
+        'https://placehold.co/1200x760/f1f5f9/94a3b8?text=Desktop+1',
+        'https://placehold.co/390x280/f1f5f9/94a3b8?text=Mobile+1',
+        'https://placehold.co/1200x760/f1f5f9/94a3b8?text=Desktop+2',
+        'https://placehold.co/390x280/f1f5f9/94a3b8?text=Mobile+2',
       ],
       link: null, // NDA
     },
@@ -136,8 +180,10 @@ export const projects = {
       role: 'Intégration headless, composants React réutilisables, optimisation des temps de chargement',
       result: 'Pages éditorialisées livrées plus vite par les équipes, sans dépendre de la DSI',
       images: [
-        { desktop: 'https://placehold.co/1200x760/f1f5f9/94a3b8?text=Desktop+1', mobile: 'https://placehold.co/390x280/f1f5f9/94a3b8?text=Mobile+1' },
-        { desktop: 'https://placehold.co/1200x760/f1f5f9/94a3b8?text=Desktop+2', mobile: 'https://placehold.co/390x280/f1f5f9/94a3b8?text=Mobile+2' },
+        'https://placehold.co/1200x760/f1f5f9/94a3b8?text=Desktop+1',
+        'https://placehold.co/390x280/f1f5f9/94a3b8?text=Mobile+1',
+        'https://placehold.co/1200x760/f1f5f9/94a3b8?text=Desktop+2',
+        'https://placehold.co/390x280/f1f5f9/94a3b8?text=Mobile+2',
       ],
       link: null, // NDA
     },
@@ -147,8 +193,10 @@ export const projects = {
       role: 'Wireframe IA + intégration React / Next, itérations sur les hypothèses growth',
       result: 'Trois variantes testées en deux semaines, cycle de décision produit accéléré',
       images: [
-        { desktop: 'https://placehold.co/1200x760/f1f5f9/94a3b8?text=Desktop+1', mobile: 'https://placehold.co/390x280/f1f5f9/94a3b8?text=Mobile+1' },
-        { desktop: 'https://placehold.co/1200x760/f1f5f9/94a3b8?text=Desktop+2', mobile: 'https://placehold.co/390x280/f1f5f9/94a3b8?text=Mobile+2' },
+        'https://placehold.co/1200x760/f1f5f9/94a3b8?text=Desktop+1',
+        'https://placehold.co/390x280/f1f5f9/94a3b8?text=Mobile+1',
+        'https://placehold.co/1200x760/f1f5f9/94a3b8?text=Desktop+2',
+        'https://placehold.co/390x280/f1f5f9/94a3b8?text=Mobile+2',
       ],
       link: 'https://à-remplacer.com',
     },
@@ -158,8 +206,10 @@ export const projects = {
       role: 'Conception et développement from scratch, animation des sections hero et features',
       result: 'Mise en ligne en 7 jours, page cohérente avec la charte et optimisée pour le paid',
       images: [
-        { desktop: 'https://placehold.co/1200x760/f1f5f9/94a3b8?text=Desktop+1', mobile: 'https://placehold.co/390x280/f1f5f9/94a3b8?text=Mobile+1' },
-        { desktop: 'https://placehold.co/1200x760/f1f5f9/94a3b8?text=Desktop+2', mobile: 'https://placehold.co/390x280/f1f5f9/94a3b8?text=Mobile+2' },
+        'https://placehold.co/1200x760/f1f5f9/94a3b8?text=Desktop+1',
+        'https://placehold.co/390x280/f1f5f9/94a3b8?text=Mobile+1',
+        'https://placehold.co/1200x760/f1f5f9/94a3b8?text=Desktop+2',
+        'https://placehold.co/390x280/f1f5f9/94a3b8?text=Mobile+2',
       ],
       link: 'https://à-remplacer.com',
     },
@@ -169,8 +219,10 @@ export const projects = {
       role: 'Développement d\'une interface de suivi et de gestion des stocks en temps réel',
       result: 'Gain de temps opérationnel, moins d\'erreurs de saisie, adoption rapide par les équipes',
       images: [
-        { desktop: 'https://placehold.co/1200x760/f1f5f9/94a3b8?text=Desktop+1', mobile: 'https://placehold.co/390x280/f1f5f9/94a3b8?text=Mobile+1' },
-        { desktop: 'https://placehold.co/1200x760/f1f5f9/94a3b8?text=Desktop+2', mobile: 'https://placehold.co/390x280/f1f5f9/94a3b8?text=Mobile+2' },
+        'https://placehold.co/1200x760/f1f5f9/94a3b8?text=Desktop+1',
+        'https://placehold.co/390x280/f1f5f9/94a3b8?text=Mobile+1',
+        'https://placehold.co/1200x760/f1f5f9/94a3b8?text=Desktop+2',
+        'https://placehold.co/390x280/f1f5f9/94a3b8?text=Mobile+2',
       ],
       link: null, // NDA
     },
@@ -180,8 +232,10 @@ export const projects = {
       role: 'Refonte du thème, optimisation Core Web Vitals, intégration des avis produits',
       result: 'Score Lighthouse amélioré, expérience d\'achat fluide sur mobile, catalogue mis à jour facilement',
       images: [
-        { desktop: 'https://placehold.co/1200x760/f1f5f9/94a3b8?text=Desktop+1', mobile: 'https://placehold.co/390x280/f1f5f9/94a3b8?text=Mobile+1' },
-        { desktop: 'https://placehold.co/1200x760/f1f5f9/94a3b8?text=Desktop+2', mobile: 'https://placehold.co/390x280/f1f5f9/94a3b8?text=Mobile+2' },
+        'https://placehold.co/1200x760/f1f5f9/94a3b8?text=Desktop+1',
+        'https://placehold.co/390x280/f1f5f9/94a3b8?text=Mobile+1',
+        'https://placehold.co/1200x760/f1f5f9/94a3b8?text=Desktop+2',
+        'https://placehold.co/390x280/f1f5f9/94a3b8?text=Mobile+2',
       ],
       link: 'https://à-remplacer.com',
     },
