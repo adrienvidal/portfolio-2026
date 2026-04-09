@@ -18,7 +18,7 @@ export const nav = {
 // - Sous-titre avec cible explicite (équipes marketing/growth)
 // - CTA principal plus direct ("Réserver un call" > "Parlons de votre projet")
 export const hero = {
-  title: 'Vos pages marketing méritent un développeur qui comprend la conversion.',
+  title: 'Un développeur qui comprend la conversion, pas juste le code.',
   sub: "J'aide les équipes growth et marketing à lancer des landing pages, refonte UX et MVPs React — livrés vite, sans friction, sans aller-retours interminables.",
   ctaPrimary: { label: 'Réserver un call', href: '#reservation' },
   ctaSecondary: { label: 'Voir mes services', href: '#services' },
@@ -114,7 +114,7 @@ export const projects = {
   resultLabel: 'Ce que ça a changé :',
   linkLabel: 'Voir le projet →',
   labTeaser: {
-    text: 'Je construis aussi des outils et des projets perso — des trucs que j\'utilise moi-même.',
+    text: 'En dehors des missions, je construis des outils pour des besoins réels — parfois les miens, parfois ceux que je n\'ai pas trouvés ailleurs.',
     cta: 'Voir le Lab →',
     href: '/lab',
   },
