@@ -1,7 +1,5 @@
 import { Link } from 'react-router-dom'
 import { articles } from '../../data/articles'
-import Nav from '../../components/Nav/Nav'
-import Footer from '../../components/Footer/Footer'
 import './Blog.scss'
 
 export default function Blog() {
@@ -9,9 +7,9 @@ export default function Blog() {
 
   return (
     <>
-      <Nav />
       <main className="blog">
         <div className="blog__inner">
+          <Link to="/" className="blog__back">← Retour</Link>
           <h1 className="blog__title">Blog</h1>
           <ul className="blog__list">
             {sorted.map((article) => (
@@ -33,7 +31,6 @@ export default function Blog() {
           </ul>
         </div>
       </main>
-      <Footer />
     </>
   )
 }

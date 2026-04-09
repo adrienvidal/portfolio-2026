@@ -9,6 +9,18 @@
     margin: 0 auto;
   }
 
+  &__back {
+    display: inline-block;
+    font-size: 0.9rem;
+    color: $blue;
+    text-decoration: none;
+    margin-bottom: 32px;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
   &__title {
     font-size: 2.5rem;
     font-weight: 700;

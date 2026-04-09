@@ -1,8 +1,6 @@
 import { useParams, Link, Navigate } from 'react-router-dom'
 import { lazy, Suspense } from 'react'
 import { articles } from '../../data/articles'
-import Nav from '../../components/Nav/Nav'
-import Footer from '../../components/Footer/Footer'
 import './Article.scss'
 
 export default function Article() {
@@ -15,7 +13,6 @@ export default function Article() {
 
   return (
     <>
-      <Nav />
       <main className="article">
         <div className="article__inner">
           <Link to="/blog" className="article__back">← Blog</Link>
@@ -35,7 +32,6 @@ export default function Article() {
           </div>
         </div>
       </main>
-      <Footer />
     </>
   )
 }
