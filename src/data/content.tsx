@@ -124,7 +124,10 @@ export const projects = {
       tags: ['React', 'SCSS', 'Mobile-first'],
       role: 'Refonte complète de la page produit principale, optimisation du tunnel mobile',
       result: 'Parcours simplifié, friction réduite sur mobile, expérience cohérente avec le positionnement premium de la marque',
-      image: 'https://placehold.co/600x380/f1f5f9/94a3b8?text=Aperçu',
+      images: [
+        { desktop: 'https://placehold.co/1200x760/f1f5f9/94a3b8?text=Desktop+1', mobile: 'https://placehold.co/390x280/f1f5f9/94a3b8?text=Mobile+1' },
+        { desktop: 'https://placehold.co/1200x760/f1f5f9/94a3b8?text=Desktop+2', mobile: 'https://placehold.co/390x280/f1f5f9/94a3b8?text=Mobile+2' },
+      ],
       link: null, // NDA
     },
     {
@@ -132,7 +135,10 @@ export const projects = {
       tags: ['React', 'Next.js', 'Headless CMS'],
       role: 'Intégration headless, composants React réutilisables, optimisation des temps de chargement',
       result: 'Pages éditorialisées livrées plus vite par les équipes, sans dépendre de la DSI',
-      image: 'https://placehold.co/600x380/f1f5f9/94a3b8?text=Aperçu',
+      images: [
+        { desktop: 'https://placehold.co/1200x760/f1f5f9/94a3b8?text=Desktop+1', mobile: 'https://placehold.co/390x280/f1f5f9/94a3b8?text=Mobile+1' },
+        { desktop: 'https://placehold.co/1200x760/f1f5f9/94a3b8?text=Desktop+2', mobile: 'https://placehold.co/390x280/f1f5f9/94a3b8?text=Mobile+2' },
+      ],
       link: null, // NDA
     },
     {
@@ -140,7 +146,10 @@ export const projects = {
       tags: ['React', 'TypeScript', 'A/B test'],
       role: 'Wireframe IA + intégration React / Next, itérations sur les hypothèses growth',
       result: 'Trois variantes testées en deux semaines, cycle de décision produit accéléré',
-      image: 'https://placehold.co/600x380/f1f5f9/94a3b8?text=Aperçu',
+      images: [
+        { desktop: 'https://placehold.co/1200x760/f1f5f9/94a3b8?text=Desktop+1', mobile: 'https://placehold.co/390x280/f1f5f9/94a3b8?text=Mobile+1' },
+        { desktop: 'https://placehold.co/1200x760/f1f5f9/94a3b8?text=Desktop+2', mobile: 'https://placehold.co/390x280/f1f5f9/94a3b8?text=Mobile+2' },
+      ],
       link: 'https://à-remplacer.com',
     },
     {
@@ -148,7 +157,10 @@ export const projects = {
       tags: ['Next.js', 'TypeScript', 'Framer Motion'],
       role: 'Conception et développement from scratch, animation des sections hero et features',
       result: 'Mise en ligne en 7 jours, page cohérente avec la charte et optimisée pour le paid',
-      image: 'https://placehold.co/600x380/f1f5f9/94a3b8?text=Aperçu',
+      images: [
+        { desktop: 'https://placehold.co/1200x760/f1f5f9/94a3b8?text=Desktop+1', mobile: 'https://placehold.co/390x280/f1f5f9/94a3b8?text=Mobile+1' },
+        { desktop: 'https://placehold.co/1200x760/f1f5f9/94a3b8?text=Desktop+2', mobile: 'https://placehold.co/390x280/f1f5f9/94a3b8?text=Mobile+2' },
+      ],
       link: 'https://à-remplacer.com',
     },
     {
@@ -156,7 +168,10 @@ export const projects = {
       tags: ['React', 'TypeScript', 'REST API'],
       role: 'Développement d\'une interface de suivi et de gestion des stocks en temps réel',
       result: 'Gain de temps opérationnel, moins d\'erreurs de saisie, adoption rapide par les équipes',
-      image: 'https://placehold.co/600x380/f1f5f9/94a3b8?text=Aperçu',
+      images: [
+        { desktop: 'https://placehold.co/1200x760/f1f5f9/94a3b8?text=Desktop+1', mobile: 'https://placehold.co/390x280/f1f5f9/94a3b8?text=Mobile+1' },
+        { desktop: 'https://placehold.co/1200x760/f1f5f9/94a3b8?text=Desktop+2', mobile: 'https://placehold.co/390x280/f1f5f9/94a3b8?text=Mobile+2' },
+      ],
       link: null, // NDA
     },
     {
@@ -164,7 +179,10 @@ export const projects = {
       tags: ['Shopify', 'React', 'Performance'],
       role: 'Refonte du thème, optimisation Core Web Vitals, intégration des avis produits',
       result: 'Score Lighthouse amélioré, expérience d\'achat fluide sur mobile, catalogue mis à jour facilement',
-      image: 'https://placehold.co/600x380/f1f5f9/94a3b8?text=Aperçu',
+      images: [
+        { desktop: 'https://placehold.co/1200x760/f1f5f9/94a3b8?text=Desktop+1', mobile: 'https://placehold.co/390x280/f1f5f9/94a3b8?text=Mobile+1' },
+        { desktop: 'https://placehold.co/1200x760/f1f5f9/94a3b8?text=Desktop+2', mobile: 'https://placehold.co/390x280/f1f5f9/94a3b8?text=Mobile+2' },
+      ],
       link: 'https://à-remplacer.com',
     },
   ],

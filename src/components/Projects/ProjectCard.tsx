@@ -1,20 +1,51 @@
+import { useState } from 'react'
+
+interface ProjectImage {
+  desktop: string
+  mobile: string
+}
+
 interface ProjectCardProps {
   title: string
   tags: string[]
   role: string
   result: string
-  image: string
+  images: ProjectImage[]
   link: string | null
   roleLabel: string
   resultLabel: string
   linkLabel: string
 }
 
-export default function ProjectCard({ title, tags, role, result, image, link, roleLabel, resultLabel, linkLabel }: ProjectCardProps) {
+export default function ProjectCard({ title, tags, role, result, images, link, roleLabel, resultLabel, linkLabel }: ProjectCardProps) {
+  const [current, setCurrent] = useState(0)
+
+  const prev = () => setCurrent((i) => (i - 1 + images.length) % images.length)
+  const next = () => setCurrent((i) => (i + 1) % images.length)
+
   return (
     <div className="project-card">
       <div className="project-card__img-wrap">
-        <img className="project-card__img" src={image} alt={title} loading="lazy" />
+        <picture>
+          <source media="(max-width: 900px)" srcSet={images[current].mobile} />
+          <img className="project-card__img" src={images[current].desktop} alt={`${title} — ${current + 1}`} loading="lazy" />
+        </picture>
+        {images.length > 1 && (
+          <>
+            <button className="project-card__nav project-card__nav--prev" onClick={prev} aria-label="Image précédente">‹</button>
+            <button className="project-card__nav project-card__nav--next" onClick={next} aria-label="Image suivante">›</button>
+            <div className="project-card__dots">
+              {images.map((_, i) => (
+                <button
+                  key={i}
+                  className={`project-card__dot${i === current ? ' project-card__dot--active' : ''}`}
+                  onClick={() => setCurrent(i)}
+                  aria-label={`Image ${i + 1}`}
+                />
+              ))}
+            </div>
+          </>
+        )}
       </div>
       <div className="project-card__body">
         <div className="project-card__tags">
