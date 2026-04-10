@@ -6,7 +6,6 @@ import Clients from './components/Clients/Clients'
 import Services from './components/Services/Services'
 import Process from './components/Process/Process'
 import About from './components/About/About'
-import Testimonials from './components/Testimonials/Testimonials'
 import Projects from './components/Projects/Projects'
 import CtaFinal from './components/CtaFinal/CtaFinal'
 import Reservation from './components/Reservation/Reservation'
@@ -24,7 +23,7 @@ function Home() {
       <Services />
       <Process />
       <About />
-      <Testimonials />
+      {/* <Testimonials /> */}
       <Projects />
       <CtaFinal />
       <Reservation />
