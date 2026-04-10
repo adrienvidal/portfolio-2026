@@ -13,6 +13,8 @@
   &__right {
     font-size: 14px;
     color: var(--gray2);
+    display: flex;
+    gap: 10px;
 
     a {
       color: var(--gray);
@@ -20,6 +22,16 @@
 
       &:hover {
         color: var(--ink);
+      }
+    }
+
+    svg {
+      width: 16px;
+      height: 16px;
+      fill: var(--gray);
+
+      &:hover {
+        fill: var(--ink);
       }
     }
   }

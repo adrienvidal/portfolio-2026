@@ -7,9 +7,9 @@ export const nav = {
     { label: 'Projets', href: '#projets' },
     { label: 'À propos', href: '#a-propos' },
     { label: 'Blog', href: '/blog' },
-    { label: 'Lab', href: '/lab', className: 'nav__lab' },
+    { label: 'Lab', href: '/lab', className: 'nav__lab' }
   ],
-  cta: { label: 'Réserver un call', href: '#reservation' },
+  cta: { label: 'Réserver un call', href: '#reservation' }
 }
 
 // ─── Hero ────────────────────────────────────────────────────────────────────
@@ -23,18 +23,18 @@ export const hero = {
   ctaPrimary: { label: 'Réserver un call', href: '#reservation' },
   ctaSecondary: { label: 'Voir mes services', href: '#services' },
   avatarSrc: '/adrien-profil.png',
-  avatarAlt: "Portrait d'Adrien, développeur front-end freelance",
+  avatarAlt: "Portrait d'Adrien, développeur front-end freelance"
 }
 
 // ─── Clients ─────────────────────────────────────────────────────────────────
 export const clients = {
-  label: 'Ils m\'ont fait confiance',
+  label: "Ils m'ont fait confiance",
   logos: [
     { name: 'Chanel', src: '/clients/chanel.webp' },
     { name: 'Fnac Darty', src: '/clients/fnacdarty.webp' },
     { name: 'Prisma Media', src: '/clients/prismamedia.webp' },
-    { name: 'Yves Rocher', src: '/clients/yvesrocher.webp' },
-  ],
+    { name: 'Yves Rocher', src: '/clients/yvesrocher.webp' }
+  ]
 }
 
 // ─── Services ────────────────────────────────────────────────────────────────
@@ -49,42 +49,61 @@ export const services = {
   delayLabel: 'Délai estimé :',
   items: [
     {
-      icon: <path strokeLinecap="round" strokeLinejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />,
+      icon: (
+        <path
+          strokeLinecap='round'
+          strokeLinejoin='round'
+          d='M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4'
+        />
+      ),
       title: 'Landing pages qui convertissent',
       items: [
-        'Structure pensée pour guider vers l\'action',
+        "Structure pensée pour guider vers l'action",
         'Mobile irréprochable',
         'Chargement rapide (Core Web Vitals)',
-        'Prêt à connecter à votre CRM ou analytics',
+        'Prêt à connecter à votre CRM ou analytics'
       ],
       delay: '5 à 10 jours',
-      proof: 'Idéal pour vos campagnes paid, lancements produit ou tests marché',
+      proof: 'Idéal pour vos campagnes paid, lancements produit ou tests marché'
     },
     {
-      icon: <path strokeLinecap="round" strokeLinejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />,
+      icon: (
+        <path
+          strokeLinecap='round'
+          strokeLinejoin='round'
+          d='M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15'
+        />
+      ),
       title: 'Refonte de page sous-performante',
       items: [
         'Audit rapide des frictions existantes',
         'Simplification du parcours utilisateur',
         'Hiérarchie visuelle et CTA clarifiés',
-        'Livraison en mode itératif',
+        'Livraison en mode itératif'
       ],
       delay: '3 à 7 jours',
-      proof: 'Quand votre page existe déjà mais que les résultats ne suivent pas',
+      proof: 'Quand votre page existe déjà mais que les résultats ne suivent pas'
     },
     {
-      icon: <path strokeLinecap="round" strokeLinejoin="round" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />,
+      icon: (
+        <path
+          strokeLinecap='round'
+          strokeLinejoin='round'
+          d='M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z'
+        />
+      ),
       title: 'Variations & tests rapides',
       items: [
-        'Plusieurs versions d\'une même section',
+        "Plusieurs versions d'une même section",
         'Wireframes IA pour valider avant de coder',
         'Itérations sur hypothèses growth',
-        'Délais réduits grâce à l\'IA dans le workflow',
+        "Délais réduits grâce à l'IA dans le workflow"
       ],
       delay: '2 à 5 jours',
-      proof: 'Pour les équipes qui testent vite et veulent des résultats sans surcharge dev',
-    },
-  ],
+      proof:
+        'Pour les équipes qui testent vite et veulent des résultats sans surcharge dev'
+    }
+  ]
 }
 
 // ─── Process ─────────────────────────────────────────────────────────────────
@@ -99,21 +118,39 @@ export const process = {
       label: 'Étape 1',
       title: 'Call découverte — 30 min',
       desc: 'On cadre ensemble votre objectif business, vos contraintes et ce que doit produire la page. Pas de brief écrit obligatoire.',
-      icon: <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />,
+      icon: (
+        <path
+          strokeLinecap='round'
+          strokeLinejoin='round'
+          d='M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z'
+        />
+      )
     },
     {
       label: 'Étape 2',
       title: 'Proposition & wireframe sous 48h',
       desc: 'Vous recevez une structure de page commentée et un chiffrage clair. Vous validez, on démarre.',
-      icon: <path strokeLinecap="round" strokeLinejoin="round" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />,
+      icon: (
+        <path
+          strokeLinecap='round'
+          strokeLinejoin='round'
+          d='M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z'
+        />
+      )
     },
     {
       label: 'Étape 3',
       title: 'Livraison + mise en ligne',
       desc: 'Développement, retours intégrés, mise en ligne. Vous récupérez un code propre, documenté et prêt à évoluer.',
-      icon: <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />,
-    },
-  ],
+      icon: (
+        <path
+          strokeLinecap='round'
+          strokeLinejoin='round'
+          d='M13 10V3L4 14h7v7l9-11h-7z'
+        />
+      )
+    }
+  ]
 }
 
 // ─── Projects ────────────────────────────────────────────────────────────────
@@ -130,64 +167,63 @@ export const projects = {
   backLabel: '← Accueil',
   homeOrder: [1, 2, 3, 4, 5, 6],
   labTeaser: {
-    text: 'En dehors des missions, je construis des outils pour des besoins réels — parfois les miens, parfois ceux que je n\'ai pas trouvés ailleurs.',
+    text: "En dehors des missions, je construis des outils pour des besoins réels — parfois les miens, parfois ceux que je n'ai pas trouvés ailleurs.",
     cta: 'Voir le Lab →',
-    href: '/lab',
+    href: '/lab'
   },
   items: [
     {
       title: 'Chanel Allure Sport — page produit',
       tags: ['React', 'SCSS', 'Responsive'],
       role: 'Développement de la page produit, intégration des assets de la marque, adaptation desktop et mobile',
-      result: 'Rendu premium cohérent sur tous les supports, dans les contraintes techniques Chanel',
-      images: [
-        '/projects/allure-sport/chanel-allure-desk.webp',
-      ],
-      link: null, // NDA
+      result:
+        'Rendu premium cohérent sur tous les supports, dans les contraintes techniques Chanel',
+      images: ['/projects/allure-sport/chanel-allure-desk.webp'],
+      link: null // NDA
     },
     {
       title: 'Chanel Chance — expérience multi-vues',
       tags: ['React', 'SCSS', 'Animation'],
-      role: 'Développement d\'une expérience interactive multi-vues pour la collection Chance, desktop et mobile',
-      result: 'Expérience immersive livrée dans les délais, cohérente avec l\'identité visuelle de la collection',
+      role: "Développement d'une expérience interactive multi-vues pour la collection Chance, desktop et mobile",
+      result:
+        "Expérience immersive livrée dans les délais, cohérente avec l'identité visuelle de la collection",
       images: [
         '/projects/chance/chanel-chance-desk0.webp',
         '/projects/chance/chanel-chance-desk1.webp',
         '/projects/chance/chanel-chance-desk2.webp',
-        '/projects/chance/chanel-chance-desk3.webp',
+        '/projects/chance/chanel-chance-desk3.webp'
       ],
-      link: null, // NDA
+      link: null // NDA
     },
     {
       title: 'Chanel Coco Crush — expérience Tinder mobile',
       tags: ['React', 'Mobile-first', 'Animation'],
-      role: 'Développement d\'une mécanique de swipe gamifiée pour la collection Coco Crush, exclusivement mobile',
-      result: 'Interaction fluide et engageante, expérience ludique au service de la découverte produit',
+      role: "Développement d'une mécanique de swipe gamifiée pour la collection Coco Crush, exclusivement mobile",
+      result:
+        'Interaction fluide et engageante, expérience ludique au service de la découverte produit',
       images: [
         '/projects/coco-crush-tinder/chanel-cococrush-desk1.webp',
-        '/projects/coco-crush-tinder/chanel-cococrush-desk2.webp',
+        '/projects/coco-crush-tinder/chanel-cococrush-desk2.webp'
       ],
-      link: null, // NDA
+      link: null // NDA
     },
     {
       title: 'Chanel N°5 — page produit',
       tags: ['React', 'SCSS', 'Responsive'],
       role: 'Développement de la page produit N°5, intégration des assets de la marque, adaptation desktop et mobile',
-      result: 'Rendu premium cohérent avec l\'identité iconique du parfum, dans les contraintes techniques Chanel',
-      images: [
-        '/projects/n5/chanel-n5-desk1.webp',
-      ],
-      link: null, // NDA
+      result:
+        "Rendu premium cohérent avec l'identité iconique du parfum, dans les contraintes techniques Chanel",
+      images: ['/projects/n5/chanel-n5-desk1.webp'],
+      link: null // NDA
     },
     {
       title: 'Chanel N°1 — page produit',
       tags: ['React', 'SCSS', 'Responsive'],
       role: 'Développement de la page produit N°1 de Chanel, intégration des visuels et adaptation multi-supports',
-      result: 'Expérience cohérente avec le positionnement premium de la collection, livrée dans les délais',
-      images: [
-        '/projects/n1/chanel-n1-desk1.webp',
-      ],
-      link: null, // NDA
+      result:
+        'Expérience cohérente avec le positionnement premium de la collection, livrée dans les délais',
+      images: ['/projects/n1/chanel-n1-desk1.webp'],
+      link: null // NDA
     },
     {
       title: 'Chanel Sublimage — page produit',
@@ -196,50 +232,46 @@ export const projects = {
       result: 'Rendu premium aligné avec le positionnement luxe de la gamme soin Chanel',
       images: [
         '/projects/sublimage/chanel-sublimage-desk1.webp',
-        '/projects/sublimage/chanel-sublimage-desk2.webp',
+        '/projects/sublimage/chanel-sublimage-desk2.webp'
       ],
-      link: null, // NDA
+      link: null // NDA
     },
     {
       title: 'Chanel 31 Le Rouge — page produit',
       tags: ['React', 'SCSS', 'Responsive'],
       role: 'Développement de la page produit 31 Le Rouge, intégration des visuels et cohérence desktop / mobile',
-      result: 'Page produit livrée dans les contraintes de la marque, rendu visuel irréprochable',
-      images: [
-        '/projects/31lerouge/chanel-31lerouge-desk1.webp',
-      ],
-      link: null, // NDA
+      result:
+        'Page produit livrée dans les contraintes de la marque, rendu visuel irréprochable',
+      images: ['/projects/31lerouge/chanel-31lerouge-desk1.webp'],
+      link: null // NDA
     },
     {
       title: 'Chanel Look This Way — expérience éditoriale',
       tags: ['React', 'SCSS', 'Animation'],
-      role: 'Développement d\'une expérience éditoriale immersive pour la campagne Look This Way, desktop et mobile',
-      result: 'Expérience visuelle engageante livrée dans les délais, cohérente avec l\'identité de la campagne',
-      images: [
-        '/projects/lookthisway/chanel-lookthisway-desk1.webp',
-      ],
-      link: null, // NDA
+      role: "Développement d'une expérience éditoriale immersive pour la campagne Look This Way, desktop et mobile",
+      result:
+        "Expérience visuelle engageante livrée dans les délais, cohérente avec l'identité de la campagne",
+      images: ['/projects/lookthisway/chanel-lookthisway-desk1.webp'],
+      link: null // NDA
     },
     {
       title: 'Chanel Manufacture — page éditoriale',
       tags: ['React', 'SCSS', 'Storytelling'],
-      role: 'Développement d\'une page éditoriale dédiée aux savoir-faire de la Manufacture Chanel',
-      result: 'Mise en valeur des métiers d\'art Chanel, rendu soigné et adaptation mobile réussie',
-      images: [
-        '/projects/manufacture/chanel-manufacture-desk1.webp',
-      ],
-      link: null, // NDA
+      role: "Développement d'une page éditoriale dédiée aux savoir-faire de la Manufacture Chanel",
+      result:
+        "Mise en valeur des métiers d'art Chanel, rendu soigné et adaptation mobile réussie",
+      images: ['/projects/manufacture/chanel-manufacture-desk1.webp'],
+      link: null // NDA
     },
     {
       title: 'Chanel CSR — page engagements',
       tags: ['React', 'SCSS', 'Responsive'],
       role: 'Développement de la page RSE Chanel, structuration du contenu et intégration des visuels institutionnels',
-      result: 'Page institutionnelle claire et accessible, cohérente avec les standards de communication Chanel',
-      images: [
-        '/projects/csr/chanel-csr-desk1.webp',
-      ],
-      link: null, // NDA
-    },
+      result:
+        'Page institutionnelle claire et accessible, cohérente avec les standards de communication Chanel',
+      images: ['/projects/csr/chanel-csr-desk1.webp'],
+      link: null // NDA
+    }
     // {
     //   title: 'Landing e-commerce — mode premium',
     //   tags: ['React', 'SCSS', 'Mobile-first'],
@@ -318,7 +350,7 @@ export const projects = {
     //   ],
     //   link: 'https://à-remplacer.com',
     // },
-  ],
+  ]
 }
 
 // ─── Other Missions ───────────────────────────────────────────────────────────
@@ -331,23 +363,24 @@ export const otherMissions = {
       description: 'Pages catégorie et composants e-commerce',
       tags: ['React', 'SCSS', 'E-commerce'],
       site: 'darty.fr',
-      link: 'https://www.darty.fr',
+      link: 'https://www.darty.fr'
     },
     {
       name: 'Prisma Media',
-      description: 'Intégration headless et pages éditoriales pour Femme Actuelle et Cuisine Actuelle',
+      description:
+        'Intégration headless et pages éditoriales pour Femme Actuelle et Cuisine Actuelle',
       tags: ['React', 'Next.js', 'Headless CMS'],
       site: 'femmeactuelle.fr',
-      link: 'https://www.femmeactuelle.fr',
+      link: 'https://www.femmeactuelle.fr'
     },
     {
       name: 'Yves Rocher',
       description: 'Pages produit et mise en avant de campagnes',
       tags: ['React', 'SCSS', 'E-commerce'],
       site: 'yves-rocher.fr',
-      link: 'https://www.yves-rocher.fr',
-    },
-  ],
+      link: 'https://www.yves-rocher.fr'
+    }
+  ]
 }
 
 // ─── About ───────────────────────────────────────────────────────────────────
@@ -359,7 +392,7 @@ export const otherMissions = {
 export const about = {
   title: 'À propos',
   avatarLetter: 'A',
-  bio: "Je suis développeur front-end depuis 10 ans, spécialisé React et TypeScript. J'ai travaillé sur des environnements exigeants — Chanel, Fnac Darty, Prisma — où la qualité perçue et la performance ne sont pas négociables.\n\nAujourd'hui je travaille en freelance avec des équipes marketing et growth qui ont besoin d'un développeur qui comprend leurs objectifs business, pas seulement leurs specs techniques. Je n'attends pas un Jira parfait pour démarrer : un brief en deux paragraphes suffit.\n\nJe travaille à distance, en flux tendu, avec un workflow IA qui me permet de livrer vite sans sacrifier la qualité.",
+  bio: "Je suis développeur front-end depuis 10 ans, spécialisé React et TypeScript. J'ai travaillé sur des environnements exigeants — Chanel, Fnac Darty, Prisma — où la qualité perçue et la performance ne sont pas négociables.\n\nAujourd'hui je travaille en freelance avec des équipes marketing et growth qui ont besoin d'un développeur qui comprend leurs objectifs business, pas seulement leurs specs techniques. Je n'attends pas un Jira parfait pour démarrer : un brief en deux paragraphes suffit.\n\nJe travaille à distance, en flux tendu, avec un workflow IA qui me permet de livrer vite sans sacrifier la qualité."
 }
 
 // ─── Testimonials ─────────────────────────────────────────────────────────────
@@ -370,25 +403,25 @@ export const about = {
 // INSTRUCTION : Remplacer les 3 items par de vraies recommandations LinkedIn dès que possible.
 // En attendant, deux options : (A) masquer cette section, (B) afficher uniquement les logos clients.
 export const testimonials = {
-  title: 'Ils m\'ont fait confiance',
-  sub: 'Des équipes marketing, e-commerce et médias avec qui j\'ai travaillé.',
+  title: "Ils m'ont fait confiance",
+  sub: "Des équipes marketing, e-commerce et médias avec qui j'ai travaillé.",
   items: [
     {
       quote: 'Adrien transforme très vite un brief flou en page claire et performante.',
       name: 'Responsable acquisition',
-      role: 'E-commerce — mode premium',
+      role: 'E-commerce — mode premium'
     },
     {
       quote: 'Excellente rigueur front, très fort sur la qualité perçue mobile.',
       name: 'Head of Product',
-      role: 'Groupe média digital',
+      role: 'Groupe média digital'
     },
     {
       quote: 'Une vraie capacité à relier marketing, UX et exécution technique.',
       name: 'Growth Manager',
-      role: 'SaaS B2B',
-    },
-  ],
+      role: 'SaaS B2B'
+    }
+  ]
 }
 
 // ─── CTA Final ───────────────────────────────────────────────────────────────
@@ -399,7 +432,7 @@ export const testimonials = {
 export const ctaFinal = {
   title: 'Un brief, un call, une proposition sous 48h.',
   sub: 'Pas de processus lourd. Réservez 30 minutes et voyons si je peux vous aider.',
-  cta: { label: 'Réserver un call gratuit', href: '#reservation' },
+  cta: { label: 'Réserver un call gratuit', href: '#reservation' }
 }
 
 // ─── Reservation ─────────────────────────────────────────────────────────────
@@ -412,36 +445,57 @@ export const reservation = {
   stepLabels: ['Date', 'Créneau', 'Infos'],
   success: {
     check: '✓',
-    title: 'C\'est dans l\'agenda !',
-    sub: 'Merci. Je vous envoie une confirmation par email et reviens vers vous rapidement.',
+    title: "C'est dans l'agenda !",
+    sub: 'Merci. Je vous envoie une confirmation par email et reviens vers vous rapidement.'
   },
   nav: {
     next: 'Suivant →',
     back: '← Retour',
-    submit: 'Envoyer ma demande',
+    submit: 'Envoyer ma demande'
   },
   calendar: {
-    months: ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre'],
-    weekdays: ['Lun', 'Mar', 'Mer', 'Jeu', 'Ven', 'Sam', 'Dim'],
+    months: [
+      'Janvier',
+      'Février',
+      'Mars',
+      'Avril',
+      'Mai',
+      'Juin',
+      'Juillet',
+      'Août',
+      'Septembre',
+      'Octobre',
+      'Novembre',
+      'Décembre'
+    ],
+    weekdays: ['Lun', 'Mar', 'Mer', 'Jeu', 'Ven', 'Sam', 'Dim']
   },
   timeSlots: {
     title: 'Choisissez un horaire',
-    slots: ['9h00', '10h00', '11h00', '14h00', '15h00', '16h00'],
+    slots: ['9h00', '10h00', '11h00', '14h00', '15h00', '16h00']
   },
   form: {
     nom: { label: 'Votre nom', placeholder: 'Prénom Nom' },
     email: { label: 'Votre email', placeholder: 'vous@entreprise.com' },
-    entreprise: { label: 'Votre entreprise', optional: '(optionnel)', placeholder: 'Nom de votre entreprise' },
-    besoin: { label: 'De quoi avez-vous besoin ?', placeholder: 'Ex : on lance une campagne paid dans 3 semaines et notre landing page actuelle ne convertit pas…' },
+    entreprise: {
+      label: 'Votre entreprise',
+      optional: '(optionnel)',
+      placeholder: 'Nom de votre entreprise'
+    },
+    besoin: {
+      label: 'De quoi avez-vous besoin ?',
+      placeholder:
+        'Ex : on lance une campagne paid dans 3 semaines et notre landing page actuelle ne convertit pas…'
+    },
     budget: {
       label: 'Budget envisagé',
-      options: ['< 1 000 €', '1 000 – 3 000 €', '3 000 – 6 000 €', '> 6 000 €'],
+      options: ['< 1 000 €', '1 000 – 3 000 €', '3 000 – 6 000 €', '> 6 000 €']
     },
     delai: {
       label: 'Délai souhaité',
-      options: ['Urgent (< 2 semaines)', '2 à 4 semaines', 'Pas de contrainte'],
-    },
-  },
+      options: ['Urgent (< 2 semaines)', '2 à 4 semaines', 'Pas de contrainte']
+    }
+  }
 }
 
 // ─── Lab ─────────────────────────────────────────────────────────────────────
@@ -452,49 +506,58 @@ export const lab = {
   statusLabels: {
     live: 'Live',
     wip: 'En cours',
-    archived: 'Archivé',
+    archived: 'Archivé'
   },
   items: [
     {
       title: 'Palette gen',
-      description: 'Générateur de palettes de couleurs cohérentes à partir d\'un mot-clé. Pratique quand on démarre un projet sans charte définie.',
+      description:
+        "Générateur de palettes de couleurs cohérentes à partir d'un mot-clé. Pratique quand on démarre un projet sans charte définie.",
       tags: ['React', 'CSS', 'Color theory'],
       status: 'live' as const,
-      link: 'https://github.com',
+      link: 'https://github.com'
     },
     {
       title: 'devlog',
-      description: 'Un petit journal de bord local pour noter ce que j\'apprends chaque jour. Markdown, sans compte, sans cloud.',
+      description:
+        "Un petit journal de bord local pour noter ce que j'apprends chaque jour. Markdown, sans compte, sans cloud.",
       tags: ['Electron', 'TypeScript', 'SQLite'],
       status: 'wip' as const,
-      link: null,
+      link: null
     },
     {
       title: 'component-cli',
-      description: 'CLI pour scaffolder des composants React avec SCSS co-localisé, typage et barrel export en une commande.',
+      description:
+        'CLI pour scaffolder des composants React avec SCSS co-localisé, typage et barrel export en une commande.',
       tags: ['Node.js', 'CLI', 'TypeScript'],
       status: 'live' as const,
-      link: 'https://github.com',
+      link: 'https://github.com'
     },
     {
       title: 'bookshelf',
-      description: 'Dashboard perso pour suivre mes lectures — en cours, terminées, abandonées. Avec une note et une citation par livre.',
+      description:
+        'Dashboard perso pour suivre mes lectures — en cours, terminées, abandonées. Avec une note et une citation par livre.',
       tags: ['React', 'Supabase', 'TypeScript'],
       status: 'wip' as const,
-      link: null,
+      link: null
     },
     {
       title: 'og-preview',
-      description: 'Outil pour prévisualiser les balises Open Graph d\'une URL sans avoir à partager le lien sur Slack.',
+      description:
+        "Outil pour prévisualiser les balises Open Graph d'une URL sans avoir à partager le lien sur Slack.",
       tags: ['Vite', 'React', 'API'],
       status: 'archived' as const,
-      link: 'https://github.com',
-    },
-  ],
+      link: 'https://github.com'
+    }
+  ]
 }
 
 // ─── Footer ──────────────────────────────────────────────────────────────────
 // CHANGEMENT : Retrait du lien "Créez votre site avec Lovable" — signal amateurisme
 export const footer = {
   left: '© 2026 Adrien Vidal — Développeur front-end freelance',
+  social: [
+    { label: 'LinkedIn', href: 'https://www.linkedin.com/in/adrien-vidal-308b4864/' },
+    { label: 'GitHub', href: 'https://github.com/adrienvidal' }
+  ]
 }
