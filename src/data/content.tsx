@@ -240,46 +240,6 @@ export const projects = {
       ],
       link: null, // NDA
     },
-    {
-      title: 'Prisma Media — Femme Actuelle',
-      tags: ['React', 'Next.js', 'Headless CMS'],
-      role: 'Développement de pages éditoriales pour Femme Actuelle, intégration headless et composants React réutilisables',
-      result: 'Pages éditorialisées livrées plus vite par les équipes, expérience de lecture optimisée',
-      images: [
-        '/projects/femme-actuelle/prismamedia-femmeactuelle-desk.webp',
-      ],
-      link: null, // NDA
-    },
-    {
-      title: 'Prisma Media — Cuisine Actuelle',
-      tags: ['React', 'Next.js', 'Headless CMS'],
-      role: 'Développement de pages éditoriales pour Cuisine Actuelle, intégration headless et optimisation des temps de chargement',
-      result: 'Expérience de lecture fluide, composants réutilisables adoptés par les équipes éditoriales',
-      images: [
-        '/projects/cuisine-actuelle/prismamedia-cuisineactuelle-desk.webp',
-      ],
-      link: null, // NDA
-    },
-    {
-      title: 'Fnac Darty — page catégorie',
-      tags: ['React', 'SCSS', 'E-commerce'],
-      role: 'Développement d\'une page catégorie pour Fnac Darty, intégration des composants e-commerce et adaptation responsive',
-      result: 'Page catégorie performante et cohérente avec l\'identité de la marque, livrée dans les contraintes techniques',
-      images: [
-        '/projects/darty/darty-desk.webp',
-      ],
-      link: null, // NDA
-    },
-    {
-      title: 'Yves Rocher — page produit',
-      tags: ['React', 'SCSS', 'E-commerce'],
-      role: 'Développement de la page produit Yves Rocher, intégration des assets de la marque et adaptation desktop / mobile',
-      result: 'Page produit cohérente avec l\'identité de la marque, expérience d\'achat optimisée sur mobile',
-      images: [
-        '/projects/yvesrocher/yvesrocher-desk.webp',
-      ],
-      link: null, // NDA
-    },
     // {
     //   title: 'Landing e-commerce — mode premium',
     //   tags: ['React', 'SCSS', 'Mobile-first'],
@@ -358,6 +318,35 @@ export const projects = {
     //   ],
     //   link: 'https://à-remplacer.com',
     // },
+  ],
+}
+
+// ─── Other Missions ───────────────────────────────────────────────────────────
+export const otherMissions = {
+  title: 'Autres missions',
+  subtitle: 'Interventions en équipe sur des sites existants à fort trafic',
+  items: [
+    {
+      name: 'Fnac Darty',
+      description: 'Pages catégorie et composants e-commerce',
+      tags: ['React', 'SCSS', 'E-commerce'],
+      site: 'darty.fr',
+      link: 'https://www.darty.fr',
+    },
+    {
+      name: 'Prisma Media',
+      description: 'Intégration headless et pages éditoriales pour Femme Actuelle et Cuisine Actuelle',
+      tags: ['React', 'Next.js', 'Headless CMS'],
+      site: 'femmeactuelle.fr',
+      link: 'https://www.femmeactuelle.fr',
+    },
+    {
+      name: 'Yves Rocher',
+      description: 'Pages produit et mise en avant de campagnes',
+      tags: ['React', 'SCSS', 'E-commerce'],
+      site: 'yves-rocher.fr',
+      link: 'https://www.yves-rocher.fr',
+    },
   ],
 }
 
