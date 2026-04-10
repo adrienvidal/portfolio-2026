@@ -19,7 +19,7 @@ export const nav = {
 // - CTA principal plus direct ("Réserver un call" > "Parlons de votre projet")
 export const hero = {
   title: 'Un développeur qui comprend la conversion, pas juste le code.',
-  sub: "J'aide les équipes growth et marketing à lancer des landing pages, refonte UX et MVPs React — livrés vite, sans friction, sans aller-retours interminables.",
+  sub: "J'aide les équipes growth et marketing à lancer des landing pages, refonte UX et MVPs — livrés vite, sans friction, sans aller-retours interminables.",
   ctaPrimary: { label: 'Réserver un call', href: '#reservation' },
   ctaSecondary: { label: 'Voir mes services', href: '#services' },
   avatarSrc: '/adrien-profil.png',
