@@ -30,8 +30,9 @@ The `Reservation` section has three sub-components: `Calendar`, `TimeSlots`, and
 > Note: `Testimonials` component exists in `src/components/Testimonials/` but is currently commented out in `App.tsx`.
 
 **Projects:**
-- Home displays the 6 most recent projects with a "Voir tous les projets →" link to `/projets`
-- `/projets` displays all projects in full, with a back link — no Nav/Footer
+- Home displays 6 Chanel projects (via `homeOrder`) with a "Voir tous les projets →" link to `/projets`
+- `/projets` displays all Chanel projects in full, with a back link — no Nav/Footer
+- Both home and `/projets` render an "Autres missions" section below the grid (Fnac Darty, Prisma Media, Yves Rocher) — sourced from `otherMissions` in `content.tsx`
 - Pages under `src/pages/` follow the same pattern: back link only, no Nav/Footer
 
 ## Styling
@@ -60,6 +61,10 @@ The script converts all PNG/JPG in `public/projects/**` to WebP (quality 85), de
 
 ## Content
 
-All copy (labels, text, links) is centralized in `src/data/content.tsx`. Each section exports a named constant (e.g. `nav`, `hero`, `services`, `process`, `projects`, `about`, `testimonials`, `ctaFinal`, `reservation`, `footer`). Components import from this file — never hardcode copy inside components.
+All copy (labels, text, links) is centralized in `src/data/content.tsx`. Each section exports a named constant (e.g. `nav`, `hero`, `services`, `process`, `projects`, `otherMissions`, `about`, `testimonials`, `ctaFinal`, `reservation`, `footer`). Components import from this file — never hardcode copy inside components.
+
+- `projects` — Chanel project cards (images, role, result, tags)
+- `otherMissions` — client list shown below the projects grid (Fnac Darty, Prisma Media, Yves Rocher); no images, just name/description/tags/link
+- `clients` — logo strip on the home page ("Ils m'ont fait confiance")
 
 Blog article metadata (slug, title, date, description, content) is defined in `src/data/articles.ts` and used by the `Blog` and `Article` pages.
