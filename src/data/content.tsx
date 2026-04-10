@@ -124,6 +124,10 @@ export const projects = {
   roleLabel: 'Mission :',
   resultLabel: 'Ce que ça a changé :',
   linkLabel: 'Voir le projet →',
+  seeAllLabel: 'Voir tous les projets →',
+  seeAllHref: '/projets',
+  allProjectsTitle: 'Tous les projets',
+  backLabel: '← Accueil',
   labTeaser: {
     text: 'En dehors des missions, je construis des outils pour des besoins réels — parfois les miens, parfois ceux que je n\'ai pas trouvés ailleurs.',
     cta: 'Voir le Lab →',
