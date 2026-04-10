@@ -165,7 +165,7 @@ export const projects = {
   seeAllHref: '/projets',
   allProjectsTitle: 'Tous les projets',
   backLabel: '← Accueil',
-  homeOrder: [1, 2, 3, 4, 5, 6],
+  homeOrder: [0, 1, 2, 3, 4, 5],
   labTeaser: {
     text: "En dehors des missions, je construis des outils pour des besoins réels — parfois les miens, parfois ceux que je n'ai pas trouvés ailleurs.",
     cta: 'Voir le Lab →',
@@ -179,7 +179,7 @@ export const projects = {
       result:
         'Rendu premium cohérent sur tous les supports, dans les contraintes techniques Chanel',
       images: ['/projects/allure-sport/chanel-allure-desk.webp'],
-      link: null // NDA
+      link: "https://www.chanel.com/fr/parfums/allure-homme-sport/"
     },
     {
       title: 'Chanel Chance — expérience multi-vues',
@@ -193,7 +193,7 @@ export const projects = {
         '/projects/chance/chanel-chance-desk2.webp',
         '/projects/chance/chanel-chance-desk3.webp'
       ],
-      link: null // NDA
+      link: "https://www.chanel.com/fr/parfums/chance/eau-splendide/"
     },
     {
       title: 'Chanel Coco Crush — expérience Tinder mobile',
@@ -205,7 +205,7 @@ export const projects = {
         '/projects/coco-crush-tinder/chanel-cococrush-desk1.webp',
         '/projects/coco-crush-tinder/chanel-cococrush-desk2.webp'
       ],
-      link: null // NDA
+      link: "https://www.chanel.com/gb/fine-jewellery/find-your-crush/?previewdate=2024-02-02T20%3A38"
     },
     {
       title: 'Chanel N°5 — page produit',
@@ -214,7 +214,7 @@ export const projects = {
       result:
         "Rendu premium cohérent avec l'identité iconique du parfum, dans les contraintes techniques Chanel",
       images: ['/projects/n5/chanel-n5-desk1.webp'],
-      link: null // NDA
+      link: "https://www.chanel.com/fr/parfums/chanel-number-5/"
     },
     {
       title: 'Chanel N°1 — page produit',
@@ -223,7 +223,7 @@ export const projects = {
       result:
         'Expérience cohérente avec le positionnement premium de la collection, livrée dans les délais',
       images: ['/projects/n1/chanel-n1-desk1.webp'],
-      link: null // NDA
+      link: "https://www.chanel.com/fr/soins/n1-de-chanel/"
     },
     {
       title: 'Chanel Sublimage — page produit',
@@ -234,7 +234,7 @@ export const projects = {
         '/projects/sublimage/chanel-sublimage-desk1.webp',
         '/projects/sublimage/chanel-sublimage-desk2.webp'
       ],
-      link: null // NDA
+      link: "https://www.chanel.com/fr/soins/sublimage/"
     },
     {
       title: 'Chanel 31 Le Rouge — page produit',
@@ -243,7 +243,7 @@ export const projects = {
       result:
         'Page produit livrée dans les contraintes de la marque, rendu visuel irréprochable',
       images: ['/projects/31lerouge/chanel-31lerouge-desk1.webp'],
-      link: null // NDA
+      link: "https://www.chanel.com/fr/maquillage/31-le-rouge/"
     },
     {
       title: 'Chanel Look This Way — expérience éditoriale',
@@ -252,7 +252,7 @@ export const projects = {
       result:
         "Expérience visuelle engageante livrée dans les délais, cohérente avec l'identité de la campagne",
       images: ['/projects/lookthisway/chanel-lookthisway-desk1.webp'],
-      link: null // NDA
+      link: "https://www.chanel.com/gb/makeup/look-this-way/genderless-beauty/"
     },
     {
       title: 'Chanel Manufacture — page éditoriale',
@@ -261,7 +261,7 @@ export const projects = {
       result:
         "Mise en valeur des métiers d'art Chanel, rendu soigné et adaptation mobile réussie",
       images: ['/projects/manufacture/chanel-manufacture-desk1.webp'],
-      link: null // NDA
+      link: "https://www.chanel.com/fr/horlogerie/manufacture-horlogere/?previewdate=2025-08-27T08%3A01"
     },
     {
       title: 'Chanel CSR — page engagements',
@@ -270,7 +270,7 @@ export const projects = {
       result:
         'Page institutionnelle claire et accessible, cohérente avec les standards de communication Chanel',
       images: ['/projects/csr/chanel-csr-desk1.webp'],
-      link: null // NDA
+      link: "https://www.chanel.com/fr/developpement-durable/"
     }
     // {
     //   title: 'Landing e-commerce — mode premium',
