@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './styles/main.scss'
 import Nav from './components/Nav/Nav'
 import Hero from './components/Hero/Hero'
+import Clients from './components/Clients/Clients'
 import Services from './components/Services/Services'
 import Process from './components/Process/Process'
 import About from './components/About/About'
@@ -19,6 +20,7 @@ function Home() {
     <>
       <Nav />
       <Hero />
+      <Clients />
       <Services />
       <Process />
       <About />

@@ -1,0 +1,54 @@
+@use '../../styles/variables' as *;
+
+.clients {
+  padding: 28px 48px;
+  border-top: 1px solid $border;
+  border-bottom: 1px solid $border;
+  background: $bg;
+
+  &__label {
+    text-align: center;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: $gray2;
+    margin-bottom: 20px;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 48px;
+    list-style: none;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    font-size: 18px;
+    font-weight: 700;
+    color: $gray;
+    letter-spacing: -0.3px;
+    opacity: 0.6;
+    transition: opacity 0.2s;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .clients {
+    padding: 24px;
+
+    &__list {
+      gap: 28px;
+    }
+
+    &__item {
+      font-size: 15px;
+    }
+  }
+}

@@ -26,6 +26,17 @@ export const hero = {
   avatarAlt: "Portrait d'Adrien, développeur front-end freelance",
 }
 
+// ─── Clients ─────────────────────────────────────────────────────────────────
+export const clients = {
+  label: 'Ils m\'ont fait confiance',
+  logos: [
+    { name: 'Chanel' },
+    { name: 'Fnac Darty' },
+    { name: 'Prisma Media' },
+    { name: 'Yves Rocher' },
+  ],
+}
+
 // ─── Services ────────────────────────────────────────────────────────────────
 // CHANGEMENTS :
 // - Titres traduits en bénéfices business, pas en jargon tech
