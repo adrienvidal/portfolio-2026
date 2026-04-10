@@ -8,7 +8,11 @@ export default function Clients() {
       <ul className="clients__list">
         {clients.logos.map((client) => (
           <li key={client.name} className="clients__item">
-            {client.name}
+            {client.src ? (
+              <img src={client.src} alt={client.name} className="clients__logo" />
+            ) : (
+              client.name
+            )}
           </li>
         ))}
       </ul>

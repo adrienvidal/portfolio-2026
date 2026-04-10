@@ -30,10 +30,10 @@ export const hero = {
 export const clients = {
   label: 'Ils m\'ont fait confiance',
   logos: [
-    { name: 'Chanel' },
-    { name: 'Fnac Darty' },
-    { name: 'Prisma Media' },
-    { name: 'Yves Rocher' },
+    { name: 'Chanel', src: '/clients/chanel.webp' },
+    { name: 'Fnac Darty', src: '/clients/fnacdarty.webp' },
+    { name: 'Prisma Media', src: '/clients/prismamedia.webp' },
+    { name: 'Yves Rocher', src: '/clients/yvesrocher.webp' },
   ],
 }
 
