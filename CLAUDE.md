@@ -27,6 +27,8 @@ Portfolio built with React 19 + TypeScript + Vite, using React Router for multi-
 
 The `Reservation` section has three sub-components: `Calendar`, `TimeSlots`, and `ContactForm`.
 
+> Note: `Testimonials` component exists in `src/components/Testimonials/` but is currently commented out in `App.tsx`.
+
 **Projects:**
 - Home displays the 6 most recent projects with a "Voir tous les projets →" link to `/projets`
 - `/projets` displays all projects in full, with a back link — no Nav/Footer
@@ -59,3 +61,5 @@ The script converts all PNG/JPG in `public/projects/**` to WebP (quality 85), de
 ## Content
 
 All copy (labels, text, links) is centralized in `src/data/content.tsx`. Each section exports a named constant (e.g. `nav`, `hero`, `services`, `process`, `projects`, `about`, `testimonials`, `ctaFinal`, `reservation`, `footer`). Components import from this file — never hardcode copy inside components.
+
+Blog article metadata (slug, title, date, description, content) is defined in `src/data/articles.ts` and used by the `Blog` and `Article` pages.
