@@ -153,6 +153,77 @@ export const projects = {
       ],
       link: null, // NDA
     },
+    {
+      title: 'Chanel N°5 — page produit',
+      tags: ['React', 'SCSS', 'Responsive'],
+      role: 'Développement de la page produit N°5, intégration des assets de la marque, adaptation desktop et mobile',
+      result: 'Rendu premium cohérent avec l\'identité iconique du parfum, dans les contraintes techniques Chanel',
+      images: [
+        '/projects/n5/chanel-n5-desk1.webp',
+      ],
+      link: null, // NDA
+    },
+    {
+      title: 'Chanel N°1 — page produit',
+      tags: ['React', 'SCSS', 'Responsive'],
+      role: 'Développement de la page produit N°1 de Chanel, intégration des visuels et adaptation multi-supports',
+      result: 'Expérience cohérente avec le positionnement premium de la collection, livrée dans les délais',
+      images: [
+        '/projects/n1/chanel-n1-desk1.webp',
+      ],
+      link: null, // NDA
+    },
+    {
+      title: 'Chanel Sublimage — page produit',
+      tags: ['React', 'SCSS', 'Animation'],
+      role: 'Développement de la page produit Sublimage, intégration des assets haute couture et animations de présentation',
+      result: 'Rendu premium aligné avec le positionnement luxe de la gamme soin Chanel',
+      images: [
+        '/projects/sublimage/chanel-sublimage-desk1.webp',
+        '/projects/sublimage/chanel-sublimage-desk2.webp',
+      ],
+      link: null, // NDA
+    },
+    {
+      title: 'Chanel 31 Le Rouge — page produit',
+      tags: ['React', 'SCSS', 'Responsive'],
+      role: 'Développement de la page produit 31 Le Rouge, intégration des visuels et cohérence desktop / mobile',
+      result: 'Page produit livrée dans les contraintes de la marque, rendu visuel irréprochable',
+      images: [
+        '/projects/31lerouge/chanel-31lerouge-desk1.webp',
+      ],
+      link: null, // NDA
+    },
+    {
+      title: 'Chanel Look This Way — expérience éditoriale',
+      tags: ['React', 'SCSS', 'Animation'],
+      role: 'Développement d\'une expérience éditoriale immersive pour la campagne Look This Way, desktop et mobile',
+      result: 'Expérience visuelle engageante livrée dans les délais, cohérente avec l\'identité de la campagne',
+      images: [
+        '/projects/lookthisway/chanel-lookthisway-desk1.webp',
+      ],
+      link: null, // NDA
+    },
+    {
+      title: 'Chanel Manufacture — page éditoriale',
+      tags: ['React', 'SCSS', 'Storytelling'],
+      role: 'Développement d\'une page éditoriale dédiée aux savoir-faire de la Manufacture Chanel',
+      result: 'Mise en valeur des métiers d\'art Chanel, rendu soigné et adaptation mobile réussie',
+      images: [
+        '/projects/manufacture/chanel-manufacture-desk1.webp',
+      ],
+      link: null, // NDA
+    },
+    {
+      title: 'Chanel CSR — page engagements',
+      tags: ['React', 'SCSS', 'Responsive'],
+      role: 'Développement de la page RSE Chanel, structuration du contenu et intégration des visuels institutionnels',
+      result: 'Page institutionnelle claire et accessible, cohérente avec les standards de communication Chanel',
+      images: [
+        '/projects/csr/chanel-csr-desk1.webp',
+      ],
+      link: null, // NDA
+    },
     // {
     //   title: 'Landing e-commerce — mode premium',
     //   tags: ['React', 'SCSS', 'Mobile-first'],
