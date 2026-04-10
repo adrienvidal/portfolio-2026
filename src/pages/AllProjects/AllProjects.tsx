@@ -1,11 +1,14 @@
 import { Link } from 'react-router-dom'
 import { projects, otherMissions } from '../../data/content'
 import ProjectCard from '../../components/Projects/ProjectCard'
+import Nav from '../../components/Nav/Nav'
+import Footer from '../../components/Footer/Footer'
 import './AllProjects.scss'
 
 export default function AllProjects() {
   return (
     <div className="all-projects">
+      <Nav page />
       <div className="all-projects__inner">
         <Link to="/" className="all-projects__back">{projects.backLabel}</Link>
         <h1 className="all-projects__title">{projects.allProjectsTitle}</h1>
@@ -43,6 +46,7 @@ export default function AllProjects() {
           </ul>
         </div>
       </div>
+      <Footer />
     </div>
   )
 }

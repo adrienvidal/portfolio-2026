@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom'
 import { articles } from '../../data/articles'
+import Nav from '../../components/Nav/Nav'
+import Footer from '../../components/Footer/Footer'
 import './Blog.scss'
 
 export default function Blog() {
@@ -7,6 +9,7 @@ export default function Blog() {
 
   return (
     <>
+      <Nav page />
       <main className="blog">
         <div className="blog__inner">
           <Link to="/" className="blog__back">← Retour</Link>
@@ -31,6 +34,7 @@ export default function Blog() {
           </ul>
         </div>
       </main>
+      <Footer />
     </>
   )
 }

@@ -1,7 +1,7 @@
 @use '../../styles/variables' as *;
 
 .lab {
-  min-height: 100vh;
+  min-height: calc(100vh - 64px);
   background: var(--ink);
   color: var(--bg);
   padding: 48px 24px 96px;
