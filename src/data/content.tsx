@@ -126,7 +126,6 @@ export const projects = {
       result: 'Rendu premium cohérent sur tous les supports, dans les contraintes techniques Chanel',
       images: [
         '/projects/allure-sport/chanel-allure-desk.webp',
-        '/projects/allure-sport/chanel-allure-mob.webp',
       ],
       link: null, // NDA
     },
@@ -137,13 +136,9 @@ export const projects = {
       result: 'Expérience immersive livrée dans les délais, cohérente avec l\'identité visuelle de la collection',
       images: [
         '/projects/chance/chanel-chance-desk0.webp',
-        '/projects/chance/chanel-chance-mob0.webp',
         '/projects/chance/chanel-chance-desk1.webp',
-        '/projects/chance/chanel-chance-mob1.webp',
         '/projects/chance/chanel-chance-desk2.webp',
-        '/projects/chance/chanel-chance-mob2.webp',
         '/projects/chance/chanel-chance-desk3.webp',
-        '/projects/chance/chanel-chance-mob3.webp',
       ],
       link: null, // NDA
     },
@@ -153,92 +148,89 @@ export const projects = {
       role: 'Développement d\'une mécanique de swipe gamifiée pour la collection Coco Crush, exclusivement mobile',
       result: 'Interaction fluide et engageante, expérience ludique au service de la découverte produit',
       images: [
-        '/projects/coco-crush-tinder/chanel-cococrush-mob0.webp',
-        '/projects/coco-crush-tinder/chanel-cococrush-mob1.webp',
-        '/projects/coco-crush-tinder/chanel-cococrush-mob1-2.webp',
-        '/projects/coco-crush-tinder/chanel-cococrush-mob2.webp',
-        '/projects/coco-crush-tinder/chanel-cococrush-mob3.webp',
+        '/projects/coco-crush-tinder/chanel-cococrush-desk1.webp',
+        '/projects/coco-crush-tinder/chanel-cococrush-desk2.webp',
       ],
       link: null, // NDA
     },
-    {
-      title: 'Landing e-commerce — mode premium',
-      tags: ['React', 'SCSS', 'Mobile-first'],
-      role: 'Refonte complète de la page produit principale, optimisation du tunnel mobile',
-      result: 'Parcours simplifié, friction réduite sur mobile, expérience cohérente avec le positionnement premium de la marque',
-      images: [
-        'https://placehold.co/1200x760/f1f5f9/94a3b8?text=Desktop+1',
-        'https://placehold.co/390x280/f1f5f9/94a3b8?text=Mobile+1',
-        'https://placehold.co/1200x760/f1f5f9/94a3b8?text=Desktop+2',
-        'https://placehold.co/390x280/f1f5f9/94a3b8?text=Mobile+2',
-      ],
-      link: null, // NDA
-    },
-    {
-      title: 'Tunnel de contenu — groupe média',
-      tags: ['React', 'Next.js', 'Headless CMS'],
-      role: 'Intégration headless, composants React réutilisables, optimisation des temps de chargement',
-      result: 'Pages éditorialisées livrées plus vite par les équipes, sans dépendre de la DSI',
-      images: [
-        'https://placehold.co/1200x760/f1f5f9/94a3b8?text=Desktop+1',
-        'https://placehold.co/390x280/f1f5f9/94a3b8?text=Mobile+1',
-        'https://placehold.co/1200x760/f1f5f9/94a3b8?text=Desktop+2',
-        'https://placehold.co/390x280/f1f5f9/94a3b8?text=Mobile+2',
-      ],
-      link: null, // NDA
-    },
-    {
-      title: 'Page acquisition — SaaS B2B',
-      tags: ['React', 'TypeScript', 'A/B test'],
-      role: 'Wireframe IA + intégration React / Next, itérations sur les hypothèses growth',
-      result: 'Trois variantes testées en deux semaines, cycle de décision produit accéléré',
-      images: [
-        'https://placehold.co/1200x760/f1f5f9/94a3b8?text=Desktop+1',
-        'https://placehold.co/390x280/f1f5f9/94a3b8?text=Mobile+1',
-        'https://placehold.co/1200x760/f1f5f9/94a3b8?text=Desktop+2',
-        'https://placehold.co/390x280/f1f5f9/94a3b8?text=Mobile+2',
-      ],
-      link: 'https://à-remplacer.com',
-    },
-    {
-      title: 'Landing page — startup fintech',
-      tags: ['Next.js', 'TypeScript', 'Framer Motion'],
-      role: 'Conception et développement from scratch, animation des sections hero et features',
-      result: 'Mise en ligne en 7 jours, page cohérente avec la charte et optimisée pour le paid',
-      images: [
-        'https://placehold.co/1200x760/f1f5f9/94a3b8?text=Desktop+1',
-        'https://placehold.co/390x280/f1f5f9/94a3b8?text=Mobile+1',
-        'https://placehold.co/1200x760/f1f5f9/94a3b8?text=Desktop+2',
-        'https://placehold.co/390x280/f1f5f9/94a3b8?text=Mobile+2',
-      ],
-      link: 'https://à-remplacer.com',
-    },
-    {
-      title: 'App de gestion interne — logistique',
-      tags: ['React', 'TypeScript', 'REST API'],
-      role: 'Développement d\'une interface de suivi et de gestion des stocks en temps réel',
-      result: 'Gain de temps opérationnel, moins d\'erreurs de saisie, adoption rapide par les équipes',
-      images: [
-        'https://placehold.co/1200x760/f1f5f9/94a3b8?text=Desktop+1',
-        'https://placehold.co/390x280/f1f5f9/94a3b8?text=Mobile+1',
-        'https://placehold.co/1200x760/f1f5f9/94a3b8?text=Desktop+2',
-        'https://placehold.co/390x280/f1f5f9/94a3b8?text=Mobile+2',
-      ],
-      link: null, // NDA
-    },
-    {
-      title: 'E-commerce — cosmétiques bio',
-      tags: ['Shopify', 'React', 'Performance'],
-      role: 'Refonte du thème, optimisation Core Web Vitals, intégration des avis produits',
-      result: 'Score Lighthouse amélioré, expérience d\'achat fluide sur mobile, catalogue mis à jour facilement',
-      images: [
-        'https://placehold.co/1200x760/f1f5f9/94a3b8?text=Desktop+1',
-        'https://placehold.co/390x280/f1f5f9/94a3b8?text=Mobile+1',
-        'https://placehold.co/1200x760/f1f5f9/94a3b8?text=Desktop+2',
-        'https://placehold.co/390x280/f1f5f9/94a3b8?text=Mobile+2',
-      ],
-      link: 'https://à-remplacer.com',
-    },
+    // {
+    //   title: 'Landing e-commerce — mode premium',
+    //   tags: ['React', 'SCSS', 'Mobile-first'],
+    //   role: 'Refonte complète de la page produit principale, optimisation du tunnel mobile',
+    //   result: 'Parcours simplifié, friction réduite sur mobile, expérience cohérente avec le positionnement premium de la marque',
+    //   images: [
+    //     'https://placehold.co/1200x760/f1f5f9/94a3b8?text=Desktop+1',
+    //     'https://placehold.co/390x280/f1f5f9/94a3b8?text=Mobile+1',
+    //     'https://placehold.co/1200x760/f1f5f9/94a3b8?text=Desktop+2',
+    //     'https://placehold.co/390x280/f1f5f9/94a3b8?text=Mobile+2',
+    //   ],
+    //   link: null, // NDA
+    // },
+    // {
+    //   title: 'Tunnel de contenu — groupe média',
+    //   tags: ['React', 'Next.js', 'Headless CMS'],
+    //   role: 'Intégration headless, composants React réutilisables, optimisation des temps de chargement',
+    //   result: 'Pages éditorialisées livrées plus vite par les équipes, sans dépendre de la DSI',
+    //   images: [
+    //     'https://placehold.co/1200x760/f1f5f9/94a3b8?text=Desktop+1',
+    //     'https://placehold.co/390x280/f1f5f9/94a3b8?text=Mobile+1',
+    //     'https://placehold.co/1200x760/f1f5f9/94a3b8?text=Desktop+2',
+    //     'https://placehold.co/390x280/f1f5f9/94a3b8?text=Mobile+2',
+    //   ],
+    //   link: null, // NDA
+    // },
+    // {
+    //   title: 'Page acquisition — SaaS B2B',
+    //   tags: ['React', 'TypeScript', 'A/B test'],
+    //   role: 'Wireframe IA + intégration React / Next, itérations sur les hypothèses growth',
+    //   result: 'Trois variantes testées en deux semaines, cycle de décision produit accéléré',
+    //   images: [
+    //     'https://placehold.co/1200x760/f1f5f9/94a3b8?text=Desktop+1',
+    //     'https://placehold.co/390x280/f1f5f9/94a3b8?text=Mobile+1',
+    //     'https://placehold.co/1200x760/f1f5f9/94a3b8?text=Desktop+2',
+    //     'https://placehold.co/390x280/f1f5f9/94a3b8?text=Mobile+2',
+    //   ],
+    //   link: 'https://à-remplacer.com',
+    // },
+    // {
+    //   title: 'Landing page — startup fintech',
+    //   tags: ['Next.js', 'TypeScript', 'Framer Motion'],
+    //   role: 'Conception et développement from scratch, animation des sections hero et features',
+    //   result: 'Mise en ligne en 7 jours, page cohérente avec la charte et optimisée pour le paid',
+    //   images: [
+    //     'https://placehold.co/1200x760/f1f5f9/94a3b8?text=Desktop+1',
+    //     'https://placehold.co/390x280/f1f5f9/94a3b8?text=Mobile+1',
+    //     'https://placehold.co/1200x760/f1f5f9/94a3b8?text=Desktop+2',
+    //     'https://placehold.co/390x280/f1f5f9/94a3b8?text=Mobile+2',
+    //   ],
+    //   link: 'https://à-remplacer.com',
+    // },
+    // {
+    //   title: 'App de gestion interne — logistique',
+    //   tags: ['React', 'TypeScript', 'REST API'],
+    //   role: 'Développement d\'une interface de suivi et de gestion des stocks en temps réel',
+    //   result: 'Gain de temps opérationnel, moins d\'erreurs de saisie, adoption rapide par les équipes',
+    //   images: [
+    //     'https://placehold.co/1200x760/f1f5f9/94a3b8?text=Desktop+1',
+    //     'https://placehold.co/390x280/f1f5f9/94a3b8?text=Mobile+1',
+    //     'https://placehold.co/1200x760/f1f5f9/94a3b8?text=Desktop+2',
+    //     'https://placehold.co/390x280/f1f5f9/94a3b8?text=Mobile+2',
+    //   ],
+    //   link: null, // NDA
+    // },
+    // {
+    //   title: 'E-commerce — cosmétiques bio',
+    //   tags: ['Shopify', 'React', 'Performance'],
+    //   role: 'Refonte du thème, optimisation Core Web Vitals, intégration des avis produits',
+    //   result: 'Score Lighthouse amélioré, expérience d\'achat fluide sur mobile, catalogue mis à jour facilement',
+    //   images: [
+    //     'https://placehold.co/1200x760/f1f5f9/94a3b8?text=Desktop+1',
+    //     'https://placehold.co/390x280/f1f5f9/94a3b8?text=Mobile+1',
+    //     'https://placehold.co/1200x760/f1f5f9/94a3b8?text=Desktop+2',
+    //     'https://placehold.co/390x280/f1f5f9/94a3b8?text=Mobile+2',
+    //   ],
+    //   link: 'https://à-remplacer.com',
+    // },
   ],
 }
 
