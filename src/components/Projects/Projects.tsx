@@ -9,7 +9,7 @@ export default function Projects() {
       <h2 className="section-title">{projects.title}</h2>
       <p className="section-sub"></p>
       <div className="projects-grid">
-        {projects.items.slice(0, 6).map((p) => (
+        {projects.homeOrder.map(i => projects.items[i]).map((p) => (
           <ProjectCard key={p.title} {...p} roleLabel={projects.roleLabel} resultLabel={projects.resultLabel} linkLabel={projects.linkLabel} />
         ))}
       </div>

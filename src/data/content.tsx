@@ -128,6 +128,7 @@ export const projects = {
   seeAllHref: '/projets',
   allProjectsTitle: 'Tous les projets',
   backLabel: '← Accueil',
+  homeOrder: [1, 2, 3, 4, 5, 6],
   labTeaser: {
     text: 'En dehors des missions, je construis des outils pour des besoins réels — parfois les miens, parfois ceux que je n\'ai pas trouvés ailleurs.',
     cta: 'Voir le Lab →',
