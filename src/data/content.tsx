@@ -235,6 +235,46 @@ export const projects = {
       ],
       link: null, // NDA
     },
+    {
+      title: 'Prisma Media — Femme Actuelle',
+      tags: ['React', 'Next.js', 'Headless CMS'],
+      role: 'Développement de pages éditoriales pour Femme Actuelle, intégration headless et composants React réutilisables',
+      result: 'Pages éditorialisées livrées plus vite par les équipes, expérience de lecture optimisée',
+      images: [
+        '/projects/femme-actuelle/prismamedia-femmeactuelle-desk.webp',
+      ],
+      link: null, // NDA
+    },
+    {
+      title: 'Prisma Media — Cuisine Actuelle',
+      tags: ['React', 'Next.js', 'Headless CMS'],
+      role: 'Développement de pages éditoriales pour Cuisine Actuelle, intégration headless et optimisation des temps de chargement',
+      result: 'Expérience de lecture fluide, composants réutilisables adoptés par les équipes éditoriales',
+      images: [
+        '/projects/cuisine-actuelle/prismamedia-cuisineactuelle-desk.webp',
+      ],
+      link: null, // NDA
+    },
+    {
+      title: 'Fnac Darty — page catégorie',
+      tags: ['React', 'SCSS', 'E-commerce'],
+      role: 'Développement d\'une page catégorie pour Fnac Darty, intégration des composants e-commerce et adaptation responsive',
+      result: 'Page catégorie performante et cohérente avec l\'identité de la marque, livrée dans les contraintes techniques',
+      images: [
+        '/projects/darty/darty-desk.webp',
+      ],
+      link: null, // NDA
+    },
+    {
+      title: 'Yves Rocher — page produit',
+      tags: ['React', 'SCSS', 'E-commerce'],
+      role: 'Développement de la page produit Yves Rocher, intégration des assets de la marque et adaptation desktop / mobile',
+      result: 'Page produit cohérente avec l\'identité de la marque, expérience d\'achat optimisée sur mobile',
+      images: [
+        '/projects/yvesrocher/yvesrocher-desk.webp',
+      ],
+      link: null, // NDA
+    },
     // {
     //   title: 'Landing e-commerce — mode premium',
     //   tags: ['React', 'SCSS', 'Mobile-first'],
