@@ -13,12 +13,24 @@ npm run preview   # Preview production build
 
 ## Architecture
 
-Single-page portfolio built with React 19 + TypeScript + Vite. No routing — `App.tsx` renders all sections sequentially as a long scrolling page.
+Portfolio built with React 19 + TypeScript + Vite, using React Router for multi-page navigation.
 
-**Section order** (top → bottom):
-`Nav` → `Hero` → `Services` → `Process` → `About` → `Testimonials` → `Projects` → `CtaFinal` → `Reservation` → `Footer`
+**Routes:**
+- `/` — Home (`App.tsx` renders all sections sequentially)
+- `/projets` — Full projects list (`src/pages/AllProjects/`)
+- `/lab` — Lab page (`src/pages/Lab/`)
+- `/blog` — Blog index (`src/pages/Blog/`)
+- `/blog/:slug` — Article (`src/pages/Article/`)
+
+**Home section order** (top → bottom):
+`Nav` → `Hero` → `Clients` → `Services` → `Process` → `About` → `Projects` → `CtaFinal` → `Reservation` → `Footer`
 
 The `Reservation` section has three sub-components: `Calendar`, `TimeSlots`, and `ContactForm`.
+
+**Projects:**
+- Home displays the 6 most recent projects with a "Voir tous les projets →" link to `/projets`
+- `/projets` displays all projects in full, with a back link — no Nav/Footer
+- Pages under `src/pages/` follow the same pattern: back link only, no Nav/Footer
 
 ## Styling
 
