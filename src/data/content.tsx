@@ -555,7 +555,7 @@ export const lab = {
 // ─── Footer ──────────────────────────────────────────────────────────────────
 // CHANGEMENT : Retrait du lien "Créez votre site avec Lovable" — signal amateurisme
 export const footer = {
-  left: '© 2026 Adrien Vidal — Développeur front-end freelance',
+  left: '© 2026 Adrien Vidal — Développeur React & TypeScript freelance',
   social: [
     { label: 'LinkedIn', href: 'https://www.linkedin.com/in/adrien-vidal-308b4864/' },
     { label: 'GitHub', href: 'https://github.com/adrienvidal' }
