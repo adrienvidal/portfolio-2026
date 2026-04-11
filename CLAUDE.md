@@ -40,7 +40,7 @@ The `Reservation` section has three sub-components: `Calendar`, `TimeSlots`, and
 - Each item can have: `images` (string[]) for a collage cover + lightbox, `video` (string) for an autoplay cover, or neither (placeholder)
 - When `images` is present, clicking the cover opens a `LabLightbox` (portal, keyboard nav ←/→/Escape)
 - `LabLightbox` is colocated in `src/pages/Lab/` alongside `Lab.tsx`
-- Lab assets live in `public/lab/<project-name>/` as `.webp` files (or `.mp4` for video)
+- Lab assets live in `public/lab/<project-name>/` as `.webp` files (videos hosted on Cloudinary — never commit `.mp4` to the repo)
 
 ## Styling
 
@@ -57,7 +57,7 @@ Each component lives in its own directory under `src/components/<Name>/` with `<
 ## Images
 
 Project images live in `public/projects/<project-name>/` as `.webp` files.
-Lab assets live in `public/lab/<project-name>/` as `.webp` files (or `.mp4` for video covers).
+Lab assets live in `public/lab/<project-name>/` as `.webp` files. Videos are hosted on Cloudinary and referenced by URL in `content.tsx` — never commit `.mp4` to the repo (`.gitignore`).
 
 When adding new images (PNG/JPG), convert them to WebP using the sharp script:
 
