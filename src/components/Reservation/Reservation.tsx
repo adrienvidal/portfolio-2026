@@ -45,17 +45,22 @@ export default function Reservation() {
       <p className="resa__sub">{reservation.sub}</p>
 
       <div className="stepper">
-        {reservation.stepLabels.map((label, i) => {
-          const n = (i + 1) as Step
-          const isActive = step === n
-          return (
-            <div key={label} style={{ display: 'flex', alignItems: 'center' }}>
-              {i > 0 && <div className="stepper__connector" />}
-              <div className={`stepper__dot${isActive ? ' stepper__dot--active' : ''}`}>{n}</div>
-              <span className={`stepper__label${isActive ? ' stepper__label--active' : ''}`}>{label}</span>
-            </div>
-          )
-        })}
+        <div className="stepper__row">
+          {reservation.stepLabels.map((label, i) => {
+            const n = (i + 1) as Step
+            const isActive = step === n
+            return (
+              <div key={label} style={{ display: 'flex', alignItems: 'center' }}>
+                {i > 0 && <div className="stepper__connector" />}
+                <div className={`stepper__dot${isActive ? ' stepper__dot--active' : ''}`}>{n}</div>
+                <span className={`stepper__label${isActive ? ' stepper__label--active' : ''}`}>{label}</span>
+              </div>
+            )
+          })}
+        </div>
+        <p className="stepper__mobile-label">
+          Étape {step} / {reservation.stepLabels.length} — {reservation.stepLabels[step - 1]}
+        </p>
       </div>
 
       {step === 1 && (

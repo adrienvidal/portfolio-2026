@@ -23,10 +23,16 @@
 // Stepper
 .stepper {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 0;
+  gap: 10px;
   margin-bottom: 48px;
+
+  &__row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
   &__dot {
     width: 36px;
@@ -341,12 +347,31 @@
   }
 }
 
+.stepper__mobile-label {
+  display: none;
+}
+
 @media (max-width: 900px) {
   .resa {
     padding: 60px 24px;
   }
 
-  .stepper__connector {
-    width: 30px;
+  .stepper {
+    margin-bottom: 32px;
+
+    &__label {
+      display: none;
+    }
+
+    &__connector {
+      width: 24px;
+    }
+
+    &__mobile-label {
+      display: block;
+      font-size: 13px;
+      color: var(--gray);
+      text-align: center;
+    }
   }
 }
