@@ -373,7 +373,7 @@ export const otherMissions = {
       name: 'Fnac Darty',
       description:
         "Développement front-end au sein de l'équipe Darty Commercialité — refonte de la page produit, liste produit et pages push. Conception des composants de mise en avant cross-sell : assurances, garanties, services associés. Intégration de la page marque.",
-      tags: ['React', 'Web Components', 'API Rest', 'SCSS'],
+      tags: ['React', 'FreeMarker', 'API Rest', 'tailwindcss'],
       site: 'darty.fr',
       link: 'https://www.darty.fr'
     },
@@ -381,7 +381,7 @@ export const otherMissions = {
       name: 'Prisma Media',
       description:
         "Développement front-end au sein du pôle Féminin (femmeactuelle.fr, cuisineactuelle.fr) — refonte des pages Home, Article, Auteur et Carnet de recettes. Développement de web components sur mesure : module de gestion des avis et étoiles sur les pages recettes, module d'authentification. Extension Chrome interne pour la gestion des code reviews GitLab via webhooks Google Chat.",
-      tags: ['React', 'Web Components', 'API Rest', 'Next.js'],
+      tags: ['React', 'FreeMarker', 'Web Components', 'API Rest'],
       site: 'femmeactuelle.fr',
       link: 'https://www.femmeactuelle.fr'
     },
