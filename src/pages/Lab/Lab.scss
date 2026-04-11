@@ -121,13 +121,17 @@
     background: rgba(0, 0, 0, 0.3);
   }
 
-  &__cover-collage-img {
+  &__cover-collage-item {
     flex: 1;
     min-width: 0;
     height: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+
+  &__cover-collage-img {
     object-fit: cover;
     object-position: top;
-    display: block;
     transition: transform 0.4s ease;
 
     .lab__cover--clickable:hover & {

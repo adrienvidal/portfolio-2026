@@ -1,3 +1,6 @@
+'use client'
+
+import Image from 'next/image'
 import { useState } from 'react'
 
 interface ProjectCardProps {
@@ -21,7 +24,7 @@ export default function ProjectCard({ title, tags, role, result, images, link, r
   return (
     <div className="project-card">
       <div className="project-card__img-wrap">
-        <img className="project-card__img" src={images[current]} alt={`${title} — ${current + 1}`} loading="lazy" />
+        <Image className="project-card__img" src={images[current]} alt={`${title} — ${current + 1}`} fill sizes="(max-width: 900px) 100vw, 33vw" />
         {images.length > 1 && (
           <>
             <button className="project-card__nav project-card__nav--prev" onClick={prev} aria-label="Image précédente">‹</button>

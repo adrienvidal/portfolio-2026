@@ -1,3 +1,6 @@
+'use client'
+
+import Image from 'next/image'
 import { useEffect, useCallback, useRef } from 'react'
 import { createPortal } from 'react-dom'
 import './LabLightbox.scss'
@@ -70,11 +73,13 @@ export default function LabLightbox({ media, index, onClose, onPrev, onNext }: P
             controls
           />
         ) : (
-          <img
+          <Image
             key={current.src}
             src={current.src}
             alt={`Visuel ${index + 1}`}
+            fill
             className="lightbox__img"
+            sizes="100vw"
           />
         )}
       </div>

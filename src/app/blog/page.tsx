@@ -1,8 +1,14 @@
-import { Link } from 'react-router-dom'
-import { articles } from '../../data/articles'
-import Nav from '../../components/Nav/Nav'
-import Footer from '../../components/Footer/Footer'
-import './Blog.scss'
+import type { Metadata } from 'next'
+import Link from 'next/link'
+import { articles } from '@/data/articles'
+import Nav from '@/components/Nav/Nav'
+import Footer from '@/components/Footer/Footer'
+import '@/pages/Blog/Blog.scss'
+
+export const metadata: Metadata = {
+  title: 'Blog — Adrien Vidal',
+  description: 'Articles sur la conversion, l\'UX et le développement front-end.',
+}
 
 export default function Blog() {
   const sorted = [...articles].sort((a, b) => b.date.localeCompare(a.date))
@@ -12,12 +18,12 @@ export default function Blog() {
       <Nav page />
       <main className="blog">
         <div className="blog__inner">
-          <Link to="/" className="blog__back">← Retour</Link>
+          <Link href="/" className="blog__back">← Retour</Link>
           <h1 className="blog__title">Blog</h1>
           <ul className="blog__list">
             {sorted.map((article) => (
               <li key={article.slug} className="blog__item">
-                <Link to={`/blog/${article.slug}`} className="blog__link">
+                <Link href={`/blog/${article.slug}`} className="blog__link">
                   <time className="blog__date">{article.date}</time>
                   <h2 className="blog__item-title">{article.title}</h2>
                   <p className="blog__description">{article.description}</p>

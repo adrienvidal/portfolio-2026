@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import Link from 'next/link'
 import { projects, otherMissions } from '../../data/content'
 import ProjectCard from './ProjectCard'
 import './Projects.scss'
@@ -14,7 +14,7 @@ export default function Projects() {
         ))}
       </div>
       <div className="projects-show-more">
-        <Link to={projects.seeAllHref} className="btn-white">{projects.seeAllLabel}</Link>
+        <Link href={projects.seeAllHref} className="btn-white">{projects.seeAllLabel}</Link>
       </div>
 
       <div className="other-missions">
@@ -42,7 +42,7 @@ export default function Projects() {
 
       <div className="projects-lab-teaser">
         <span>{projects.labTeaser.text}</span>
-        <Link to={projects.labTeaser.href} className="projects-lab-teaser__link">
+        <Link href={projects.labTeaser.href} className="projects-lab-teaser__link">
           {projects.labTeaser.cta}
         </Link>
       </div>

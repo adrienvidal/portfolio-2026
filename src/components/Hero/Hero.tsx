@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { hero } from '../../data/content'
 import './Hero.scss'
 
@@ -13,10 +14,13 @@ export default function Hero() {
         </div>
       </div>
       <div className="hero__right">
-        <img
+        <Image
           className="hero__avatar"
           src={hero.avatarSrc}
           alt={hero.avatarAlt}
+          width={340}
+          height={340}
+          priority
         />
       </div>
     </div>

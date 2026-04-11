@@ -1,16 +1,22 @@
-import { Link } from 'react-router-dom'
-import { projects, otherMissions } from '../../data/content'
-import ProjectCard from '../../components/Projects/ProjectCard'
-import Nav from '../../components/Nav/Nav'
-import Footer from '../../components/Footer/Footer'
-import './AllProjects.scss'
+import type { Metadata } from 'next'
+import Link from 'next/link'
+import { projects, otherMissions } from '@/data/content'
+import ProjectCard from '@/components/Projects/ProjectCard'
+import Nav from '@/components/Nav/Nav'
+import Footer from '@/components/Footer/Footer'
+import '@/pages/AllProjects/AllProjects.scss'
+
+export const metadata: Metadata = {
+  title: 'Projets — Adrien Vidal',
+  description: 'Tous mes projets : landing pages, refonte UX, MVPs — réalisés pour des équipes growth et marketing.',
+}
 
 export default function AllProjects() {
   return (
     <div className="all-projects">
       <Nav page />
       <div className="all-projects__inner">
-        <Link to="/" className="all-projects__back">{projects.backLabel}</Link>
+        <Link href="/" className="all-projects__back">{projects.backLabel}</Link>
         <h1 className="all-projects__title">{projects.allProjectsTitle}</h1>
         <div className="all-projects__grid">
           {projects.items.map((p) => (

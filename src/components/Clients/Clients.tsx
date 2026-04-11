@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { clients } from '../../data/content'
 import './Clients.scss'
 
@@ -9,7 +10,7 @@ export default function Clients() {
         {clients.logos.map((client) => (
           <li key={client.name} className="clients__item">
             {client.src ? (
-              <img src={client.src} alt={client.name} className="clients__logo" />
+              <Image src={client.src} alt={client.name} className="clients__logo" width={160} height={50} />
             ) : (
               client.name
             )}

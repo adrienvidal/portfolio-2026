@@ -1,10 +1,13 @@
+'use client'
+
+import Image from 'next/image'
 import { useState, useCallback } from 'react'
-import { Link } from 'react-router-dom'
-import { lab } from '../../data/content'
-import Nav from '../../components/Nav/Nav'
-import Footer from '../../components/Footer/Footer'
+import Link from 'next/link'
+import { lab } from '@/data/content'
+import Nav from '@/components/Nav/Nav'
+import Footer from '@/components/Footer/Footer'
 import LabLightbox, { type MediaItem } from './LabLightbox'
-import './Lab.scss'
+import '@/pages/Lab/Lab.scss'
 
 function LabCover({ item }: { item: typeof lab.items[number] }) {
   if ('video' in item && item.video) {
@@ -23,7 +26,9 @@ function LabCover({ item }: { item: typeof lab.items[number] }) {
     return (
       <div className="lab__cover-collage">
         {item.images.slice(0, 3).map((src, i) => (
-          <img key={i} src={src} alt={`${item.title} screen ${i + 1}`} className="lab__cover-collage-img" />
+          <div key={i} className="lab__cover-collage-item">
+            <Image fill src={src} alt={`${item.title} screen ${i + 1}`} className="lab__cover-collage-img" sizes="(max-width: 900px) 33vw, 17vw" />
+          </div>
         ))}
       </div>
     )
@@ -53,7 +58,7 @@ export default function Lab() {
       <Nav page dark />
       <div className="lab">
         <div className="lab__inner">
-          <Link to="/" className="lab__back">{lab.backLabel}</Link>
+          <Link href="/" className="lab__back">{lab.backLabel}</Link>
           <header className="lab__header">
             <h1 className="lab__title">{lab.title}</h1>
             <p className="lab__sub">{lab.sub}</p>
