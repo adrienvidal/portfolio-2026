@@ -529,7 +529,11 @@ export const lab = {
       tags: ['React', 'TypeScript', 'Supabase', 'Google OAuth'],
       status: 'live' as const,
       link: 'https://github.com/adrienvidal/fitness-app',
-      image: '/lab/fitnesspal.webp'
+      images: [
+        '/lab/fitnesspal/finesspal-mob1.webp',
+        '/lab/fitnesspal/finesspal-mob2.webp',
+        '/lab/fitnesspal/finesspal-mob3.webp'
+      ]
     },
     {
       title: 'Dripflow',
@@ -538,7 +542,14 @@ export const lab = {
       tags: ['Next.js', 'Claude SDK', 'fal.ai', 'Instagram Graph API'],
       status: 'wip' as const,
       link: null,
-      image: '/lab/dripflow.webp'
+      video: '/lab/dripflow/dripflowgif.mp4',
+      images: [
+        '/lab/dripflow/dripflow-desk1.webp',
+        '/lab/dripflow/dripflow-desk2.webp',
+        '/lab/dripflow/dripflow-desk3.webp',
+        '/lab/dripflow/dripflow-desk4.webp',
+        '/lab/dripflow/dripflow-desk5.webp'
+      ]
     },
     // {
     //   title: 'Palette gen',

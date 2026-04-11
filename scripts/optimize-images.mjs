@@ -5,7 +5,7 @@ import { fileURLToPath } from 'url'
 import { dirname } from 'path'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
-const projectsDir = join(__dirname, '../public/projects')
+const projectsDir = join(__dirname, '../public')
 
 async function getFiles(dir) {
   const entries = await readdir(dir, { withFileTypes: true })
