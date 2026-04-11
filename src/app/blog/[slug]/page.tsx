@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { articles } from '@/data/articles'
-import '@/pages/Article/Article.scss'
+import './article.scss'
 
 // Static map: add one entry per article in src/articles/
 const articleModules: Record<string, () => Promise<{ default: React.ComponentType }>> = {

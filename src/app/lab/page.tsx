@@ -7,7 +7,7 @@ import { lab } from '@/data/content'
 import Nav from '@/components/Nav/Nav'
 import Footer from '@/components/Footer/Footer'
 import LabLightbox, { type MediaItem } from './LabLightbox'
-import '@/pages/Lab/Lab.scss'
+import './lab.scss'
 
 function LabCover({ item }: { item: typeof lab.items[number] }) {
   if ('video' in item && item.video) {

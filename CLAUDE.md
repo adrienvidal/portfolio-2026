@@ -52,7 +52,7 @@ The `Reservation` section has three sub-components: `Calendar`, `TimeSlots`, and
 
 - **Sass (SCSS)** — each component has a co-located `.scss` file
 - Global styles live in `src/styles/`: `_variables.scss` (design tokens), `_reset.scss`, and `main.scss` (shared utility classes). Imported in `src/app/layout.tsx`.
-- Page-level SCSS files (blog, article, allProjects, lab) live in `src/pages/*/` and are imported with `@/pages/...` paths in the app pages
+- Page-level SCSS files (blog, article, allProjects, lab) are colocated with their page in `src/app/*/` and imported with a relative path
 - Design tokens are defined as both CSS custom properties (`var(--blue)`) and Sass variables (`$blue`) in `_variables.scss`
 - Shared layout classes: `.section`, `.section-bg`, `.section-bg-inner`, `.section-title`, `.section-sub`, `.btn-blue`, `.btn-white`
 - Breakpoint: `900px` for mobile layout adjustments

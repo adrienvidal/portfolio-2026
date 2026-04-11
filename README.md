@@ -46,7 +46,6 @@ src/
     content.tsx     # All copy and content (never hardcode in components)
     articles.ts     # Blog article metadata
   styles/           # Global styles, variables, reset
-  pages/            # Page-level SCSS files
 public/
   projects/         # Project images (.webp)
   lab/              # Lab assets (.webp — videos hosted on Cloudinary)

@@ -4,7 +4,7 @@ import { projects, otherMissions } from '@/data/content'
 import ProjectCard from '@/components/Projects/ProjectCard'
 import Nav from '@/components/Nav/Nav'
 import Footer from '@/components/Footer/Footer'
-import '@/pages/AllProjects/AllProjects.scss'
+import './allProjects.scss'
 
 export const metadata: Metadata = {
   title: 'Projets — Adrien Vidal',

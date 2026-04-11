@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { articles } from '@/data/articles'
 import Nav from '@/components/Nav/Nav'
 import Footer from '@/components/Footer/Footer'
-import '@/pages/Blog/Blog.scss'
+import './blog.scss'
 
 export const metadata: Metadata = {
   title: 'Blog — Adrien Vidal',
