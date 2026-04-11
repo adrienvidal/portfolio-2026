@@ -528,7 +528,8 @@ export const lab = {
         "App de suivi d'entraînement complète, construite en live coding assisté par IA. Programme PPL/Cardio sur 4 jours, fiches exercice avec illustrations musculaires, saisie du poids, historique des séances par calendrier, thème clair/sombre, authentification Google. Un exemple concret de ce qu'un workflow IA permet de livrer vite sans sacrifier la qualité.",
       tags: ['React', 'TypeScript', 'Supabase', 'Google OAuth'],
       status: 'live' as const,
-      link: 'https://github.com/adrienvidal/fitness-app'
+      link: 'https://github.com/adrienvidal/fitness-app',
+      image: '/lab/fitnesspal.webp'
     },
     {
       title: 'Dripflow',
@@ -536,7 +537,8 @@ export const lab = {
         "Pipeline de contenu Instagram automatisé propulsé par l'IA. Upload d'une image de référence → Claude Sonnet génère des prompts Midjourney optimisés → workflow d'approbation humain → génération d'images via fal.ai → sélection des visuels → génération de captions en 3 tons (mystérieux, décontracté, artistique) → assemblage du carousel → publication automatique sur Instagram via l'Instagram Graph API (Meta). Conçu pour gérer le compte d'un influenceur/influenceuse virtuelle.",
       tags: ['Next.js', 'Claude SDK', 'fal.ai', 'Instagram Graph API'],
       status: 'wip' as const,
-      link: null
+      link: null,
+      image: '/lab/dripflow.webp'
     },
     // {
     //   title: 'Palette gen',

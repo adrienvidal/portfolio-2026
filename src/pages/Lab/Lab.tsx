@@ -18,25 +18,33 @@ export default function Lab() {
           <ul className="lab__list">
             {lab.items.map((item) => (
               <li key={item.title} className="lab__item">
-                <div className="lab__item-top">
-                  <div className="lab__item-meta">
-                    <span className={`lab__status lab__status--${item.status}`}>
-                      {lab.statusLabels[item.status]}
-                    </span>
-                    <div className="lab__tags">
-                      {item.tags.map((tag) => (
-                        <span key={tag} className="lab__tag">{tag}</span>
-                      ))}
-                    </div>
-                  </div>
-                  {item.link && (
-                    <a className="lab__link" href={item.link} target="_blank" rel="noopener noreferrer">
-                      GitHub →
-                    </a>
-                  )}
+                <div className="lab__cover">
+                  {item.image
+                    ? <img src={item.image} alt={item.title} className="lab__cover-img" />
+                    : <div className="lab__cover-placeholder" />
+                  }
                 </div>
-                <h2 className="lab__item-title">{item.title}</h2>
-                <p className="lab__item-desc">{item.description}</p>
+                <div className="lab__item-body">
+                  <div className="lab__item-top">
+                    <div className="lab__item-meta">
+                      <span className={`lab__status lab__status--${item.status}`}>
+                        {lab.statusLabels[item.status]}
+                      </span>
+                      <div className="lab__tags">
+                        {item.tags.map((tag) => (
+                          <span key={tag} className="lab__tag">{tag}</span>
+                        ))}
+                      </div>
+                    </div>
+                    {item.link && (
+                      <a className="lab__link" href={item.link} target="_blank" rel="noopener noreferrer">
+                        GitHub →
+                      </a>
+                    )}
+                  </div>
+                  <h2 className="lab__item-title">{item.title}</h2>
+                  <p className="lab__item-desc">{item.description}</p>
+                </div>
               </li>
             ))}
           </ul>
