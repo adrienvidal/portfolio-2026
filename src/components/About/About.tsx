@@ -11,10 +11,10 @@ export default function About() {
           <div className="about__layout">
             <div className="about__avatar">
               <Image
-                src="/adrien-profil2.webp"
+                src="/adrien-profil3.webp"
                 alt="Portrait d'Adrien"
-                width={100}
-                height={100}
+                width={200}
+                height={200}
               />
             </div>
             <div className="about__text">
