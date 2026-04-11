@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { projects, otherMissions } from '../../data/content'
 import ProjectCard from './ProjectCard'
+import OtherMissionItem from './OtherMissionItem'
 import './Projects.scss'
 
 export default function Projects() {
@@ -24,18 +25,14 @@ export default function Projects() {
         </div>
         <ul className="other-missions__list">
           {otherMissions.items.map((client) => (
-            <li key={client.name} className="other-missions__item">
-              <span className="other-missions__name">{client.name}</span>
-              <span className="other-missions__desc">{client.description}</span>
-              <div className="other-missions__tags">
-                {client.tags.map((tag) => (
-                  <span key={tag} className="other-missions__tag">{tag}</span>
-                ))}
-              </div>
-              <a className="other-missions__link" href={client.link} target="_blank" rel="noopener noreferrer">
-                {client.site}
-              </a>
-            </li>
+            <OtherMissionItem
+              key={client.name}
+              name={client.name}
+              description={client.description}
+              tags={client.tags}
+              link={client.link}
+              site={client.site}
+            />
           ))}
         </ul>
       </div>
