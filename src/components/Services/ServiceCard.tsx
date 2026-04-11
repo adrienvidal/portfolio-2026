@@ -2,9 +2,9 @@ interface ServiceCardProps {
   icon: React.ReactNode
   title: string
   items: string[]
-  delay: string
+  delay?: string
   proof: string
-  delayLabel: string
+  delayLabel?: string
 }
 
 export default function ServiceCard({ icon, title, items, delay, proof, delayLabel }: ServiceCardProps) {
@@ -22,9 +22,11 @@ export default function ServiceCard({ icon, title, items, delay, proof, delayLab
         ))}
       </ul>
       <div className="service-card__footer">
-        <div className="service-card__delay">
-          <strong>{delayLabel}</strong> <span>{delay}</span>
-        </div>
+        {delay && delayLabel && (
+          <div className="service-card__delay">
+            <strong>{delayLabel}</strong> <span>{delay}</span>
+          </div>
+        )}
         <div className="service-card__proof">{proof}</div>
       </div>
     </div>
