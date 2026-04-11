@@ -53,4 +53,19 @@
     grid-template-columns: 1fr;
     gap: 40px;
   }
+
+  .process-step {
+    position: relative;
+
+    &:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: -40px;
+      width: 2px;
+      height: 40px;
+      background: linear-gradient(to bottom, var(--blue-pale), transparent);
+    }
+  }
 }
