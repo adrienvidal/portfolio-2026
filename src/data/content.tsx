@@ -37,17 +37,44 @@ export const clients = {
   ]
 }
 
-// ─── Services ────────────────────────────────────────────────────────────────
-// CHANGEMENTS :
-// - Titres traduits en bénéfices business, pas en jargon tech
-// - Bullet points reformulés du point de vue client
-// - "A/B tests visuels & variantes IA" renommé pour être compréhensible
-// - Les "proof" deviennent des promesses concrètes
 export const services = {
   title: 'Ce que je fais pour vous',
-  sub: 'Trois types de missions, un seul objectif : des pages qui convertissent.',
-  delayLabel: 'Délai estimé :',
+  sub: 'Des interfaces qui vont plus loin que la page statique.',
   items: [
+    {
+      icon: (
+        <path
+          strokeLinecap='round'
+          strokeLinejoin='round'
+          d='M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122'
+        />
+      ),
+      title: 'Expériences web interactives',
+      items: [
+        'Quiz et diagnostics produit',
+        'Expériences multi-vues et gamification',
+        'Configurateurs et mécaniques de découverte',
+        'Animations avancées (GSAP, Framer Motion)'
+      ],
+      proof: 'Quand une landing page classique ne suffit plus pour engager votre audience'
+    },
+    {
+      icon: (
+        <path
+          strokeLinecap='round'
+          strokeLinejoin='round'
+          d='M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z'
+        />
+      ),
+      title: 'Intégration IA dans votre produit',
+      items: [
+        'Génération de contenu (Claude, OpenAI)',
+        'Recommandation et personnalisation produit',
+        "Pipeline IA avec workflow d'approbation humain",
+        'Automatisation et publication via API (Meta, etc.)'
+      ],
+      proof: "Pour ajouter une feature IA concrète sans recruter un profil ML ou data"
+    },
     {
       icon: (
         <path
@@ -56,55 +83,18 @@ export const services = {
           d='M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4'
         />
       ),
-      title: 'Landing pages qui convertissent',
+      title: 'Landing pages & campagnes premium',
       items: [
         "Structure pensée pour guider vers l'action",
-        'Mobile irréprochable',
-        'Chargement rapide (Core Web Vitals)',
-        'Prêt à connecter à votre CRM ou analytics'
+        'Mobile irréprochable, chargement rapide',
+        'Vidéos promotionnelles et animations',
+        "Connecté à votre CRM, analytics ou tunnel e-commerce"
       ],
-      delay: '5 à 10 jours',
-      proof: 'Idéal pour vos campagnes paid, lancements produit ou tests marché'
-    },
-    {
-      icon: (
-        <path
-          strokeLinecap='round'
-          strokeLinejoin='round'
-          d='M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15'
-        />
-      ),
-      title: 'Refonte de page sous-performante',
-      items: [
-        'Audit rapide des frictions existantes',
-        'Simplification du parcours utilisateur',
-        'Hiérarchie visuelle et CTA clarifiés',
-        'Livraison en mode itératif'
-      ],
-      delay: '3 à 7 jours',
-      proof: 'Quand votre page existe déjà mais que les résultats ne suivent pas'
-    },
-    {
-      icon: (
-        <path
-          strokeLinecap='round'
-          strokeLinejoin='round'
-          d='M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z'
-        />
-      ),
-      title: 'Variations & tests rapides',
-      items: [
-        "Plusieurs versions d'une même section",
-        'Wireframes IA pour valider avant de coder',
-        'Itérations sur hypothèses growth',
-        "Délais réduits grâce à l'IA dans le workflow"
-      ],
-      delay: '2 à 5 jours',
-      proof:
-        'Pour les équipes qui testent vite et veulent des résultats sans surcharge dev'
+      proof: "Pages de campagne, lancements produit et pages d'acquisition au niveau des grandes marques"
     }
   ]
 }
+
 
 // ─── Process ─────────────────────────────────────────────────────────────────
 // CHANGEMENTS :
