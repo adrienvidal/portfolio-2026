@@ -172,105 +172,115 @@ export const projects = {
     href: '/lab'
   },
   items: [
+    // ─── GSAP — le plus technique, le plus différenciant
     {
       title: 'Chanel Allure Sport — page produit',
-      tags: ['React', 'SCSS', 'Responsive'],
-      role: 'Développement de la page produit, intégration des assets de la marque, adaptation desktop et mobile',
-      result:
-        'Rendu premium cohérent sur tous les supports, dans les contraintes techniques Chanel',
+      tags: ['React', 'GSAP', 'SEO'],
+      role: 'Développement de la page produit avec animations GSAP, intégration des assets de la marque, adaptation desktop et mobile',
+      result: 'Rendu premium cohérent sur tous les supports, animations fluides dans les contraintes techniques Chanel',
       images: ['/projects/allure-sport/chanel-allure-desk.webp'],
-      link: "https://www.chanel.com/fr/parfums/allure-homme-sport/"
+      link: 'https://www.chanel.com/fr/parfums/allure-homme-sport/'
     },
+
+    // ─── Framer Motion — expérience la plus riche visuellement (4 visuels)
     {
       title: 'Chanel Chance — expérience multi-vues',
-      tags: ['React', 'SCSS', 'Animation'],
+      tags: ['React', 'Framer Motion', 'Accessibilité'],
       role: "Développement d'une expérience interactive multi-vues pour la collection Chance, desktop et mobile",
-      result:
-        "Expérience immersive livrée dans les délais, cohérente avec l'identité visuelle de la collection",
+      result: "Expérience immersive livrée dans les délais, cohérente avec l'identité visuelle de la collection",
       images: [
         '/projects/chance/chanel-chance-desk0.webp',
         '/projects/chance/chanel-chance-desk1.webp',
         '/projects/chance/chanel-chance-desk2.webp',
         '/projects/chance/chanel-chance-desk3.webp'
       ],
-      link: "https://www.chanel.com/fr/parfums/chance/eau-splendide/"
+      link: 'https://www.chanel.com/fr/parfums/chance/eau-splendide/'
     },
+
+    // ─── Framer Motion — le cas d'usage le plus mémorable (swipe gamifié)
     {
       title: 'Chanel Coco Crush — expérience Tinder mobile',
-      tags: ['React', 'Mobile-first', 'Animation'],
+      tags: ['React', 'Framer Motion', 'Mobile-first'],
       role: "Développement d'une mécanique de swipe gamifiée pour la collection Coco Crush, exclusivement mobile",
-      result:
-        'Interaction fluide et engageante, expérience ludique au service de la découverte produit',
+      result: 'Interaction fluide et engageante, expérience ludique au service de la découverte produit',
       images: [
         '/projects/coco-crush-tinder/chanel-cococrush-desk1.webp',
         '/projects/coco-crush-tinder/chanel-cococrush-desk2.webp'
       ],
-      link: "https://www.chanel.com/gb/fine-jewellery/find-your-crush/?previewdate=2024-02-02T20%3A38"
+      link: 'https://www.chanel.com/gb/fine-jewellery/find-your-crush/?previewdate=2024-02-02T20%3A38'
     },
+
+    // ─── Animation CSS/JS — le nom le plus iconique
     {
       title: 'Chanel N°5 — page produit',
-      tags: ['React', 'SCSS', 'Responsive'],
-      role: 'Développement de la page produit N°5, intégration des assets de la marque, adaptation desktop et mobile',
-      result:
-        "Rendu premium cohérent avec l'identité iconique du parfum, dans les contraintes techniques Chanel",
+      tags: ['React', 'Animation', 'SEO'],
+      role: 'Développement de la page produit N°5, animations CSS/JS, intégration des assets de la marque',
+      result: "Rendu premium cohérent avec l'identité iconique du parfum, dans les contraintes techniques Chanel",
       images: ['/projects/n5/chanel-n5-desk1.webp'],
-      link: "https://www.chanel.com/fr/parfums/chanel-number-5/"
+      link: 'https://www.chanel.com/fr/parfums/chanel-number-5/'
     },
+
+    // ─── Animation CSS/JS — soin premium
     {
       title: 'Chanel N°1 — page produit',
-      tags: ['React', 'SCSS', 'Responsive'],
-      role: 'Développement de la page produit N°1 de Chanel, intégration des visuels et adaptation multi-supports',
-      result:
-        'Expérience cohérente avec le positionnement premium de la collection, livrée dans les délais',
+      tags: ['React', 'Animation', 'Accessibilité'],
+      role: 'Développement de la page produit N°1 de Chanel, animations CSS/JS et adaptation multi-supports',
+      result: 'Expérience cohérente avec le positionnement premium de la collection, livrée dans les délais',
       images: ['/projects/n1/chanel-n1-desk1.webp'],
-      link: "https://www.chanel.com/fr/soins/n1-de-chanel/"
+      link: 'https://www.chanel.com/fr/soins/n1-de-chanel/'
     },
+
+    // ─── Animation CSS/JS — luxe soin
     {
       title: 'Chanel Sublimage — page produit',
-      tags: ['React', 'SCSS', 'Animation'],
-      role: 'Développement de la page produit Sublimage, intégration des assets haute couture et animations de présentation',
+      tags: ['React', 'Animation', 'SEO'],
+      role: 'Développement de la page produit Sublimage, animations de présentation et intégration des assets haute couture',
       result: 'Rendu premium aligné avec le positionnement luxe de la gamme soin Chanel',
       images: [
         '/projects/sublimage/chanel-sublimage-desk1.webp',
         '/projects/sublimage/chanel-sublimage-desk2.webp'
       ],
-      link: "https://www.chanel.com/fr/soins/sublimage/"
+      link: 'https://www.chanel.com/fr/soins/sublimage/'
     },
+
+    // ─── Animation CSS/JS — maquillage
     {
       title: 'Chanel 31 Le Rouge — page produit',
-      tags: ['React', 'SCSS', 'Responsive'],
-      role: 'Développement de la page produit 31 Le Rouge, intégration des visuels et cohérence desktop / mobile',
-      result:
-        'Page produit livrée dans les contraintes de la marque, rendu visuel irréprochable',
+      tags: ['React', 'Animation', 'Accessibilité'],
+      role: 'Développement de la page produit 31 Le Rouge, animations CSS/JS et cohérence desktop / mobile',
+      result: 'Page produit livrée dans les contraintes de la marque, rendu visuel irréprochable',
       images: ['/projects/31lerouge/chanel-31lerouge-desk1.webp'],
-      link: "https://www.chanel.com/fr/maquillage/31-le-rouge/"
+      link: 'https://www.chanel.com/fr/maquillage/31-le-rouge/'
     },
+
+    // ─── Animation CSS/JS — expérience éditoriale campagne
     {
       title: 'Chanel Look This Way — expérience éditoriale',
-      tags: ['React', 'SCSS', 'Animation'],
+      tags: ['React', 'Animation', 'SEO'],
       role: "Développement d'une expérience éditoriale immersive pour la campagne Look This Way, desktop et mobile",
-      result:
-        "Expérience visuelle engageante livrée dans les délais, cohérente avec l'identité de la campagne",
+      result: "Expérience visuelle engageante livrée dans les délais, cohérente avec l'identité de la campagne",
       images: ['/projects/lookthisway/chanel-lookthisway-desk1.webp'],
-      link: "https://www.chanel.com/gb/makeup/look-this-way/genderless-beauty/"
+      link: 'https://www.chanel.com/gb/makeup/look-this-way/genderless-beauty/'
     },
+
+    // ─── Storytelling — page éditoriale savoir-faire
     {
       title: 'Chanel Manufacture — page éditoriale',
-      tags: ['React', 'SCSS', 'Storytelling'],
+      tags: ['React', 'Animation', 'Accessibilité'],
       role: "Développement d'une page éditoriale dédiée aux savoir-faire de la Manufacture Chanel",
-      result:
-        "Mise en valeur des métiers d'art Chanel, rendu soigné et adaptation mobile réussie",
+      result: "Mise en valeur des métiers d'art Chanel, rendu soigné et adaptation mobile réussie",
       images: ['/projects/manufacture/chanel-manufacture-desk1.webp'],
-      link: "https://www.chanel.com/fr/horlogerie/manufacture-horlogere/?previewdate=2025-08-27T08%3A01"
+      link: 'https://www.chanel.com/fr/horlogerie/manufacture-horlogere/?previewdate=2025-08-27T08%3A01'
     },
+
+    // ─── Institutionnel — SEO + accessibilité au premier plan
     {
       title: 'Chanel CSR — page engagements',
-      tags: ['React', 'SCSS', 'Responsive'],
-      role: 'Développement de la page RSE Chanel, structuration du contenu et intégration des visuels institutionnels',
-      result:
-        'Page institutionnelle claire et accessible, cohérente avec les standards de communication Chanel',
+      tags: ['React', 'SEO', 'Accessibilité'],
+      role: 'Développement de la page RSE Chanel, structuration du contenu, intégration des visuels institutionnels',
+      result: 'Page institutionnelle claire et accessible, cohérente avec les standards de communication Chanel',
       images: ['/projects/csr/chanel-csr-desk1.webp'],
-      link: "https://www.chanel.com/fr/developpement-durable/"
+      link: 'https://www.chanel.com/fr/developpement-durable/'
     }
     // {
     //   title: 'Landing e-commerce — mode premium',
