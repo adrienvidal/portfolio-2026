@@ -35,6 +35,13 @@ The `Reservation` section has three sub-components: `Calendar`, `TimeSlots`, and
 - Both home and `/projets` render an "Autres missions" section below the grid (Fnac Darty, Prisma Media, Yves Rocher) — sourced from `otherMissions` in `content.tsx`
 - Pages under `src/pages/` follow the same pattern: back link only, no Nav/Footer
 
+**Lab (`/lab`):**
+- Displays personal projects in a 2-column card grid (1 column on mobile)
+- Each item can have: `images` (string[]) for a collage cover + lightbox, `video` (string) for an autoplay cover, or neither (placeholder)
+- When `images` is present, clicking the cover opens a `LabLightbox` (portal, keyboard nav ←/→/Escape)
+- `LabLightbox` is colocated in `src/pages/Lab/` alongside `Lab.tsx`
+- Lab assets live in `public/lab/<project-name>/` as `.webp` files (or `.mp4` for video)
+
 ## Styling
 
 - **Sass (SCSS)** — each component has a co-located `.scss` file
@@ -50,6 +57,7 @@ Each component lives in its own directory under `src/components/<Name>/` with `<
 ## Images
 
 Project images live in `public/projects/<project-name>/` as `.webp` files.
+Lab assets live in `public/lab/<project-name>/` as `.webp` files (or `.mp4` for video covers).
 
 When adding new images (PNG/JPG), convert them to WebP using the sharp script:
 
@@ -57,7 +65,7 @@ When adding new images (PNG/JPG), convert them to WebP using the sharp script:
 node scripts/optimize-images.mjs
 ```
 
-The script converts all PNG/JPG in `public/projects/**` to WebP (quality 85), deletes the originals, and logs the size savings.
+The script converts all PNG/JPG in `public/**` to WebP (quality 85), deletes the originals, and logs the size savings.
 
 ## Content
 
@@ -66,5 +74,6 @@ All copy (labels, text, links) is centralized in `src/data/content.tsx`. Each se
 - `projects` — Chanel project cards (images, role, result, tags)
 - `otherMissions` — client list shown below the projects grid (Fnac Darty, Prisma Media, Yves Rocher); no images, just name/description/tags/link
 - `clients` — logo strip on the home page ("Ils m'ont fait confiance")
+- `lab` — personal project cards; each item supports `images` (collage + lightbox), `video` (autoplay cover), or neither
 
 Blog article metadata (slug, title, date, description, content) is defined in `src/data/articles.ts` and used by the `Blog` and `Article` pages.
