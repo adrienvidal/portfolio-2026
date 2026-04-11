@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { lab } from '../../data/content'
 import Nav from '../../components/Nav/Nav'
 import Footer from '../../components/Footer/Footer'
-import LabLightbox from './LabLightbox'
+import LabLightbox, { type MediaItem } from './LabLightbox'
 import './Lab.scss'
 
 function LabCover({ item }: { item: typeof lab.items[number] }) {
@@ -32,20 +32,20 @@ function LabCover({ item }: { item: typeof lab.items[number] }) {
 }
 
 export default function Lab() {
-  const [lightbox, setLightbox] = useState<{ images: string[]; index: number } | null>(null)
+  const [lightbox, setLightbox] = useState<{ media: MediaItem[]; index: number } | null>(null)
 
-  const openLightbox = useCallback((images: string[], index = 0) => {
-    setLightbox({ images, index })
+  const openLightbox = useCallback((media: MediaItem[], index = 0) => {
+    setLightbox({ media, index })
   }, [])
 
   const closeLightbox = useCallback(() => setLightbox(null), [])
 
   const prev = useCallback(() => {
-    setLightbox(lb => lb ? { ...lb, index: (lb.index - 1 + lb.images.length) % lb.images.length } : lb)
+    setLightbox(lb => lb ? { ...lb, index: (lb.index - 1 + lb.media.length) % lb.media.length } : lb)
   }, [])
 
   const next = useCallback(() => {
-    setLightbox(lb => lb ? { ...lb, index: (lb.index + 1) % lb.images.length } : lb)
+    setLightbox(lb => lb ? { ...lb, index: (lb.index + 1) % lb.media.length } : lb)
   }, [])
 
   return (
@@ -60,19 +60,22 @@ export default function Lab() {
           </header>
           <ul className="lab__list">
             {lab.items.map((item) => {
-              const images = 'images' in item ? item.images : undefined
-              const hasLightbox = images && images.length > 0
+              const media: MediaItem[] = [
+                ...('video' in item && item.video ? [{ type: 'video' as const, src: item.video }] : []),
+                ...('images' in item && item.images ? item.images.map(src => ({ type: 'image' as const, src })) : []),
+              ]
+              const hasLightbox = media.length > 0
 
               return (
                 <li key={item.title} className="lab__item">
                   <div
                     className={`lab__cover${hasLightbox ? ' lab__cover--clickable' : ''}`}
-                    onClick={hasLightbox ? () => openLightbox(images) : undefined}
+                    onClick={hasLightbox ? () => openLightbox(media) : undefined}
                   >
                     <LabCover item={item} />
                     {hasLightbox && (
                       <div className="lab__cover-hint">
-                        <span>{images.length} visuels</span>
+                        <span>{media.length} visuels</span>
                       </div>
                     )}
                   </div>
@@ -107,7 +110,7 @@ export default function Lab() {
 
       {lightbox && (
         <LabLightbox
-          images={lightbox.images}
+          media={lightbox.media}
           index={lightbox.index}
           onClose={closeLightbox}
           onPrev={prev}
