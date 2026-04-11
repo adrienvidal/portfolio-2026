@@ -13,13 +13,9 @@ export const nav = {
 }
 
 // ─── Hero ────────────────────────────────────────────────────────────────────
-// CHANGEMENTS :
-// - Titre recentré sur le bénéfice client (pas la stack)
-// - Sous-titre avec cible explicite (équipes marketing/growth)
-// - CTA principal plus direct ("Réserver un call" > "Parlons de votre projet")
 export const hero = {
   title: 'Un développeur qui comprend la conversion, pas juste le code.',
-  sub: "J'aide les équipes growth et marketing à lancer des landing pages, refonte UX et MVPs — livrés vite, sans friction, sans aller-retours interminables.",
+  sub: "J'aide les startups et équipes produit à construire des expériences web interactives, intégrer l'IA dans leurs interfaces et lancer des campagnes digitales premium — vite, bien, sans friction.",
   ctaPrimary: { label: 'Réserver un call', href: '#reservation' },
   ctaSecondary: { label: 'Voir mes services', href: '#services' },
   avatarSrc: '/adrien-profil.webp',
@@ -37,6 +33,7 @@ export const clients = {
   ]
 }
 
+// ─── Services ────────────────────────────────────────────────────────────────
 export const services = {
   title: 'Ce que je fais pour vous',
   sub: 'Des interfaces qui vont plus loin que la page statique.',
@@ -95,11 +92,7 @@ export const services = {
   ]
 }
 
-
 // ─── Process ─────────────────────────────────────────────────────────────────
-// CHANGEMENTS :
-// - Étape 3 reformulée avec un livrable concret
-// - Descriptions orientées vers ce que REÇOIT le client
 export const process = {
   title: 'Comment ça marche',
   sub: 'Trois étapes. Pas de surprise, pas de tunnel sans nouvelles.',
@@ -144,8 +137,6 @@ export const process = {
 }
 
 // ─── Projects ────────────────────────────────────────────────────────────────
-// INSTRUCTION : Remplacer les images placeholder et les liens par les vrais assets.
-// link: null = projet confidentiel (NDA), lien string = projet public.
 export const projects = {
   title: 'Projets récents',
   roleLabel: 'Mission :',
@@ -162,29 +153,22 @@ export const projects = {
     href: '/lab'
   },
   items: [
-    // ─── Coco Crush en premier : le projet le plus unique et mémorable
-    // Swipe gamifié + quiz + QR code pour event physique = cas d'usage rarissime
     {
       title: 'Chanel Coco Crush — expérience interactive bijoux',
       tags: ['React', 'Framer Motion', 'Mobile-first'],
       role: "Développement d'une expérience mobile gamifiée : quiz de profil bijoux, swipe à la Tinder pour constituer une liste de souhaits, génération d'un QR code personnel utilisé lors d'un événement physique Chanel",
-      result:
-        "Expérience phygitale complète livrée pour un événement éphémère — du diagnostic produit jusqu'à la liste de souhaits scannable en boutique",
+      result: "Expérience phygitale complète livrée pour un événement éphémère — du diagnostic produit jusqu'à la liste de souhaits scannable en boutique",
       images: [
         '/projects/coco-crush-tinder/chanel-cococrush-desk1.webp',
         '/projects/coco-crush-tinder/chanel-cococrush-desk2.webp'
       ],
       link: 'https://www.chanel.com/gb/fine-jewellery/find-your-crush/?previewdate=2024-02-02T20%3A38'
     },
-
-    // ─── Chance : quiz/diagnostic + expérience multi-vues
-    // Deuxième projet le plus complexe fonctionnellement
     {
       title: 'Chanel Chance — campagne interactive multi-vues',
       tags: ['React', 'Framer Motion', 'Accessibilité'],
       role: "Développement d'une campagne landing page multi-vues avec vidéos promotionnelles, et d'un quiz diagnostic permettant au visiteur d'identifier le parfum Chance correspondant à son profil",
-      result:
-        "Expérience de découverte produit personnalisée : chaque visiteur arrive sur une page résultat dédiée à son parfum, augmentant la pertinence et l'intention d'achat",
+      result: "Expérience de découverte produit personnalisée : chaque visiteur arrive sur une page résultat dédiée à son parfum, augmentant la pertinence et l'intention d'achat",
       images: [
         '/projects/chance/chanel-chance-desk0.webp',
         '/projects/chance/chanel-chance-desk1.webp',
@@ -193,31 +177,22 @@ export const projects = {
       ],
       link: 'https://www.chanel.com/fr/parfums/chance/eau-splendide/'
     },
-
-    // ─── Allure Sport : GSAP + campagne complète avec tunnel e-commerce
-    // Le seul projet avec ajout au panier — signal e-commerce fort
     {
       title: 'Chanel Allure Sport — campagne & tunnel produit',
       tags: ['React', 'GSAP', 'SEO'],
       role: "Développement d'une landing page campagne avec vidéos promotionnelles, animations GSAP et liste produit avec ajout au panier",
-      result:
-        "Campagne immersive connectée au tunnel e-commerce Chanel — de la découverte produit jusqu'à l'achat en une seule page",
+      result: "Campagne immersive connectée au tunnel e-commerce Chanel — de la découverte produit jusqu'à l'achat en une seule page",
       images: ['/projects/allure-sport/chanel-allure-desk.webp'],
       link: 'https://www.chanel.com/fr/parfums/allure-homme-sport/'
     },
-
-    // ─── N°5 : le nom le plus iconique, landing page campagne
     {
       title: 'Chanel N°5 — campagne landing page',
       tags: ['React', 'Animation', 'SEO'],
       role: 'Développement de la landing page campagne N°5 avec vidéos promotionnelles, animations CSS/JS et intégration des assets de la marque',
-      result:
-        "Rendu premium cohérent avec l'identité iconique du parfum, dans les contraintes techniques Chanel",
+      result: "Rendu premium cohérent avec l'identité iconique du parfum, dans les contraintes techniques Chanel",
       images: ['/projects/n5/chanel-n5-desk1.webp'],
       link: 'https://www.chanel.com/fr/parfums/chanel-number-5/'
     },
-
-    // ─── Sublimage : landing campagne soin luxe, 2 visuels
     {
       title: 'Chanel Sublimage — campagne soin luxe',
       tags: ['React', 'Animation', 'Accessibilité'],
@@ -229,134 +204,44 @@ export const projects = {
       ],
       link: 'https://www.chanel.com/fr/soins/sublimage/'
     },
-
-    // ─── CSR : institutionnel, SEO + accessibilité au premier plan
-    // Volontairement en 6e position — montre la diversité des typologies de pages
     {
       title: 'Chanel CSR — page engagements',
       tags: ['React', 'SEO', 'Accessibilité'],
       role: 'Développement de la page RSE Chanel, structuration du contenu éditorial et intégration des visuels institutionnels',
-      result:
-        'Page institutionnelle claire et accessible, cohérente avec les standards de communication Chanel',
+      result: 'Page institutionnelle claire et accessible, cohérente avec les standards de communication Chanel',
       images: ['/projects/csr/chanel-csr-desk1.webp'],
       link: 'https://www.chanel.com/fr/developpement-durable/'
     },
-
-    // ─── Projets secondaires — visibles via "Voir tous les projets"
-
     {
       title: 'Chanel 31 Le Rouge — campagne maquillage',
       tags: ['React', 'Animation', 'Accessibilité'],
       role: 'Développement de la landing page campagne 31 Le Rouge, animations CSS/JS et cohérence desktop / mobile',
-      result:
-        'Page campagne livrée dans les contraintes de la marque, rendu visuel irréprochable',
+      result: 'Page campagne livrée dans les contraintes de la marque, rendu visuel irréprochable',
       images: ['/projects/31lerouge/chanel-31lerouge-desk1.webp'],
       link: 'https://www.chanel.com/fr/maquillage/31-le-rouge/'
     },
-
     {
       title: 'Chanel Look This Way — expérience éditoriale',
       tags: ['React', 'Animation', 'SEO'],
       role: "Développement d'une expérience éditoriale immersive pour la campagne Look This Way, desktop et mobile",
-      result:
-        "Expérience visuelle engageante livrée dans les délais, cohérente avec l'identité de la campagne",
+      result: "Expérience visuelle engageante livrée dans les délais, cohérente avec l'identité de la campagne",
       images: ['/projects/lookthisway/chanel-lookthisway-desk1.webp'],
       link: 'https://www.chanel.com/gb/makeup/look-this-way/genderless-beauty/'
     },
-
     {
       title: 'Chanel Manufacture — page éditoriale',
       tags: ['React', 'Animation', 'Accessibilité'],
       role: "Développement d'une page éditoriale dédiée aux savoir-faire de la Manufacture Chanel",
-      result:
-        "Mise en valeur des métiers d'art Chanel, rendu soigné et adaptation mobile réussie",
+      result: "Mise en valeur des métiers d'art Chanel, rendu soigné et adaptation mobile réussie",
       images: ['/projects/manufacture/chanel-manufacture-desk1.webp'],
       link: 'https://www.chanel.com/fr/horlogerie/manufacture-horlogere/?previewdate=2025-08-27T08%3A01'
     }
-    // {
-    //   title: 'Landing e-commerce — mode premium',
-    //   tags: ['React', 'SCSS', 'Mobile-first'],
-    //   role: 'Refonte complète de la page produit principale, optimisation du tunnel mobile',
-    //   result: 'Parcours simplifié, friction réduite sur mobile, expérience cohérente avec le positionnement premium de la marque',
-    //   images: [
-    //     'https://placehold.co/1200x760/f1f5f9/94a3b8?text=Desktop+1',
-    //     'https://placehold.co/390x280/f1f5f9/94a3b8?text=Mobile+1',
-    //     'https://placehold.co/1200x760/f1f5f9/94a3b8?text=Desktop+2',
-    //     'https://placehold.co/390x280/f1f5f9/94a3b8?text=Mobile+2',
-    //   ],
-    //   link: null, // NDA
-    // },
-    // {
-    //   title: 'Tunnel de contenu — groupe média',
-    //   tags: ['React', 'Next.js', 'Headless CMS'],
-    //   role: 'Intégration headless, composants React réutilisables, optimisation des temps de chargement',
-    //   result: 'Pages éditorialisées livrées plus vite par les équipes, sans dépendre de la DSI',
-    //   images: [
-    //     'https://placehold.co/1200x760/f1f5f9/94a3b8?text=Desktop+1',
-    //     'https://placehold.co/390x280/f1f5f9/94a3b8?text=Mobile+1',
-    //     'https://placehold.co/1200x760/f1f5f9/94a3b8?text=Desktop+2',
-    //     'https://placehold.co/390x280/f1f5f9/94a3b8?text=Mobile+2',
-    //   ],
-    //   link: null, // NDA
-    // },
-    // {
-    //   title: 'Page acquisition — SaaS B2B',
-    //   tags: ['React', 'TypeScript', 'A/B test'],
-    //   role: 'Wireframe IA + intégration React / Next, itérations sur les hypothèses growth',
-    //   result: 'Trois variantes testées en deux semaines, cycle de décision produit accéléré',
-    //   images: [
-    //     'https://placehold.co/1200x760/f1f5f9/94a3b8?text=Desktop+1',
-    //     'https://placehold.co/390x280/f1f5f9/94a3b8?text=Mobile+1',
-    //     'https://placehold.co/1200x760/f1f5f9/94a3b8?text=Desktop+2',
-    //     'https://placehold.co/390x280/f1f5f9/94a3b8?text=Mobile+2',
-    //   ],
-    //   link: 'https://à-remplacer.com',
-    // },
-    // {
-    //   title: 'Landing page — startup fintech',
-    //   tags: ['Next.js', 'TypeScript', 'Framer Motion'],
-    //   role: 'Conception et développement from scratch, animation des sections hero et features',
-    //   result: 'Mise en ligne en 7 jours, page cohérente avec la charte et optimisée pour le paid',
-    //   images: [
-    //     'https://placehold.co/1200x760/f1f5f9/94a3b8?text=Desktop+1',
-    //     'https://placehold.co/390x280/f1f5f9/94a3b8?text=Mobile+1',
-    //     'https://placehold.co/1200x760/f1f5f9/94a3b8?text=Desktop+2',
-    //     'https://placehold.co/390x280/f1f5f9/94a3b8?text=Mobile+2',
-    //   ],
-    //   link: 'https://à-remplacer.com',
-    // },
-    // {
-    //   title: 'App de gestion interne — logistique',
-    //   tags: ['React', 'TypeScript', 'REST API'],
-    //   role: 'Développement d\'une interface de suivi et de gestion des stocks en temps réel',
-    //   result: 'Gain de temps opérationnel, moins d\'erreurs de saisie, adoption rapide par les équipes',
-    //   images: [
-    //     'https://placehold.co/1200x760/f1f5f9/94a3b8?text=Desktop+1',
-    //     'https://placehold.co/390x280/f1f5f9/94a3b8?text=Mobile+1',
-    //     'https://placehold.co/1200x760/f1f5f9/94a3b8?text=Desktop+2',
-    //     'https://placehold.co/390x280/f1f5f9/94a3b8?text=Mobile+2',
-    //   ],
-    //   link: null, // NDA
-    // },
-    // {
-    //   title: 'E-commerce — cosmétiques bio',
-    //   tags: ['Shopify', 'React', 'Performance'],
-    //   role: 'Refonte du thème, optimisation Core Web Vitals, intégration des avis produits',
-    //   result: 'Score Lighthouse amélioré, expérience d\'achat fluide sur mobile, catalogue mis à jour facilement',
-    //   images: [
-    //     'https://placehold.co/1200x760/f1f5f9/94a3b8?text=Desktop+1',
-    //     'https://placehold.co/390x280/f1f5f9/94a3b8?text=Mobile+1',
-    //     'https://placehold.co/1200x760/f1f5f9/94a3b8?text=Desktop+2',
-    //     'https://placehold.co/390x280/f1f5f9/94a3b8?text=Mobile+2',
-    //   ],
-    //   link: 'https://à-remplacer.com',
-    // },
   ]
 }
 
 // ─── Other Missions ───────────────────────────────────────────────────────────
 export const otherMissions = {
-  title: 'Autres missions',
+  title: 'Contributions',
   subtitle: 'Interventions en équipe sur des sites existants à fort trafic',
   items: [
     {
@@ -387,11 +272,6 @@ export const otherMissions = {
 }
 
 // ─── About ───────────────────────────────────────────────────────────────────
-// CHANGEMENTS :
-// - Passage à la 1ère personne (plus direct, plus humain)
-// - Recentré sur ce que ça apporte au client marketing/growth
-// - Stack technique évoquée sans être listée
-// - Mention des clients grands comptes conservée (signal de crédibilité)
 export const about = {
   title: 'À propos',
   avatarLetter: 'A',
@@ -399,12 +279,7 @@ export const about = {
 }
 
 // ─── Testimonials ─────────────────────────────────────────────────────────────
-// CHANGEMENTS :
-// - Section transformée en "Ils m'ont fait confiance" avec logos/noms de contexte
-// - Les quotes sont conservées car elles sonnent juste — à remplacer par de vrais témoignages dès disponibles
-// - Le sous-titre ne dit plus "À remplacer" visible en prod
-// INSTRUCTION : Remplacer les 3 items par de vraies recommandations LinkedIn dès que possible.
-// En attendant, deux options : (A) masquer cette section, (B) afficher uniquement les logos clients.
+// INSTRUCTION : Remplacer par de vraies recommandations LinkedIn dès que possible.
 export const testimonials = {
   title: "Ils m'ont fait confiance",
   sub: "Des équipes marketing, e-commerce et médias avec qui j'ai travaillé.",
@@ -428,10 +303,6 @@ export const testimonials = {
 }
 
 // ─── CTA Final ───────────────────────────────────────────────────────────────
-// CHANGEMENTS :
-// - Un seul CTA (calendrier) pour éviter la dispersion
-// - Accroche reformulée pour réduire la barrière à l'action
-// - Sous-titre centré sur la rapidité et l'absence de friction
 export const ctaFinal = {
   title: 'Un brief, un call, une proposition sous 48h.',
   sub: 'Pas de processus lourd. Réservez 30 minutes et voyons si je peux vous aider.',
@@ -439,9 +310,6 @@ export const ctaFinal = {
 }
 
 // ─── Reservation ─────────────────────────────────────────────────────────────
-// CHANGEMENTS :
-// - Titre plus direct et rassurant
-// - Sous-titre qui réduit la friction ("30 minutes suffisent")
 export const reservation = {
   title: 'Réservons 30 minutes',
   sub: 'Choisissez un créneau. Je reviens vers vous dans la journée pour confirmer.',
@@ -458,18 +326,8 @@ export const reservation = {
   },
   calendar: {
     months: [
-      'Janvier',
-      'Février',
-      'Mars',
-      'Avril',
-      'Mai',
-      'Juin',
-      'Juillet',
-      'Août',
-      'Septembre',
-      'Octobre',
-      'Novembre',
-      'Décembre'
+      'Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin',
+      'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre'
     ],
     weekdays: ['Lun', 'Mar', 'Mer', 'Jeu', 'Ven', 'Sam', 'Dim']
   },
@@ -487,8 +345,7 @@ export const reservation = {
     },
     besoin: {
       label: 'De quoi avez-vous besoin ?',
-      placeholder:
-        'Ex : on lance une campagne paid dans 3 semaines et notre landing page actuelle ne convertit pas…'
+      placeholder: "Ex : on lance une campagne paid dans 3 semaines et notre landing page actuelle ne convertit pas…"
     },
     budget: {
       label: 'Budget envisagé',
@@ -540,52 +397,11 @@ export const lab = {
         '/lab/dripflow/dripflow-desk4.webp',
         '/lab/dripflow/dripflow-desk5.webp'
       ]
-    },
-    // {
-    //   title: 'Palette gen',
-    //   description:
-    //     "Générateur de palettes de couleurs cohérentes à partir d'un mot-clé. Pratique quand on démarre un projet sans charte définie.",
-    //   tags: ['React', 'CSS', 'Color theory'],
-    //   status: 'live' as const,
-    //   link: 'https://github.com'
-    // },
-    // {
-    //   title: 'devlog',
-    //   description:
-    //     "Un petit journal de bord local pour noter ce que j'apprends chaque jour. Markdown, sans compte, sans cloud.",
-    //   tags: ['Electron', 'TypeScript', 'SQLite'],
-    //   status: 'wip' as const,
-    //   link: null
-    // },
-    // {
-    //   title: 'component-cli',
-    //   description:
-    //     'CLI pour scaffolder des composants React avec SCSS co-localisé, typage et barrel export en une commande.',
-    //   tags: ['Node.js', 'CLI', 'TypeScript'],
-    //   status: 'live' as const,
-    //   link: 'https://github.com'
-    // },
-    // {
-    //   title: 'bookshelf',
-    //   description:
-    //     'Dashboard perso pour suivre mes lectures — en cours, terminées, abandonées. Avec une note et une citation par livre.',
-    //   tags: ['React', 'Supabase', 'TypeScript'],
-    //   status: 'wip' as const,
-    //   link: null
-    // },
-    // {
-    //   title: 'og-preview',
-    //   description:
-    //     "Outil pour prévisualiser les balises Open Graph d'une URL sans avoir à partager le lien sur Slack.",
-    //   tags: ['Vite', 'React', 'API'],
-    //   status: 'archived' as const,
-    //   link: 'https://github.com'
-    // }
+    }
   ]
 }
 
 // ─── Footer ──────────────────────────────────────────────────────────────────
-// CHANGEMENT : Retrait du lien "Créez votre site avec Lovable" — signal amateurisme
 export const footer = {
   left: '© 2026 Adrien Vidal — Développeur React & TypeScript freelance',
   social: [
