@@ -22,7 +22,7 @@ export const hero = {
   sub: "J'aide les équipes growth et marketing à lancer des landing pages, refonte UX et MVPs — livrés vite, sans friction, sans aller-retours interminables.",
   ctaPrimary: { label: 'Réserver un call', href: '#reservation' },
   ctaSecondary: { label: 'Voir mes services', href: '#services' },
-  avatarSrc: '/adrien-profil.png',
+  avatarSrc: '/adrien-profil.webp',
   avatarAlt: "Portrait d'Adrien, développeur front-end freelance"
 }
 
