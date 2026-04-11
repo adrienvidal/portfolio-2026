@@ -542,7 +542,7 @@ export const lab = {
       tags: ['Next.js', 'Claude SDK', 'fal.ai', 'Instagram Graph API'],
       status: 'wip' as const,
       link: null,
-      video: '/lab/dripflow/dripflowgif.mp4',
+      video: 'https://res.cloudinary.com/dewqbg9at/video/upload/v1775905776/dripflowgif_jmifao.mp4',
       images: [
         '/lab/dripflow/dripflow-desk1.webp',
         '/lab/dripflow/dripflow-desk2.webp',
