@@ -100,4 +100,24 @@
   .services-row2 {
     grid-template-columns: 1fr;
   }
+
+  .service-card {
+    padding: 20px 18px;
+
+    &__icon-wrap {
+      width: 38px;
+      height: 38px;
+      margin-bottom: 14px;
+    }
+
+    &__icon {
+      width: 18px;
+      height: 18px;
+    }
+
+    &__title {
+      font-size: 15px;
+      margin-bottom: 10px;
+    }
+  }
 }

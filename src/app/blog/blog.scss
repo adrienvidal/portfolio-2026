@@ -4,6 +4,10 @@
   min-height: 100vh;
   padding: 80px 24px;
 
+  @media (max-width: 900px) {
+    padding: 48px 20px;
+  }
+
   &__inner {
     max-width: 720px;
     margin: 0 auto;
@@ -26,6 +30,11 @@
     font-weight: 700;
     color: $ink;
     margin-bottom: 48px;
+
+    @media (max-width: 900px) {
+      font-size: 1.75rem;
+      margin-bottom: 32px;
+    }
   }
 
   &__list {
@@ -44,6 +53,10 @@
     border-radius: $radius;
     text-decoration: none;
     transition: border-color 0.2s, box-shadow 0.2s;
+
+    @media (max-width: 900px) {
+      padding: 20px;
+    }
 
     &:hover {
       border-color: $blue;
