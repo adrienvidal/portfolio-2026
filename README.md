@@ -1,13 +1,13 @@
 # Portfolio 2026
 
-Personal portfolio website built with React 19, TypeScript, and Vite.
+Personal portfolio website built with React 19, TypeScript, and Next.js 15.
 
 ## Stack
 
 - **React 19** + **TypeScript**
-- **Vite** — dev server and bundler
-- **React Router** — multi-page navigation
+- **Next.js 15** (App Router) — file-based routing, SSR, static generation
 - **Sass (SCSS)** — component-scoped styles with shared design tokens
+- **MDX** — blog articles via `@next/mdx`
 
 ## Getting started
 
@@ -20,9 +20,9 @@ npm run dev
 
 | Command | Description |
 |---|---|
-| `npm run dev` | Start dev server with HMR |
-| `npm run build` | Type-check and build for production |
-| `npm run preview` | Preview production build locally |
+| `npm run dev` | Start dev server (Turbopack) |
+| `npm run build` | Build for production |
+| `npm run start` | Start production server |
 | `npm run lint` | Run ESLint |
 
 ## Routes
@@ -33,18 +33,20 @@ npm run dev
 | `/projets` | Full projects list |
 | `/lab` | Lab / personal projects |
 | `/blog` | Blog index |
-| `/blog/:slug` | Article |
+| `/blog/[slug]` | Article |
 
 ## Project structure
 
 ```
 src/
-  components/       # Shared UI components (co-located .tsx + .scss)
-  pages/            # Route-level pages (AllProjects, Lab, Blog, Article)
+  app/              # Next.js App Router pages and layouts
+  components/       # UI components (co-located .tsx + .scss)
+  articles/         # MDX blog articles
   data/
     content.tsx     # All copy and content (never hardcode in components)
     articles.ts     # Blog article metadata
   styles/           # Global styles, variables, reset
+  pages/            # Page-level SCSS files
 public/
   projects/         # Project images (.webp)
   lab/              # Lab assets (.webp — videos hosted on Cloudinary)
