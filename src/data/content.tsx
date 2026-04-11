@@ -523,45 +523,61 @@ export const lab = {
   },
   items: [
     {
-      title: 'Palette gen',
+      title: 'FitnessPal',
       description:
-        "Générateur de palettes de couleurs cohérentes à partir d'un mot-clé. Pratique quand on démarre un projet sans charte définie.",
-      tags: ['React', 'CSS', 'Color theory'],
+        "App de suivi d'entraînement complète, construite en live coding assisté par IA. Programme PPL/Cardio sur 4 jours, fiches exercice avec illustrations musculaires, saisie du poids, historique des séances par calendrier, thème clair/sombre, authentification Google. Un exemple concret de ce qu'un workflow IA permet de livrer vite sans sacrifier la qualité.",
+      tags: ['React', 'TypeScript', 'Supabase', 'Google OAuth'],
       status: 'live' as const,
-      link: 'https://github.com'
+      link: 'https://github.com/adrienvidal/fitness-app'
     },
     {
-      title: 'devlog',
+      title: 'Dripflow',
       description:
-        "Un petit journal de bord local pour noter ce que j'apprends chaque jour. Markdown, sans compte, sans cloud.",
-      tags: ['Electron', 'TypeScript', 'SQLite'],
+        "Pipeline de contenu Instagram automatisé propulsé par l'IA. Upload d'une image de référence → Claude Sonnet génère des prompts Midjourney optimisés → workflow d'approbation humain → génération d'images via fal.ai → sélection des visuels → génération de captions en 3 tons (mystérieux, décontracté, artistique) → assemblage du carousel → publication automatique sur Instagram via l'Instagram Graph API (Meta). Conçu pour gérer le compte d'un influenceur/influenceuse virtuelle.",
+      tags: ['Next.js', 'Claude SDK', 'fal.ai', 'Instagram Graph API'],
       status: 'wip' as const,
       link: null
     },
-    {
-      title: 'component-cli',
-      description:
-        'CLI pour scaffolder des composants React avec SCSS co-localisé, typage et barrel export en une commande.',
-      tags: ['Node.js', 'CLI', 'TypeScript'],
-      status: 'live' as const,
-      link: 'https://github.com'
-    },
-    {
-      title: 'bookshelf',
-      description:
-        'Dashboard perso pour suivre mes lectures — en cours, terminées, abandonées. Avec une note et une citation par livre.',
-      tags: ['React', 'Supabase', 'TypeScript'],
-      status: 'wip' as const,
-      link: null
-    },
-    {
-      title: 'og-preview',
-      description:
-        "Outil pour prévisualiser les balises Open Graph d'une URL sans avoir à partager le lien sur Slack.",
-      tags: ['Vite', 'React', 'API'],
-      status: 'archived' as const,
-      link: 'https://github.com'
-    }
+    // {
+    //   title: 'Palette gen',
+    //   description:
+    //     "Générateur de palettes de couleurs cohérentes à partir d'un mot-clé. Pratique quand on démarre un projet sans charte définie.",
+    //   tags: ['React', 'CSS', 'Color theory'],
+    //   status: 'live' as const,
+    //   link: 'https://github.com'
+    // },
+    // {
+    //   title: 'devlog',
+    //   description:
+    //     "Un petit journal de bord local pour noter ce que j'apprends chaque jour. Markdown, sans compte, sans cloud.",
+    //   tags: ['Electron', 'TypeScript', 'SQLite'],
+    //   status: 'wip' as const,
+    //   link: null
+    // },
+    // {
+    //   title: 'component-cli',
+    //   description:
+    //     'CLI pour scaffolder des composants React avec SCSS co-localisé, typage et barrel export en une commande.',
+    //   tags: ['Node.js', 'CLI', 'TypeScript'],
+    //   status: 'live' as const,
+    //   link: 'https://github.com'
+    // },
+    // {
+    //   title: 'bookshelf',
+    //   description:
+    //     'Dashboard perso pour suivre mes lectures — en cours, terminées, abandonées. Avec une note et une citation par livre.',
+    //   tags: ['React', 'Supabase', 'TypeScript'],
+    //   status: 'wip' as const,
+    //   link: null
+    // },
+    // {
+    //   title: 'og-preview',
+    //   description:
+    //     "Outil pour prévisualiser les balises Open Graph d'une URL sans avoir à partager le lien sur Slack.",
+    //   tags: ['Vite', 'React', 'API'],
+    //   status: 'archived' as const,
+    //   link: 'https://github.com'
+    // }
   ]
 }
 
