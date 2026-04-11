@@ -371,23 +371,25 @@ export const otherMissions = {
   items: [
     {
       name: 'Fnac Darty',
-      description: 'Pages catégorie et composants e-commerce',
-      tags: ['React', 'SCSS', 'E-commerce'],
+      description:
+        "Développement front-end au sein de l'équipe Darty Commercialité — refonte de la page produit, liste produit et pages push. Conception des composants de mise en avant cross-sell : assurances, garanties, services associés. Intégration de la page marque.",
+      tags: ['React', 'Web Components', 'API Rest', 'SCSS'],
       site: 'darty.fr',
       link: 'https://www.darty.fr'
     },
     {
       name: 'Prisma Media',
       description:
-        'Intégration headless et pages éditoriales pour Femme Actuelle et Cuisine Actuelle',
-      tags: ['React', 'Next.js', 'Headless CMS'],
+        "Développement front-end au sein du pôle Féminin (femmeactuelle.fr, cuisineactuelle.fr) — refonte des pages Home, Article, Auteur et Carnet de recettes. Développement de web components sur mesure : module de gestion des avis et étoiles sur les pages recettes, module d'authentification. Extension Chrome interne pour la gestion des code reviews GitLab via webhooks Google Chat.",
+      tags: ['React', 'Web Components', 'API Rest', 'Next.js'],
       site: 'femmeactuelle.fr',
       link: 'https://www.femmeactuelle.fr'
     },
     {
       name: 'Yves Rocher',
-      description: 'Pages produit et mise en avant de campagnes',
-      tags: ['React', 'SCSS', 'E-commerce'],
+      description:
+        "Landing pages campagnes pour les gammes Lifting Végétal et Parfum. Développement d'un quiz de diagnostic pour orienter le visiteur vers le fond de teint adapté à son profil. Refonte e-commerce, intégration de la recommandation produit Target2Sell et création d'A/B tests via ABTASTY.",
+      tags: ['A/B Testing', 'Quiz', 'E-commerce', 'ABTASTY'],
       site: 'yves-rocher.fr',
       link: 'https://www.yves-rocher.fr'
     }
