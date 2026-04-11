@@ -65,7 +65,7 @@ export default function LabLightbox({ media, index, onClose, onPrev, onNext }: P
           <video
             key={current.src}
             src={current.src}
-            className="lightbox__img"
+            className="lightbox__video"
             autoPlay
             loop
             muted
