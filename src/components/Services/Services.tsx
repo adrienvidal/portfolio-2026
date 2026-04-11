@@ -13,10 +13,10 @@ export default function Services() {
         <p className="section-sub">{services.sub}</p>
 
         <div className="services-grid">
-          {row1.map((s) => <ServiceCard key={s.title} {...s} delayLabel={services.delayLabel} />)}
+          {row1.map((s) => <ServiceCard key={s.title} {...s} />)}
         </div>
         <div className="services-row2">
-          {row2.map((s) => <ServiceCard key={s.title} {...s} delayLabel={services.delayLabel} />)}
+          {row2.map((s) => <ServiceCard key={s.title} {...s} />)}
         </div>
       </div>
     </div>
