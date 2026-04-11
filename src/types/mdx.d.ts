@@ -1,3 +1,6 @@
+declare module '*.scss'
+declare module '*.css'
+
 declare module '*.mdx' {
   import type { ComponentType } from 'react'
 
