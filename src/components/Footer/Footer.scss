@@ -43,5 +43,13 @@
     flex-direction: column;
     gap: 8px;
     text-align: center;
+
+    &__sep {
+      display: none;
+    }
+
+    &__subtitle {
+      display: block;
+    }
   }
 }
