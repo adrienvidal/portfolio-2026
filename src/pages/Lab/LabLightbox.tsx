@@ -1,4 +1,4 @@
-import { useEffect, useCallback } from 'react'
+import { useEffect, useCallback, useRef } from 'react'
 import { createPortal } from 'react-dom'
 import './LabLightbox.scss'
 
@@ -16,6 +16,8 @@ interface Props {
 }
 
 export default function LabLightbox({ media, index, onClose, onPrev, onNext }: Props) {
+  const touchStartX = useRef<number | null>(null)
+
   const handleKey = useCallback((e: KeyboardEvent) => {
     if (e.key === 'Escape') onClose()
     if (e.key === 'ArrowLeft') onPrev()
@@ -31,21 +33,29 @@ export default function LabLightbox({ media, index, onClose, onPrev, onNext }: P
     }
   }, [handleKey])
 
+  const handleTouchStart = (e: React.TouchEvent) => {
+    touchStartX.current = e.touches[0].clientX
+  }
+
+  const handleTouchEnd = (e: React.TouchEvent) => {
+    if (touchStartX.current === null) return
+    const delta = e.changedTouches[0].clientX - touchStartX.current
+    if (Math.abs(delta) > 50) {
+      delta < 0 ? onNext() : onPrev()
+    }
+    touchStartX.current = null
+  }
+
   const current = media[index]
 
   return createPortal(
-    <div className="lightbox" onClick={onClose}>
+    <div
+      className="lightbox"
+      onClick={onClose}
+      onTouchStart={handleTouchStart}
+      onTouchEnd={handleTouchEnd}
+    >
       <button className="lightbox__close" onClick={onClose} aria-label="Fermer">✕</button>
-
-      {media.length > 1 && (
-        <button
-          className="lightbox__nav lightbox__nav--prev"
-          onClick={(e) => { e.stopPropagation(); onPrev() }}
-          aria-label="Précédent"
-        >
-          ←
-        </button>
-      )}
 
       <div className="lightbox__frame" onClick={(e) => e.stopPropagation()}>
         {current.type === 'video' ? (
@@ -70,25 +80,10 @@ export default function LabLightbox({ media, index, onClose, onPrev, onNext }: P
       </div>
 
       {media.length > 1 && (
-        <button
-          className="lightbox__nav lightbox__nav--next"
-          onClick={(e) => { e.stopPropagation(); onNext() }}
-          aria-label="Suivant"
-        >
-          →
-        </button>
-      )}
-
-      {media.length > 1 && (
-        <div className="lightbox__dots">
-          {media.map((_, i) => (
-            <button
-              key={i}
-              className={`lightbox__dot${i === index ? ' lightbox__dot--active' : ''}`}
-              onClick={(e) => { e.stopPropagation(); onPrev() }}
-              aria-label={`Visuel ${i + 1}`}
-            />
-          ))}
+        <div className="lightbox__bar" onClick={(e) => e.stopPropagation()}>
+          <button className="lightbox__bar-btn" onClick={onPrev} aria-label="Précédent">←</button>
+          <span className="lightbox__bar-count">{index + 1} / {media.length}</span>
+          <button className="lightbox__bar-btn" onClick={onNext} aria-label="Suivant">→</button>
         </div>
       )}
     </div>,
