@@ -205,6 +205,14 @@ export const projects = {
       link: 'https://www.chanel.com/fr/soins/sublimage/'
     },
     {
+      title: 'Chanel Manufacture — page éditoriale',
+      tags: ['React', 'Animation', 'Accessibilité'],
+      role: "Développement d'une page éditoriale dédiée aux savoir-faire de la Manufacture Chanel",
+      result: "Mise en valeur des métiers d'art Chanel, rendu soigné et adaptation mobile réussie",
+      images: ['/projects/manufacture/chanel-manufacture-desk1.webp'],
+      link: 'https://www.chanel.com/fr/horlogerie/manufacture-horlogere/?previewdate=2025-08-27T08%3A01'
+    },
+    {
       title: 'Chanel CSR — page engagements',
       tags: ['React', 'SEO', 'Accessibilité'],
       role: 'Développement de la page RSE Chanel, structuration du contenu éditorial et intégration des visuels institutionnels',
@@ -228,14 +236,6 @@ export const projects = {
       images: ['/projects/lookthisway/chanel-lookthisway-desk1.webp'],
       link: 'https://www.chanel.com/gb/makeup/look-this-way/genderless-beauty/'
     },
-    {
-      title: 'Chanel Manufacture — page éditoriale',
-      tags: ['React', 'Animation', 'Accessibilité'],
-      role: "Développement d'une page éditoriale dédiée aux savoir-faire de la Manufacture Chanel",
-      result: "Mise en valeur des métiers d'art Chanel, rendu soigné et adaptation mobile réussie",
-      images: ['/projects/manufacture/chanel-manufacture-desk1.webp'],
-      link: 'https://www.chanel.com/fr/horlogerie/manufacture-horlogere/?previewdate=2025-08-27T08%3A01'
-    }
   ]
 }
 
