@@ -17,7 +17,7 @@ export async function POST(req: Request) {
 
   try {
     await resend.emails.send({
-      from: 'Mission Freelance <adrienvidal.com>',
+      from: 'Portfolio <onboarding@resend.dev>',
       to: process.env.CONTACT_EMAIL!,
       replyTo: email,
       subject: `Nouvelle demande de ${nom} — ${dateLabel}`,
