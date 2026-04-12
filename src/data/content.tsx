@@ -158,6 +158,7 @@ export const projects = {
       tags: ['React', 'Framer Motion', 'Mobile-first'],
       role: "Développement d'une expérience mobile gamifiée : quiz de profil bijoux, swipe à la Tinder pour constituer une liste de souhaits, génération d'un QR code personnel utilisé lors d'un événement physique Chanel",
       result: "Expérience phygitale complète livrée pour un événement éphémère — du diagnostic produit jusqu'à la liste de souhaits scannable en boutique",
+      video: 'https://res.cloudinary.com/dewqbg9at/video/upload/v1776000915/chanel-cococrush_u70fyb.mov',
       images: [
         '/projects/coco-crush-tinder/chanel-cococrush-desk1.webp',
         '/projects/coco-crush-tinder/chanel-cococrush-desk2.webp'
@@ -169,6 +170,7 @@ export const projects = {
       tags: ['React', 'Framer Motion', 'Accessibilité'],
       role: "Développement d'une campagne landing page multi-vues avec vidéos promotionnelles, et d'un quiz diagnostic permettant au visiteur d'identifier le parfum Chance correspondant à son profil",
       result: "Expérience de découverte produit personnalisée : chaque visiteur arrive sur une page résultat dédiée à son parfum, augmentant la pertinence et l'intention d'achat",
+      video: 'https://res.cloudinary.com/dewqbg9at/video/upload/v1776000956/chanel-chance_dcvzl0.mov',
       images: [
         '/projects/chance/chanel-chance-desk0.webp',
         '/projects/chance/chanel-chance-desk1.webp',
@@ -182,6 +184,7 @@ export const projects = {
       tags: ['React', 'GSAP', 'SEO'],
       role: "Développement d'une landing page campagne avec vidéos promotionnelles, animations GSAP et liste produit avec ajout au panier",
       result: "Campagne immersive connectée au tunnel e-commerce Chanel — de la découverte produit jusqu'à l'achat en une seule page",
+      video: 'https://res.cloudinary.com/dewqbg9at/video/upload/v1776000903/chanel-allure_zclgql.mov',
       images: ['/projects/allure-sport/chanel-allure-desk.webp'],
       link: 'https://www.chanel.com/fr/parfums/allure-homme-sport/'
     },
@@ -190,6 +193,7 @@ export const projects = {
       tags: ['React', 'Animation', 'SEO'],
       role: 'Développement de la landing page campagne N°5 avec vidéos promotionnelles, animations CSS/JS et intégration des assets de la marque',
       result: "Rendu premium cohérent avec l'identité iconique du parfum, dans les contraintes techniques Chanel",
+      video: 'https://res.cloudinary.com/dewqbg9at/video/upload/v1776000913/chanel-n5_iazgnj.mov',
       images: ['/projects/n5/chanel-n5-desk1.webp'],
       link: 'https://www.chanel.com/fr/parfums/chanel-number-5/'
     },
@@ -198,6 +202,7 @@ export const projects = {
       tags: ['React', 'Animation', 'Accessibilité'],
       role: 'Développement de la landing page campagne Sublimage avec animations de présentation et intégration des assets haute couture',
       result: 'Rendu premium aligné avec le positionnement luxe de la gamme soin Chanel',
+      video: 'https://res.cloudinary.com/dewqbg9at/video/upload/v1776000915/chanel-sublimage_p6tjjc.mov',
       images: [
         '/projects/sublimage/chanel-sublimage-desk1.webp',
         '/projects/sublimage/chanel-sublimage-desk2.webp'
@@ -209,6 +214,7 @@ export const projects = {
       tags: ['React', 'Animation', 'Accessibilité'],
       role: "Développement d'une page éditoriale dédiée aux savoir-faire de la Manufacture Chanel",
       result: "Mise en valeur des métiers d'art Chanel, rendu soigné et adaptation mobile réussie",
+      video: 'https://res.cloudinary.com/dewqbg9at/video/upload/v1776000925/chanel-manufacture_rvgqjc.mov',
       images: ['/projects/manufacture/chanel-manufacture-desk1.webp'],
       link: 'https://www.chanel.com/fr/horlogerie/manufacture-horlogere/?previewdate=2025-08-27T08%3A01'
     },
@@ -225,6 +231,7 @@ export const projects = {
       tags: ['React', 'Animation', 'Accessibilité'],
       role: 'Développement de la landing page campagne 31 Le Rouge, animations CSS/JS et cohérence desktop / mobile',
       result: 'Page campagne livrée dans les contraintes de la marque, rendu visuel irréprochable',
+      video: 'https://res.cloudinary.com/dewqbg9at/video/upload/v1776000910/chanel-31rouge_df75li.mov',
       images: ['/projects/31lerouge/chanel-31lerouge-desk1.webp'],
       link: 'https://www.chanel.com/fr/maquillage/31-le-rouge/'
     },
@@ -233,6 +240,7 @@ export const projects = {
       tags: ['React', 'Animation', 'SEO'],
       role: "Développement d'une expérience éditoriale immersive pour la campagne Look This Way, desktop et mobile",
       result: "Expérience visuelle engageante livrée dans les délais, cohérente avec l'identité de la campagne",
+      video: 'https://res.cloudinary.com/dewqbg9at/video/upload/v1776000936/chanel-lookthisway_kjixqx.mov',
       images: ['/projects/lookthisway/chanel-lookthisway-desk1.webp'],
       link: 'https://www.chanel.com/gb/makeup/look-this-way/genderless-beauty/'
     },
