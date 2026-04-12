@@ -389,13 +389,15 @@ export const lab = {
       tags: ['Next.js', 'Claude SDK', 'fal.ai', 'Instagram Graph API'],
       status: 'wip' as const,
       link: null,
-      video: 'https://res.cloudinary.com/dewqbg9at/video/upload/v1775905776/dripflowgif_jmifao.mp4',
+      videoDesk: 'https://res.cloudinary.com/dewqbg9at/video/upload/v1775905776/dripflowgif_jmifao.mp4',
+      videoMob: 'https://res.cloudinary.com/dewqbg9at/video/upload/v1775997385/dripflow-demo_n7uxsn.mov',
       images: [
-        '/lab/dripflow/dripflow-desk1.webp',
-        '/lab/dripflow/dripflow-desk2.webp',
-        '/lab/dripflow/dripflow-desk3.webp',
-        '/lab/dripflow/dripflow-desk4.webp',
-        '/lab/dripflow/dripflow-desk5.webp'
+        '/lab/dripflow/dripflow-mob1.webp',
+        '/lab/dripflow/dripflow-mob2.webp',
+        '/lab/dripflow/dripflow-mob3.webp',
+        '/lab/dripflow/dripflow-mob4.webp',
+        '/lab/dripflow/dripflow-mob5.webp',
+        '/lab/dripflow/dripflow-mob6.webp'
       ]
     }
   ]

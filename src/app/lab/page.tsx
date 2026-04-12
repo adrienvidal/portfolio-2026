@@ -10,6 +10,14 @@ import LabLightbox, { type MediaItem } from './LabLightbox'
 import './lab.scss'
 
 function LabCover({ item }: { item: typeof lab.items[number] }) {
+  if ('videoDesk' in item && item.videoDesk && 'videoMob' in item && item.videoMob) {
+    return (
+      <>
+        <video className="lab__cover-video lab__cover-video--desk" src={item.videoDesk} autoPlay loop muted playsInline />
+        <video className="lab__cover-video lab__cover-video--mob" src={item.videoMob} autoPlay loop muted playsInline />
+      </>
+    )
+  }
   if ('video' in item && item.video) {
     return (
       <video
@@ -65,8 +73,11 @@ export default function Lab() {
           </header>
           <ul className="lab__list">
             {lab.items.map((item) => {
+              const videoSrc = 'videoDesk' in item && item.videoDesk && 'videoMob' in item && item.videoMob
+                ? (typeof window !== 'undefined' && window.innerWidth <= 900 ? item.videoMob : item.videoDesk)
+                : ('video' in item && item.video ? item.video : null)
               const media: MediaItem[] = [
-                ...('video' in item && item.video ? [{ type: 'video' as const, src: item.video }] : []),
+                ...(videoSrc ? [{ type: 'video' as const, src: videoSrc }] : []),
                 ...('images' in item && item.images ? item.images.map(src => ({ type: 'image' as const, src })) : []),
               ]
               const hasLightbox = media.length > 0
