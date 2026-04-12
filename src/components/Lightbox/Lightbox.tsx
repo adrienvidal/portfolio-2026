@@ -3,7 +3,7 @@
 import Image from 'next/image'
 import { useEffect, useCallback, useRef } from 'react'
 import { createPortal } from 'react-dom'
-import './LabLightbox.scss'
+import './Lightbox.scss'
 
 export interface MediaItem {
   type: 'image' | 'video'
@@ -18,7 +18,7 @@ interface Props {
   onNext: () => void
 }
 
-export default function LabLightbox({ media, index, onClose, onPrev, onNext }: Props) {
+export default function Lightbox({ media, index, onClose, onPrev, onNext }: Props) {
   const touchStartX = useRef<number | null>(null)
 
   const handleKey = useCallback((e: KeyboardEvent) => {

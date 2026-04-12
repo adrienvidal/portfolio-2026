@@ -1,7 +1,8 @@
 'use client'
 
 import Image from 'next/image'
-import { useRef, useState } from 'react'
+import { useRef, useState, useCallback } from 'react'
+import Lightbox, { type MediaItem } from '@/components/Lightbox/Lightbox'
 
 interface ProjectCardProps {
   title: string
@@ -21,12 +22,13 @@ function toAutoVideo(url: string) {
 }
 
 export default function ProjectCard({ title, tags, role, result, images, video, link, roleLabel, resultLabel, linkLabel }: ProjectCardProps) {
-  const [current, setCurrent] = useState(0)
+  const [lightboxIndex, setLightboxIndex] = useState<number | null>(null)
   const videoRef = useRef<HTMLVideoElement>(null)
 
-  const slides = video ? [null, ...images] : images
-  const prev = () => setCurrent((i) => (i - 1 + slides.length) % slides.length)
-  const next = () => setCurrent((i) => (i + 1) % slides.length)
+  const media: MediaItem[] = [
+    ...(video ? [{ type: 'video' as const, src: toAutoVideo(video) }] : []),
+    ...images.map(src => ({ type: 'image' as const, src })),
+  ]
 
   const handleMouseEnter = () => videoRef.current?.play()
   const handleMouseLeave = () => {
@@ -36,14 +38,20 @@ export default function ProjectCard({ title, tags, role, result, images, video, 
     }
   }
 
+  const closeLightbox = useCallback(() => setLightboxIndex(null), [])
+  const prevSlide = useCallback(() => setLightboxIndex(i => i !== null ? (i - 1 + media.length) % media.length : 0), [media.length])
+  const nextSlide = useCallback(() => setLightboxIndex(i => i !== null ? (i + 1) % media.length : 0), [media.length])
+
   return (
     <div className="project-card">
       <div
         className="project-card__img-wrap"
+        onClick={() => setLightboxIndex(0)}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
+        style={{ cursor: 'zoom-in' }}
       >
-        {current === 0 && video ? (
+        {video ? (
           <video
             ref={videoRef}
             className="project-card__video"
@@ -56,27 +64,11 @@ export default function ProjectCard({ title, tags, role, result, images, video, 
         ) : (
           <Image
             className="project-card__img"
-            src={slides[current] as string}
-            alt={`${title} — ${current + 1}`}
+            src={images[0]}
+            alt={title}
             fill
             sizes="(max-width: 900px) 100vw, 33vw"
           />
-        )}
-        {slides.length > 1 && (
-          <>
-            <button className="project-card__nav project-card__nav--prev" onClick={prev} aria-label="Image précédente">‹</button>
-            <button className="project-card__nav project-card__nav--next" onClick={next} aria-label="Image suivante">›</button>
-            <div className="project-card__dots">
-              {slides.map((_, i) => (
-                <button
-                  key={i}
-                  className={`project-card__dot${i === current ? ' project-card__dot--active' : ''}`}
-                  onClick={() => setCurrent(i)}
-                  aria-label={`Slide ${i + 1}`}
-                />
-              ))}
-            </div>
-          </>
         )}
       </div>
       <div className="project-card__body">
@@ -96,6 +88,16 @@ export default function ProjectCard({ title, tags, role, result, images, video, 
           </a>
         )}
       </div>
+
+      {lightboxIndex !== null && (
+        <Lightbox
+          media={media}
+          index={lightboxIndex}
+          onClose={closeLightbox}
+          onPrev={prevSlide}
+          onNext={nextSlide}
+        />
+      )}
     </div>
   )
 }

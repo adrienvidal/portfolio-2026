@@ -1,20 +1,24 @@
 'use client'
 
 import Image from 'next/image'
-import { useState, useCallback } from 'react'
+import { useState, useCallback, useRef } from 'react'
 import Link from 'next/link'
 import { lab } from '@/data/content'
 import Nav from '@/components/Nav/Nav'
 import Footer from '@/components/Footer/Footer'
-import LabLightbox, { type MediaItem } from './LabLightbox'
+import Lightbox, { type MediaItem } from '@/components/Lightbox/Lightbox'
 import './lab.scss'
 
-function LabCover({ item }: { item: typeof lab.items[number] }) {
+function toAutoVideo(url: string) {
+  return url.replace('/upload/', '/upload/f_auto,q_auto/')
+}
+
+function LabCover({ item, poster }: { item: typeof lab.items[number]; poster?: string }) {
   if ('videoDesk' in item && item.videoDesk && 'videoMob' in item && item.videoMob) {
     return (
       <>
-        <video className="lab__cover-video lab__cover-video--desk" src={item.videoDesk} autoPlay loop muted playsInline />
-        <video className="lab__cover-video lab__cover-video--mob" src={item.videoMob} autoPlay loop muted playsInline />
+        <video className="lab__cover-video lab__cover-video--desk" src={toAutoVideo(item.videoDesk)} poster={poster} loop muted playsInline />
+        <video className="lab__cover-video lab__cover-video--mob" src={toAutoVideo(item.videoMob)} poster={poster} loop muted playsInline />
       </>
     )
   }
@@ -22,8 +26,8 @@ function LabCover({ item }: { item: typeof lab.items[number] }) {
     return (
       <video
         className="lab__cover-video"
-        src={item.video}
-        autoPlay
+        src={toAutoVideo(item.video as string)}
+        poster={poster}
         loop
         muted
         playsInline
@@ -42,6 +46,70 @@ function LabCover({ item }: { item: typeof lab.items[number] }) {
     )
   }
   return <div className="lab__cover-placeholder" />
+}
+
+function LabItem({ item, openLightbox }: { item: typeof lab.items[number]; openLightbox: (media: MediaItem[], index?: number) => void }) {
+  const coverRef = useRef<HTMLDivElement>(null)
+
+  const videoSrc = 'videoDesk' in item && item.videoDesk && 'videoMob' in item && item.videoMob
+    ? (typeof window !== 'undefined' && window.innerWidth <= 900 ? item.videoMob : item.videoDesk)
+    : ('video' in item && item.video ? item.video : null)
+  const media: MediaItem[] = [
+    ...(videoSrc ? [{ type: 'video' as const, src: toAutoVideo(videoSrc as string) }] : []),
+    ...('images' in item && item.images ? item.images.map(src => ({ type: 'image' as const, src })) : []),
+  ]
+  const hasLightbox = media.length > 0
+  const poster = 'images' in item && item.images && item.images.length > 0 ? item.images[0] : undefined
+
+  const handleMouseEnter = () => {
+    coverRef.current?.querySelectorAll('video').forEach(v => v.play())
+  }
+  const handleMouseLeave = () => {
+    coverRef.current?.querySelectorAll('video').forEach(v => {
+      v.pause()
+      v.currentTime = 0
+    })
+  }
+
+  return (
+    <li className="lab__item">
+      <div
+        ref={coverRef}
+        className={`lab__cover${hasLightbox ? ' lab__cover--clickable' : ''}`}
+        onClick={hasLightbox ? () => openLightbox(media) : undefined}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+      >
+        <LabCover item={item} poster={poster} />
+        {hasLightbox && (
+          <div className="lab__cover-hint">
+            <span>{media.length} visuels</span>
+          </div>
+        )}
+      </div>
+      <div className="lab__item-body">
+        <div className="lab__item-top">
+          <div className="lab__item-meta">
+            <span className={`lab__status lab__status--${item.status}`}>
+              {lab.statusLabels[item.status]}
+            </span>
+            <div className="lab__tags">
+              {item.tags.map((tag) => (
+                <span key={tag} className="lab__tag">{tag}</span>
+              ))}
+            </div>
+          </div>
+          {item.link && (
+            <a className="lab__link" href={item.link} target="_blank" rel="noopener noreferrer">
+              GitHub →
+            </a>
+          )}
+        </div>
+        <h2 className="lab__item-title">{item.title}</h2>
+        <p className="lab__item-desc">{item.description}</p>
+      </div>
+    </li>
+  )
 }
 
 export default function Lab() {
@@ -72,60 +140,16 @@ export default function Lab() {
             <p className="lab__sub">{lab.sub}</p>
           </header>
           <ul className="lab__list">
-            {lab.items.map((item) => {
-              const videoSrc = 'videoDesk' in item && item.videoDesk && 'videoMob' in item && item.videoMob
-                ? (typeof window !== 'undefined' && window.innerWidth <= 900 ? item.videoMob : item.videoDesk)
-                : ('video' in item && item.video ? item.video : null)
-              const media: MediaItem[] = [
-                ...(videoSrc ? [{ type: 'video' as const, src: videoSrc }] : []),
-                ...('images' in item && item.images ? item.images.map(src => ({ type: 'image' as const, src })) : []),
-              ]
-              const hasLightbox = media.length > 0
-
-              return (
-                <li key={item.title} className="lab__item">
-                  <div
-                    className={`lab__cover${hasLightbox ? ' lab__cover--clickable' : ''}`}
-                    onClick={hasLightbox ? () => openLightbox(media) : undefined}
-                  >
-                    <LabCover item={item} />
-                    {hasLightbox && (
-                      <div className="lab__cover-hint">
-                        <span>{media.length} visuels</span>
-                      </div>
-                    )}
-                  </div>
-                  <div className="lab__item-body">
-                    <div className="lab__item-top">
-                      <div className="lab__item-meta">
-                        <span className={`lab__status lab__status--${item.status}`}>
-                          {lab.statusLabels[item.status]}
-                        </span>
-                        <div className="lab__tags">
-                          {item.tags.map((tag) => (
-                            <span key={tag} className="lab__tag">{tag}</span>
-                          ))}
-                        </div>
-                      </div>
-                      {item.link && (
-                        <a className="lab__link" href={item.link} target="_blank" rel="noopener noreferrer">
-                          GitHub →
-                        </a>
-                      )}
-                    </div>
-                    <h2 className="lab__item-title">{item.title}</h2>
-                    <p className="lab__item-desc">{item.description}</p>
-                  </div>
-                </li>
-              )
-            })}
+            {lab.items.map((item) => (
+              <LabItem key={item.title} item={item} openLightbox={openLightbox} />
+            ))}
           </ul>
         </div>
       </div>
       <Footer />
 
       {lightbox && (
-        <LabLightbox
+        <Lightbox
           media={lightbox.media}
           index={lightbox.index}
           onClose={closeLightbox}
