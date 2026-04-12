@@ -14,7 +14,7 @@ export const nav = {
 
 // ─── Hero ────────────────────────────────────────────────────────────────────
 export const hero = {
-  title: 'Un développeur qui comprend la conversion, pas juste le code.',
+  title: 'Un développeur qui construit des expériences, pas juste des pages.',
   sub: "J'aide les startups et équipes produit à construire des expériences web interactives, intégrer l'IA dans leurs interfaces et lancer des campagnes digitales premium — vite, bien, sans friction.",
   ctaPrimary: { label: 'Travaillons ensemble', href: '#reservation' },
   ctaSecondary: { label: 'Voir mes services', href: '#services' },
