@@ -278,7 +278,7 @@ export const otherMissions = {
 export const about = {
   title: 'À propos',
   avatarLetter: 'A',
-  bio: "Je suis développeur front-end depuis 10 ans, spécialisé React et TypeScript. J'ai travaillé sur des environnements exigeants — Chanel, Fnac Darty, Prisma — où la qualité perçue et la performance ne sont pas négociables.\n\nAujourd'hui je travaille en freelance avec des équipes marketing et growth qui ont besoin d'un développeur qui comprend leurs objectifs business, pas seulement leurs specs techniques. Je n'attends pas un Jira parfait pour démarrer : un brief en deux paragraphes suffit.\n\nJe travaille à distance, en flux tendu, avec un workflow IA qui me permet de livrer vite sans sacrifier la qualité."
+  bio: "Je suis développeur front-end depuis 10 ans, spécialisé React et TypeScript. J'ai travaillé sur des environnements exigeants — Chanel, Fnac Darty, Prisma — où la qualité perçue et la performance ne sont pas négociables.\n\nAujourd'hui je travaille en freelance avec des startups et des équipes produit qui veulent aller plus loin que la page statique : expériences interactives, intégrations IA, campagnes digitales premium. Je n'attends pas un Jira parfait pour démarrer : un brief en deux paragraphes suffit.\n\nJe travaille à distance, en flux tendu, avec un workflow IA qui me permet de livrer vite sans sacrifier la qualité."
 }
 
 // ─── Testimonials ─────────────────────────────────────────────────────────────
