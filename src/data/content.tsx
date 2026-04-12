@@ -314,29 +314,13 @@ export const ctaFinal = {
 
 // ─── Reservation ─────────────────────────────────────────────────────────────
 export const reservation = {
-  title: 'Réservons 30 minutes',
-  sub: 'Choisissez un créneau. Je reviens vers vous dans la journée pour confirmer.',
-  stepLabels: ['Date', 'Créneau', 'Infos'],
+  title: 'Travaillons ensemble',
+  sub: 'Dites-moi ce que vous préparez. Je reviens vers vous sous 24h.',
+  submit: 'Envoyer ma demande',
   success: {
     check: '✓',
-    title: "C'est dans l'agenda !",
-    sub: 'Merci. Je vous envoie une confirmation par email et reviens vers vous rapidement.'
-  },
-  nav: {
-    next: 'Suivant →',
-    back: '← Retour',
-    submit: 'Envoyer ma demande'
-  },
-  calendar: {
-    months: [
-      'Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin',
-      'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre'
-    ],
-    weekdays: ['Lun', 'Mar', 'Mer', 'Jeu', 'Ven', 'Sam', 'Dim']
-  },
-  timeSlots: {
-    title: 'Choisissez un horaire',
-    slots: ['9h00', '10h00', '11h00', '14h00', '15h00', '16h00']
+    title: 'Message reçu !',
+    sub: "Merci. Je vous réponds sous 24h pour qu'on cale la suite ensemble."
   },
   form: {
     nom: { label: 'Votre nom', placeholder: 'Prénom Nom' },

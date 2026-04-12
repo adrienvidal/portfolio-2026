@@ -20,179 +20,6 @@
   }
 }
 
-// Stepper
-.stepper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 48px;
-
-  &__row {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  &__dot {
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    background: #e2e8f0;
-    color: var(--gray2);
-    font-size: 14px;
-    font-weight: 600;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-
-    &--active {
-      background: var(--blue);
-      color: #fff;
-    }
-  }
-
-  &__label {
-    font-size: 14px;
-    color: var(--gray);
-    margin-left: 8px;
-
-    &--active {
-      color: var(--ink);
-      font-weight: 500;
-    }
-  }
-
-  &__connector {
-    width: 60px;
-    height: 1px;
-    background: var(--border);
-    margin: 0 12px;
-    flex-shrink: 0;
-  }
-}
-
-// Calendar
-.calendar {
-  &__header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 24px;
-    margin-bottom: 32px;
-  }
-
-  &__nav {
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: var(--gray);
-    font-size: 20px;
-    padding: 6px;
-    border-radius: 6px;
-    transition: color 0.2s;
-
-    &:hover {
-      color: var(--ink);
-    }
-  }
-
-  &__month {
-    font-size: 18px;
-    font-weight: 700;
-    color: var(--ink);
-  }
-
-  &__grid {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    gap: 4px;
-    max-width: 600px;
-    margin: 0 auto;
-  }
-
-  &__weekday {
-    text-align: center;
-    font-size: 13px;
-    color: var(--gray);
-    font-weight: 500;
-    padding: 8px 0;
-  }
-
-  &__day {
-    text-align: center;
-    font-size: 15px;
-    color: var(--ink);
-    padding: 10px 4px;
-    border-radius: var(--radius-sm);
-    cursor: pointer;
-    transition: background 0.15s;
-    font-weight: 400;
-
-    &:hover:not(.calendar__day--disabled):not(.calendar__day--empty) {
-      background: var(--blue-pale);
-      color: var(--blue);
-    }
-
-    &--selected {
-      background: var(--blue);
-      color: #fff;
-      font-weight: 600;
-    }
-
-    &--disabled {
-      color: var(--gray2);
-      cursor: default;
-    }
-
-    &--empty {
-      cursor: default;
-    }
-  }
-}
-
-// Time slots
-.time-slots {
-  &__title {
-    font-size: 15px;
-    font-weight: 600;
-    color: var(--ink);
-    margin: 32px 0 16px;
-    text-align: center;
-  }
-
-  &__grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center;
-  }
-
-  &__slot {
-    padding: 10px 20px;
-    border: 1.5px solid var(--border);
-    border-radius: var(--radius-sm);
-    font-size: 14px;
-    font-weight: 500;
-    color: var(--ink);
-    cursor: pointer;
-    background: var(--bg);
-    transition: all 0.15s;
-
-    &:hover {
-      border-color: var(--blue);
-      color: var(--blue);
-    }
-
-    &--selected {
-      border-color: var(--blue);
-      background: var(--blue-pale);
-      color: var(--blue);
-    }
-  }
-}
-
 // Form
 .resa-form {
   &__group {
@@ -276,24 +103,6 @@
   }
 }
 
-.btn-back {
-  padding: 12px 20px;
-  border: 1.5px solid var(--border);
-  background: var(--bg);
-  border-radius: var(--radius-sm);
-  font-family: 'Inter', sans-serif;
-  font-size: 14px;
-  font-weight: 500;
-  color: var(--gray);
-  cursor: pointer;
-  transition: all 0.2s;
-
-  &:hover {
-    border-color: var(--ink);
-    color: var(--ink);
-  }
-}
-
 .btn-next {
   flex: 1;
   padding: 12px 20px;
@@ -309,6 +118,11 @@
 
   &:hover {
     background: var(--blue-dark);
+  }
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
   }
 
   &--auto {
@@ -347,31 +161,8 @@
   }
 }
 
-.stepper__mobile-label {
-  display: none;
-}
-
 @media (max-width: 900px) {
   .resa {
     padding: 60px 24px;
-  }
-
-  .stepper {
-    margin-bottom: 32px;
-
-    &__label {
-      display: none;
-    }
-
-    &__connector {
-      width: 24px;
-    }
-
-    &__mobile-label {
-      display: block;
-      font-size: 13px;
-      color: var(--gray);
-      text-align: center;
-    }
   }
 }
