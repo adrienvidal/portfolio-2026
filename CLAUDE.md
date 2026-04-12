@@ -25,7 +25,7 @@ Portfolio built with React 19 + TypeScript + Next.js 15 (App Router), using file
 **Home section order** (top → bottom):
 `Nav` → `Hero` → `Clients` → `Services` → `Process` → `About` → `Projects` → `CtaFinal` → `Reservation` → `Footer`
 
-The `Reservation` section has three sub-components: `Calendar`, `TimeSlots`, and `ContactForm`.
+The `Reservation` section has one sub-component: `ContactForm`.
 
 > Note: `Testimonials` component exists in `src/components/Testimonials/` but is currently commented out in `src/app/page.tsx`.
 
@@ -47,7 +47,7 @@ The `Reservation` section has three sub-components: `Calendar`, `TimeSlots`, and
 - Pages (`src/app/*/page.tsx`) are **Server Components** by default — good for SEO
 - Components with state or browser APIs must have `'use client'` at the top
 - Current client components: `Reservation`, `ProjectCard`, `Lab/page`, `Lightbox`
-- `Calendar`, `TimeSlots`, `ContactForm` are children of `Reservation` — they don't need `'use client'` explicitly
+- `ContactForm` is a child of `Reservation` — it doesn't need `'use client'` explicitly
 
 ## Styling
 
