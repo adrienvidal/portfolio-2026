@@ -36,10 +36,12 @@ export default function Reservation() {
   if (submitted) {
     return (
       <div className="resa" id="reservation">
-        <div className="resa-success">
-          <div className="resa-success__check">{reservation.success.check}</div>
-          <div className="resa-success__title">{reservation.success.title}</div>
-          <p className="resa-success__sub">{reservation.success.sub}</p>
+        <div className="resa__inner">
+          <div className="resa-success">
+            <div className="resa-success__check">{reservation.success.check}</div>
+            <div className="resa-success__title">{reservation.success.title}</div>
+            <p className="resa-success__sub">{reservation.success.sub}</p>
+          </div>
         </div>
       </div>
     )
@@ -47,17 +49,19 @@ export default function Reservation() {
 
   return (
     <div className="resa" id="reservation">
-      <h2 className="resa__title">{reservation.title}</h2>
-      <p className="resa__sub">{reservation.sub}</p>
+      <div className="resa__inner">
+        <h2 className="resa__title">{reservation.title}</h2>
+        <p className="resa__sub">{reservation.sub}</p>
 
-      <ContactForm data={formData} onChange={setFormData} />
+        <ContactForm data={formData} onChange={setFormData} />
 
-      {error && <p style={{ color: 'red', marginTop: 12, fontSize: 14 }}>{error}</p>}
+        {error && <p style={{ color: 'red', marginTop: 12, fontSize: 14 }}>{error}</p>}
 
-      <div className="form-actions form-actions--end" style={{ marginTop: 32 }}>
-        <button className="btn-next btn-next--auto" onClick={handleSubmit} disabled={loading}>
-          {loading ? 'Envoi…' : reservation.submit}
-        </button>
+        <div className="form-actions form-actions--end" style={{ marginTop: 32 }}>
+          <button className="btn-next btn-next--auto" onClick={handleSubmit} disabled={loading}>
+            {loading ? 'Envoi…' : reservation.submit}
+          </button>
+        </div>
       </div>
     </div>
   )

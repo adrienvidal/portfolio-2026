@@ -6,7 +6,6 @@ import Services from '@/components/Services/Services'
 import Process from '@/components/Process/Process'
 import About from '@/components/About/About'
 import Projects from '@/components/Projects/Projects'
-import CtaFinal from '@/components/CtaFinal/CtaFinal'
 import Reservation from '@/components/Reservation/Reservation'
 import Footer from '@/components/Footer/Footer'
 
@@ -25,7 +24,6 @@ export default function Home() {
       <Process />
       <About />
       <Projects />
-      <CtaFinal />
       <Reservation />
       <Footer />
     </>

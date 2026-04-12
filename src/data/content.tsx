@@ -305,17 +305,10 @@ export const testimonials = {
   ]
 }
 
-// ─── CTA Final ───────────────────────────────────────────────────────────────
-export const ctaFinal = {
-  title: 'Un brief, un call, une proposition sous 48h.',
-  sub: 'Pas de processus lourd. Dites-moi ce que vous préparez, je reviens vers vous sous 24h.',
-  cta: { label: 'Envoyer ma demande', href: '#reservation' }
-}
-
 // ─── Reservation ─────────────────────────────────────────────────────────────
 export const reservation = {
-  title: 'Travaillons ensemble',
-  sub: 'Dites-moi ce que vous préparez. Je reviens vers vous sous 24h.',
+  title: 'Un brief, un call, une proposition sous 48h.',
+  sub: 'Pas de processus lourd. Dites-moi ce que vous préparez, je reviens vers vous sous 24h.',
   submit: 'Envoyer ma demande',
   success: {
     check: '✓',

@@ -1,7 +1,11 @@
 .resa {
   padding: 80px 48px;
-  max-width: 900px;
-  margin: 0 auto;
+  background: var(--bg2);
+
+  &__inner {
+    max-width: 900px;
+    margin: 0 auto;
+  }
 
   &__title {
     font-size: 36px;
@@ -164,5 +168,9 @@
 @media (max-width: 900px) {
   .resa {
     padding: 60px 24px;
+
+    &__inner {
+      max-width: 100%;
+    }
   }
 }
