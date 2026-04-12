@@ -9,14 +9,14 @@ export const nav = {
     { label: 'Blog', href: '/blog', className: 'nav__page' },
     { label: 'Lab', href: '/lab', className: 'nav__lab' }
   ],
-  cta: { label: 'Réserver un call', href: '#reservation' }
+  cta: { label: 'Me contacter', href: '#reservation' }
 }
 
 // ─── Hero ────────────────────────────────────────────────────────────────────
 export const hero = {
   title: 'Un développeur qui comprend la conversion, pas juste le code.',
   sub: "J'aide les startups et équipes produit à construire des expériences web interactives, intégrer l'IA dans leurs interfaces et lancer des campagnes digitales premium — vite, bien, sans friction.",
-  ctaPrimary: { label: 'Réserver un call', href: '#reservation' },
+  ctaPrimary: { label: 'Travaillons ensemble', href: '#reservation' },
   ctaSecondary: { label: 'Voir mes services', href: '#services' },
   avatarSrc: '/adrien-profil.webp',
   avatarAlt: "Portrait d'Adrien, développeur front-end freelance"
@@ -308,8 +308,8 @@ export const testimonials = {
 // ─── CTA Final ───────────────────────────────────────────────────────────────
 export const ctaFinal = {
   title: 'Un brief, un call, une proposition sous 48h.',
-  sub: 'Pas de processus lourd. Réservez 30 minutes et voyons si je peux vous aider.',
-  cta: { label: 'Réserver un call gratuit', href: '#reservation' }
+  sub: 'Pas de processus lourd. Dites-moi ce que vous préparez, je reviens vers vous sous 24h.',
+  cta: { label: 'Envoyer ma demande', href: '#reservation' }
 }
 
 // ─── Reservation ─────────────────────────────────────────────────────────────
