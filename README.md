@@ -7,8 +7,16 @@ Personal portfolio website built with React 19, TypeScript, and Next.js 15.
 - **React 19** + **TypeScript**
 - **Next.js 15** (App Router) — file-based routing, SSR, static generation
 - **Sass (SCSS)** — component-scoped styles with shared design tokens
-- **MDX** — blog articles via `@next/mdx`
-- **Resend** — email sending for the reservation form (`RESEND_API_KEY` in `.env.local`)
+
+## Third-party
+
+| Package / Service | Role |
+|---|---|
+| `@next/mdx` + `remark-frontmatter` + `remark-mdx-frontmatter` | MDX compilation for blog articles |
+| `resend` | Email sending for the reservation form — requires `RESEND_API_KEY` in `.env.local` |
+| `sharp` | PNG/JPG → WebP conversion (`scripts/optimize-images.mjs`) |
+| **Cloudinary** | Video hosting (project demos, lab videos) — URLs referenced in `content.tsx`, never commit `.mp4` |
+| **Google Fonts** | Inter typeface loaded via `next/font/google` in `layout.tsx` |
 
 ## Getting started
 
