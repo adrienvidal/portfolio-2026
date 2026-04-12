@@ -24,6 +24,82 @@
   }
 }
 
+// Step indicator
+.resa-steps {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 40px;
+
+  &__item {
+    display: flex;
+    align-items: center;
+  }
+
+  &__line {
+    width: 48px;
+    height: 2px;
+    background: var(--border);
+    transition: background 0.3s;
+
+    &--filled {
+      background: var(--blue);
+    }
+  }
+
+  &__dot {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 2px solid var(--border);
+    background: transparent;
+    color: var(--gray);
+    font-size: 13px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+
+    &--active {
+      border-color: var(--blue);
+      background: var(--blue);
+      color: #fff;
+    }
+
+    &--done {
+      border-color: var(--blue);
+      background: var(--blue);
+      color: #fff;
+      opacity: 0.4;
+    }
+  }
+}
+
+// Error
+.resa__error {
+  color: #dc2626;
+  font-size: 14px;
+  margin-top: 12px;
+}
+
+// Back button
+.btn-back {
+  background: none;
+  border: none;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--gray);
+  cursor: pointer;
+  padding: 0;
+  transition: color 0.15s;
+
+  &:hover {
+    color: var(--ink);
+  }
+}
+
 // Form
 .resa-form {
   &__group {
@@ -104,6 +180,11 @@
 
   &--end {
     justify-content: flex-end;
+  }
+
+  &--spread {
+    justify-content: space-between;
+    align-items: center;
   }
 }
 

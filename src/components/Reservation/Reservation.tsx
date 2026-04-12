@@ -5,15 +5,32 @@ import { reservation } from '../../data/content'
 import ContactForm, { type FormData } from './ContactForm'
 import './Reservation.scss'
 
+const STEPS = 3
+
 export default function Reservation() {
+  const [step, setStep] = useState<1 | 2 | 3>(1)
   const [submitted, setSubmitted] = useState(false)
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
   const [formData, setFormData] = useState<FormData>({ nom: '', email: '', entreprise: '', besoin: '', budget: '', delai: '' })
 
+  function handleNext() {
+    if (step === 1 && !formData.besoin) {
+      setError('Merci de décrire votre besoin.')
+      return
+    }
+    setError(null)
+    setStep((s) => (s + 1) as 1 | 2 | 3)
+  }
+
+  function handleBack() {
+    setError(null)
+    setStep((s) => (s - 1) as 1 | 2 | 3)
+  }
+
   async function handleSubmit() {
-    if (!formData.nom || !formData.email || !formData.besoin) {
-      setError('Merci de remplir votre nom, email et description du besoin.')
+    if (!formData.nom || !formData.email) {
+      setError('Merci de remplir votre nom et votre email.')
       return
     }
     setError(null)
@@ -53,14 +70,37 @@ export default function Reservation() {
         <h2 className="resa__title">{reservation.title}</h2>
         <p className="resa__sub">{reservation.sub}</p>
 
-        <ContactForm data={formData} onChange={setFormData} />
+        <div className="resa-steps">
+          {Array.from({ length: STEPS }, (_, i) => {
+            const n = i + 1
+            const isDone = n < step
+            const isActive = n === step
+            return (
+              <div key={n} className="resa-steps__item">
+                {i > 0 && <div className={`resa-steps__line${isDone || isActive ? ' resa-steps__line--filled' : ''}`} />}
+                <div className={`resa-steps__dot${isActive ? ' resa-steps__dot--active' : isDone ? ' resa-steps__dot--done' : ''}`}>
+                  {n}
+                </div>
+              </div>
+            )
+          })}
+        </div>
 
-        {error && <p style={{ color: 'red', marginTop: 12, fontSize: 14 }}>{error}</p>}
+        <ContactForm data={formData} onChange={setFormData} step={step} />
 
-        <div className="form-actions form-actions--end" style={{ marginTop: 32 }}>
-          <button className="btn-next btn-next--auto" onClick={handleSubmit} disabled={loading}>
-            {loading ? 'Envoi…' : reservation.submit}
-          </button>
+        {error && <p className="resa__error">{error}</p>}
+
+        <div className={`form-actions${step > 1 ? ' form-actions--spread' : ' form-actions--end'}`} style={{ marginTop: 32 }}>
+          {step > 1 && (
+            <button className="btn-back" onClick={handleBack}>← Retour</button>
+          )}
+          {step < STEPS ? (
+            <button className="btn-next btn-next--auto" onClick={handleNext}>Continuer →</button>
+          ) : (
+            <button className="btn-next btn-next--auto" onClick={handleSubmit} disabled={loading}>
+              {loading ? 'Envoi…' : reservation.submit}
+            </button>
+          )}
         </div>
       </div>
     </div>
