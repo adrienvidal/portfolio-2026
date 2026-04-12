@@ -1,7 +1,7 @@
 'use client'
 
 import Image from 'next/image'
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 
 interface ProjectCardProps {
   title: string
@@ -16,21 +16,39 @@ interface ProjectCardProps {
   linkLabel: string
 }
 
+function toAutoVideo(url: string) {
+  return url.replace('/upload/', '/upload/f_auto,q_auto/')
+}
+
 export default function ProjectCard({ title, tags, role, result, images, video, link, roleLabel, resultLabel, linkLabel }: ProjectCardProps) {
   const [current, setCurrent] = useState(0)
+  const videoRef = useRef<HTMLVideoElement>(null)
 
   const slides = video ? [null, ...images] : images
   const prev = () => setCurrent((i) => (i - 1 + slides.length) % slides.length)
   const next = () => setCurrent((i) => (i + 1) % slides.length)
 
+  const handleMouseEnter = () => videoRef.current?.play()
+  const handleMouseLeave = () => {
+    if (videoRef.current) {
+      videoRef.current.pause()
+      videoRef.current.currentTime = 0
+    }
+  }
+
   return (
     <div className="project-card">
-      <div className="project-card__img-wrap">
+      <div
+        className="project-card__img-wrap"
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+      >
         {current === 0 && video ? (
           <video
+            ref={videoRef}
             className="project-card__video"
-            src={video}
-            autoPlay
+            src={toAutoVideo(video)}
+            poster={images[0]}
             loop
             muted
             playsInline

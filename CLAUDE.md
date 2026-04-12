@@ -33,6 +33,7 @@ The `Reservation` section has three sub-components: `Calendar`, `TimeSlots`, and
 - Home displays 6 Chanel projects (via `homeOrder`) with a "Voir tous les projets →" link to `/projets`
 - `/projets` has Nav + Footer; renders all Chanel projects + "Autres missions" section
 - Both home and `/projets` render an "Autres missions" section below the grid (Fnac Darty, Prisma Media, Yves Rocher) — sourced from `otherMissions` in `content.tsx`
+- Each project item supports an optional `video` (Cloudinary URL) rendered as slide 0 in `ProjectCard`. The video plays on hover and pauses/resets on mouse leave. `images[0]` is used as `poster`. Cloudinary URLs are automatically transformed with `f_auto,q_auto` via `toAutoVideo()` in `ProjectCard.tsx`. Videos are never committed to the repo.
 
 **Lab (`/lab`):**
 - Displays personal projects in a 2-column card grid (1 column on mobile)
@@ -108,7 +109,7 @@ Blog article slugs are pre-generated via `generateStaticParams` in `src/app/blog
 
 All copy (labels, text, links) is centralized in `src/data/content.tsx`. Each section exports a named constant (e.g. `nav`, `hero`, `services`, `process`, `projects`, `otherMissions`, `about`, `testimonials`, `ctaFinal`, `reservation`, `footer`). Components import from this file — never hardcode copy inside components.
 
-- `projects` — Chanel project cards (images, role, result, tags)
+- `projects` — Chanel project cards (images, role, result, tags, optional `video`)
 - `otherMissions` — client list shown below the projects grid (Fnac Darty, Prisma Media, Yves Rocher); no images, just name/description/tags/link
 - `clients` — logo strip on the home page ("Ils m'ont fait confiance")
 - `lab` — personal project cards; each item supports `images` (collage + lightbox), `video` (autoplay cover), or neither
