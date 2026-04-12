@@ -1,7 +1,7 @@
 'use client'
 
 import Image from 'next/image'
-import { useRef, useState, useCallback } from 'react'
+import { useState, useCallback } from 'react'
 import Lightbox, { type MediaItem } from '@/components/Lightbox/Lightbox'
 
 interface ProjectCardProps {
@@ -18,48 +18,23 @@ interface ProjectCardProps {
   linkLabel: string
 }
 
-function toAutoVideo(url: string) {
-  return url.replace('/upload/', '/upload/f_auto,q_auto/')
-}
-
 function toAutoVideoBest(url: string) {
   return url.replace('/upload/', '/upload/f_auto,q_auto:best/')
 }
 
 export default function ProjectCard({ title, tags, role, result, images, mobileImages, video, link, roleLabel, resultLabel, linkLabel }: ProjectCardProps) {
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null)
-  const videoRef = useRef<HTMLVideoElement>(null)
 
   const media: MediaItem[] = [
     ...(video ? [{ type: 'video' as const, src: toAutoVideoBest(video) }] : []),
     ...(mobileImages ?? images).map(src => ({ type: 'image' as const, src })),
   ]
 
-  const poster = mobileImages?.[0] ?? images[0]
-
-  const handleMouseEnter = () => videoRef.current?.play()
-  const handleMouseLeave = () => {
-    if (videoRef.current) {
-      videoRef.current.pause()
-      videoRef.current.currentTime = 0
-    }
-  }
-
   const closeLightbox = useCallback(() => setLightboxIndex(null), [])
   const prevSlide = useCallback(() => setLightboxIndex(i => i !== null ? (i - 1 + media.length) % media.length : 0), [media.length])
   const nextSlide = useCallback(() => setLightboxIndex(i => i !== null ? (i + 1) % media.length : 0), [media.length])
 
-  const coverContent = video ? (
-    <video
-      ref={videoRef}
-      className="project-card__video"
-      src={toAutoVideo(video)}
-      poster={poster}
-      loop
-      muted
-      playsInline
-    />
-  ) : mobileImages ? (
+  const coverContent = mobileImages ? (
     <div className="project-card__collage">
       {mobileImages.slice(0, 3).map((src, i) => (
         <div key={i} className="project-card__collage-item">
@@ -88,8 +63,6 @@ export default function ProjectCard({ title, tags, role, result, images, mobileI
       <div
         className="project-card__img-wrap"
         onClick={() => setLightboxIndex(0)}
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
         style={{ cursor: 'zoom-in' }}
       >
         {coverContent}
