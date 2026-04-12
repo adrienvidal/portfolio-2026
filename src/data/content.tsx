@@ -6,7 +6,7 @@ export const nav = {
     { label: 'Processus', href: '#processus' },
     { label: 'Projets', href: '#projets' },
     { label: 'À propos', href: '#a-propos' },
-    { label: 'Blog', href: '/blog' },
+    { label: 'Blog', href: '/blog', className: 'nav__page' },
     { label: 'Lab', href: '/lab', className: 'nav__lab' }
   ],
   cta: { label: 'Réserver un call', href: '#reservation' }
