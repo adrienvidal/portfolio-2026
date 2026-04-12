@@ -5,7 +5,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## Commands
 
 ```bash
-npm run dev       # Start dev server (Next.js with Turbopack)
+npm run dev       # Start dev server (Next.js 15 — Turbopack by default)
 npm run build     # Build for production (next build)
 npm run start     # Start production server
 npm run lint      # Run ESLint (next lint)
@@ -38,15 +38,15 @@ The `Reservation` section has three sub-components: `Calendar`, `TimeSlots`, and
 **Lab (`/lab`):**
 - Displays personal projects in a 2-column card grid (1 column on mobile)
 - Each item can have: `images` (string[]) for a collage cover + lightbox, `video` (string) for an autoplay cover, or neither (placeholder)
-- When `images` is present, clicking the cover opens a `LabLightbox` (portal, keyboard nav ←/→/Escape)
-- `LabLightbox` is colocated in `src/app/lab/` alongside `lab/page.tsx`
+- When media is present, clicking the cover opens `Lightbox` (portal, keyboard nav ←/→/Escape, touch swipe)
+- `Lightbox` is a generic component at `src/components/Lightbox/` — accepts a `MediaItem[]` (`{ type: 'image' | 'video', src: string }`)
 - Lab assets live in `public/lab/<project-name>/` as `.webp` files (videos hosted on Cloudinary — never commit `.mp4` to the repo)
 
 ## Server vs Client components
 
 - Pages (`src/app/*/page.tsx`) are **Server Components** by default — good for SEO
 - Components with state or browser APIs must have `'use client'` at the top
-- Current client components: `Reservation`, `ProjectCard`, `Lab/page`, `LabLightbox`
+- Current client components: `Reservation`, `ProjectCard`, `Lab/page`, `Lightbox`
 - `Calendar`, `TimeSlots`, `ContactForm` are children of `Reservation` — they don't need `'use client'` explicitly
 
 ## Styling
@@ -104,6 +104,10 @@ Blog article slugs are pre-generated via `generateStaticParams` in `src/app/blog
   1. Create `src/articles/<slug>.mdx`
   2. Add metadata to `src/data/articles.ts`
   3. Add the import to the `articleModules` map in `src/app/blog/[slug]/page.tsx`
+
+## API
+
+- `src/app/api/reservation/route.ts` — POST endpoint called by the `ContactForm`. Sends a booking confirmation email via **Resend** (`resend` npm package). Requires `RESEND_API_KEY` in `.env.local`.
 
 ## Content
 
