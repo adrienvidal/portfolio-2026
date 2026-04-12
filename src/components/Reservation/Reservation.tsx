@@ -12,8 +12,11 @@ type Step = 1 | 2 | 3
 export default function Reservation() {
   const [step, setStep] = useState<Step>(1)
   const [submitted, setSubmitted] = useState(false)
-  const [currentYear, setCurrentYear] = useState(2026)
-  const [currentMonth, setCurrentMonth] = useState(3)
+  const [loading, setLoading] = useState(false)
+  const [error, setError] = useState<string | null>(null)
+  const today = new Date()
+  const [currentYear, setCurrentYear] = useState(today.getFullYear())
+  const [currentMonth, setCurrentMonth] = useState(today.getMonth())
   const [selectedDay, setSelectedDay] = useState<{ y: number; m: number; d: number } | null>(null)
   const [selectedTime, setSelectedTime] = useState<string | null>(null)
   const [formData, setFormData] = useState<FormData>({ nom: '', email: '', entreprise: '', besoin: '', budget: '', delai: '' })
@@ -25,6 +28,28 @@ export default function Reservation() {
   function nextMonth() {
     if (currentMonth === 11) { setCurrentMonth(0); setCurrentYear(y => y + 1) }
     else setCurrentMonth(m => m + 1)
+  }
+
+  async function handleSubmit() {
+    if (!formData.nom || !formData.email || !formData.besoin) {
+      setError('Merci de remplir votre nom, email et description du besoin.')
+      return
+    }
+    setError(null)
+    setLoading(true)
+    try {
+      const res = await fetch('/api/reservation', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ ...formData, date: selectedDay, time: selectedTime }),
+      })
+      if (!res.ok) throw new Error()
+      setSubmitted(true)
+    } catch {
+      setError("Une erreur s'est produite. Réessayez ou contactez-moi directement.")
+    } finally {
+      setLoading(false)
+    }
   }
 
   if (submitted) {
@@ -92,9 +117,12 @@ export default function Reservation() {
       {step === 3 && (
         <div>
           <ContactForm data={formData} onChange={setFormData} />
+          {error && <p style={{ color: 'red', marginTop: 12, fontSize: 14 }}>{error}</p>}
           <div className="form-actions">
             <button className="btn-back" onClick={() => setStep(2)}>{reservation.nav.back}</button>
-            <button className="btn-next" onClick={() => setSubmitted(true)}>{reservation.nav.submit}</button>
+            <button className="btn-next" onClick={handleSubmit} disabled={loading}>
+              {loading ? 'Envoi…' : reservation.nav.submit}
+            </button>
           </div>
         </div>
       )}

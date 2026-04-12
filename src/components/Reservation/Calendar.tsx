@@ -13,7 +13,7 @@ interface CalendarProps {
   onNextMonth: () => void
 }
 
-const TODAY = new Date(2026, 3, 8)
+const TODAY = new Date(); TODAY.setHours(0, 0, 0, 0)
 
 export default function Calendar({ selectedDay, onSelectDay, currentMonth, currentYear, onPrevMonth, onNextMonth }: CalendarProps) {
   const firstDow = new Date(currentYear, currentMonth, 1).getDay()
