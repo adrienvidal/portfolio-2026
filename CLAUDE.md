@@ -23,7 +23,7 @@ Portfolio built with React 19 + TypeScript + Next.js 15 (App Router), using file
 - `/blog/[slug]` — Article (`src/app/blog/[slug]/page.tsx`)
 
 **Home section order** (top → bottom):
-`Nav` → `Hero` → `Clients` → `Services` → `Process` → `About` → `Projects` → `CtaFinal` → `Reservation` → `Footer`
+`Nav` → `Hero` → `Clients` → `Services` → `Process` → `About` → `Projects` → `Reservation` → `Footer`
 
 The `Reservation` section has one sub-component: `ContactForm`.
 
@@ -37,7 +37,12 @@ The `Reservation` section has one sub-component: `ContactForm`.
 
 **Lab (`/lab`):**
 - Displays personal projects in a 2-column card grid (1 column on mobile)
-- Each item can have: `images` (string[]) for a collage cover + lightbox, `video` (string) for an autoplay cover, or neither (placeholder)
+- Each item has a `status` field (`live`, `wip`, `archived`) — labels sourced from `lab.statusLabels`
+- Each item can have:
+  - `images` (string[]) — collage cover + lightbox slides
+  - `video` (string) — single autoplay cover (desktop + mobile)
+  - `videoDesk` + `videoMob` (strings) — responsive autoplay covers (different source per breakpoint, 900px)
+  - none of the above — placeholder
 - When media is present, clicking the cover opens `Lightbox` (portal, keyboard nav ←/→/Escape, touch swipe)
 - `Lightbox` is a generic component at `src/components/Lightbox/` — accepts a `MediaItem[]` (`{ type: 'image' | 'video', src: string }`)
 - Lab assets live in `public/lab/<project-name>/` as `.webp` files (videos hosted on Cloudinary — never commit `.mp4` to the repo)
@@ -116,4 +121,4 @@ All copy (labels, text, links) is centralized in `src/data/content.tsx`. Each se
 - `projects` — Chanel project cards (images, role, result, tags, optional `video`)
 - `otherMissions` — client list shown below the projects grid (Fnac Darty, Prisma Media, Yves Rocher); no images, just name/description/tags/link
 - `clients` — logo strip on the home page ("Ils m'ont fait confiance")
-- `lab` — personal project cards; each item supports `images` (collage + lightbox), `video` (autoplay cover), or neither
+- `lab` — personal project cards; each item has a `status` (`live`/`wip`/`archived`) and supports `images` (collage + lightbox), `video` (single autoplay cover), `videoDesk`+`videoMob` (responsive autoplay covers), or neither

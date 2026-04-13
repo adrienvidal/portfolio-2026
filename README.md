@@ -52,7 +52,11 @@ src/
   app/              # Next.js App Router pages and layouts
     api/
       reservation/  # POST — sends booking email via Resend
+    blog/           # Blog index + [slug] article pages
+    lab/            # Lab page (client component)
+    projets/        # Full projects list
   components/       # UI components (co-located .tsx + .scss)
+    About/ Clients/ Footer/ Hero/ Nav/ Process/ Projects/ Reservation/ Services/
     Lightbox/       # Generic media lightbox (image + video, portal, keyboard/swipe nav)
   articles/         # MDX blog articles
   data/
