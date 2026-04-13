@@ -1,6 +1,8 @@
 import { getLocale } from 'next-intl/server'
 import { Inter } from 'next/font/google'
 import type { Metadata, Viewport } from 'next'
+import { Analytics } from '@vercel/analytics/next'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 import '@/styles/main.scss'
 
 const inter = Inter({
@@ -23,7 +25,11 @@ export default async function RootLayout({ children }: { children: React.ReactNo
   const locale = await getLocale()
   return (
     <html lang={locale} className={inter.className}>
-      <body suppressHydrationWarning>{children}</body>
+      <body suppressHydrationWarning>
+        {children}
+        <Analytics />
+        <SpeedInsights />
+      </body>
     </html>
   )
 }
