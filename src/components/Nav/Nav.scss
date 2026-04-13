@@ -11,6 +11,12 @@
   align-items: center;
   justify-content: space-between;
 
+  &__left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
   &__logo {
     font-weight: 700;
     font-size: 18px;
@@ -34,13 +40,16 @@
         color: var(--ink);
       }
     }
+
+    li:not(:first-child) .nav__page {
+      margin-left: 8px;
+      padding-left: 24px !important;
+      border-left: 1px solid var(--border);
+    }
   }
 
   &__page {
     color: var(--ink) !important;
-    margin-left: 8px;
-    padding-left: 24px !important;
-    border-left: 1px solid var(--border);
   }
 
   &__lab {
@@ -103,12 +112,6 @@
       color: #fff !important;
     }
   }
-}
-
-.nav__actions {
-  display: flex;
-  align-items: center;
-  gap: 8px;
 }
 
 .nav__lang {

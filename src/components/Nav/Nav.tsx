@@ -40,25 +40,25 @@ export default function Nav({ page = false, dark = false }: { page?: boolean; da
   return (
     <>
       <nav className={`nav${dark ? ' nav--dark' : ''}`}>
-        <Link href="/" className="nav__logo">Adrien Vidal</Link>
+        <div className="nav__left">
+          <Link href="/" className="nav__logo">Adrien Vidal</Link>
+          <button className="nav__lang" onClick={switchLocale} aria-label={`Switch to ${locale === 'fr' ? 'English' : 'Français'}`}>
+            {locale === 'fr' ? 'EN' : 'FR'}
+          </button>
+        </div>
         <ul className="nav__links">
           {links.map((link) => (
             <li key={link.href}><NavLink href={link.href} className={link.className}>{link.label}</NavLink></li>
           ))}
           <li><NavLink href={ctaHref} className="nav__cta">{t('cta')}</NavLink></li>
         </ul>
-        <div className="nav__actions">
-          <button className="nav__lang" onClick={switchLocale} aria-label={`Switch to ${locale === 'fr' ? 'English' : 'Français'}`}>
-            {locale === 'fr' ? 'EN' : 'FR'}
-          </button>
-          <button
-            className="nav__burger"
-            onClick={() => setIsOpen(true)}
-            aria-label={t('openMenu')}
-          >
-            <span /><span /><span />
-          </button>
-        </div>
+        <button
+          className="nav__burger"
+          onClick={() => setIsOpen(true)}
+          aria-label={t('openMenu')}
+        >
+          <span /><span /><span />
+        </button>
       </nav>
 
       {isOpen && (
