@@ -9,25 +9,11 @@ export interface ArticleMeta {
 // Ajouter chaque nouvel article ici — du plus ancien (début) au plus récent (fin)
 export const articles: ArticleMeta[] = [
   {
-    slug: 'influenceur-instagram-ia-ce-que-jai-appris',
-    title: "J'ai construit un influenceur Instagram avec de l'IA — voilà ce que j'ai appris",
-    date: '2025-11-14',
-    description: "Retour honnête sur Dripflow, mon projet de pipeline IA complet pour Instagram — Next.js, Claude SDK, fal.ai, Instagram Graph API. Les trucs qui ont marché, et les galères.",
-    tags: ['ia', 'side-project', 'next.js', 'instagram'],
-  },
-  {
     slug: 'un-quiz-peut-il-vraiment-vendre-un-parfum',
     title: "Un quiz peut-il vraiment vendre un parfum ? L'expérience Chanel Chance",
     date: '2025-11-28',
     description: "Décryptage du mécanisme quiz → page personnalisée → intention d'achat. Entre UX et psychologie de la conversion, ce que j'ai appris en construisant l'expérience Chanel Chance.",
     tags: ['conversion', 'ux', 'interactivite', 'chanel'],
-  },
-  {
-    slug: 'construire-app-fitness-avec-claude-code',
-    title: "Ce que j'ai découvert en construisant une app fitness avec Claude Code en live",
-    date: '2025-12-12',
-    description: "Retour honnête sur la construction de FitnessPal avec Claude Code — React, TypeScript, Supabase, Google OAuth. Ce qui a bluffé, ce qui a résisté, et le workflow qui a émergé.",
-    tags: ['claude-code', 'react', 'typescript', 'supabase', 'workflow'],
   },
   {
     slug: 'freelance-nomade-outils-concrets',
@@ -81,8 +67,15 @@ export const articles: ArticleMeta[] = [
   {
     slug: 'ce-que-chanel-ma-appris-sur-les-interfaces-premium',
     title: "Ce que Chanel m'a appris sur les interfaces premium",
-    date: '2026-04-03',
+    date: '2026-03-27',
     description: "Travailler sur les interfaces digitales de Chanel m'a recalibré sur ce que \"qualité perçue\" veut vraiment dire techniquement. Voilà ce que j'ai rapporté sur tous mes projets depuis.",
     tags: ['qualite', 'frontend', 'luxe', 'animation'],
+  },
+  {
+    slug: 'construire-app-fitness-avec-claude-code',
+    title: "Ce que j'ai découvert en construisant une app fitness avec Claude Code en live",
+    date: '2026-04-03',
+    description: "Retour honnête sur la construction de FitnessPal avec Claude Code — React, TypeScript, Supabase, Google OAuth. Ce qui a bluffé, ce qui a résisté, et le workflow qui a émergé.",
+    tags: ['claude-code', 'react', 'typescript', 'supabase', 'workflow'],
   },
 ]

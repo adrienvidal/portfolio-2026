@@ -1,11 +1,97 @@
 ---
 slug: comment-j-utilise-l-ia-pour-livrer-plus-vite
 title: Comment j'utilise l'IA pour livrer des projets front-end 2x plus vite
-date: 2026-04-8
-description: Transparence totale sur mon workflow avec Claude et Claude Code en 2025 — ce que ça change, ce que ça ne remplace pas, et pourquoi c'est une bonne nouvelle pour vous.
+date: 2026-04-08
+description: Transparence totale sur mon workflow avec Claude et Claude Code en 2026 — ce que ça change, ce que ça ne remplace pas, et pourquoi c'est une bonne nouvelle pour vous.
 tags: [ia, workflow, react, freelance]
 ---
 
 Je vais vous dire quelque chose que beaucoup de développeurs freelance n'osent pas admettre : **j'utilise l'IA tous les jours dans mon travail**. Pas pour générer du code au hasard et le livrer tel quel. Mais comme un levier qui me permet de travailler plus vite, de couvrir un périmètre plus large, et de me concentrer sur ce qui crée vraiment de la valeur pour mes clients.
 
-Voici exactement comment ça fonctionne — sans bullshit.
+Voici exactement comment ça fonctionne.
+
+## D'abord, ce que "utiliser l'IA" ne veut pas dire
+
+Il y a une image qui circule : le développeur qui tape une phrase dans ChatGPT, copie-colle le résultat, et envoie la facture. Ce n'est pas un workflow, c'est une façon de livrer de la médiocrité rapidement.
+
+Ce que j'ai mis en place est différent. C'est un ensemble de pratiques structurées — des phases distinctes, des prompts précis, des points de validation humaine — qui me permettent d'aller plus vite sans sacrifier la qualité ni la cohérence du code.
+
+La distinction que je fais constamment : **générer** versus **orchestrer**. Générer, c'est demander à l'IA d'écrire du code. Orchestrer, c'est utiliser l'IA pour penser, structurer, challenger, documenter — et générer quand c'est pertinent. Dans mon quotidien, la génération représente environ 30% de l'usage. L'orchestration, 70%.
+
+## Le workflow phase par phase
+
+### Phase 1 — Cadrage du projet (avant d'écrire la moindre ligne)
+
+Avant de toucher au code, j'utilise Claude comme interlocuteur de cadrage. Je lui décris le projet — l'objectif business, les contraintes techniques, le contexte existant — et je lui demande d'identifier les zones de risque et les décisions d'architecture à prendre en amont.
+
+Ce que ça produit : une liste de points de friction que j'aurais découverts en cours de route — souvent au pire moment. En les adressant avant de commencer, je perds moins de temps à refactorer ensuite.
+
+### Phase 2 — Structure des composants
+
+Une fois l'architecture validée, j'utilise Claude pour concevoir la structure des composants avant de les coder. Pas le code lui-même — la structure : quels composants, quelles responsabilités, quelle interface (props), quel état local vs état partagé.
+
+Je lis, je valide ou je modifie, et je code ensuite dans une direction claire plutôt que de tâtonner.
+
+### Phase 3 — Implémentation avec Claude Code
+
+C'est là que la génération de code intervient vraiment. J'utilise Claude Code dans VS Code pour les phases d'implémentation — mais avec des instructions précises, pas des demandes vagues.
+
+La règle : **plus le contexte est précis, meilleur est le code généré**. Une instruction vague comme *"crée un composant de liste de produits"* donne quelque chose de générique. Une instruction qui précise l'interface TypeScript attendue, les contraintes d'accessibilité, le comportement mobile et les animations — donne quelque chose d'utilisable directement.
+
+Le résultat est proche de ce que j'aurais écrit. Parfois exactement. Je relis, je vérifie, j'ajuste — mais je ne repars pas de zéro.
+
+### Phase 4 — Revue et validation du code généré
+
+C'est la phase que beaucoup sautent et qui fait toute la différence. Tout code généré par l'IA passe par ma revue avant d'aller en production.
+
+Ce que je vérifie systématiquement :
+
+**Cohérence avec le reste du codebase.** L'IA ne voit que ce que je lui montre. Elle peut générer quelque chose de techniquement correct mais qui duplique une logique existante, ou qui utilise un pattern différent du reste du projet.
+
+**Les cas limites.** L'IA gère bien le happy path. Les états d'erreur, les données nulles, les chargements lents, les comportements inattendus côté API — ces cas sont souvent traités superficiellement ou pas du tout.
+
+**La lisibilité dans six mois.** Du code généré peut être fonctionnel mais dense. Si je dois le maintenir ou le passer à un autre développeur, est-ce qu'il se lit bien ? Sinon, je le refactorise.
+
+**La sécurité sur les parties sensibles.** Authentification, gestion des tokens, appels API avec données utilisateur — relus ligne par ligne, pas juste scannés.
+
+### Phase 5 — Documentation et handoff
+
+La phase où l'IA me fait le plus gagner du temps sur des tâches sans valeur créative. Je passe le code finalisé à Claude avec des instructions précises sur ce que la documentation doit couvrir — usage, props, comportements non évidents, limitations. Le résultat est une première version solide que je relis et complète en quelques minutes, contre une demi-heure de rédaction seul.
+
+Multiplié sur un projet entier, c'est significatif.
+
+## Les templates de prompts
+
+J'utilise **aText** sur Mac pour stocker et invoquer mes prompts via des raccourcis clavier. Chaque template couvre une situation récurrente — cadrage, conception de composants, revue de code, debug, documentation, tests — et déploie un contexte structuré en quelques caractères.
+
+Ça évite de reconstruire le contexte à chaque session et garantit que les contraintes importantes (accessibilité, cohérence de style, cas limites) ne sont jamais oubliées par réflexe.
+
+## Ce que ça change concrètement pour mes clients
+
+La vitesse de livraison est réelle — environ 2x sur des projets comparables. Mais la rapidité n'est pas le seul bénéfice.
+
+**Une couverture plus large.** Seul, je suis développeur front-end. Avec l'IA comme copilote, je touche au back-end (API routes, logique serveur), à la base de données (schémas Supabase, requêtes optimisées), au DevOps léger (Vercel, CI/CD basique). Je ne remplace pas un spécialiste sur chacun de ces sujets, mais je permets à un projet de démarrer et d'avancer sans recruter cinq profils différents.
+
+**Moins de surprises.** La phase de cadrage en amont identifie les problèmes avant qu'ils arrivent. Moins de "on a découvert un problème" en cours de projet — et ça, c'est souvent plus précieux que la rapidité.
+
+**Un code documenté dès le départ.** La documentation n'est plus sacrifiée faute de temps. Le prochain développeur qui touche au projet trouve quelque chose de lisible.
+
+## Ce que l'IA ne fait pas à ma place
+
+Pour être complet — les choses qui restent entièrement humaines :
+
+**Comprendre ce que le client veut vraiment.** Pas ce qu'il demande — ce qu'il veut. La différence entre les deux est souvent là où se joue la vraie valeur d'une mission.
+
+**Les décisions d'architecture à long terme.** Quelle structure va encore tenir dans 18 mois ? Quelle abstraction introduire maintenant pour éviter la dette technique plus tard ? Ces jugements viennent de l'expérience, pas d'un LLM.
+
+**Le jugement esthétique.** L'IA génère du CSS fonctionnel. Elle ne génère pas de l'élégance. La différence entre une interface qui "marche" et une interface qui "a l'air bien" reste dans ma cour.
+
+**La relation client.** Comprendre les enjeux d'un projet, sentir quand quelque chose ne va pas dans le brief, savoir comment présenter une mauvaise nouvelle — aucun LLM ne fait ça.
+
+## En résumé
+
+Utiliser l'IA dans mon workflow n'est pas un raccourci. C'est une discipline — un ensemble de pratiques qui demandent d'être apprises, affinées, et maintenues.
+
+Le développeur qui génère du code sans le comprendre ni le valider livre de la dette technique, pas de la valeur. Ce que j'ai mis en place me permet de livrer plus vite *et* mieux — parce que je sais précisément à quelles étapes utiliser l'IA, comment lui donner du contexte, et où poser mon propre jugement.
+
+C'est une compétence à part entière. Peut-être la plus importante de ces prochaines années.

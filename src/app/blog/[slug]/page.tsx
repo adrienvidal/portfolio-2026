@@ -14,8 +14,6 @@ const articleModules: Record<string, () => Promise<{ default: React.ComponentTyp
     import('@/articles/ia-workflow-freelance.mdx'),
   'pourquoi-vos-landing-pages-ne-convertissent-pas': () =>
     import('@/articles/pourquoi-vos-landing-pages-ne-convertissent-pas.mdx'),
-  'influenceur-instagram-ia-ce-que-jai-appris': () =>
-    import('@/articles/influenceur-instagram-ia.mdx'),
   'utiliser-claude-comme-co-developpeur': () =>
     import('@/articles/claude-co-developpeur.mdx'),
   'un-quiz-peut-il-vraiment-vendre-un-parfum': () =>
