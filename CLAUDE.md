@@ -13,26 +13,32 @@ npm run lint      # Run ESLint (next lint)
 
 ## Architecture
 
-Portfolio built with React 19 + TypeScript + Next.js 15 (App Router), using file-based routing.
+Portfolio built with React 19 + TypeScript + Next.js 15 (App Router), using file-based routing with `next-intl` for i18n.
 
 **Routes:**
-- `/` — Home (`src/app/page.tsx` renders all sections sequentially)
-- `/projets` — Full projects list (`src/app/projets/page.tsx`)
-- `/lab` — Lab page (`src/app/lab/page.tsx`)
-- `/blog` — Blog index (`src/app/blog/page.tsx`)
-- `/blog/[slug]` — Article (`src/app/blog/[slug]/page.tsx`)
+- `/` — Home (`src/app/[locale]/page.tsx` renders all sections sequentially)
+- `/projets` — Full projects list (`src/app/[locale]/projets/page.tsx`)
+- `/lab` — Lab page (`src/app/[locale]/lab/page.tsx`)
+- `/blog` — Blog index (`src/app/[locale]/blog/page.tsx`)
+- `/blog/[slug]` — Article (`src/app/[locale]/blog/[slug]/page.tsx`)
+
+All routes are nested under `[locale]` — Next.js resolves `/fr/...` and `/en/...` automatically. `fr` is the default locale (no prefix in URLs by default).
+
+**Layouts:**
+- `src/app/layout.tsx` — root layout: sets `<html lang>` via `getLocale()`, loads global SCSS and fonts
+- `src/app/[locale]/layout.tsx` — locale layout: wraps with `NextIntlClientProvider`, calls `setRequestLocale`
 
 **Home section order** (top → bottom):
 `Nav` → `Hero` → `Clients` → `Services` → `Process` → `About` → `Projects` → `Reservation` → `Footer`
 
 The `Reservation` section has one sub-component: `ContactForm`.
 
-> Note: `Testimonials` component exists in `src/components/Testimonials/` but is currently commented out in `src/app/page.tsx`.
+> Note: `Testimonials` component exists in `src/components/Testimonials/` but is currently commented out in `src/app/[locale]/page.tsx`.
 
 **Projects:**
-- Home displays 6 Chanel projects (via `homeOrder`) with a "Voir tous les projets →" link to `/projets`
+- Home displays 6 Chanel projects (via `HOME_ORDER` in `src/data/static.tsx`) with a "Voir tous les projets →" link to `/projets`
 - `/projets` has Nav + Footer; renders all Chanel projects + "Autres missions" section
-- Both home and `/projets` render an "Autres missions" section below the grid (Fnac Darty, Prisma Media, Yves Rocher) — sourced from `otherMissions` in `content.tsx`
+- Both home and `/projets` render an "Autres missions" section below the grid (Fnac Darty, Prisma Media, Yves Rocher) — static data from `otherMissionsStaticData` in `src/data/static.tsx`, translated copy from `src/messages/*.json`
 - Each project item supports an optional `video` (Cloudinary URL) rendered as slide 0 in `ProjectCard`. The video plays on hover and pauses/resets on mouse leave. `images[0]` is used as `poster`. Cloudinary URLs are automatically transformed with `f_auto,q_auto` via `toAutoVideo()` in `ProjectCard.tsx`. Videos are never committed to the repo.
 
 **Lab (`/lab`):**
@@ -47,18 +53,34 @@ The `Reservation` section has one sub-component: `ContactForm`.
 - `Lightbox` is a generic component at `src/components/Lightbox/` — accepts a `MediaItem[]` (`{ type: 'image' | 'video', src: string }`)
 - Lab assets live in `public/lab/<project-name>/` as `.webp` files (videos hosted on Cloudinary — never commit `.mp4` to the repo)
 
+## i18n
+
+The project uses **next-intl** with two locales: `fr` (default) and `en`.
+
+**Key files:**
+- `src/i18n/routing.ts` — defines locales and defaultLocale
+- `src/i18n/request.ts` — loads the right `messages/*.json` per request
+- `src/i18n/navigation.ts` — exports locale-aware `Link`, `useRouter`, `usePathname`, `redirect`
+- `src/messages/fr.json` and `src/messages/en.json` — all translated copy
+
+**Rules:**
+- Server components use `getTranslations(namespace)` and `setRequestLocale(locale)` from `next-intl/server`
+- Client components use `useTranslations(namespace)` and `useLocale()` from `next-intl`
+- Never import `Link` from `next/link` — always use `Link` from `@/i18n/navigation` so links stay locale-aware
+- The `Nav` component is a client component (uses `useTranslations`, `useLocale`, `useRouter`, `usePathname`)
+
 ## Server vs Client components
 
-- Pages (`src/app/*/page.tsx`) are **Server Components** by default — good for SEO
+- Pages (`src/app/[locale]/*/page.tsx`) are **Server Components** by default — good for SEO
 - Components with state or browser APIs must have `'use client'` at the top
-- Current client components: `Reservation`, `ProjectCard`, `Lab/page`, `Lightbox`
+- Current client components: `Nav`, `Reservation`, `ProjectCard`, `Lab/page`, `Lightbox`
 - `ContactForm` is a child of `Reservation` — it doesn't need `'use client'` explicitly
 
 ## Styling
 
 - **Sass (SCSS)** — each component has a co-located `.scss` file
 - Global styles live in `src/styles/`: `_variables.scss` (design tokens), `_reset.scss`, and `main.scss` (shared utility classes). Imported in `src/app/layout.tsx`.
-- Page-level SCSS files (blog, article, allProjects, lab) are colocated with their page in `src/app/*/` and imported with a relative path
+- Page-level SCSS files (blog, article, allProjects, lab) live in their legacy `src/app/blog/`, `src/app/lab/`, `src/app/projets/` directories and are imported with a relative path from the locale pages
 - Design tokens are defined as both CSS custom properties (`var(--blue)`) and Sass variables (`$blue`) in `_variables.scss`
 - Shared layout classes: `.section`, `.section-bg`, `.section-bg-inner`, `.section-title`, `.section-sub`, `.btn-blue`, `.btn-white`
 - Breakpoint: `900px` for mobile layout adjustments
@@ -76,7 +98,7 @@ All `<img>` tags use `next/image` (`Image` from `'next/image'`). Strategies used
 - Add `priority` on above-the-fold images (Hero)
 
 Project images live in `public/projects/<project-name>/` as `.webp` files.
-Lab assets live in `public/lab/<project-name>/` as `.webp` files. Videos are hosted on Cloudinary and referenced by URL in `content.tsx` — never commit `.mp4` to the repo (`.gitignore`).
+Lab assets live in `public/lab/<project-name>/` as `.webp` files. Videos are hosted on Cloudinary and referenced by URL in `src/data/static.tsx` or `src/messages/*.json` — never commit `.mp4` to the repo (`.gitignore`).
 
 When adding new images (PNG/JPG), convert them to WebP using the sharp script:
 
@@ -98,7 +120,7 @@ export const metadata: Metadata = { title: '...', description: '...' }
 export async function generateMetadata({ params }): Promise<Metadata> { ... }
 ```
 
-Blog article slugs are pre-generated via `generateStaticParams` in `src/app/blog/[slug]/page.tsx`.
+Blog article slugs are pre-generated via `generateStaticParams` in `src/app/[locale]/blog/[slug]/page.tsx`.
 
 ## Blog / MDX
 
@@ -108,7 +130,7 @@ Blog article slugs are pre-generated via `generateStaticParams` in `src/app/blog
 - To add a new article:
   1. Create `src/articles/<slug>.mdx`
   2. Add metadata to `src/data/articles.ts`
-  3. Add the import to the `articleModules` map in `src/app/blog/[slug]/page.tsx`
+  3. Add the import to the `articleModules` map in `src/app/[locale]/blog/[slug]/page.tsx`
 
 ## API
 
@@ -116,9 +138,15 @@ Blog article slugs are pre-generated via `generateStaticParams` in `src/app/blog
 
 ## Content
 
-All copy (labels, text, links) is centralized in `src/data/content.tsx`. Each section exports a named constant (e.g. `nav`, `hero`, `services`, `process`, `projects`, `otherMissions`, `about`, `testimonials`, `ctaFinal`, `reservation`, `footer`). Components import from this file — never hardcode copy inside components.
+Content is split between two sources — never hardcode copy inside components:
 
-- `projects` — Chanel project cards (images, role, result, tags, optional `video`)
-- `otherMissions` — client list shown below the projects grid (Fnac Darty, Prisma Media, Yves Rocher); no images, just name/description/tags/link
-- `clients` — logo strip on the home page ("Ils m'ont fait confiance")
-- `lab` — personal project cards; each item has a `status` (`live`/`wip`/`archived`) and supports `images` (collage + lightbox), `video` (single autoplay cover), `videoDesk`+`videoMob` (responsive autoplay covers), or neither
+**`src/data/static.tsx`** — locale-agnostic data (images, videos, SVG icon paths, links, tags):
+- `projectsStaticData` — Chanel project cards (images, video, tags, link)
+- `otherMissionsStaticData` — client list (Fnac Darty, Prisma Media, Yves Rocher); tags, link, site
+- `clientLogos` — logo strip on the home page
+- `serviceIcons`, `processIcons` — SVG path nodes
+- `HOME_ORDER`, `PROJECTS_SEE_ALL_HREF`, `LAB_HREF` — constants
+
+**`src/messages/fr.json` / `src/messages/en.json`** — all translated copy (labels, titles, descriptions, CTA text). Organized by namespace matching component names (`nav`, `hero`, `services`, `process`, `projects`, `otherMissions`, `about`, `reservation`, `footer`, `blog`, `lab`, `meta`).
+
+Lab items are defined entirely in the messages files under the `lab` namespace — each item has a `status` (`live`/`wip`/`archived`) and supports `images` (collage + lightbox), `video` (single autoplay cover), `videoDesk`+`videoMob` (responsive autoplay covers), or neither.
