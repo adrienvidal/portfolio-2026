@@ -14,6 +14,12 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL('https://adrienvidal.com'),
   icons: { icon: '/favicon.svg' },
+  openGraph: {
+    images: ['/thumbnail.webp'],
+  },
+  twitter: {
+    images: ['/thumbnail.webp'],
+  },
 }
 
 export const viewport: Viewport = {

@@ -33,11 +33,13 @@ export async function generateMetadata({
       siteName: 'Adrien Vidal',
       locale: locale === 'en' ? 'en_GB' : 'fr_FR',
       type: 'website',
+      images: ['/thumbnail.webp'],
     },
     twitter: {
       card: 'summary_large_image',
       title,
       description,
+      images: ['/thumbnail.webp'],
     },
   }
 }

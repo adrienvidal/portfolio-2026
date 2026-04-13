@@ -60,11 +60,13 @@ export async function generateMetadata({
       locale: locale === 'en' ? 'en_GB' : 'fr_FR',
       type: 'article',
       publishedTime: meta.date,
+      images: ['/thumbnail.webp'],
     },
     twitter: {
       card: 'summary_large_image',
       title,
       description,
+      images: ['/thumbnail.webp'],
     },
   }
 }
