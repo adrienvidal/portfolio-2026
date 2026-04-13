@@ -1,5 +1,6 @@
 import { getLocale } from 'next-intl/server'
 import { Inter } from 'next/font/google'
+import type { Metadata, Viewport } from 'next'
 import '@/styles/main.scss'
 
 const inter = Inter({
@@ -8,14 +9,20 @@ const inter = Inter({
   display: 'swap',
 })
 
+export const metadata: Metadata = {
+  metadataBase: new URL('https://adrienvidal.com'),
+  icons: { icon: '/favicon.svg' },
+}
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+}
+
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
   const locale = await getLocale()
   return (
     <html lang={locale} className={inter.className}>
-      <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="icon" href="/favicon.svg" />
-      </head>
       <body suppressHydrationWarning>{children}</body>
     </html>
   )

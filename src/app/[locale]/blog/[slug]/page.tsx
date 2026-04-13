@@ -39,10 +39,34 @@ export async function generateMetadata({
 }: {
   params: Promise<{ locale: string; slug: string }>
 }): Promise<Metadata> {
-  const { slug } = await params
+  const { locale, slug } = await params
   const meta = articles.find((a) => a.slug === slug)
   if (!meta) return {}
-  return { title: `${meta.title} — Adrien Vidal`, description: meta.description }
+  const title = `${meta.title} — Adrien Vidal`
+  const description = meta.description
+  const canonical = locale === 'en' ? `/en/blog/${slug}` : `/blog/${slug}`
+  return {
+    title,
+    description,
+    alternates: {
+      canonical,
+      languages: { fr: `/blog/${slug}`, en: `/en/blog/${slug}` },
+    },
+    openGraph: {
+      title,
+      description,
+      url: canonical,
+      siteName: 'Adrien Vidal',
+      locale: locale === 'en' ? 'en_GB' : 'fr_FR',
+      type: 'article',
+      publishedTime: meta.date,
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+    },
+  }
 }
 
 export default async function ArticlePage({

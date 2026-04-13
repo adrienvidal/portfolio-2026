@@ -16,7 +16,30 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params
   const t = await getTranslations({ locale, namespace: 'meta.projects' })
-  return { title: t('title'), description: t('description') }
+  const title = t('title')
+  const description = t('description')
+  const canonical = locale === 'en' ? '/en/projets' : '/projets'
+  return {
+    title,
+    description,
+    alternates: {
+      canonical,
+      languages: { fr: '/projets', en: '/en/projets' },
+    },
+    openGraph: {
+      title,
+      description,
+      url: canonical,
+      siteName: 'Adrien Vidal',
+      locale: locale === 'en' ? 'en_GB' : 'fr_FR',
+      type: 'website',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+    },
+  }
 }
 
 type TranslatedItem = { title: string; role: string; result: string }
