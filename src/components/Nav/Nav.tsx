@@ -12,24 +12,26 @@ function NavLink({ href, className, children, onClick }: { href: string; classNa
   return <a href={href} className={className} onClick={onClick}>{children}</a>
 }
 
-export default function Nav({ page = false, dark = false }: { page?: boolean; dark?: boolean }) {
+export default function Nav({ dark = false }: { dark?: boolean }) {
   const t = useTranslations('nav')
   const locale = useLocale()
   const router = useRouter()
   const pathname = usePathname()
   const [isOpen, setIsOpen] = useState(false)
 
-  const allLinks = [
-    { label: t('links.services'), href: '#services' },
-    { label: t('links.processus'), href: '#processus' },
-    { label: t('links.projets'), href: '#projets' },
-    { label: t('links.apropos'), href: '#a-propos' },
+  const isHome = pathname === '/'
+  const anchor = (hash: string) => isHome ? hash : `/${hash}`
+
+  const links = [
+    { label: t('links.services'), href: anchor('#services') },
+    { label: t('links.processus'), href: anchor('#processus') },
+    { label: t('links.projets'), href: anchor('#projets') },
+    { label: t('links.apropos'), href: anchor('#a-propos') },
     { label: t('links.blog'), href: '/blog', className: 'nav__page' },
     { label: t('links.lab'), href: '/lab', className: 'nav__lab' },
   ]
 
-  const links = page ? allLinks.filter(l => !l.href.startsWith('#')) : allLinks
-  const ctaHref = page ? '/#reservation' : '#reservation'
+  const ctaHref = anchor('#reservation')
 
   const switchLocale = () => {
     router.replace(pathname, { locale: locale === 'fr' ? 'en' : 'fr' })

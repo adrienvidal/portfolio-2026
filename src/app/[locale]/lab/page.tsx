@@ -149,7 +149,7 @@ export default function Lab() {
 
   return (
     <>
-      <Nav page dark />
+      <Nav dark />
       <div className="lab">
         <div className="lab__inner">
           <Link href="/" className="lab__back">{t('backLabel')}</Link>

@@ -37,7 +37,7 @@ export default async function AllProjects({ params }: { params: Promise<{ locale
 
   return (
     <div className="all-projects">
-      <Nav page />
+      <Nav />
       <div className="all-projects__inner">
         <Link href="/" className="all-projects__back">{t('backLabel')}</Link>
         <h1 className="all-projects__title">{t('allProjectsTitle')}</h1>

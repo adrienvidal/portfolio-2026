@@ -27,7 +27,7 @@ export default async function Blog({ params }: { params: Promise<{ locale: strin
 
   return (
     <>
-      <Nav page />
+      <Nav />
       <main className="blog">
         <div className="blog__inner">
           <Link href="/" className="blog__back">{t('back')}</Link>
