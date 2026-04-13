@@ -189,12 +189,12 @@ export const projects = {
       link: 'https://www.chanel.com/fr/parfums/allure-homme-sport/'
     },
     {
-      title: 'Chanel N°5 — campagne landing page',
+      title: 'Chanel Look This Way — expérience éditoriale',
       tags: ['React', 'Animation', 'SEO'],
-      role: 'Développement de la landing page campagne N°5 avec vidéos promotionnelles, animations CSS/JS et intégration des assets de la marque',
-      result: "Rendu premium cohérent avec l'identité iconique du parfum, dans les contraintes techniques Chanel",
-      images: ['/projects/n5/chanel-n5-desk1.webp'],
-      link: 'https://www.chanel.com/fr/parfums/chanel-number-5/'
+      role: "Développement d'une expérience éditoriale immersive pour la campagne Look This Way, desktop et mobile",
+      result: "Expérience visuelle engageante livrée dans les délais, cohérente avec l'identité de la campagne",
+      images: ['/projects/lookthisway/chanel-lookthisway-desk1.webp'],
+      link: 'https://www.chanel.com/gb/makeup/look-this-way/genderless-beauty/'
     },
     {
       title: 'Chanel Sublimage — campagne soin luxe',
@@ -216,6 +216,14 @@ export const projects = {
       link: 'https://www.chanel.com/fr/horlogerie/manufacture-horlogere/?previewdate=2025-08-27T08%3A01'
     },
     {
+      title: 'Chanel N°5 — campagne landing page',
+      tags: ['React', 'Animation', 'SEO'],
+      role: 'Développement de la landing page campagne N°5 avec vidéos promotionnelles, animations CSS/JS et intégration des assets de la marque',
+      result: "Rendu premium cohérent avec l'identité iconique du parfum, dans les contraintes techniques Chanel",
+      images: ['/projects/n5/chanel-n5-desk1.webp'],
+      link: 'https://www.chanel.com/fr/parfums/chanel-number-5/'
+    },
+    {
       title: 'Chanel CSR — page engagements',
       tags: ['React', 'SEO', 'Accessibilité'],
       role: 'Développement de la page RSE Chanel, structuration du contenu éditorial et intégration des visuels institutionnels',
@@ -230,14 +238,6 @@ export const projects = {
       result: 'Page campagne livrée dans les contraintes de la marque, rendu visuel irréprochable',
       images: ['/projects/31lerouge/chanel-31lerouge-desk1.webp'],
       link: 'https://www.chanel.com/fr/maquillage/31-le-rouge/'
-    },
-    {
-      title: 'Chanel Look This Way — expérience éditoriale',
-      tags: ['React', 'Animation', 'SEO'],
-      role: "Développement d'une expérience éditoriale immersive pour la campagne Look This Way, desktop et mobile",
-      result: "Expérience visuelle engageante livrée dans les délais, cohérente avec l'identité de la campagne",
-      images: ['/projects/lookthisway/chanel-lookthisway-desk1.webp'],
-      link: 'https://www.chanel.com/gb/makeup/look-this-way/genderless-beauty/'
     },
   ]
 }
