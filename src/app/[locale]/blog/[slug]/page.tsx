@@ -1,8 +1,10 @@
 import type { Metadata } from 'next'
-import Link from 'next/link'
+import { getTranslations } from 'next-intl/server'
+import { setRequestLocale } from 'next-intl/server'
+import { Link } from '@/i18n/navigation'
 import { notFound } from 'next/navigation'
 import { articles } from '@/data/articles'
-import './article.scss'
+import '../../../blog/[slug]/article.scss'
 
 // Static map: add one entry per article in src/articles/
 const articleModules: Record<string, () => Promise<{ default: React.ComponentType }>> = {
@@ -32,17 +34,26 @@ export async function generateStaticParams() {
   return articles.map((a) => ({ slug: a.slug }))
 }
 
-export async function generateMetadata(
-  { params }: { params: Promise<{ slug: string }> }
-): Promise<Metadata> {
+export async function generateMetadata({
+  params
+}: {
+  params: Promise<{ locale: string; slug: string }>
+}): Promise<Metadata> {
   const { slug } = await params
   const meta = articles.find((a) => a.slug === slug)
   if (!meta) return {}
   return { title: `${meta.title} — Adrien Vidal`, description: meta.description }
 }
 
-export default async function ArticlePage({ params }: { params: Promise<{ slug: string }> }) {
-  const { slug } = await params
+export default async function ArticlePage({
+  params
+}: {
+  params: Promise<{ locale: string; slug: string }>
+}) {
+  const { locale, slug } = await params
+  setRequestLocale(locale)
+
+  const t = await getTranslations('blog')
   const meta = articles.find((a) => a.slug === slug)
   if (!meta) notFound()
 
@@ -50,12 +61,19 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
   if (!loader) notFound()
 
   const { default: MDXContent } = await loader()
+  const dateLocale = locale === 'fr' ? 'fr-FR' : 'en-GB'
 
   return (
     <main className="article">
       <div className="article__inner">
-        <Link href="/blog" className="article__back">← Blog</Link>
-        <time className="article__date">{new Date(meta.date).toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' })}</time>
+        <Link href="/blog" className="article__back">{t('articleBack')}</Link>
+        <time className="article__date">
+          {new Date(meta.date).toLocaleDateString(dateLocale, {
+            day: 'numeric',
+            month: 'long',
+            year: 'numeric'
+          })}
+        </time>
         <h1 className="article__title">{meta.title}</h1>
         {meta.tags && (
           <ul className="article__tags">

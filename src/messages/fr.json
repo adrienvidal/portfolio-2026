@@ -1,0 +1,254 @@
+{
+  "meta": {
+    "home": {
+      "title": "Adrien Vidal — Développeur Web Freelance",
+      "description": "Adrien conçoit des landing pages React / Next premium orientées conversion avec IA, UX et exécution rapide. Parlons de votre projet."
+    },
+    "projects": {
+      "title": "Projets — Adrien Vidal",
+      "description": "Tous mes projets : landing pages, refonte UX, MVPs — réalisés pour des équipes growth et marketing."
+    },
+    "blog": {
+      "title": "Blog — Adrien Vidal",
+      "description": "Articles sur la conversion, l'UX et le développement front-end."
+    },
+    "lab": {
+      "title": "Lab — Adrien Vidal",
+      "description": "Projets personnels : outils, expérimentations et prototypes construits pour des besoins réels."
+    }
+  },
+
+  "nav": {
+    "links": {
+      "services": "Services",
+      "processus": "Processus",
+      "projets": "Projets",
+      "apropos": "À propos",
+      "blog": "Blog",
+      "lab": "Lab"
+    },
+    "cta": "Me contacter",
+    "openMenu": "Ouvrir le menu",
+    "closeMenu": "Fermer le menu"
+  },
+
+  "hero": {
+    "title": "Un développeur qui construit des expériences, pas juste des pages.",
+    "sub": "J'aide les startups et équipes produit à construire des expériences web interactives, intégrer l'IA dans leurs interfaces et lancer des campagnes digitales premium — vite, bien, sans friction.",
+    "ctaPrimary": "Travaillons ensemble",
+    "ctaSecondary": "Voir mes services",
+    "avatarAlt": "Portrait d'Adrien, développeur front-end freelance"
+  },
+
+  "clients": {
+    "label": "Ils m'ont fait confiance"
+  },
+
+  "services": {
+    "title": "Ce que je fais pour vous",
+    "sub": "Des interfaces qui vont plus loin que la page statique.",
+    "items": [
+      {
+        "title": "Expériences web interactives",
+        "items": [
+          "Quiz et diagnostics produit",
+          "Expériences multi-vues et gamification",
+          "Configurateurs et mécaniques de découverte",
+          "Animations avancées (GSAP, Framer Motion)"
+        ],
+        "proof": "Quand une landing page classique ne suffit plus pour engager votre audience"
+      },
+      {
+        "title": "Intégration IA dans votre produit",
+        "items": [
+          "Génération de contenu (Claude, OpenAI)",
+          "Recommandation et personnalisation produit",
+          "Pipeline IA avec workflow d'approbation humain",
+          "Automatisation et publication via API (Meta, etc.)"
+        ],
+        "proof": "Pour ajouter une feature IA concrète sans recruter un profil ML ou data"
+      },
+      {
+        "title": "Landing pages & campagnes premium",
+        "items": [
+          "Structure pensée pour guider vers l'action",
+          "Mobile irréprochable, chargement rapide",
+          "Vidéos promotionnelles et animations",
+          "Connecté à votre CRM, analytics ou tunnel e-commerce"
+        ],
+        "proof": "Pages de campagne, lancements produit et pages d'acquisition au niveau des grandes marques"
+      }
+    ]
+  },
+
+  "process": {
+    "title": "Comment ça marche",
+    "sub": "Trois étapes. Pas de surprise, pas de tunnel sans nouvelles.",
+    "steps": [
+      {
+        "label": "Étape 1",
+        "title": "Call découverte — 30 min",
+        "desc": "On cadre ensemble votre objectif business, vos contraintes et ce que doit produire la page. Pas de brief écrit obligatoire."
+      },
+      {
+        "label": "Étape 2",
+        "title": "Proposition & wireframe sous 48h",
+        "desc": "Vous recevez une structure de page commentée et un chiffrage clair. Vous validez, on démarre."
+      },
+      {
+        "label": "Étape 3",
+        "title": "Livraison + mise en ligne",
+        "desc": "Développement, retours intégrés, mise en ligne. Vous récupérez un code propre, documenté et prêt à évoluer."
+      }
+    ]
+  },
+
+  "projects": {
+    "title": "Projets récents",
+    "roleLabel": "Mission :",
+    "resultLabel": "Ce que ça a changé :",
+    "linkLabel": "Voir le projet →",
+    "seeAllLabel": "Voir tous les projets →",
+    "allProjectsTitle": "Tous les projets",
+    "backLabel": "← Accueil",
+    "labTeaserText": "En dehors des missions, je construis des outils pour des besoins réels — parfois les miens, parfois ceux que je n'ai pas trouvés ailleurs.",
+    "labTeaserCta": "Voir le Lab →",
+    "items": [
+      {
+        "title": "Chanel Coco Crush — expérience interactive bijoux",
+        "role": "Développement d'une expérience mobile gamifiée : quiz de profil bijoux, swipe à la Tinder pour constituer une liste de souhaits, génération d'un QR code personnel utilisé lors d'un événement physique Chanel",
+        "result": "Expérience phygitale complète livrée pour un événement éphémère — du diagnostic produit jusqu'à la liste de souhaits scannable en boutique"
+      },
+      {
+        "title": "Chanel Chance — campagne interactive multi-vues",
+        "role": "Développement d'une campagne landing page multi-vues avec vidéos promotionnelles, et d'un quiz diagnostic permettant au visiteur d'identifier le parfum Chance correspondant à son profil",
+        "result": "Expérience de découverte produit personnalisée : chaque visiteur arrive sur une page résultat dédiée à son parfum, augmentant la pertinence et l'intention d'achat"
+      },
+      {
+        "title": "Chanel Allure Sport — campagne & tunnel produit",
+        "role": "Développement d'une landing page campagne avec vidéos promotionnelles, animations GSAP et liste produit avec ajout au panier",
+        "result": "Campagne immersive connectée au tunnel e-commerce Chanel — de la découverte produit jusqu'à l'achat en une seule page"
+      },
+      {
+        "title": "Chanel Look This Way — expérience éditoriale",
+        "role": "Développement d'une expérience éditoriale immersive pour la campagne Look This Way, desktop et mobile",
+        "result": "Expérience visuelle engageante livrée dans les délais, cohérente avec l'identité de la campagne"
+      },
+      {
+        "title": "Chanel Sublimage — campagne soin luxe",
+        "role": "Développement de la landing page campagne Sublimage avec animations de présentation et intégration des assets haute couture",
+        "result": "Rendu premium aligné avec le positionnement luxe de la gamme soin Chanel"
+      },
+      {
+        "title": "Chanel Manufacture — page éditoriale",
+        "role": "Développement d'une page éditoriale dédiée aux savoir-faire de la Manufacture Chanel",
+        "result": "Mise en valeur des métiers d'art Chanel, rendu soigné et adaptation mobile réussie"
+      },
+      {
+        "title": "Chanel N°5 — campagne landing page",
+        "role": "Développement de la landing page campagne N°5 avec vidéos promotionnelles, animations CSS/JS et intégration des assets de la marque",
+        "result": "Rendu premium cohérent avec l'identité iconique du parfum, dans les contraintes techniques Chanel"
+      },
+      {
+        "title": "Chanel CSR — page engagements",
+        "role": "Développement de la page RSE Chanel, structuration du contenu éditorial et intégration des visuels institutionnels",
+        "result": "Page institutionnelle claire et accessible, cohérente avec les standards de communication Chanel"
+      },
+      {
+        "title": "Chanel 31 Le Rouge — campagne maquillage",
+        "role": "Développement de la landing page campagne 31 Le Rouge, animations CSS/JS et cohérence desktop / mobile",
+        "result": "Page campagne livrée dans les contraintes de la marque, rendu visuel irréprochable"
+      }
+    ]
+  },
+
+  "otherMissions": {
+    "title": "Contributions",
+    "subtitle": "Interventions en équipe sur des sites existants à fort trafic",
+    "seeMore": "Voir plus",
+    "seeLess": "Voir moins",
+    "items": [
+      {
+        "name": "Fnac Darty",
+        "description": "Développement front-end au sein de l'équipe Darty Commercialité — refonte de la page produit, liste produit et pages push. Conception des composants de mise en avant cross-sell : assurances, garanties, services associés. Intégration de la page marque."
+      },
+      {
+        "name": "Prisma Media",
+        "description": "Développement front-end au sein du pôle Féminin (femmeactuelle.fr, cuisineactuelle.fr) — refonte des pages Home, Article, Auteur et Carnet de recettes. Développement de web components sur mesure : module de gestion des avis et étoiles sur les pages recettes, module d'authentification. Extension Chrome interne pour la gestion des code reviews GitLab via webhooks Google Chat."
+      },
+      {
+        "name": "Yves Rocher",
+        "description": "Landing pages campagnes pour les gammes Lifting Végétal et Parfum. Développement d'un quiz de diagnostic pour orienter le visiteur vers le fond de teint adapté à son profil. Refonte e-commerce, intégration de la recommandation produit Target2Sell et création d'A/B tests via ABTASTY."
+      }
+    ]
+  },
+
+  "about": {
+    "title": "À propos",
+    "bio": "Je suis développeur front-end depuis 10 ans, spécialisé React et TypeScript. J'ai travaillé sur des environnements exigeants — Chanel, Fnac Darty, Prisma — où la qualité perçue et la performance ne sont pas négociables.\n\nAujourd'hui je travaille en freelance avec des startups et des équipes produit qui veulent aller plus loin que la page statique : expériences interactives, intégrations IA, campagnes digitales premium. Je n'attends pas un Jira parfait pour démarrer : un brief en deux paragraphes suffit.\n\nJe travaille à distance, en flux tendu, avec un workflow IA qui me permet de livrer vite sans sacrifier la qualité."
+  },
+
+  "reservation": {
+    "title": "Un brief, un call, une proposition sous 48h.",
+    "sub": "Pas de processus lourd. Dites-moi ce que vous préparez, je reviens vers vous sous 24h.",
+    "submit": "Envoyer ma demande",
+    "loading": "Envoi…",
+    "back": "← Retour",
+    "next": "Continuer →",
+    "errorBesoin": "Merci de décrire votre besoin.",
+    "errorContact": "Merci de remplir votre nom et votre email.",
+    "errorGeneric": "Une erreur s'est produite. Réessayez ou contactez-moi directement.",
+    "success": {
+      "check": "✓",
+      "title": "Message reçu !",
+      "sub": "Merci. Je vous réponds sous 24h pour qu'on cale la suite ensemble."
+    },
+    "form": {
+      "nomLabel": "Votre nom",
+      "nomPlaceholder": "Prénom Nom",
+      "emailLabel": "Votre email",
+      "emailPlaceholder": "vous@entreprise.com",
+      "entrepriseLabel": "Votre entreprise",
+      "entrepriseOptional": "(optionnel)",
+      "entreprisePlaceholder": "Nom de votre entreprise",
+      "besoinLabel": "De quoi avez-vous besoin ?",
+      "besoinPlaceholder": "Ex : on lance une campagne paid dans 3 semaines et notre landing page actuelle ne convertit pas…",
+      "budgetLabel": "Budget envisagé",
+      "budgetOptions": ["< 1 000 €", "1 000 – 3 000 €", "3 000 – 6 000 €", "> 6 000 €"],
+      "delaiLabel": "Délai souhaité",
+      "delaiOptions": ["Urgent (< 2 semaines)", "2 à 4 semaines", "Pas de contrainte"]
+    }
+  },
+
+  "lab": {
+    "title": "Lab",
+    "sub": "Projets perso — outils, expérimentations, trucs construits pour un besoin réel ou juste pour voir.",
+    "backLabel": "← Retour",
+    "visuals": "{count} visuels",
+    "statusLabels": {
+      "live": "Live",
+      "wip": "En cours",
+      "archived": "Archivé"
+    },
+    "items": [
+      {
+        "title": "FitnessPal",
+        "description": "App de suivi d'entraînement complète, construite en live coding assisté par IA. Programme PPL/Cardio sur 4 jours, fiches exercice avec illustrations musculaires, saisie du poids, historique des séances par calendrier, thème clair/sombre, authentification Google. Un exemple concret de ce qu'un workflow IA permet de livrer vite sans sacrifier la qualité."
+      },
+      {
+        "title": "Dripflow",
+        "description": "Pipeline de contenu Instagram automatisé propulsé par l'IA. Upload d'une image de référence → Claude Sonnet génère des prompts Midjourney optimisés → workflow d'approbation humain → génération d'images via fal.ai → sélection des visuels → génération de captions en 3 tons (mystérieux, décontracté, artistique) → assemblage du carousel → publication automatique sur Instagram via l'Instagram Graph API (Meta). Conçu pour gérer le compte d'un influenceur/influenceuse virtuelle."
+      }
+    ]
+  },
+
+  "footer": {
+    "subtitle": "Développeur React & TypeScript freelance"
+  },
+
+  "blog": {
+    "back": "← Retour",
+    "title": "Blog",
+    "articleBack": "← Blog"
+  }
+}

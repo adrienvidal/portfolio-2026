@@ -2,19 +2,22 @@
 
 import Image from 'next/image'
 import { useState, useCallback, useRef } from 'react'
-import Link from 'next/link'
-import { lab } from '@/data/content'
+import { useTranslations } from 'next-intl'
+import { Link } from '@/i18n/navigation'
+import { labStaticData, type LabStaticItem } from '@/data/static'
 import Nav from '@/components/Nav/Nav'
 import Footer from '@/components/Footer/Footer'
 import Lightbox, { type MediaItem } from '@/components/Lightbox/Lightbox'
-import './lab.scss'
+import '../../lab/lab.scss'
 
 function toAutoVideo(url: string) {
   return url.replace('/upload/', '/upload/f_auto,q_auto/')
 }
 
-function LabCover({ item, poster }: { item: typeof lab.items[number]; poster?: string }) {
-  if ('videoDesk' in item && item.videoDesk && 'videoMob' in item && item.videoMob) {
+type LabItemFull = LabStaticItem & { title: string; description: string }
+
+function LabCover({ item, poster }: { item: LabItemFull; poster?: string }) {
+  if (item.videoDesk && item.videoMob) {
     return (
       <>
         <video className="lab__cover-video lab__cover-video--desk" src={toAutoVideo(item.videoDesk)} poster={poster} loop muted playsInline />
@@ -22,11 +25,11 @@ function LabCover({ item, poster }: { item: typeof lab.items[number]; poster?: s
       </>
     )
   }
-  if ('video' in item && item.video) {
+  if (item.video) {
     return (
       <video
         className="lab__cover-video"
-        src={toAutoVideo(item.video as string)}
+        src={toAutoVideo(item.video)}
         poster={poster}
         loop
         muted
@@ -34,7 +37,7 @@ function LabCover({ item, poster }: { item: typeof lab.items[number]; poster?: s
       />
     )
   }
-  if ('images' in item && item.images && item.images.length > 0) {
+  if (item.images && item.images.length > 0) {
     return (
       <div className="lab__cover-collage">
         {item.images.slice(0, 3).map((src, i) => (
@@ -48,18 +51,19 @@ function LabCover({ item, poster }: { item: typeof lab.items[number]; poster?: s
   return <div className="lab__cover-placeholder" />
 }
 
-function LabItem({ item, openLightbox }: { item: typeof lab.items[number]; openLightbox: (media: MediaItem[], index?: number) => void }) {
+function LabItem({ item, openLightbox, visualsLabel }: { item: LabItemFull; openLightbox: (media: MediaItem[], index?: number) => void; visualsLabel: string }) {
   const coverRef = useRef<HTMLDivElement>(null)
 
-  const videoSrc = 'videoDesk' in item && item.videoDesk && 'videoMob' in item && item.videoMob
+  const videoSrc = item.videoDesk && item.videoMob
     ? (typeof window !== 'undefined' && window.innerWidth <= 900 ? item.videoMob : item.videoDesk)
-    : ('video' in item && item.video ? item.video : null)
+    : (item.video ?? null)
+
   const media: MediaItem[] = [
-    ...(videoSrc ? [{ type: 'video' as const, src: toAutoVideo(videoSrc as string) }] : []),
-    ...('images' in item && item.images ? item.images.map(src => ({ type: 'image' as const, src })) : []),
+    ...(videoSrc ? [{ type: 'video' as const, src: toAutoVideo(videoSrc) }] : []),
+    ...(item.images ? item.images.map(src => ({ type: 'image' as const, src })) : []),
   ]
   const hasLightbox = media.length > 0
-  const poster = 'images' in item && item.images && item.images.length > 0 ? item.images[0] : undefined
+  const poster = item.images && item.images.length > 0 ? item.images[0] : undefined
 
   const handleMouseEnter = () => {
     coverRef.current?.querySelectorAll('video').forEach(v => v.play())
@@ -83,16 +87,14 @@ function LabItem({ item, openLightbox }: { item: typeof lab.items[number]; openL
         <LabCover item={item} poster={poster} />
         {hasLightbox && (
           <div className="lab__cover-hint">
-            <span>{media.length} visuels</span>
+            <span>{visualsLabel}</span>
           </div>
         )}
       </div>
       <div className="lab__item-body">
         <div className="lab__item-top">
           <div className="lab__item-meta">
-            <span className={`lab__status lab__status--${item.status}`}>
-              {lab.statusLabels[item.status]}
-            </span>
+            <LabStatus status={item.status} />
             <div className="lab__tags">
               {item.tags.map((tag) => (
                 <span key={tag} className="lab__tag">{tag}</span>
@@ -112,7 +114,17 @@ function LabItem({ item, openLightbox }: { item: typeof lab.items[number]; openL
   )
 }
 
+function LabStatus({ status }: { status: 'live' | 'wip' | 'archived' }) {
+  const t = useTranslations('lab')
+  return (
+    <span className={`lab__status lab__status--${status}`}>
+      {t(`statusLabels.${status}`)}
+    </span>
+  )
+}
+
 export default function Lab() {
+  const t = useTranslations('lab')
   const [lightbox, setLightbox] = useState<{ media: MediaItem[]; index: number } | null>(null)
 
   const openLightbox = useCallback((media: MediaItem[], index = 0) => {
@@ -129,19 +141,30 @@ export default function Lab() {
     setLightbox(lb => lb ? { ...lb, index: (lb.index + 1) % lb.media.length } : lb)
   }, [])
 
+  const translatedItems = t.raw('items') as Array<{ title: string; description: string }>
+  const items: LabItemFull[] = labStaticData.map((staticItem, i) => ({
+    ...staticItem,
+    ...translatedItems[i]
+  }))
+
   return (
     <>
       <Nav page dark />
       <div className="lab">
         <div className="lab__inner">
-          <Link href="/" className="lab__back">{lab.backLabel}</Link>
+          <Link href="/" className="lab__back">{t('backLabel')}</Link>
           <header className="lab__header">
-            <h1 className="lab__title">{lab.title}</h1>
-            <p className="lab__sub">{lab.sub}</p>
+            <h1 className="lab__title">{t('title')}</h1>
+            <p className="lab__sub">{t('sub')}</p>
           </header>
           <ul className="lab__list">
-            {lab.items.map((item) => (
-              <LabItem key={item.title} item={item} openLightbox={openLightbox} />
+            {items.map((item, i) => (
+              <LabItem
+                key={i}
+                item={item}
+                openLightbox={openLightbox}
+                visualsLabel={t('visuals', { count: (item.images?.length ?? 0) + (item.videoDesk || item.video ? 1 : 0) })}
+              />
             ))}
           </ul>
         </div>

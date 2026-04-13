@@ -1,30 +1,48 @@
 import type { Metadata } from 'next'
-import Link from 'next/link'
+import { getTranslations } from 'next-intl/server'
+import { setRequestLocale } from 'next-intl/server'
+import { Link } from '@/i18n/navigation'
 import { articles } from '@/data/articles'
 import Nav from '@/components/Nav/Nav'
 import Footer from '@/components/Footer/Footer'
-import './blog.scss'
+import '../../blog/blog.scss'
 
-export const metadata: Metadata = {
-  title: 'Blog — Adrien Vidal',
-  description: 'Articles sur la conversion, l\'UX et le développement front-end.',
+export async function generateMetadata({
+  params
+}: {
+  params: Promise<{ locale: string }>
+}): Promise<Metadata> {
+  const { locale } = await params
+  const t = await getTranslations({ locale, namespace: 'meta.blog' })
+  return { title: t('title'), description: t('description') }
 }
 
-export default function Blog() {
+export default async function Blog({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params
+  setRequestLocale(locale)
+
+  const t = await getTranslations('blog')
   const sorted = [...articles].sort((a, b) => b.date.localeCompare(a.date))
+  const dateLocale = locale === 'fr' ? 'fr-FR' : 'en-GB'
 
   return (
     <>
       <Nav page />
       <main className="blog">
         <div className="blog__inner">
-          <Link href="/" className="blog__back">← Retour</Link>
-          <h1 className="blog__title">Blog</h1>
+          <Link href="/" className="blog__back">{t('back')}</Link>
+          <h1 className="blog__title">{t('title')}</h1>
           <ul className="blog__list">
             {sorted.map((article) => (
               <li key={article.slug} className="blog__item">
                 <Link href={`/blog/${article.slug}`} className="blog__link">
-                  <time className="blog__date">{new Date(article.date).toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' })}</time>
+                  <time className="blog__date">
+                    {new Date(article.date).toLocaleDateString(dateLocale, {
+                      day: 'numeric',
+                      month: 'long',
+                      year: 'numeric'
+                    })}
+                  </time>
                   <h2 className="blog__item-title">{article.title}</h2>
                   <p className="blog__description">{article.description}</p>
                   {article.tags && (

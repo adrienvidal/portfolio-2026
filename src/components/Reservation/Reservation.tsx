@@ -1,13 +1,14 @@
 'use client'
 
 import { useState } from 'react'
-import { reservation } from '../../data/content'
+import { useTranslations } from 'next-intl'
 import ContactForm, { type FormData } from './ContactForm'
 import './Reservation.scss'
 
 const STEPS = 3
 
 export default function Reservation() {
+  const t = useTranslations('reservation')
   const [step, setStep] = useState<1 | 2 | 3>(1)
   const [submitted, setSubmitted] = useState(false)
   const [loading, setLoading] = useState(false)
@@ -16,7 +17,7 @@ export default function Reservation() {
 
   function handleNext() {
     if (step === 1 && !formData.besoin) {
-      setError('Merci de décrire votre besoin.')
+      setError(t('errorBesoin'))
       return
     }
     setError(null)
@@ -30,7 +31,7 @@ export default function Reservation() {
 
   async function handleSubmit() {
     if (!formData.nom || !formData.email) {
-      setError('Merci de remplir votre nom et votre email.')
+      setError(t('errorContact'))
       return
     }
     setError(null)
@@ -44,7 +45,7 @@ export default function Reservation() {
       if (!res.ok) throw new Error()
       setSubmitted(true)
     } catch {
-      setError("Une erreur s'est produite. Réessayez ou contactez-moi directement.")
+      setError(t('errorGeneric'))
     } finally {
       setLoading(false)
     }
@@ -55,9 +56,9 @@ export default function Reservation() {
       <div className="resa" id="reservation">
         <div className="resa__inner">
           <div className="resa-success">
-            <div className="resa-success__check">{reservation.success.check}</div>
-            <div className="resa-success__title">{reservation.success.title}</div>
-            <p className="resa-success__sub">{reservation.success.sub}</p>
+            <div className="resa-success__check">{t('success.check')}</div>
+            <div className="resa-success__title">{t('success.title')}</div>
+            <p className="resa-success__sub">{t('success.sub')}</p>
           </div>
         </div>
       </div>
@@ -67,8 +68,8 @@ export default function Reservation() {
   return (
     <div className="resa" id="reservation">
       <div className="resa__inner">
-        <h2 className="resa__title">{reservation.title}</h2>
-        <p className="resa__sub">{reservation.sub}</p>
+        <h2 className="resa__title">{t('title')}</h2>
+        <p className="resa__sub">{t('sub')}</p>
 
         <div className="resa-steps">
           {Array.from({ length: STEPS }, (_, i) => {
@@ -92,13 +93,13 @@ export default function Reservation() {
 
         <div className={`form-actions${step > 1 ? ' form-actions--spread' : ' form-actions--end'}`} style={{ marginTop: 32 }}>
           {step > 1 && (
-            <button className="btn-back" onClick={handleBack}>← Retour</button>
+            <button className="btn-back" onClick={handleBack}>{t('back')}</button>
           )}
           {step < STEPS ? (
-            <button className="btn-next btn-next--auto" onClick={handleNext}>Continuer →</button>
+            <button className="btn-next btn-next--auto" onClick={handleNext}>{t('next')}</button>
           ) : (
             <button className="btn-next btn-next--auto" onClick={handleSubmit} disabled={loading}>
-              {loading ? 'Envoi…' : reservation.submit}
+              {loading ? t('loading') : t('submit')}
             </button>
           )}
         </div>

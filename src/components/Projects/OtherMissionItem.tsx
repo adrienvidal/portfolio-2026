@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { useTranslations } from 'next-intl'
 
 interface OtherMissionItemProps {
   name: string
@@ -11,6 +12,7 @@ interface OtherMissionItemProps {
 }
 
 export default function OtherMissionItem({ name, description, tags, link, site }: OtherMissionItemProps) {
+  const t = useTranslations('otherMissions')
   const [expanded, setExpanded] = useState(false)
 
   return (
@@ -24,7 +26,7 @@ export default function OtherMissionItem({ name, description, tags, link, site }
         onClick={() => setExpanded((v) => !v)}
         aria-expanded={expanded}
       >
-        {expanded ? 'Voir moins' : 'Voir plus'}
+        {expanded ? t('seeLess') : t('seeMore')}
       </button>
       <div className="other-missions__tags">
         {tags.map((tag) => (

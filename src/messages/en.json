@@ -1,0 +1,254 @@
+{
+  "meta": {
+    "home": {
+      "title": "Adrien Vidal — Freelance Web Developer",
+      "description": "Adrien builds premium React / Next landing pages focused on conversion, with AI, UX, and fast execution. Let's talk about your project."
+    },
+    "projects": {
+      "title": "Projects — Adrien Vidal",
+      "description": "All my projects: landing pages, UX redesigns, MVPs — built for growth and marketing teams."
+    },
+    "blog": {
+      "title": "Blog — Adrien Vidal",
+      "description": "Articles on conversion, UX, and front-end development."
+    },
+    "lab": {
+      "title": "Lab — Adrien Vidal",
+      "description": "Personal projects: tools, experiments, and prototypes built for real needs."
+    }
+  },
+
+  "nav": {
+    "links": {
+      "services": "Services",
+      "processus": "Process",
+      "projets": "Projects",
+      "apropos": "About",
+      "blog": "Blog",
+      "lab": "Lab"
+    },
+    "cta": "Contact me",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
+  },
+
+  "hero": {
+    "title": "A developer who builds experiences, not just pages.",
+    "sub": "I help startups and product teams build interactive web experiences, integrate AI into their interfaces, and launch premium digital campaigns — fast, clean, without friction.",
+    "ctaPrimary": "Let's work together",
+    "ctaSecondary": "See my services",
+    "avatarAlt": "Portrait of Adrien, freelance front-end developer"
+  },
+
+  "clients": {
+    "label": "They trusted me"
+  },
+
+  "services": {
+    "title": "What I do for you",
+    "sub": "Interfaces that go beyond the static page.",
+    "items": [
+      {
+        "title": "Interactive web experiences",
+        "items": [
+          "Product quizzes and diagnostics",
+          "Multi-view experiences and gamification",
+          "Configurators and discovery mechanics",
+          "Advanced animations (GSAP, Framer Motion)"
+        ],
+        "proof": "When a classic landing page is no longer enough to engage your audience"
+      },
+      {
+        "title": "AI integration in your product",
+        "items": [
+          "Content generation (Claude, OpenAI)",
+          "Product recommendation and personalization",
+          "AI pipeline with human approval workflow",
+          "Automation and publishing via API (Meta, etc.)"
+        ],
+        "proof": "To add a concrete AI feature without hiring an ML or data profile"
+      },
+      {
+        "title": "Landing pages & premium campaigns",
+        "items": [
+          "Structure designed to guide toward action",
+          "Flawless mobile, fast loading",
+          "Promotional videos and animations",
+          "Connected to your CRM, analytics, or e-commerce funnel"
+        ],
+        "proof": "Campaign pages, product launches, and acquisition pages at the level of major brands"
+      }
+    ]
+  },
+
+  "process": {
+    "title": "How it works",
+    "sub": "Three steps. No surprises, no radio silence.",
+    "steps": [
+      {
+        "label": "Step 1",
+        "title": "Discovery call — 30 min",
+        "desc": "We define your business objective, constraints, and what the page needs to deliver. No written brief required."
+      },
+      {
+        "label": "Step 2",
+        "title": "Proposal & wireframe in 48h",
+        "desc": "You receive an annotated page structure and clear pricing. You approve, we start."
+      },
+      {
+        "label": "Step 3",
+        "title": "Delivery + launch",
+        "desc": "Development, feedback integrated, launch. You get clean, documented code ready to evolve."
+      }
+    ]
+  },
+
+  "projects": {
+    "title": "Recent projects",
+    "roleLabel": "Mission:",
+    "resultLabel": "What it changed:",
+    "linkLabel": "See the project →",
+    "seeAllLabel": "See all projects →",
+    "allProjectsTitle": "All projects",
+    "backLabel": "← Home",
+    "labTeaserText": "Outside of client work, I build tools for real needs — sometimes mine, sometimes ones I couldn't find elsewhere.",
+    "labTeaserCta": "See the Lab →",
+    "items": [
+      {
+        "title": "Chanel Coco Crush — gamified jewelry experience",
+        "role": "Development of a gamified mobile experience: jewelry profile quiz, Tinder-style swipe to build a wish list, generation of a personal QR code used at a physical Chanel event",
+        "result": "Complete phygital experience delivered for a pop-up event — from product diagnosis to a scannable wish list in-store"
+      },
+      {
+        "title": "Chanel Chance — interactive multi-view campaign",
+        "role": "Development of a multi-view campaign landing page with promotional videos, and a diagnostic quiz helping visitors identify the Chance fragrance matching their profile",
+        "result": "Personalized product discovery experience: each visitor lands on a result page dedicated to their fragrance, increasing relevance and purchase intent"
+      },
+      {
+        "title": "Chanel Allure Sport — campaign & product funnel",
+        "role": "Development of a campaign landing page with promotional videos, GSAP animations, and product list with add-to-cart",
+        "result": "Immersive campaign connected to the Chanel e-commerce funnel — from product discovery to purchase in a single page"
+      },
+      {
+        "title": "Chanel Look This Way — editorial experience",
+        "role": "Development of an immersive editorial experience for the Look This Way campaign, desktop and mobile",
+        "result": "Engaging visual experience delivered on time, consistent with the campaign identity"
+      },
+      {
+        "title": "Chanel Sublimage — luxury skincare campaign",
+        "role": "Development of the Sublimage campaign landing page with presentation animations and high-end asset integration",
+        "result": "Premium rendering aligned with the luxury positioning of the Chanel skincare range"
+      },
+      {
+        "title": "Chanel Manufacture — editorial page",
+        "role": "Development of an editorial page dedicated to the craftsmanship of the Chanel Manufacture",
+        "result": "Showcase of Chanel's artisan crafts, refined rendering, and successful mobile adaptation"
+      },
+      {
+        "title": "Chanel N°5 — campaign landing page",
+        "role": "Development of the N°5 campaign landing page with promotional videos, CSS/JS animations, and brand asset integration",
+        "result": "Premium rendering consistent with the iconic fragrance identity, within Chanel technical constraints"
+      },
+      {
+        "title": "Chanel CSR — commitments page",
+        "role": "Development of the Chanel CSR page, editorial content structuring, and integration of institutional visuals",
+        "result": "Clear and accessible institutional page, consistent with Chanel communication standards"
+      },
+      {
+        "title": "Chanel 31 Le Rouge — makeup campaign",
+        "role": "Development of the 31 Le Rouge campaign landing page, CSS/JS animations, and desktop/mobile consistency",
+        "result": "Campaign page delivered within brand constraints, flawless visual rendering"
+      }
+    ]
+  },
+
+  "otherMissions": {
+    "title": "Contributions",
+    "subtitle": "Team contributions to high-traffic existing sites",
+    "seeMore": "See more",
+    "seeLess": "See less",
+    "items": [
+      {
+        "name": "Fnac Darty",
+        "description": "Front-end development within the Darty Commerciality team — redesign of the product page, product list, and push pages. Design of cross-sell highlight components: insurance, warranties, associated services. Brand page integration."
+      },
+      {
+        "name": "Prisma Media",
+        "description": "Front-end development within the Women's division (femmeactuelle.fr, cuisineactuelle.fr) — redesign of Home, Article, Author, and Recipe Book pages. Development of custom web components: review and star rating module on recipe pages, authentication module. Internal Chrome extension for GitLab code review management via Google Chat webhooks."
+      },
+      {
+        "name": "Yves Rocher",
+        "description": "Campaign landing pages for the Lifting Végétal and Fragrance lines. Development of a diagnostic quiz to guide visitors toward the foundation matching their profile. E-commerce redesign, integration of Target2Sell product recommendation, and creation of A/B tests via ABTASTY."
+      }
+    ]
+  },
+
+  "about": {
+    "title": "About",
+    "bio": "I've been a front-end developer for 10 years, specializing in React and TypeScript. I've worked in demanding environments — Chanel, Fnac Darty, Prisma — where perceived quality and performance are non-negotiable.\n\nToday I work freelance with startups and product teams that want to go beyond the static page: interactive experiences, AI integrations, premium digital campaigns. I don't wait for a perfect Jira ticket to start: a two-paragraph brief is enough.\n\nI work remotely, in fast-paced mode, with an AI workflow that lets me deliver quickly without sacrificing quality."
+  },
+
+  "reservation": {
+    "title": "A brief, a call, a proposal in 48h.",
+    "sub": "No heavy process. Tell me what you're working on, I'll get back to you within 24h.",
+    "submit": "Send my request",
+    "loading": "Sending…",
+    "back": "← Back",
+    "next": "Continue →",
+    "errorBesoin": "Please describe your need.",
+    "errorContact": "Please fill in your name and email.",
+    "errorGeneric": "An error occurred. Please try again or contact me directly.",
+    "success": {
+      "check": "✓",
+      "title": "Message received!",
+      "sub": "Thank you. I'll get back to you within 24h to figure out next steps together."
+    },
+    "form": {
+      "nomLabel": "Your name",
+      "nomPlaceholder": "First Last",
+      "emailLabel": "Your email",
+      "emailPlaceholder": "you@company.com",
+      "entrepriseLabel": "Your company",
+      "entrepriseOptional": "(optional)",
+      "entreprisePlaceholder": "Company name",
+      "besoinLabel": "What do you need?",
+      "besoinPlaceholder": "E.g.: we're launching a paid campaign in 3 weeks and our current landing page isn't converting…",
+      "budgetLabel": "Estimated budget",
+      "budgetOptions": ["< €1,000", "€1,000 – €3,000", "€3,000 – €6,000", "> €6,000"],
+      "delaiLabel": "Desired timeline",
+      "delaiOptions": ["Urgent (< 2 weeks)", "2 to 4 weeks", "No constraint"]
+    }
+  },
+
+  "lab": {
+    "title": "Lab",
+    "sub": "Personal projects — tools, experiments, stuff built for a real need or just to see.",
+    "backLabel": "← Back",
+    "visuals": "{count} visuals",
+    "statusLabels": {
+      "live": "Live",
+      "wip": "In progress",
+      "archived": "Archived"
+    },
+    "items": [
+      {
+        "title": "FitnessPal",
+        "description": "Complete workout tracking app, built with AI-assisted live coding. PPL/Cardio 4-day program, exercise cards with muscle illustrations, weight tracking, session history by calendar, light/dark theme, Google authentication. A concrete example of what an AI workflow can deliver quickly without sacrificing quality."
+      },
+      {
+        "title": "Dripflow",
+        "description": "Automated Instagram content pipeline powered by AI. Upload a reference image → Claude Sonnet generates optimized Midjourney prompts → human approval workflow → image generation via fal.ai → visual selection → caption generation in 3 tones (mysterious, casual, artistic) → carousel assembly → automatic publication on Instagram via the Instagram Graph API (Meta). Designed to manage a virtual influencer account."
+      }
+    ]
+  },
+
+  "footer": {
+    "subtitle": "React & TypeScript Freelance Developer"
+  },
+
+  "blog": {
+    "back": "← Back",
+    "title": "Blog",
+    "articleBack": "← Blog"
+  }
+}

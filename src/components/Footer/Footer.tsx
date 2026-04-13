@@ -1,5 +1,5 @@
 import React from 'react'
-import { footer } from '../../data/content'
+import { useTranslations } from 'next-intl'
 import './Footer.scss'
 
 const icons: Record<string, React.ReactElement> = {
@@ -15,16 +15,23 @@ const icons: Record<string, React.ReactElement> = {
   ),
 }
 
+const socialLinks = [
+  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/adrien-vidal-308b4864/' },
+  { label: 'GitHub', href: 'https://github.com/adrienvidal' }
+]
+
 export default function Footer() {
+  const t = useTranslations('footer')
+
   return (
     <footer className="footer">
       <div className="footer__left">
         © 2026 Adrien Vidal
         <span className="footer__sep"> — </span>
-        <span className="footer__subtitle">Développeur React &amp; TypeScript freelance</span>
+        <span className="footer__subtitle">{t('subtitle')}</span>
       </div>
       <div className="footer__right">
-        {footer.social.map(({ label, href }) => (
+        {socialLinks.map(({ label, href }) => (
           <a key={label} href={href} target="_blank" rel="noopener noreferrer" aria-label={label} className="footer__social-link">
             {icons[label]}
           </a>
