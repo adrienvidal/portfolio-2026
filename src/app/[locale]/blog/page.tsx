@@ -31,13 +31,13 @@ export async function generateMetadata({
       siteName: 'Adrien Vidal',
       locale: locale === 'en' ? 'en_GB' : 'fr_FR',
       type: 'website',
-      images: ['/thumbnail.webp'],
+      images: [{ url: '/thumbnail.webp', width: 1200, height: 630 }],
     },
     twitter: {
       card: 'summary_large_image',
       title,
       description,
-      images: ['/thumbnail.webp'],
+      images: [{ url: '/thumbnail.webp', width: 1200, height: 630 }],
     },
   }
 }

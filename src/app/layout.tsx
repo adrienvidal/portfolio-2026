@@ -15,10 +15,10 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://adrienvidal.com'),
   icons: { icon: '/favicon.svg' },
   openGraph: {
-    images: ['/thumbnail.webp'],
+    images: [{ url: '/thumbnail.webp', width: 1200, height: 630 }],
   },
   twitter: {
-    images: ['/thumbnail.webp'],
+    images: [{ url: '/thumbnail.webp', width: 1200, height: 630 }],
   },
 }
 
