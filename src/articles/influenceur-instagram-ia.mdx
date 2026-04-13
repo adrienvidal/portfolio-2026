@@ -1,0 +1,50 @@
+---
+slug: influenceur-instagram-ia-ce-que-jai-appris
+title: J'ai construit un influenceur Instagram avec de l'IA — voilà ce que j'ai appris
+date: 2026-01-08
+description: Retour honnête sur Dripflow, mon projet de pipeline IA complet pour Instagram — Next.js, Claude SDK, fal.ai, Instagram Graph API. Les trucs qui ont marché, et les galères.
+tags: [ia, side-project, next.js, instagram]
+---
+
+Il y a quelques mois, je me suis lancé dans un projet un peu dingue : créer un influenceur Instagram entièrement généré par l'IA. Pas juste les images — le contenu, le calendrier, la publication, tout le pipeline. Le projet s'appelle **Dripflow**, et je vais vous raconter honnêtement comment ça s'est passé.
+
+## L'idée de départ
+
+Tout est parti d'une question simple : jusqu'où peut-on pousser l'automatisation d'un compte de contenu ? J'avais envie de tester si on pouvait construire une présence Instagram crédible sans intervention humaine au quotidien. Pas pour tromper qui que ce soit — plutôt pour comprendre les limites techniques et créatives de ce qui est possible aujourd'hui.
+
+La stack choisie : **Next.js** pour le back-end, le **SDK Claude** pour la génération de texte, **fal.ai** pour les images, et l'**Instagram Graph API** pour la publication automatique. Sur le papier, c'est propre. En pratique, ça a été une belle série d'apprentissages.
+
+## Ce qui a marché du premier coup
+
+La génération de contenu textuel est bluffante. En définissant bien le persona — ton, valeurs, style d'écriture, centres d'intérêt — Claude produit des captions qui sonnent authentiques. J'ai passé du temps sur le system prompt, vraiment, et ça fait toute la différence.
+
+❌ *Un prompt bâclé donne un influenceur générique.*
+
+✅ *Un prompt travaillé donne quelque chose qui a une vraie voix.*
+
+La partie scheduling avec Next.js et les cron jobs s'est montée assez vite. Rien de révolutionnaire techniquement, mais ça tourne proprement.
+
+## Ce qui m'a surpris (dans le bon sens)
+
+fal.ai est vraiment impressionnant pour la cohérence visuelle. En utilisant des seeds fixes et des prompts contrôlés, on arrive à maintenir une identité visuelle entre les posts — ce qui est crucial pour un feed Instagram. Avec les bons modèles et les bonnes contraintes, on est loin du rendu "IA générique".
+
+L'autre surprise : le **workflow d'approbation humain** que j'ai intégré. Avant toute publication, le contenu passe par une interface de validation. J'avais mis ça "pour la sécurité", pensant que je l'utiliserais peu. En fait, c'est devenu la partie la plus intéressante du projet : observer ce que l'IA propose, comprendre pourquoi certains posts sonnent juste et d'autres non. Un outil de feedback loop autant qu'une garde-fou.
+
+## Les galères (parce qu'il y en a eu)
+
+L'**Instagram Graph API** est capricieuse. Les limitations sur les types de contenu, les délais de publication, les erreurs silencieuses — j'ai passé plus de temps sur cette partie que sur tout le reste. La documentation est dense et certains comportements ne sont documentés nulle part, vous les découvrez en prod à 2h du matin.
+
+La **cohérence du persona sur la durée** est aussi un vrai défi. Sur un post, c'est facile. Sur 30 posts sur deux mois, des incohérences apparaissent si on ne structure pas bien le contexte passé à chaque génération. J'ai dû implémenter un système de "mémoire légère" — quelques éléments de contexte toujours présents dans chaque appel API.
+
+## Ce que ça m'a vraiment appris
+
+Construire Dripflow m'a confirmé quelque chose que je pressentais : la valeur du développeur dans un workflow IA n'est pas d'écrire du code plus vite. C'est de :
+
+- concevoir l'architecture qui tient sur la durée
+- gérer les cas limites
+- intégrer les APIs tierces qui résistent
+- créer les garde-fous qui rendent l'automatisation fiable
+
+N'importe qui peut faire tourner un script qui appelle Claude et publie sur Instagram. Faire un système qui tourne proprement en production — c'est là que l'expérience compte vraiment.
+
+Dripflow tourne toujours. Le compte grandit doucement. Et je continue d'apprendre de chaque itération.

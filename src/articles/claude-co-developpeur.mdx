@@ -1,0 +1,56 @@
+---
+slug: utiliser-claude-comme-co-developpeur
+title: Comment j'utilise Claude comme co-développeur au quotidien (pas juste pour générer du code)
+date: 2026-01-15
+description: La vraie différence entre générer du code et orchestrer avec l'IA — comment j'ai structuré mes prompts avec aText pour que ça devienne un vrai workflow, pas juste un outil ponctuel.
+tags: [ia, workflow, productivite, prompts]
+---
+
+"Tu utilises l'IA pour coder ?" La question revient souvent. Ma réponse est toujours la même : pas vraiment pour *coder*, plutôt pour *penser*.
+
+Il y a une confusion répandue sur ce que ça veut dire d'utiliser l'IA dans son travail de développeur. L'image qu'on a souvent, c'est quelqu'un qui tape "crée-moi un composant React avec tel comportement" et copie-colle le résultat. Ça existe, oui. Mais c'est la partie la moins intéressante.
+
+## La différence entre générer et orchestrer
+
+**Générer du code**, c'est demander à Claude d'écrire une fonction, un composant, un test. C'est utile pour aller vite, pour les parties répétitives, pour les syntaxes qu'on ne connaît pas par cœur.
+
+**Orchestrer**, c'est autre chose. C'est utiliser Claude comme interlocuteur pour structurer sa pensée *avant* d'écrire la première ligne. C'est lui soumettre une architecture et lui demander de challenger les choix. C'est lui décrire un bug et explorer les hypothèses ensemble avant de toucher au code.
+
+Dans mon quotidien, la génération représente peut-être 30% de mon usage. L'orchestration, 70%.
+
+## Comment j'ai structuré mes prompts
+
+J'utilise **aText** pour l'expansion de texte sur Mac. Ça me permet d'avoir des templates de prompts accessibles avec un raccourci clavier. Ma structure de base :
+
+- **Rôle** — qui est Claude dans ce contexte (expert React, architecte back-end, relecteur de code...)
+- **Mission** — ce que je veux exactement comme output
+- **Contexte** — le code existant, les contraintes, ce qui a déjà été essayé
+- **Format attendu** — code, liste d'options, analyse critique...
+- **Exemples** — si le format ou le style importe
+- **Ton** — pragmatique, pédagogique, direct...
+
+Ce n'est pas une structure originale. Mais l'avoir formalisée et pouvoir l'invoquer rapidement change tout. Je ne perds plus de temps à "recadrer" Claude au milieu d'une conversation parce que je n'avais pas bien posé le contexte au départ.
+
+## Cas concrets
+
+### Exploration d'architecture
+
+Avant de commencer une feature complexe, je décris le problème à Claude — données, contraintes, comportements attendus — et je lui demande de proposer deux ou trois approches avec leurs tradeoffs. Je n'utilise pas forcément ce qu'il propose, mais l'exercice de lire ses arguments clarifie ma propre réflexion.
+
+### Revue de code
+
+Je colle un composant et je demande une revue ciblée. Pas *"qu'est-ce qui ne va pas"*, mais *"est-ce que ce composant gère correctement les cas d'erreur"*. Des questions précises donnent des réponses précises.
+
+### Debugging
+
+Décrire un comportement inattendu à quelqu'un — même une IA — force à organiser ses observations. Souvent, je trouve la solution en rédigeant le contexte, avant même d'avoir envoyé le message.
+
+### Documentation
+
+Je déteste écrire de la documentation. Claude ne déteste pas ça. Je lui passe le code, il produit une première version que je relis et affine. Le temps total est divisé par trois.
+
+## Ce que ça ne remplace pas
+
+Le jugement. La capacité à sentir qu'une solution "sent mauvais" même si elle fonctionne techniquement. L'expérience des projets qui partent bien et dérivent six mois plus tard faute d'architecture claire. La relation avec le client qui permet de comprendre ce qu'il veut vraiment, pas juste ce qu'il demande.
+
+Claude est un outil extraordinairement capable. Mais la valeur que j'apporte à mes clients ne vient pas de la qualité du code qu'un LLM peut générer — elle vient de mes choix sur **quoi** construire, **comment** le construire, et **pourquoi**.

@@ -1,0 +1,63 @@
+---
+slug: construire-app-fitness-avec-claude-code
+title: Ce que j'ai découvert en construisant une app fitness avec Claude Code en live
+date: 2026-02-26
+description: Retour honnête sur la construction de FitnessPal avec Claude Code — React, TypeScript, Supabase, Google OAuth. Ce qui a bluffé, ce qui a résisté, et le workflow qui a émergé.
+tags: [claude-code, react, typescript, supabase, workflow]
+---
+
+Il y a quelques mois, je me suis lancé dans un exercice un peu particulier : construire une app de suivi fitness en utilisant Claude Code de manière intensive, en mode presque live. React, TypeScript, Supabase, Google OAuth. De la conception à la mise en ligne.
+
+Voilà ce que j'ai appris, les bonnes surprises, et les endroits où ça m'a résisté.
+
+## Le contexte : pourquoi cet exercice
+
+Je voulais comprendre jusqu'où Claude Code pouvait aller sur un projet complet — pas un composant isolé, pas un script utilitaire, mais une vraie application avec authentification, base de données, état complexe, plusieurs vues.
+
+Et je voulais documenter honnêtement ce qui se passait, pas juste montrer les parties où ça marche.
+
+## Ce qui m'a bluffé
+
+### La vitesse sur le scaffolding
+
+La mise en place de l'environnement, la configuration de Supabase, l'intégration de Google OAuth — des choses que je fais régulièrement et qui me prennent du temps non pas parce qu'elles sont difficiles, mais parce qu'elles sont longues. Avec Claude Code, cette phase s'est passée deux à trois fois plus vite que d'habitude.
+
+### La gestion de l'état
+
+J'avais des doutes sur la capacité à gérer un état applicatif un peu complexe (sessions utilisateur, données de workout, préférences). Le code généré était structuré, propre, avec des patterns cohérents. Pas toujours exactement ce que j'aurais écrit, mais défendable dans la plupart des cas.
+
+### Les types TypeScript
+
+Claude Code gère TypeScript sérieusement. Les interfaces, les types génériques, l'inférence — c'est traité avec soin, pas juste ajouté en surface pour que ça compile.
+
+## Les endroits où ça a résisté
+
+### Les décisions d'architecture cross-composants
+
+Quand j'ai demandé à Claude Code de restructurer une partie de l'application devenue fouillis, les suggestions étaient techniquement valides mais ne tenaient pas compte des implications sur d'autres parties du codebase. **Il voyait le composant, pas l'application.**
+
+### Les cas limites de l'API Supabase
+
+Certains comportements de Supabase en production ne correspondent pas exactement à ce que la documentation décrit. Claude Code a proposé des solutions qui auraient fonctionné dans un contexte standard, mais pas dans le mien. J'ai dû creuser manuellement.
+
+### Le jugement esthétique
+
+Le CSS généré était correct fonctionnellement. Il n'était pas élégant. La différence entre *"ça marche"* et *"ça a l'air bien"* reste une zone où mon intervention était systématiquement nécessaire.
+
+## Le workflow qui a émergé
+
+Ce que j'ai naturellement développé au fil du projet : je décompose les tâches en deux catégories.
+
+**Tâches d'implémentation** → Claude Code.
+Écrire ce composant, connecter cet endpoint, gérer ces états.
+
+**Tâches de jugement** → moi.
+Comment structurer cette feature, est-ce que cette interface est cohérente avec le reste, est-ce que cette approche va créer des problèmes dans trois mois.
+
+C'est un partage du travail plus qu'un remplacement. Et ce partage, une fois qu'on l'a trouvé, est très efficace.
+
+## Ce que je recommande si vous voulez essayer
+
+Commencez par un projet qui vous intéresse vraiment mais que vous repoussez faute de temps. Pas un projet fictif, un vrai projet que vous voulez finir.
+
+L'engagement que vous avez envers ce projet vous rendra plus attentif aux outputs de Claude Code et plus critique sur ce qui ne va pas — ce qui est exactement la bonne posture.

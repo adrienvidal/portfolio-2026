@@ -1,0 +1,54 @@
+---
+slug: ce-que-chanel-ma-appris-sur-les-interfaces-premium
+title: Ce que Chanel m'a appris sur les interfaces premium
+date: 2026-01-29
+description: Travailler sur les interfaces digitales de Chanel m'a recalibré sur ce que "qualité perçue" veut vraiment dire techniquement. Voilà ce que j'ai rapporté sur tous mes projets depuis.
+tags: [qualite, frontend, luxe, animation]
+---
+
+Quand on me dit "qualité premium", j'entends des mots vagues. Quand j'ai commencé à travailler sur les interfaces digitales de Chanel, j'ai compris ce que ça voulait vraiment dire à l'échelle d'un projet.
+
+## L'exigence que je n'avais pas anticipée
+
+Ma première mission Chanel portait sur une landing page de parfum. J'avais fait des dizaines de landing pages avant ça. Première réunion de validation : la vidéo de fond avait un artefact de compression d'une fraction de seconde dans la transition entre deux scènes. Arrêt complet. Retour en production.
+
+Ce genre de détail, sur d'autres projets, passe. Sur un projet Chanel, ça ne passe pas.
+
+Après avoir intégré ça, les projets d'avant semblent légèrement bâclés — pas parce qu'ils l'étaient, mais parce que le niveau d'attention s'était recalibré.
+
+## Ce que "qualité perçue" signifie techniquement
+
+La qualité perçue d'une interface n'est pas qu'une question de design. Elle se joue dans des dimensions techniques précises.
+
+### Les animations
+
+Une animation à 60fps sur Chrome doit aussi être à 60fps sur un iPhone 11 en mode économie d'énergie. On ne livre pas une animation qui "marche bien sur la démo". On livre une animation qui marche sur les devices que les utilisateurs ont *vraiment*.
+
+### Les assets
+
+Les images servies en trop grande taille et mal optimisées — c'est le problème le plus fréquent. Pour une marque de luxe, la photo du produit qui pixelise légèrement sur un écran Retina n'est pas acceptable. Ça implique de traiter sérieusement les formats (WebP, AVIF), les résolutions, le lazy loading.
+
+### La typographie
+
+Les marques de luxe ont leurs propres fontes, souvent chargées en WOFF2 avec des specs précises. La gestion du **FOUT** (flash de texte non stylé) n'est pas optionnelle. Un chargement de police mal géré qui fait sauter le layout pendant 200ms — ça se voit, ça se corrige.
+
+### La cohérence mobile
+
+"Mobile-first" est un mantra. Mais pour les projets Chanel, *mobile-irréprochable* serait plus juste. Chaque interaction tactile, chaque swipe, chaque état de hover remplacé par un état d'appui — tout a été vérifié sur de vrais devices, pas dans le simulateur Chrome.
+
+## Ce que les contraintes de marque enseignent
+
+Travailler sous une charte technique et graphique stricte est une discipline utile. On ne peut pas improviser, on ne peut pas préférer ses goûts à ceux de la marque, on ne peut pas simplifier ce qui est jugé non simplifiable.
+
+Au début c'est frustrant. Avec le recul, c'est un excellent entraînement à **l'architecture contrainte** : produire quelque chose d'excellent dans un cadre qui ne bouge pas, plutôt que dans la liberté totale où n'importe quelle décision peut se justifier.
+
+## Ce que j'ai rapporté sur mes autres projets
+
+Une liste mentale de choses qui ne se voient pas mais qui comptent :
+
+- Les transitions entre états
+- Le comportement du scroll sur iOS
+- La gestion des erreurs réseau sur les assets critiques
+- L'accessibilité des animations pour les utilisateurs qui ont activé *"réduire le mouvement"*
+
+Ces choses existent sur tous les projets. Sur la plupart, elles ne sont pas traitées. Depuis Chanel, je les traite systématiquement — pas parce que le client le demande, mais parce que c'est la différence entre quelque chose de bien et quelque chose d'excellent.

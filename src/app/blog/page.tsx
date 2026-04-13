@@ -24,7 +24,7 @@ export default function Blog() {
             {sorted.map((article) => (
               <li key={article.slug} className="blog__item">
                 <Link href={`/blog/${article.slug}`} className="blog__link">
-                  <time className="blog__date">{article.date}</time>
+                  <time className="blog__date">{new Date(article.date).toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' })}</time>
                   <h2 className="blog__item-title">{article.title}</h2>
                   <p className="blog__description">{article.description}</p>
                   {article.tags && (

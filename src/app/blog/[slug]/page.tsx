@@ -6,8 +6,28 @@ import './article.scss'
 
 // Static map: add one entry per article in src/articles/
 const articleModules: Record<string, () => Promise<{ default: React.ComponentType }>> = {
+  'ce-que-chanel-ma-appris-sur-les-interfaces-premium': () =>
+    import('@/articles/chanel-interfaces-premium.mdx'),
+  'freelance-vs-agence-comment-choisir': () =>
+    import('@/articles/freelance-vs-agence.mdx'),
+  'comment-j-utilise-l-ia-pour-livrer-plus-vite': () =>
+    import('@/articles/ia-workflow-freelance.mdx'),
   'pourquoi-vos-landing-pages-ne-convertissent-pas': () =>
     import('@/articles/pourquoi-vos-landing-pages-ne-convertissent-pas.mdx'),
+  'influenceur-instagram-ia-ce-que-jai-appris': () =>
+    import('@/articles/influenceur-instagram-ia.mdx'),
+  'utiliser-claude-comme-co-developpeur': () =>
+    import('@/articles/claude-co-developpeur.mdx'),
+  'un-quiz-peut-il-vraiment-vendre-un-parfum': () =>
+    import('@/articles/quiz-vendre-parfum.mdx'),
+  'landing-page-vs-experience-interactive': () =>
+    import('@/articles/landing-page-vs-experience-interactive.mdx'),
+  'lia-va-t-elle-remplacer-les-developpeurs': () =>
+    import('@/articles/ia-va-t-elle-remplacer-developpeurs.mdx'),
+  'construire-app-fitness-avec-claude-code': () =>
+    import('@/articles/app-fitness-claude-code.mdx'),
+  'freelance-nomade-outils-concrets': () =>
+    import('@/articles/freelance-nomade-outils.mdx')
 }
 
 export async function generateStaticParams() {
@@ -37,7 +57,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
     <main className="article">
       <div className="article__inner">
         <Link href="/blog" className="article__back">← Blog</Link>
-        <time className="article__date">{meta.date}</time>
+        <time className="article__date">{new Date(meta.date).toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' })}</time>
         <h1 className="article__title">{meta.title}</h1>
         {meta.tags && (
           <ul className="article__tags">
