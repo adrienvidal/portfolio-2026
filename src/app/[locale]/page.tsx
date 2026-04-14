@@ -8,6 +8,7 @@ import Services from '@/components/Services/Services'
 import Process from '@/components/Process/Process'
 import About from '@/components/About/About'
 import Projects from '@/components/Projects/Projects'
+import Testimonials from '@/components/Testimonials/Testimonials'
 import Reservation from '@/components/Reservation/Reservation'
 import Footer from '@/components/Footer/Footer'
 
@@ -59,6 +60,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
       <Process />
       <About />
       <Projects />
+      <Testimonials />
       <Reservation />
       <Footer />
     </>
