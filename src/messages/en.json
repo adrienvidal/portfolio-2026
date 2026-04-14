@@ -188,6 +188,28 @@
     "bio": "I've been a front-end developer for 10 years, specializing in React and TypeScript. I've worked in demanding environments — Chanel, Fnac Darty, Prisma — where perceived quality and performance are non-negotiable.\n\nToday I work freelance with startups and product teams that want to go beyond the static page: interactive experiences, AI integrations, premium digital campaigns. I don't wait for a perfect Jira ticket to start: a two-paragraph brief is enough.\n\nI work remotely, in fast-paced mode, with an AI workflow that lets me deliver quickly without sacrificing quality."
   },
 
+  "testimonials": {
+    "title": "They trusted me",
+    "sub": "Marketing, e-commerce and media teams I've worked with.",
+    "items": [
+      {
+        "quote": "He handled projects end to end, in a demanding environment with strict pixel-perfect and performance constraints. Deliveries were always on time, with a consistently high level of quality.",
+        "name": "Marine Benoit-Jannin",
+        "role": "Lead Front-End Developer — Chanel"
+      },
+      {
+        "quote": "Adrien has a keen eye for detail and is committed to delivering quality work. He is also very communicative and a great team player, making him a valuable asset on any project.",
+        "name": "Quentin Vuong",
+        "role": "Business Manager — Globalis"
+      },
+      {
+        "quote": "It is rare to find a developer who is flexible, always attentive, and truly understands business challenges. He brought calm and clarity to complex projects.",
+        "name": "Aurélia Baudelaire",
+        "role": "Global Marketplaces Manager — Yves Rocher"
+      }
+    ]
+  },
+
   "reservation": {
     "title": "A brief, a call, a proposal in 48h.",
     "sub": "No heavy process. Tell me what you're working on, I'll get back to you within 24h.",
