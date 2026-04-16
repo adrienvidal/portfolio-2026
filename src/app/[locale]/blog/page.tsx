@@ -5,7 +5,7 @@ import { Link } from '@/i18n/navigation'
 import { articles } from '@/data/articles'
 import Nav from '@/components/Nav/Nav'
 import Footer from '@/components/Footer/Footer'
-import '../../blog/blog.scss'
+import './blog.scss'
 
 export async function generateMetadata({
   params

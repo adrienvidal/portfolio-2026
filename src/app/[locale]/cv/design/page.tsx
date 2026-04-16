@@ -1,8 +1,8 @@
 import { getTranslations, setRequestLocale } from 'next-intl/server'
 import type { Metadata } from 'next'
 import { DM_Serif_Display, DM_Sans } from 'next/font/google'
-import { CVDesign } from '@/components/CV/CVDesign'
-import type { CVDesignData } from '@/components/CV/CVDesign'
+import { CVDesign } from './CVDesign'
+import type { CVDesignData } from './CVDesign'
 
 const dmSerif = DM_Serif_Display({
   subsets: ['latin'],

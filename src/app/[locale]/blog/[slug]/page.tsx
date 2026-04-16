@@ -4,7 +4,7 @@ import { setRequestLocale } from 'next-intl/server'
 import { Link } from '@/i18n/navigation'
 import { notFound } from 'next/navigation'
 import { articles } from '@/data/articles'
-import '../../../blog/[slug]/article.scss'
+import './article.scss'
 
 // Static map: add one entry per article in src/articles/
 const articleModules: Record<string, () => Promise<{ default: React.ComponentType }>> = {

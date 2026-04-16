@@ -1,8 +1,8 @@
 import { getTranslations, setRequestLocale } from 'next-intl/server'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-import { CVSimple } from '@/components/CV/CVSimple'
-import type { CVSimpleData } from '@/components/CV/CVSimple'
+import { CVSimple } from './CVSimple'
+import type { CVSimpleData } from './CVSimple'
 
 const inter = Inter({
   subsets: ['latin'],

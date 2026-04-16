@@ -1,4 +1,4 @@
-import { PrintButton } from './PrintButton'
+import { PrintButton } from '../PrintButton'
 import './CVSimple.scss'
 
 type Skill = { cat: string; val: string }

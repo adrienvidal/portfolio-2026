@@ -8,7 +8,7 @@ import { labStaticData, type LabStaticItem } from '@/data/static'
 import Nav from '@/components/Nav/Nav'
 import Footer from '@/components/Footer/Footer'
 import Lightbox, { type MediaItem } from '@/components/Lightbox/Lightbox'
-import '../../lab/lab.scss'
+import './lab.scss'
 
 function toAutoVideo(url: string) {
   return url.replace('/upload/', '/upload/f_auto,q_auto/')

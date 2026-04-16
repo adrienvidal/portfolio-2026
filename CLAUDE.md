@@ -21,7 +21,9 @@ Portfolio built with React 19 + TypeScript + Next.js 15 (App Router), using file
 - `/lab` — Lab page (`src/app/[locale]/lab/page.tsx`)
 - `/blog` — Blog index (`src/app/[locale]/blog/page.tsx`)
 - `/blog/[slug]` — Article (`src/app/[locale]/blog/[slug]/page.tsx`)
-- `/cv` — CV hub (`src/app/[locale]/cv/page.tsx`) — lists available CVs (design, simple); each card links to `/cv/{locale}/cv-design.html` or `/cv/{locale}/cv-simple.html` (static HTML files in `public/cv/`). Styles in `src/app/cv/cv-hub.scss`. i18n namespace: `cv`.
+- `/cv` — CV hub (`src/app/[locale]/cv/page.tsx`) — lists available CVs (design, simple); each card links to `/cv/design` and `/cv/simple`. i18n namespace: `cv`.
+- `/cv/design` — CV design page (`src/app/[locale]/cv/design/page.tsx`) renders `CVDesign` component
+- `/cv/simple` — CV simple page (`src/app/[locale]/cv/simple/page.tsx`) renders `CVSimple` component
 
 All routes are nested under `[locale]` — Next.js resolves `/fr/...` and `/en/...` automatically. `fr` is the default locale (no prefix in URLs by default).
 
@@ -34,7 +36,7 @@ All routes are nested under `[locale]` — Next.js resolves `/fr/...` and `/en/.
 
 The `Reservation` section has one sub-component: `ContactForm`.
 
-> Note: `Testimonials` component exists in `src/components/Testimonials/` but is currently commented out in `src/app/[locale]/page.tsx`.
+> Note: `Testimonials` component exists in `src/components/Testimonials/` and is rendered in `src/app/[locale]/page.tsx`.
 
 **Projects:**
 - Home displays 6 Chanel projects (via `HOME_ORDER` in `src/data/static.tsx`) with a "Voir tous les projets →" link to `/projets`
@@ -81,7 +83,7 @@ The project uses **next-intl** with two locales: `fr` (default) and `en`.
 
 - **Sass (SCSS)** — each component has a co-located `.scss` file
 - Global styles live in `src/styles/`: `_variables.scss` (design tokens), `_reset.scss`, and `main.scss` (shared utility classes). Imported in `src/app/layout.tsx`.
-- Page-level SCSS files (blog, article, allProjects, lab) live in their legacy `src/app/blog/`, `src/app/lab/`, `src/app/projets/` directories and are imported with a relative path from the locale pages
+- Page-level SCSS files are co-located with their page: `src/app/[locale]/blog/blog.scss`, `src/app/[locale]/blog/[slug]/article.scss`, `src/app/[locale]/projets/allProjects.scss`, `src/app/[locale]/lab/lab.scss`, `src/app/[locale]/cv/cv-hub.scss`
 - Design tokens are defined as both CSS custom properties (`var(--blue)`) and Sass variables (`$blue`) in `_variables.scss`
 - Shared layout classes: `.section`, `.section-bg`, `.section-bg-inner`, `.section-title`, `.section-sub`, `.btn-blue`, `.btn-white`
 - Breakpoint: `900px` for mobile layout adjustments

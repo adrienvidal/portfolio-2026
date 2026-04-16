@@ -7,7 +7,7 @@ import ProjectCard from '@/components/Projects/ProjectCard'
 import OtherMissionItem from '@/components/Projects/OtherMissionItem'
 import Nav from '@/components/Nav/Nav'
 import Footer from '@/components/Footer/Footer'
-import '../../projets/allProjects.scss'
+import './allProjects.scss'
 
 export async function generateMetadata({
   params

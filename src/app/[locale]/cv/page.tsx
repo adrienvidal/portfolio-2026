@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 import Nav from '@/components/Nav/Nav'
 import Footer from '@/components/Footer/Footer'
 import { Link } from '@/i18n/navigation'
-import '../../cv/cv-hub.scss'
+import './cv-hub.scss'
 
 type Props = { params: Promise<{ locale: string }> }
 
