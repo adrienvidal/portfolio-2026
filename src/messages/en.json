@@ -343,13 +343,13 @@
         "tags": "React · TypeScript · Framer Motion · GSAP · SCSS · SEO · Accessibility · Azure"
       },
       {
-        "company": "Mazarine × Delvaux",
-        "date": "Oct. 2020",
-        "role": "Front-End Developer — Luxury showcase site",
+        "company": "Prisma Media",
+        "date": "Dec. 2021",
+        "role": "Front-End Developer — Women's Vertical (femmeactuelle.fr · cuisineactuelle.fr)",
         "bullets": [
-          "Development of the Delvaux showcase site for the virtual store launch"
+          "Home, Article, Author, Recipe Book page redesigns · Review, auth web components · GitLab Chrome extension"
         ],
-        "tags": "React · Next.js · Redux · Storybook"
+        "tags": "React · FreeMarker · Web Components · REST API · GraphQL"
       },
       {
         "company": "Fnac Darty",
@@ -361,13 +361,13 @@
         "tags": "React · Web Components · REST API · SCSS"
       },
       {
-        "company": "Prisma Media",
-        "date": "Dec. 2021",
-        "role": "Front-End Developer — Women's Vertical (femmeactuelle.fr · cuisineactuelle.fr)",
+        "company": "Mazarine × Delvaux",
+        "date": "Oct. 2020",
+        "role": "Front-End Developer — Luxury showcase site",
         "bullets": [
-          "Home, Article, Author, Recipe Book page redesigns · Review, auth web components · GitLab Chrome extension"
+          "Development of the Delvaux showcase site for the virtual store launch"
         ],
-        "tags": "React · FreeMarker · Web Components · REST API · GraphQL"
+        "tags": "React · Next.js · Redux · Storybook"
       },
       {
         "company": "Yves Rocher",
@@ -438,13 +438,14 @@
         "tags": "React · TypeScript · Framer Motion · GSAP · SCSS · SEO · Accessibility · Azure"
       },
       {
-        "company": "Mazarine × Delvaux",
-        "date": "Oct. 2020",
-        "role": "Front-End Developer — Luxury showcase site",
+        "company": "Prisma Media",
+        "date": "Dec. 2021",
+        "role": "Front-End Developer — Women's Vertical (femmeactuelle.fr · cuisineactuelle.fr)",
         "bullets": [
-          "Development of the Delvaux showcase site for the virtual store launch"
+          "Home, Article, Author, Recipe Book page redesigns",
+          "Web components: review/rating module, authentication module, GitLab/webhooks Chrome extension"
         ],
-        "tags": "React · Next.js · Redux · Storybook"
+        "tags": "React · FreeMarker · Web Components · REST API · GraphQL"
       },
       {
         "company": "Fnac Darty",
@@ -457,14 +458,13 @@
         "tags": "React · Web Components · REST API · SCSS"
       },
       {
-        "company": "Prisma Media",
-        "date": "Dec. 2021",
-        "role": "Front-End Developer — Women's Vertical (femmeactuelle.fr · cuisineactuelle.fr)",
+        "company": "Mazarine × Delvaux",
+        "date": "Oct. 2020",
+        "role": "Front-End Developer — Luxury showcase site",
         "bullets": [
-          "Home, Article, Author, Recipe Book page redesigns",
-          "Web components: review/rating module, authentication module, GitLab/webhooks Chrome extension"
+          "Development of the Delvaux showcase site for the virtual store launch"
         ],
-        "tags": "React · FreeMarker · Web Components · REST API · GraphQL"
+        "tags": "React · Next.js · Redux · Storybook"
       },
       {
         "company": "Yves Rocher",

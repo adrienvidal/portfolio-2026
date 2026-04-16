@@ -343,13 +343,13 @@
         "tags": "React · TypeScript · Framer Motion · GSAP · SCSS · SEO · Accessibilité · Azure"
       },
       {
-        "company": "Mazarine × Delvaux",
-        "date": "Oct. 2020",
-        "role": "Développeur Front-End — Site vitrine luxe",
+        "company": "Prisma Media",
+        "date": "Déc. 2021",
+        "role": "Développeur Front-End — Pôle Féminin (femmeactuelle.fr · cuisineactuelle.fr)",
         "bullets": [
-          "Développement du site vitrine Delvaux pour la mise en avant du magasin virtuel"
+          "Refonte Home, Article, Auteur, Carnet de recettes · Web components avis, auth · Extension Chrome GitLab"
         ],
-        "tags": "React · Next.js · Redux · Storybook"
+        "tags": "React · FreeMarker · Web Components · API Rest · GraphQL"
       },
       {
         "company": "Fnac Darty",
@@ -361,13 +361,13 @@
         "tags": "React · Web Components · API Rest · SCSS"
       },
       {
-        "company": "Prisma Media",
-        "date": "Déc. 2021",
-        "role": "Développeur Front-End — Pôle Féminin (femmeactuelle.fr · cuisineactuelle.fr)",
+        "company": "Mazarine × Delvaux",
+        "date": "Oct. 2020",
+        "role": "Développeur Front-End — Site vitrine luxe",
         "bullets": [
-          "Refonte Home, Article, Auteur, Carnet de recettes · Web components avis, auth · Extension Chrome GitLab"
+          "Développement du site vitrine Delvaux pour la mise en avant du magasin virtuel"
         ],
-        "tags": "React · FreeMarker · Web Components · API Rest · GraphQL"
+        "tags": "React · Next.js · Redux · Storybook"
       },
       {
         "company": "Yves Rocher",
@@ -438,13 +438,14 @@
         "tags": "React · TypeScript · Framer Motion · GSAP · SCSS · SEO · Accessibilité · Azure"
       },
       {
-        "company": "Mazarine × Delvaux",
-        "date": "Oct. 2020",
-        "role": "Développeur Front-End — Site vitrine luxe",
+        "company": "Prisma Media",
+        "date": "Déc. 2021",
+        "role": "Développeur Front-End — Pôle Féminin (femmeactuelle.fr · cuisineactuelle.fr)",
         "bullets": [
-          "Développement du site vitrine Delvaux pour la mise en avant du magasin virtuel"
+          "Refonte des pages Home, Article, Auteur, Carnet de recettes",
+          "Web components : module d'avis/étoiles, module d'authentification, extension Chrome GitLab/webhooks"
         ],
-        "tags": "React · Next.js · Redux · Storybook"
+        "tags": "React · FreeMarker · Web Components · API Rest · GraphQL"
       },
       {
         "company": "Fnac Darty",
@@ -457,14 +458,13 @@
         "tags": "React · Web Components · API Rest · SCSS"
       },
       {
-        "company": "Prisma Media",
-        "date": "Déc. 2021",
-        "role": "Développeur Front-End — Pôle Féminin (femmeactuelle.fr · cuisineactuelle.fr)",
+        "company": "Mazarine × Delvaux",
+        "date": "Oct. 2020",
+        "role": "Développeur Front-End — Site vitrine luxe",
         "bullets": [
-          "Refonte des pages Home, Article, Auteur, Carnet de recettes",
-          "Web components : module d'avis/étoiles, module d'authentification, extension Chrome GitLab/webhooks"
+          "Développement du site vitrine Delvaux pour la mise en avant du magasin virtuel"
         ],
-        "tags": "React · FreeMarker · Web Components · API Rest · GraphQL"
+        "tags": "React · Next.js · Redux · Storybook"
       },
       {
         "company": "Yves Rocher",
