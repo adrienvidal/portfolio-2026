@@ -14,8 +14,8 @@ type Props = { params: Promise<{ locale: string }> }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params
-  const t = await getTranslations({ locale, namespace: 'cvSimple' })
-  return { title: `${t('name')} — CV Simple` }
+  const td = await getTranslations({ locale, namespace: 'cvData' })
+  return { title: `${td('name')} — CV Simple` }
 }
 
 export default async function CVSimplePage({ params }: Props) {

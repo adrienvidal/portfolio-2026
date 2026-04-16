@@ -1,3 +1,4 @@
+import React from 'react'
 import { PrintButton } from '../PrintButton'
 import './CVSimple.scss'
 
@@ -125,10 +126,10 @@ export function CVSimple({ data }: { data: CVSimpleData }) {
         <div className="cv-simple__section-title">{data.sections.skills}</div>
         <div className="cv-simple__skills-grid">
           {data.skills.map((s) => (
-            <>
-              <span className="cv-simple__skill-cat" key={`cat-${s.cat}`}>{s.cat}</span>
-              <span className="cv-simple__skill-val" key={`val-${s.cat}`}>{s.val}</span>
-            </>
+            <React.Fragment key={s.cat}>
+              <span className="cv-simple__skill-cat">{s.cat}</span>
+              <span className="cv-simple__skill-val">{s.val}</span>
+            </React.Fragment>
           ))}
         </div>
       </div>
