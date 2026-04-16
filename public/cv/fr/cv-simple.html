@@ -208,6 +208,8 @@
     body { margin: 0; padding: 14mm 18mm; }
     @page { size: A4; margin: 0; }
     .print-btn { display: none; }
+    a { text-decoration: underline !important; }
+    a[href]::after { content: " (" attr(href) ")"; font-size: 0.7em; font-weight: 300; color: #555; }
   }
 </style>
 </head>
@@ -222,7 +224,6 @@
   <div class="header-right">
     Paris · adriensg.vidal@gmail.com · 06 21 14 30 05<br>
     <a href="https://adrienvidal.com">adrienvidal.com</a> ·
-    <a href="https://linkedin.com/in/adrien-vidal-308b4864">linkedin</a> ·
     <a href="https://github.com/adrienvidal">github</a>
   </div>
 </div>

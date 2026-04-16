@@ -249,6 +249,10 @@
     body { margin: 0; width: 210mm; }
     @page { size: A4; margin: 0; }
     .print-btn { display: none; }
+    .sidebar { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    a { text-decoration: underline !important; }
+    a[href]::after { content: " (" attr(href) ")"; font-size: 0.7em; font-weight: 300; }
+    .sidebar a[href]::after { color: #aaa; }
   }
 </style>
 </head>
@@ -274,7 +278,6 @@
     <div class="sidebar-contact-item">adriensg.vidal@gmail.com</div>
     <div class="sidebar-contact-item">06 21 14 30 05</div>
     <div class="sidebar-contact-item"><a href="https://adrienvidal.com">adrienvidal.com</a></div>
-    <div class="sidebar-contact-item"><a href="https://linkedin.com/in/adrien-vidal-308b4864">linkedin</a></div>
     <div class="sidebar-contact-item"><a href="https://github.com/adrienvidal">github.com/adrienvidal</a></div>
   </div>
 
