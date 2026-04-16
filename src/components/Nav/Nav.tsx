@@ -27,7 +27,6 @@ export default function Nav({ dark = false }: { dark?: boolean }) {
     { label: t('links.processus'), href: anchor('#processus') },
     { label: t('links.apropos'), href: anchor('#a-propos') },
     { label: t('links.projets'), href: anchor('#projets') },
-    { label: t('links.cv'), href: '/cv', className: 'nav__page' },
     { label: t('links.blog'), href: '/blog', className: 'nav__page' },
     { label: t('links.lab'), href: '/lab', className: 'nav__lab' },
   ]
