@@ -29,19 +29,20 @@ export default async function CVDesignPage({ params }: Props) {
   const { locale } = await params
   setRequestLocale(locale)
   const t = await getTranslations('cvDesign')
+  const td = await getTranslations('cvData')
 
   const data: CVDesignData = {
-    downloadPdf: t('downloadPdf'),
-    name: t('name'),
-    role: t('role'),
+    downloadPdf: td('downloadPdf'),
+    name: td('name'),
+    role: td('role'),
     contact: {
-      location: t('contact.location'),
-      email: t('contact.email'),
-      phone: t('contact.phone'),
-      websiteLabel: t('contact.websiteLabel'),
-      websiteUrl: t('contact.websiteUrl'),
-      githubLabel: t('contact.githubLabel'),
-      githubUrl: t('contact.githubUrl'),
+      location: td('contact.location'),
+      email: td('contact.email'),
+      phone: td('contact.phone'),
+      websiteLabel: td('contact.websiteLabel'),
+      websiteUrl: td('contact.websiteUrl'),
+      githubLabel: td('contact.githubLabel'),
+      githubUrl: td('contact.githubUrl'),
     },
     sections: {
       contact: t('sections.contact'),
@@ -51,13 +52,13 @@ export default async function CVDesignPage({ params }: Props) {
       experience: t('sections.experience'),
       projects: t('sections.projects'),
     },
-    accroche: t('accroche'),
-    skills: t.raw('skills') as CVDesignData['skills'],
-    languages: t.raw('languages') as CVDesignData['languages'],
-    education: t.raw('education') as CVDesignData['education'],
-    experiences: t.raw('experiences') as CVDesignData['experiences'],
-    experienceNote: t('experienceNote'),
-    projects: t.raw('projects') as CVDesignData['projects'],
+    accroche: td('accroche'),
+    skills: td.raw('skills') as CVDesignData['skills'],
+    languages: td.raw('languages') as CVDesignData['languages'],
+    education: td.raw('education') as CVDesignData['education'],
+    experiences: td.raw('experiences') as CVDesignData['experiences'],
+    experienceNote: td('experienceNote'),
+    projects: td.raw('projects') as CVDesignData['projects'],
     fontVars: `${dmSerif.variable} ${dmSans.variable}`,
   }
 

@@ -22,19 +22,20 @@ export default async function CVSimplePage({ params }: Props) {
   const { locale } = await params
   setRequestLocale(locale)
   const t = await getTranslations('cvSimple')
+  const td = await getTranslations('cvData')
 
   const data: CVSimpleData = {
-    downloadPdf: t('downloadPdf'),
-    name: t('name'),
-    role: t('role'),
+    downloadPdf: td('downloadPdf'),
+    name: td('name'),
+    role: td('role'),
     contact: {
-      location: t('contact.location'),
-      email: t('contact.email'),
-      phone: t('contact.phone'),
-      websiteLabel: t('contact.websiteLabel'),
-      websiteUrl: t('contact.websiteUrl'),
-      githubLabel: t('contact.githubLabel'),
-      githubUrl: t('contact.githubUrl'),
+      location: td('contact.location'),
+      email: td('contact.email'),
+      phone: td('contact.phone'),
+      websiteLabel: td('contact.websiteLabel'),
+      websiteUrl: td('contact.websiteUrl'),
+      githubLabel: td('contact.githubLabel'),
+      githubUrl: td('contact.githubUrl'),
     },
     sections: {
       experience: t('sections.experience'),
@@ -42,14 +43,14 @@ export default async function CVSimplePage({ params }: Props) {
       skills: t('sections.skills'),
       educationLanguages: t('sections.educationLanguages'),
     },
-    accroche: t('accroche'),
-    experiences: t.raw('experiences') as CVSimpleData['experiences'],
-    experienceNote: t('experienceNote'),
-    projects: t.raw('projects') as CVSimpleData['projects'],
-    skills: t.raw('skills') as CVSimpleData['skills'],
-    educationDegree: t('educationDegree'),
-    educationSub: t('educationSub'),
-    languageLine: t('languageLine'),
+    accroche: td('accroche'),
+    experiences: td.raw('experiences') as CVSimpleData['experiences'],
+    experienceNote: td('experienceNote'),
+    projects: td.raw('projects') as CVSimpleData['projects'],
+    skills: td.raw('skills') as CVSimpleData['skills'],
+    educationDegree: td('educationDegree'),
+    educationSub: td('educationSub'),
+    languageLine: td('languageLine'),
     fontVars: inter.variable,
   }
 

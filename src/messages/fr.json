@@ -289,7 +289,7 @@
     "open": "Voir le CV"
   },
 
-  "cvDesign": {
+  "cvData": {
     "downloadPdf": "Télécharger PDF",
     "name": "Adrien Vidal",
     "role": "Développeur React & TypeScript\nExpériences interactives\nIntégration IA · Campagnes premium",
@@ -299,130 +299,19 @@
       "phone": "06 21 14 30 05",
       "websiteLabel": "adrienvidal.com",
       "websiteUrl": "https://adrienvidal.com",
-      "githubLabel": "github.com/adrienvidal",
-      "githubUrl": "https://github.com/adrienvidal"
-    },
-    "sections": {
-      "contact": "Contact",
-      "skills": "Compétences",
-      "languages": "Langues",
-      "education": "Formation",
-      "experience": "Expériences",
-      "projects": "Projets personnels"
-    },
-    "accroche": "Développeur front-end senior, 10 ans d'expérience. Je construis des expériences web interactives, intègre l'IA dans les interfaces et livre des campagnes digitales premium — vite, bien, sans friction. Clients : Chanel, Fnac Darty, Prisma Media, Yves Rocher.",
-    "skills": [
-      { "cat": "Front-end", "val": "React, Next.js, TypeScript, JavaScript ES6+, HTML5, SCSS" },
-      { "cat": "Animation", "val": "Framer Motion, GSAP" },
-      { "cat": "IA & APIs", "val": "Claude SDK, OpenAI, fal.ai, Instagram Graph API, REST" },
-      { "cat": "Data", "val": "Supabase, Prisma, SQLite" },
-      { "cat": "Outils", "val": "Vite, Webpack, Git, Figma, Azure" },
-      { "cat": "Qualité", "val": "SEO, ARIA/WCAG, Core Web Vitals" },
-      { "cat": "CMS", "val": "Shopify, FreeMarker, Twig" }
-    ],
-    "languages": [
-      { "name": "Français", "level": "natif" },
-      { "name": "Anglais", "level": "courant" }
-    ],
-    "education": [
-      { "degree": "Intégrateur Front-End", "school": "IFOCOP Paris", "year": "2013" },
-      { "degree": "Modern React Front to Back", "school": "Udemy", "year": "2020" }
-    ],
-    "experiences": [
-      {
-        "company": "Chanel",
-        "date": "Avr. 2023 – Présent",
-        "role": "Développeur Front-End — Expériences immersives & campagnes digitales",
-        "bullets": [
-          "Pages immersives pour les collections Coco Crush, Chance, Gabrielle, Sublimage, Allure Sport, Haute Horlogerie",
-          "Web app Coco Crush : swipe bijoux façon Tinder, quiz interactif, QR code de liste de souhaits scannable en boutique",
-          "Campagne Chance : landing multi-vues + quiz diagnostic orientant chaque visiteur vers son parfum",
-          "Campagne Allure Sport : animations GSAP + tunnel e-commerce complet (ajout au panier)",
-          "Optimisation performances, accessibilité ARIA/WCAG et SEO sur tous les projets"
-        ],
-        "tags": "React · TypeScript · Framer Motion · GSAP · SCSS · SEO · Accessibilité · Azure"
-      },
-      {
-        "company": "Prisma Media",
-        "date": "Déc. 2021",
-        "role": "Développeur Front-End — Pôle Féminin (femmeactuelle.fr · cuisineactuelle.fr)",
-        "bullets": [
-          "Refonte Home, Article, Auteur, Carnet de recettes · Web components avis, auth · Extension Chrome GitLab"
-        ],
-        "tags": "React · FreeMarker · Web Components · API Rest · GraphQL"
-      },
-      {
-        "company": "Fnac Darty",
-        "date": "Nov. 2020",
-        "role": "Développeur Front-End — Équipe Darty Commercialité",
-        "bullets": [
-          "Refonte page produit, liste produit et pages push · Composants cross-sell : assurances, garanties, services"
-        ],
-        "tags": "React · Web Components · API Rest · SCSS"
-      },
-      {
-        "company": "Mazarine × Delvaux",
-        "date": "Oct. 2020",
-        "role": "Développeur Front-End — Site vitrine luxe",
-        "bullets": [
-          "Développement du site vitrine Delvaux pour la mise en avant du magasin virtuel"
-        ],
-        "tags": "React · Next.js · Redux · Storybook"
-      },
-      {
-        "company": "Yves Rocher",
-        "date": "Jan. 2019",
-        "role": "Développeur Front-End",
-        "bullets": [
-          "Landing pages campagnes · Quiz diagnostic fond de teint · A/B tests ABTASTY · Recommandation Target2Sell"
-        ],
-        "tags": "A/B Testing · Quiz · E-commerce · ABTASTY · Sass"
-      }
-    ],
-    "experienceNote": "Expériences antérieures (2013–2018) — Shareweez, Quicksign, Publicis, Wibilong, ByAgency, Neuradom.",
-    "projects": [
-      {
-        "name": "Dripflow",
-        "date": "",
-        "role": "Pipeline de contenu Instagram automatisé par l'IA",
-        "bullets": [
-          "Image → Claude Sonnet génère des prompts → fal.ai génère les images → captions × 3 tons → publication Instagram Graph API",
-          "Workflow humain-dans-la-boucle pour gérer un compte d'influenceur(euse) virtuel(le)"
-        ],
-        "tags": "Next.js · Claude SDK · fal.ai · Instagram Graph API · Prisma · TypeScript"
-      },
-      {
-        "name": "FitnessPal",
-        "date": "",
-        "role": "App de suivi d'entraînement — live coding assisté par IA",
-        "bullets": [
-          "Programme PPL/Cardio 4 jours, fiches exercice avec illustrations, historique calendrier, auth Google"
-        ],
-        "tags": "React · TypeScript · Supabase · Google OAuth · Vite"
-      }
-    ]
-  },
-
-  "cvSimple": {
-    "downloadPdf": "Télécharger PDF",
-    "name": "Adrien Vidal",
-    "role": "Développeur React & TypeScript — Expériences interactives · Intégration IA · Campagnes premium",
-    "contact": {
-      "location": "Paris",
-      "email": "adriensg.vidal@gmail.com",
-      "phone": "06 21 14 30 05",
-      "websiteLabel": "adrienvidal.com",
-      "websiteUrl": "https://adrienvidal.com",
       "githubLabel": "github",
       "githubUrl": "https://github.com/adrienvidal"
     },
-    "sections": {
-      "experience": "Expériences",
-      "projects": "Projets personnels",
-      "skills": "Compétences",
-      "educationLanguages": "Formation & Langues"
-    },
     "accroche": "Développeur front-end senior avec 10 ans d'expérience, spécialisé React et TypeScript. Je construis des expériences web interactives, intègre l'IA dans les interfaces et livre des campagnes digitales premium pour des startups et équipes produit. Anciens clients : Chanel, Fnac Darty, Prisma Media, Yves Rocher. Workflow IA augmenté pour livrer vite sans sacrifier la qualité.",
+    "skills": [
+      { "cat": "Front-end", "val": "React, Next.js, TypeScript, JavaScript ES6+, HTML5, CSS3, SCSS" },
+      { "cat": "Animation", "val": "Framer Motion, GSAP" },
+      { "cat": "IA & APIs", "val": "Claude SDK, OpenAI, fal.ai, Instagram Graph API, API REST" },
+      { "cat": "Base de données", "val": "Supabase, Prisma, SQLite" },
+      { "cat": "Outils", "val": "Vite.js, Webpack, Git (Azure · GitLab · Bitbucket), Figma" },
+      { "cat": "Optimisation", "val": "SEO, Accessibilité ARIA/WCAG, Performance Web, Core Web Vitals" },
+      { "cat": "CMS", "val": "Shopify, FreeMarker, Twig" }
+    ],
     "experiences": [
       {
         "company": "Chanel",
@@ -498,17 +387,36 @@
         "tags": "React · TypeScript · Supabase · Google OAuth · Vite"
       }
     ],
-    "skills": [
-      { "cat": "Front-end", "val": "React, Next.js, TypeScript, JavaScript ES6+, HTML5, CSS3, SCSS" },
-      { "cat": "Animation", "val": "Framer Motion, GSAP" },
-      { "cat": "IA & APIs", "val": "Claude SDK, OpenAI, fal.ai, Instagram Graph API, API REST" },
-      { "cat": "Base de données", "val": "Supabase, Prisma, SQLite" },
-      { "cat": "Outils", "val": "Vite.js, Webpack, Git (Azure · GitLab · Bitbucket), Figma" },
-      { "cat": "Optimisation", "val": "SEO, Accessibilité ARIA/WCAG, Performance Web, Core Web Vitals" },
-      { "cat": "CMS", "val": "Shopify, FreeMarker, Twig" }
+    "languages": [
+      { "name": "Français", "level": "natif" },
+      { "name": "Anglais", "level": "courant" }
+    ],
+    "education": [
+      { "degree": "Intégrateur Front-End", "school": "IFOCOP Paris", "year": "2013" },
+      { "degree": "Modern React Front to Back", "school": "Udemy", "year": "2020" }
     ],
     "educationDegree": "Intégrateur / Développeur Front-End — IFOCOP Paris (2013)",
     "educationSub": "Modern React Front to Back — Udemy, Brad Traversy (2020)",
     "languageLine": "Français — Langue maternelle · Anglais — Courant"
+  },
+
+  "cvDesign": {
+    "sections": {
+      "contact": "Contact",
+      "skills": "Compétences",
+      "languages": "Langues",
+      "education": "Formation",
+      "experience": "Expériences",
+      "projects": "Projets personnels"
+    }
+  },
+
+  "cvSimple": {
+    "sections": {
+      "experience": "Expériences",
+      "projects": "Projets personnels",
+      "skills": "Compétences",
+      "educationLanguages": "Formation & Langues"
+    }
   }
 }
