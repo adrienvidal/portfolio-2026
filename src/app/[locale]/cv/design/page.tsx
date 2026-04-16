@@ -52,7 +52,6 @@ export default async function CVDesignPage({ params }: Props) {
       experience: t('sections.experience'),
       projects: t('sections.projects'),
     },
-    accroche: td('accroche'),
     skills: td.raw('skills') as CVDesignData['skills'],
     languages: td.raw('languages') as CVDesignData['languages'],
     education: td.raw('education') as CVDesignData['education'],

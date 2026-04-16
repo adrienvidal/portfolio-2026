@@ -43,7 +43,6 @@ export default async function CVSimplePage({ params }: Props) {
       skills: t('sections.skills'),
       educationLanguages: t('sections.educationLanguages'),
     },
-    accroche: td('accroche'),
     experiences: td.raw('experiences') as CVSimpleData['experiences'],
     experienceNote: td('experienceNote'),
     projects: td.raw('projects') as CVSimpleData['projects'],

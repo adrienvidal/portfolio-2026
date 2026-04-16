@@ -292,7 +292,7 @@
   "cvData": {
     "downloadPdf": "Télécharger PDF",
     "name": "Adrien Vidal",
-    "role": "Développeur React & TypeScript\nExpériences interactives\nIntégration IA · Campagnes premium",
+    "role": "Développeur React & TypeScript | \nExpériences interactives · \nCampagnes premium · \nIntégration IA",
     "contact": {
       "location": "Paris",
       "email": "adriensg.vidal@gmail.com",
@@ -302,7 +302,6 @@
       "githubLabel": "github",
       "githubUrl": "https://github.com/adrienvidal"
     },
-    "accroche": "Développeur front-end senior avec 10 ans d'expérience, spécialisé React et TypeScript. Je construis des expériences web interactives, intègre l'IA dans les interfaces et livre des campagnes digitales premium pour des startups et équipes produit. Anciens clients : Chanel, Fnac Darty, Prisma Media, Yves Rocher. Workflow IA augmenté pour livrer vite sans sacrifier la qualité.",
     "skills": [
       { "cat": "Front-end", "val": "React, Next.js, TypeScript, JavaScript ES6+, HTML5, CSS3, SCSS" },
       { "cat": "Animation", "val": "Framer Motion, GSAP" },

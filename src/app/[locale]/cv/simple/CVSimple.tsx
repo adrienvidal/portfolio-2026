@@ -25,7 +25,6 @@ export type CVSimpleData = {
     skills: string
     educationLanguages: string
   }
-  accroche: string
   experiences: Experience[]
   experienceNote: string
   projects: Project[]
@@ -77,8 +76,6 @@ export function CVSimple({ data }: { data: CVSimpleData }) {
       </div>
 
       <hr className="cv-simple__hr" />
-
-      <p className="cv-simple__accroche">{data.accroche}</p>
 
       <div className="cv-simple__section">
         <div className="cv-simple__section-title">{data.sections.experience}</div>

@@ -28,7 +28,6 @@ export type CVDesignData = {
     experience: string
     projects: string
   }
-  accroche: string
   skills: Skill[]
   languages: Language[]
   education: Education[]
@@ -39,21 +38,12 @@ export type CVDesignData = {
 }
 
 export function CVDesign({ data }: { data: CVDesignData }) {
-  const roleLines = data.role.split('\n')
-
   return (
     <div className={`cv-design ${data.fontVars}`}>
       <aside className="cv-design__sidebar">
         <div>
           <div className="cv-design__name">{data.name}</div>
-          <div className="cv-design__role">
-            {roleLines.map((line, i) => (
-              <span key={i}>
-                {line}
-                {i < roleLines.length - 1 && <br />}
-              </span>
-            ))}
-          </div>
+          <div className="cv-design__role">{data.role}</div>
         </div>
 
         <div className="cv-design__sidebar-section">
@@ -100,7 +90,6 @@ export function CVDesign({ data }: { data: CVDesignData }) {
       </aside>
 
       <main className="cv-design__main">
-        <p className="cv-design__accroche">{data.accroche}</p>
 
         <div className="cv-design__section">
           <div className="cv-design__section-title">{data.sections.experience}</div>
