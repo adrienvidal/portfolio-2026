@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Adrien Vidal — CV</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap');
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --ink: #0e0e0e;
+    --ink-2: #3a3a3a;
+    --ink-3: #6b6b6b;
+    --ink-4: #a0a0a0;
+    --rule: #d4d4d4;
+    --accent: #0e0e0e;
+    --sidebar-bg: #0e0e0e;
+    --sidebar-text: #f5f5f0;
+    --sidebar-muted: #888;
+    --serif: 'DM Serif Display', serif;
+    --sans: 'DM Sans', sans-serif;
+  }
+
+  html { font-size: 10px; }
+
+  body {
+    font-family: var(--sans);
+    color: var(--ink);
+    background: #fff;
+    width: 210mm;
+    min-height: 297mm;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 62mm 1fr;
+  }
+
+  /* ── Sidebar ── */
+  .sidebar {
+    background: var(--sidebar-bg);
+    padding: 12mm 8mm 12mm 10mm;
+    display: flex;
+    flex-direction: column;
+    gap: 7mm;
+  }
+
+  .sidebar-name {
+    font-family: var(--serif);
+    font-size: 2.6rem;
+    color: var(--sidebar-text);
+    line-height: 1.05;
+    letter-spacing: -0.01em;
+  }
+
+  .sidebar-name em {
+    font-style: italic;
+    color: #aaa;
+    display: block;
+    font-size: 2rem;
+  }
+
+  .sidebar-role {
+    font-size: 0.78rem;
+    color: #888;
+    font-weight: 300;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    border-top: 0.5px solid #2a2a2a;
+    padding-top: 4mm;
+  }
+
+  .sidebar-section { border-top: 0.5px solid #2a2a2a; padding-top: 4mm; }
+
+  .sidebar-section-title {
+    font-size: 0.65rem;
+    color: #555;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 3mm;
+    font-weight: 500;
+  }
+
+  .sidebar-contact-item {
+    font-size: 0.8rem;
+    color: #aaa;
+    line-height: 1.7;
+    font-weight: 300;
+  }
+  .sidebar-contact-item a { color: #aaa; text-decoration: none; }
+  .sidebar-contact-item a:hover { color: var(--sidebar-text); }
+
+  .sidebar-skill-group { margin-bottom: 3mm; }
+  .sidebar-skill-cat {
+    font-size: 0.72rem;
+    color: var(--sidebar-text);
+    font-weight: 500;
+    margin-bottom: 1px;
+  }
+  .sidebar-skill-val {
+    font-size: 0.76rem;
+    color: #888;
+    font-weight: 300;
+    line-height: 1.5;
+  }
+
+  .sidebar-lang {
+    font-size: 0.8rem;
+    color: #aaa;
+    line-height: 1.7;
+    font-weight: 300;
+  }
+  .sidebar-lang strong { color: var(--sidebar-text); font-weight: 500; }
+
+  /* ── Main ── */
+  .main {
+    padding: 12mm 14mm 12mm 12mm;
+    display: flex;
+    flex-direction: column;
+    gap: 6mm;
+  }
+
+  /* Accroche */
+  .accroche {
+    font-family: var(--serif);
+    font-size: 1.05rem;
+    color: var(--ink-2);
+    line-height: 1.6;
+    font-style: italic;
+    padding-bottom: 5mm;
+    border-bottom: 0.5px solid var(--rule);
+  }
+
+  /* Section */
+  .section { display: flex; flex-direction: column; gap: 3.5mm; }
+
+  .section-title {
+    font-size: 0.65rem;
+    font-weight: 500;
+    color: var(--ink-4);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 1mm;
+  }
+
+  /* Exp */
+  .exp { padding-bottom: 3.5mm; border-bottom: 0.5px solid var(--rule); }
+  .exp:last-child { border-bottom: none; padding-bottom: 0; }
+
+  .exp-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 1px;
+  }
+
+  .exp-company {
+    font-family: var(--serif);
+    font-size: 1.1rem;
+    color: var(--ink);
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+  }
+
+  .exp-date {
+    font-size: 0.76rem;
+    color: var(--ink-4);
+    font-weight: 300;
+  }
+
+  .exp-role {
+    font-size: 0.82rem;
+    color: var(--ink-3);
+    font-weight: 300;
+    margin-bottom: 3px;
+    font-style: italic;
+  }
+
+  .exp-bullets {
+    list-style: none;
+    margin-bottom: 3px;
+  }
+
+  .exp-bullets li {
+    font-size: 0.83rem;
+    color: var(--ink-2);
+    line-height: 1.55;
+    padding-left: 10px;
+    position: relative;
+    font-weight: 300;
+  }
+
+  .exp-bullets li::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+    color: var(--ink-4);
+    font-size: 0.7rem;
+    top: 2px;
+  }
+
+  .exp-tags {
+    font-size: 0.72rem;
+    color: var(--ink-4);
+    font-weight: 300;
+    margin-top: 3px;
+    letter-spacing: 0.01em;
+  }
+
+  .small-note {
+    font-size: 0.76rem;
+    color: var(--ink-4);
+    font-weight: 300;
+    font-style: italic;
+    line-height: 1.5;
+  }
+
+  /* Formation */
+  .formation-item {
+    font-size: 0.83rem;
+    color: var(--ink-2);
+    font-weight: 300;
+    line-height: 1.5;
+  }
+  .formation-item strong { font-weight: 500; color: var(--ink); }
+  .formation-sub {
+    font-size: 0.76rem;
+    color: var(--ink-4);
+    font-weight: 300;
+  }
+
+  .print-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 18px;
+    background: #0e0e0e;
+    color: #f5f5f0;
+    border: 0.5px solid #3a3a3a;
+    border-radius: 4px;
+    font-family: var(--sans);
+    font-size: 0.8rem;
+    font-weight: 400;
+    letter-spacing: 0.04em;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.15s, border-color 0.15s;
+    z-index: 100;
+  }
+  .print-btn:hover { background: #1a1a1a; border-color: #555; }
+  .print-btn svg { flex-shrink: 0; }
+
+  @media print {
+    body { margin: 0; width: 210mm; }
+    @page { size: A4; margin: 0; }
+    .print-btn { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- SIDEBAR -->
+<aside class="sidebar">
+
+  <div>
+    <div class="sidebar-name">
+      Adrien<br><em>Vidal</em>
+    </div>
+    <div class="sidebar-role">
+      Développeur React &amp; TypeScript<br>
+      Expériences interactives<br>
+      Intégration IA · Campagnes premium
+    </div>
+  </div>
+
+  <div class="sidebar-section">
+    <div class="sidebar-section-title">Contact</div>
+    <div class="sidebar-contact-item">Paris</div>
+    <div class="sidebar-contact-item">adriensg.vidal@gmail.com</div>
+    <div class="sidebar-contact-item">06 21 14 30 05</div>
+    <div class="sidebar-contact-item"><a href="https://adrienvidal.com">adrienvidal.com</a></div>
+    <div class="sidebar-contact-item"><a href="https://linkedin.com/in/adrien-vidal-308b4864">linkedin</a></div>
+    <div class="sidebar-contact-item"><a href="https://github.com/adrienvidal">github.com/adrienvidal</a></div>
+  </div>
+
+  <div class="sidebar-section">
+    <div class="sidebar-section-title">Compétences</div>
+
+    <div class="sidebar-skill-group">
+      <div class="sidebar-skill-cat">Front-end</div>
+      <div class="sidebar-skill-val">React, Next.js, TypeScript, JavaScript ES6+, HTML5, SCSS</div>
+    </div>
+    <div class="sidebar-skill-group">
+      <div class="sidebar-skill-cat">Animation</div>
+      <div class="sidebar-skill-val">Framer Motion, GSAP</div>
+    </div>
+    <div class="sidebar-skill-group">
+      <div class="sidebar-skill-cat">IA &amp; APIs</div>
+      <div class="sidebar-skill-val">Claude SDK, OpenAI, fal.ai, Instagram Graph API, REST</div>
+    </div>
+    <div class="sidebar-skill-group">
+      <div class="sidebar-skill-cat">Data</div>
+      <div class="sidebar-skill-val">Supabase, Prisma, SQLite</div>
+    </div>
+    <div class="sidebar-skill-group">
+      <div class="sidebar-skill-cat">Outils</div>
+      <div class="sidebar-skill-val">Vite, Webpack, Git, Figma, Azure</div>
+    </div>
+    <div class="sidebar-skill-group">
+      <div class="sidebar-skill-cat">Qualité</div>
+      <div class="sidebar-skill-val">SEO, ARIA/WCAG, Core Web Vitals</div>
+    </div>
+    <div class="sidebar-skill-group">
+      <div class="sidebar-skill-cat">CMS</div>
+      <div class="sidebar-skill-val">Shopify, FreeMarker, Twig</div>
+    </div>
+  </div>
+
+  <div class="sidebar-section">
+    <div class="sidebar-section-title">Langues</div>
+    <div class="sidebar-lang"><strong>Français</strong> — natif</div>
+    <div class="sidebar-lang"><strong>Anglais</strong> — courant</div>
+  </div>
+
+  <div class="sidebar-section">
+    <div class="sidebar-section-title">Formation</div>
+    <div class="sidebar-contact-item" style="color:#ccc;font-weight:400;">Intégrateur Front-End</div>
+    <div class="sidebar-contact-item">IFOCOP Paris — 2013</div>
+    <div style="margin-top:3mm;">
+    <div class="sidebar-contact-item" style="color:#ccc;font-weight:400;">Modern React Front to Back</div>
+    <div class="sidebar-contact-item">Udemy — 2020</div>
+    </div>
+  </div>
+
+</aside>
+
+<!-- MAIN -->
+<main class="main">
+
+  <p class="accroche">
+    Développeur front-end senior, 10 ans d'expérience. Je construis des expériences web interactives, intègre l'IA dans les interfaces et livre des campagnes digitales premium — vite, bien, sans friction. Clients : Chanel, Fnac Darty, Prisma Media, Yves Rocher.
+  </p>
+
+  <!-- Expériences -->
+  <div class="section">
+    <div class="section-title">Expériences</div>
+
+    <div class="exp">
+      <div class="exp-header">
+        <span class="exp-company">Chanel</span>
+        <span class="exp-date">Avr. 2023 – Présent</span>
+      </div>
+      <div class="exp-role">Développeur Front-End — Expériences immersives &amp; campagnes digitales</div>
+      <ul class="exp-bullets">
+        <li>Pages immersives pour les collections Coco Crush, Chance, Gabrielle, Sublimage, Allure Sport, Haute Horlogerie</li>
+        <li>Web app Coco Crush : swipe bijoux façon Tinder, quiz interactif, QR code de liste de souhaits scannable en boutique</li>
+        <li>Campagne Chance : landing multi-vues + quiz diagnostic orientant chaque visiteur vers son parfum</li>
+        <li>Campagne Allure Sport : animations GSAP + tunnel e-commerce complet (ajout au panier)</li>
+        <li>Optimisation performances, accessibilité ARIA/WCAG et SEO sur tous les projets</li>
+      </ul>
+      <div class="exp-tags">React · TypeScript · Framer Motion · GSAP · SCSS · SEO · Accessibilité · Azure</div>
+    </div>
+
+    <div class="exp">
+      <div class="exp-header">
+        <span class="exp-company">Mazarine × Delvaux</span>
+        <span class="exp-date">Oct. 2020</span>
+      </div>
+      <div class="exp-role">Développeur Front-End — Site vitrine luxe</div>
+      <ul class="exp-bullets">
+        <li>Développement du site vitrine Delvaux pour la mise en avant du magasin virtuel</li>
+      </ul>
+      <div class="exp-tags">React · Next.js · Redux · Storybook</div>
+    </div>
+
+    <div class="exp">
+      <div class="exp-header">
+        <span class="exp-company">Fnac Darty</span>
+        <span class="exp-date">Nov. 2020</span>
+      </div>
+      <div class="exp-role">Développeur Front-End — Équipe Darty Commercialité</div>
+      <ul class="exp-bullets">
+        <li>Refonte page produit, liste produit et pages push · Composants cross-sell : assurances, garanties, services</li>
+      </ul>
+      <div class="exp-tags">React · Web Components · API Rest · SCSS</div>
+    </div>
+
+    <div class="exp">
+      <div class="exp-header">
+        <span class="exp-company">Prisma Media</span>
+        <span class="exp-date">Déc. 2021</span>
+      </div>
+      <div class="exp-role">Développeur Front-End — Pôle Féminin (femmeactuelle.fr · cuisineactuelle.fr)</div>
+      <ul class="exp-bullets">
+        <li>Refonte Home, Article, Auteur, Carnet de recettes · Web components avis, auth · Extension Chrome GitLab</li>
+      </ul>
+      <div class="exp-tags">React · FreeMarker · Web Components · API Rest · GraphQL</div>
+    </div>
+
+    <div class="exp">
+      <div class="exp-header">
+        <span class="exp-company">Yves Rocher</span>
+        <span class="exp-date">Jan. 2019</span>
+      </div>
+      <div class="exp-role">Développeur Front-End</div>
+      <ul class="exp-bullets">
+        <li>Landing pages campagnes · Quiz diagnostic fond de teint · A/B tests ABTASTY · Recommandation Target2Sell</li>
+      </ul>
+      <div class="exp-tags">A/B Testing · Quiz · E-commerce · ABTASTY · Sass</div>
+    </div>
+
+    <p class="small-note">Expériences antérieures (2013–2018) — Shareweez, Quicksign, Publicis, Wibilong, ByAgency, Neuradom.</p>
+  </div>
+
+  <!-- Projets perso -->
+  <div class="section">
+    <div class="section-title">Projets personnels</div>
+
+    <div class="exp">
+      <div class="exp-header">
+        <span class="exp-company">Dripflow</span>
+      </div>
+      <div class="exp-role">Pipeline de contenu Instagram automatisé par l'IA</div>
+      <ul class="exp-bullets">
+        <li>Image → Claude Sonnet génère des prompts → fal.ai génère les images → captions × 3 tons → publication Instagram Graph API</li>
+        <li>Workflow humain-dans-la-boucle pour gérer un compte d'influenceur(euse) virtuel(le)</li>
+      </ul>
+      <div class="exp-tags">Next.js · Claude SDK · fal.ai · Instagram Graph API · Prisma · TypeScript</div>
+    </div>
+
+    <div class="exp">
+      <div class="exp-header">
+        <span class="exp-company">FitnessPal</span>
+      </div>
+      <div class="exp-role">App de suivi d'entraînement — live coding assisté par IA</div>
+      <ul class="exp-bullets">
+        <li>Programme PPL/Cardio 4 jours, fiches exercice avec illustrations, historique calendrier, auth Google</li>
+      </ul>
+      <div class="exp-tags">React · TypeScript · Supabase · Google OAuth · Vite</div>
+    </div>
+  </div>
+
+</main>
+
+
+<button class="print-btn" onclick="window.print()">
+  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M7 1v8M7 9l-3-3M7 9l3-3" stroke="#f5f5f0" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M2 11h10" stroke="#f5f5f0" stroke-width="1.2" stroke-linecap="round"/>
+  </svg>
+  Télécharger PDF
+</button>
+
+</body>
+</html>
