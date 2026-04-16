@@ -2,6 +2,7 @@ import { getTranslations, setRequestLocale } from 'next-intl/server'
 import type { Metadata } from 'next'
 import Nav from '@/components/Nav/Nav'
 import Footer from '@/components/Footer/Footer'
+import { Link } from '@/i18n/navigation'
 import '../../cv/cv-hub.scss'
 
 type Props = { params: Promise<{ locale: string }> }
@@ -17,10 +18,7 @@ export default async function CvPage({ params }: Props) {
   setRequestLocale(locale)
   const t = await getTranslations('cv')
 
-  const cvs = [
-    { key: 'design', file: 'cv-design.html' },
-    { key: 'simple', file: 'cv-simple.html' },
-  ] as const
+  const cvs = ['design', 'simple'] as const
 
   return (
     <>
@@ -31,10 +29,10 @@ export default async function CvPage({ params }: Props) {
           <p className="cv-hub__subtitle">{t('subtitle')}</p>
         </div>
         <div className="cv-hub__grid">
-          {cvs.map(({ key, file }) => (
-            <a
+          {cvs.map((key) => (
+            <Link
               key={key}
-              href={`/cv/${locale}/${file}`}
+              href={`/cv/${key}`}
               target="_blank"
               rel="noopener noreferrer"
               className="cv-hub__card"
@@ -44,7 +42,7 @@ export default async function CvPage({ params }: Props) {
                 <span className="cv-hub__card-desc">{t(`${key}.description`)}</span>
                 <span className="cv-hub__card-cta">{t('open')} →</span>
               </div>
-            </a>
+            </Link>
           ))}
         </div>
       </main>
