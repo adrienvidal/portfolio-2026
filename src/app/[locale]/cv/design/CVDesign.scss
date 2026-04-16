@@ -247,8 +247,6 @@
     margin: 0;
     width: 210mm;
 
-    @page { size: A4; margin: 0; }
-
     .print-btn { display: none; }
 
     &__sidebar {
@@ -256,18 +254,20 @@
       print-color-adjust: exact;
     }
 
-    a {
-      text-decoration: underline !important;
-
-      &[href]::after {
-        content: " (" attr(href) ")";
-        font-size: 7px;
-        font-weight: 300;
-      }
+    a[href]::after {
+      content: " (" attr(href) ")";
+      font-size: 7px;
+      font-weight: 300;
     }
 
     &__sidebar a[href]::after {
       color: #aaa;
     }
   }
+}
+
+// @page doit être au niveau racine du CSS pour être respecté par les navigateurs
+@media print {
+  @page { size: A4; margin: 0; }
+  body { margin: 0 !important; padding: 0 !important; }
 }
