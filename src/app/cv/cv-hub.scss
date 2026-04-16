@@ -1,0 +1,93 @@
+@use '../../styles/variables' as *;
+
+.cv-hub {
+  min-height: calc(100vh - 64px);
+  padding: 64px 24px 96px;
+  max-width: 900px;
+  margin: 0 auto;
+
+  &__header {
+    margin-bottom: 56px;
+  }
+
+  &__title {
+    font-size: clamp(32px, 5vw, 48px);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    color: var(--ink);
+    margin-bottom: 12px;
+    line-height: 1.1;
+  }
+
+  &__subtitle {
+    font-size: 1rem;
+    color: var(--ink-3);
+    line-height: 1.6;
+    max-width: 480px;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+
+    @media (max-width: 900px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--rule);
+    border-radius: 10px;
+    text-decoration: none;
+    color: inherit;
+    overflow: hidden;
+    transition: border-color 0.2s, box-shadow 0.2s;
+
+    &:hover {
+      border-color: var(--ink-3);
+      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+    }
+  }
+
+  // ── Card body ────────────────────────────────────────
+
+  &__card-body {
+    padding: 24px 28px 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1;
+  }
+
+  &__card-label {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--ink);
+    letter-spacing: -0.01em;
+  }
+
+  &__card-desc {
+    font-size: 0.875rem;
+    color: var(--ink-3);
+    line-height: 1.6;
+    flex: 1;
+  }
+
+  &__card-cta {
+    font-size: 0.85rem;
+    color: var(--ink);
+    font-weight: 500;
+    margin-top: 4px;
+  }
+
+  @media (max-width: 900px) {
+    padding: 48px 20px 72px;
+
+    &__header {
+      margin-bottom: 40px;
+    }
+  }
+}

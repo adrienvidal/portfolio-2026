@@ -25,7 +25,8 @@
       "projets": "Projets",
       "apropos": "À propos",
       "blog": "Blog",
-      "lab": "Lab"
+      "lab": "Lab",
+      "cv": "CV"
     },
     "cta": "Me contacter",
     "openMenu": "Ouvrir le menu",
@@ -272,5 +273,19 @@
     "back": "← Retour",
     "title": "Blog",
     "articleBack": "← Blog"
+  },
+
+  "cv": {
+    "title": "Mon CV",
+    "subtitle": "Choisissez le format qui correspond à votre contexte.",
+    "design": {
+      "label": "CV Design",
+      "description": "Mise en page graphique avec sidebar sombre, typographie serif. Pour les contextes créatifs."
+    },
+    "simple": {
+      "label": "CV Simple",
+      "description": "Format minimaliste, clair et lisible. Idéal pour les systèmes ATS et RH."
+    },
+    "open": "Voir le CV"
   }
 }

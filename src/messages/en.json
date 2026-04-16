@@ -25,7 +25,8 @@
       "projets": "Projects",
       "apropos": "About",
       "blog": "Blog",
-      "lab": "Lab"
+      "lab": "Lab",
+      "cv": "CV"
     },
     "cta": "Contact me",
     "openMenu": "Open menu",
@@ -272,5 +273,19 @@
     "back": "← Back",
     "title": "Blog",
     "articleBack": "← Blog"
+  },
+
+  "cv": {
+    "title": "My Resume",
+    "subtitle": "Choose the format that fits your context.",
+    "design": {
+      "label": "Design CV",
+      "description": "Graphic layout with dark sidebar and serif typography. For creative contexts."
+    },
+    "simple": {
+      "label": "Simple CV",
+      "description": "Minimal, clean and readable format. Ideal for ATS systems and HR teams."
+    },
+    "open": "View CV"
   }
 }
