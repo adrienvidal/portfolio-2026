@@ -43,6 +43,7 @@ npm run dev
 | `/lab` | Lab / personal projects |
 | `/blog` | Blog index |
 | `/blog/[slug]` | Article |
+| `/cv` | CV hub — links to static HTML CVs in `public/cv/{locale}/` |
 | `/api/reservation` | POST — sends booking email via Resend |
 
 ## Project structure

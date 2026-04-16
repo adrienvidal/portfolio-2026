@@ -21,6 +21,7 @@ Portfolio built with React 19 + TypeScript + Next.js 15 (App Router), using file
 - `/lab` — Lab page (`src/app/[locale]/lab/page.tsx`)
 - `/blog` — Blog index (`src/app/[locale]/blog/page.tsx`)
 - `/blog/[slug]` — Article (`src/app/[locale]/blog/[slug]/page.tsx`)
+- `/cv` — CV hub (`src/app/[locale]/cv/page.tsx`) — lists available CVs (design, simple); each card links to `/cv/{locale}/cv-design.html` or `/cv/{locale}/cv-simple.html` (static HTML files in `public/cv/`). Styles in `src/app/cv/cv-hub.scss`. i18n namespace: `cv`.
 
 All routes are nested under `[locale]` — Next.js resolves `/fr/...` and `/en/...` automatically. `fr` is the default locale (no prefix in URLs by default).
 
