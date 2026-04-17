@@ -34,8 +34,8 @@
   },
 
   "hero": {
-    "title": "Un développeur qui construit des expériences, pas juste des pages.",
-    "sub": "J'aide les startups et équipes produit à construire des expériences web interactives, intégrer l'IA dans leurs interfaces et lancer des campagnes digitales premium — vite, bien, sans friction.",
+    "title": "Je construis des landing pages et campagnes qui convertissent",
+    "sub": "En forfait, à périmètre défini, pour des équipes marketing et des startups qui veulent aller vite sans sacrifier la qualité.",
     "ctaPrimary": "Travaillons ensemble",
     "ctaSecondary": "Voir mes services",
     "avatarAlt": "Portrait d'Adrien, développeur front-end freelance"
@@ -49,6 +49,16 @@
     "title": "Ce que je fais pour vous",
     "sub": "Des interfaces qui vont plus loin que la page statique.",
     "items": [
+      {
+        "title": "Landing pages & campagnes premium",
+        "items": [
+          "Structure pensée pour guider vers l'action",
+          "Mobile irréprochable, chargement rapide",
+          "Vidéos promotionnelles et animations",
+          "Connecté à votre CRM, analytics ou tunnel e-commerce"
+        ],
+        "proof": "Pages de campagne, lancements produit et pages d'acquisition au niveau des grandes marques"
+      },
       {
         "title": "Expériences web interactives",
         "items": [
@@ -69,16 +79,6 @@
         ],
         "proof": "Pour ajouter une feature IA concrète sans recruter un profil ML ou data"
       },
-      {
-        "title": "Landing pages & campagnes premium",
-        "items": [
-          "Structure pensée pour guider vers l'action",
-          "Mobile irréprochable, chargement rapide",
-          "Vidéos promotionnelles et animations",
-          "Connecté à votre CRM, analytics ou tunnel e-commerce"
-        ],
-        "proof": "Pages de campagne, lancements produit et pages d'acquisition au niveau des grandes marques"
-      }
     ]
   },
 

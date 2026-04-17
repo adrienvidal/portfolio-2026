@@ -34,8 +34,8 @@
   },
 
   "hero": {
-    "title": "A developer who builds experiences, not just pages.",
-    "sub": "I help startups and product teams build interactive web experiences, integrate AI into their interfaces, and launch premium digital campaigns — fast, clean, without friction.",
+    "title": "I build landing pages and campaigns that convert",
+    "sub": "Fixed-scope packages for marketing teams and startups who want to move fast without sacrificing quality.",
     "ctaPrimary": "Let's work together",
     "ctaSecondary": "See my services",
     "avatarAlt": "Portrait of Adrien, freelance front-end developer"
@@ -49,6 +49,16 @@
     "title": "What I do for you",
     "sub": "Interfaces that go beyond the static page.",
     "items": [
+      {
+        "title": "Landing pages & premium campaigns",
+        "items": [
+          "Structure designed to guide toward action",
+          "Flawless mobile, fast loading",
+          "Promotional videos and animations",
+          "Connected to your CRM, analytics, or e-commerce funnel"
+        ],
+        "proof": "Campaign pages, product launches, and acquisition pages at the level of major brands"
+      },
       {
         "title": "Interactive web experiences",
         "items": [
@@ -68,16 +78,6 @@
           "Automation and publishing via API (Meta, etc.)"
         ],
         "proof": "To add a concrete AI feature without hiring an ML or data profile"
-      },
-      {
-        "title": "Landing pages & premium campaigns",
-        "items": [
-          "Structure designed to guide toward action",
-          "Flawless mobile, fast loading",
-          "Promotional videos and animations",
-          "Connected to your CRM, analytics, or e-commerce funnel"
-        ],
-        "proof": "Campaign pages, product launches, and acquisition pages at the level of major brands"
       }
     ]
   },
