@@ -303,12 +303,24 @@
       "githubUrl": "https://github.com/adrienvidal"
     },
     "skills": [
-      { "cat": "Front-end", "val": "React, Next.js, TypeScript, JavaScript ES6+, HTML5, CSS3, SCSS" },
+      {
+        "cat": "Front-end",
+        "val": "React, Next.js, TypeScript, JavaScript ES6+, HTML5, CSS3, SCSS"
+      },
       { "cat": "Animation", "val": "Framer Motion, GSAP" },
-      { "cat": "IA & APIs", "val": "Claude SDK, OpenAI, fal.ai, Instagram Graph API, API REST" },
+      {
+        "cat": "IA & APIs",
+        "val": "Claude SDK, OpenAI, fal.ai, Instagram Graph API, API REST"
+      },
       { "cat": "Base de données", "val": "Supabase, Prisma, SQLite" },
-      { "cat": "Outils", "val": "Vite.js, Webpack, Git (Azure · GitLab · Bitbucket), Figma" },
-      { "cat": "Optimisation", "val": "SEO, Accessibilité ARIA/WCAG, Performance Web, Core Web Vitals" },
+      {
+        "cat": "Outils",
+        "val": "Vite.js, Webpack, Git (Azure · GitLab · Bitbucket), Figma"
+      },
+      {
+        "cat": "Optimisation",
+        "val": "SEO, Accessibilité ARIA/WCAG, Performance Web, Core Web Vitals"
+      },
       { "cat": "CMS", "val": "Shopify, FreeMarker, Twig" }
     ],
     "experiences": [
@@ -317,33 +329,33 @@
         "date": "Avr. 2023 – Présent",
         "role": "Développeur Front-End — Expériences immersives & campagnes digitales",
         "bullets": [
-          "Pages immersives pour les collections Coco Crush, Chance, Gabrielle, Sublimage, Allure Sport, Haute Horlogerie",
-          "Web app événementielle Coco Crush : swipe de bijoux façon Tinder (Framer Motion), quiz interactif, génération de QR code de liste de souhaits scannable en boutique",
-          "Campagne Chance : landing page multi-vues avec quiz diagnostic — chaque visiteur orienté vers son parfum",
-          "Campagne Allure Sport : landing page avec animations GSAP et tunnel e-commerce (ajout au panier)",
-          "Optimisation performances, accessibilité ARIA/WCAG et SEO sur l'ensemble des projets"
+          "Développement d'expériences immersives : transformation de concepts créatifs et designs haute-fidélité en interfaces web fluides et performantes (pixel perfect) pour le site e-commerce mondial — Coco Crush, Chance, Gabrielle, Sublimage, Haute Horlogerie",
+          "Optimisation des performances (Core Web Vitals, LCP, CLS, bundle size), du SEO technique (SSR, balises sémantiques, données structurées) et de l'accessibilité (WCAG, ARIA) pour garantir une expérience premium, indexable et inclusive",
+          "Collaboration cross-fonctionnelle avec les équipes Design, Marketing et Data pour aligner les contraintes techniques avec les exigences esthétiques de la marque"
         ],
-        "tags": "React · TypeScript · Framer Motion · GSAP · SCSS · SEO · Accessibilité · Azure"
+        "tags": "React · Next.js · TypeScript · SCSS · GSAP · Framer Motion · Webpack · Vite · Agile/SCRUM · Figma"
       },
       {
         "company": "Prisma Media",
-        "date": "Déc. 2021",
+        "date": "Déc. 2021 – Avr. 2023",
         "role": "Développeur Front-End — Pôle Féminin (femmeactuelle.fr · cuisineactuelle.fr)",
         "bullets": [
-          "Refonte des pages Home, Article, Auteur, Carnet de recettes",
-          "Web components : module d'avis/étoiles, module d'authentification, extension Chrome GitLab/webhooks"
+          "Refonte des pages Home, Article, Auteur et Carnet de recettes",
+          "Conception et intégration de composants front-end complexes pour les sites à fort trafic cuisineactuelle.fr et femmeactuelle.fr — système de gestion des commentaires et notation (Web Component + API REST), module d'authentification utilisateur",
+          "Développement d'une extension Chrome sur-mesure pour la gestion des code reviews GitLab",
+          "Collaboration produit avec les équipes éditoriales et produit pour aligner les contraintes techniques avec les exigences d'un média digital à grande audience"
         ],
-        "tags": "React · FreeMarker · Web Components · API Rest · GraphQL"
+        "tags": "React · JavaScript ES6+ · FreeMarker · LESS · GraphQL · API REST · GitLab · Extensions Chrome (Manifest V3)"
       },
       {
         "company": "Fnac Darty",
-        "date": "Nov. 2020",
-        "role": "Développeur Front-End — Équipe Darty Commercialité",
+        "date": "Nov. 2020 – Déc. 2021",
+        "role": "Développeur Front-End — Équipe Commercialité",
         "bullets": [
-          "Refonte page produit, liste produit et pages push",
-          "Composants cross-sell : assurances, garanties, services associés · Intégration page marque"
+          "Contribution à la refonte des pages clés du parcours e-commerce (fiche produit, liste produit, pages push) avec un focus sur la performance et la cohérence visuelle",
+          "Conception et développement de modules cross-sell dédiés aux services à valeur ajoutée — assurances, garanties, Darty Max — pour maximiser l'engagement client à chaque étape du tunnel"
         ],
-        "tags": "React · Web Components · API Rest · SCSS"
+        "tags": "React · Twig · Less · API REST · Webpack · Figma · GitLab"
       },
       {
         "company": "Mazarine × Delvaux",
@@ -356,12 +368,16 @@
       },
       {
         "company": "Yves Rocher",
-        "date": "Jan. 2019",
-        "role": "Développeur Front-End",
+        "date": "Janv. 2019 – Juin 2020",
+        "role": "Intégrateur web | Développeur Front-End",
         "bullets": [
-          "Landing pages campagnes · Quiz diagnostic fond de teint · A/B tests via ABTASTY · Target2Sell"
+          "Développement de landing pages pour la gamme lifting vegetal et gamme parfum",
+          "Développement d'un quiz pour orienter le consommateur vers le fond de teint qui lui convient le mieux",
+          "Participation à l'intégration de la refonte du site e-commerce",
+          "Intégration du service Target2Sell sur tous les sites e-commerce Yves Rocher",
+          "Création d'A/B tests via ABTASTY"
         ],
-        "tags": "A/B Testing · Quiz · E-commerce · ABTASTY · Sass"
+        "tags": "HTML5 · CSS3 · Sass · JavaScript · jQuery · Git · Webpack · CMS Hybris"
       }
     ],
     "experienceNote": "Expériences antérieures (2013–2018) — Shareweez, Quicksign, Publicis, Wibilong, ByAgency, Neuradom : développement front-end en agence et startup (HTML/CSS/JS, responsive, e-commerce).",
