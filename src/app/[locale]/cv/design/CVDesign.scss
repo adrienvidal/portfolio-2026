@@ -133,11 +133,13 @@
     letter-spacing: 0.12em;
     text-transform: uppercase;
     margin-bottom: 1mm;
+    break-after: avoid;
   }
 
   &__exp {
     padding-bottom: 3.5mm;
     border-bottom: 0.5px solid var(--cv-rule);
+    break-inside: avoid;
 
     &:last-child {
       border-bottom: none;

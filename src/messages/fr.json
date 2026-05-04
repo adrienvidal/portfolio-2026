@@ -292,7 +292,7 @@
   "cvData": {
     "downloadPdf": "Télécharger PDF",
     "name": "Adrien Vidal",
-    "role": "Développeur React & TypeScript | \nExpériences interactives · \nCampagnes premium · \nIntégration IA",
+    "role": "Développeur React & TypeScript",
     "contact": {
       "location": "Paris 20e",
       "email": "adriensg.vidal@gmail.com",
@@ -399,9 +399,20 @@
           "Développement d'interfaces responsives adaptées aux contraintes UX d'un contexte juridique et sécurisé"
         ],
         "tags": "HTML5 · CSS3 · SASS · JavaScript · jQuery · Webpack · Git"
+      },
+      {
+        "company": "Neuradom",
+        "date": "Mai 2016 – Oct. 2017",
+        "role": "Intégrateur web | Développeur Front-End | Webdesigner",
+        "bullets": [
+          "Développement du site vitrine de la startup MedTech — présentation de la solution de réhabilitation cognitive et motrice (AVC, Alzheimer) combinant jeux vidéo et capteur Kinect",
+          "Développement des interfaces du backoffice médecin permettant la création et le suivi des programmes thérapeutiques patients",
+          "Conception UX/UI des interfaces de l'application et des jeux sous Unity, et production de tutoriels vidéo"
+        ],
+        "tags": "HTML5 · CSS3 · SASS · JavaScript · Webpack · Unity · Photoshop · Illustrator · After Effects"
       }
     ],
-    "experienceNote": "Expériences antérieures (2013–2018) — Publicis, Wibilong, ByAgency, Neuradom : développement front-end en agence et startup (HTML/CSS/JS, responsive, e-commerce).",
+    "experienceNote": "Expériences antérieures (2013–2018) — Publicis, Wibilong, ByAgency : développement front-end en agence et startup (HTML/CSS/JS, responsive, e-commerce).",
     "projects": [
       {
         "name": "Dripflow",

@@ -78,11 +78,13 @@
     letter-spacing: 0.1em;
     text-transform: uppercase;
     margin-bottom: 3mm;
+    break-after: avoid;
   }
 
   // ── Experience ────────────────────────────────────────
   &__exp {
     margin-bottom: 4mm;
+    break-inside: avoid;
   }
 
   &__exp-header {
