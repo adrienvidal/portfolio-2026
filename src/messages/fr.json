@@ -378,9 +378,30 @@
           "Création d'A/B tests via ABTASTY"
         ],
         "tags": "HTML5 · CSS3 · Sass · JavaScript · jQuery · Git · Webpack · CMS Hybris"
+      },
+      {
+        "company": "Shareweez",
+        "date": "Oct. 2018 – Janv. 2019",
+        "role": "Développeur Front-End",
+        "bullets": [
+          "Développement de composants UI et d'interfaces interactives pour une application web de gestion de l'épargne salariale",
+          "Implémentation d'interfaces utilisateur responsives et accessibles avec React et Semantic UI",
+          "Collaboration avec les équipes backend pour intégrer des API REST et assurer un rendu des données fluide"
+        ],
+        "tags": "React · React Semantic UI · JavaScript · HTML5 · CSS3 · SASS · Webpack"
+      },
+      {
+        "company": "QuickSign · Freelance",
+        "date": "Janv. 2018 – Avr. 2018",
+        "role": "Développeur Front-End",
+        "bullets": [
+          "Intégration de parcours de souscription digitale pour une solution de signature électronique B2B",
+          "Développement d'interfaces responsives adaptées aux contraintes UX d'un contexte juridique et sécurisé"
+        ],
+        "tags": "HTML5 · CSS3 · SASS · JavaScript · jQuery · Webpack · Git"
       }
     ],
-    "experienceNote": "Expériences antérieures (2013–2018) — Shareweez, Quicksign, Publicis, Wibilong, ByAgency, Neuradom : développement front-end en agence et startup (HTML/CSS/JS, responsive, e-commerce).",
+    "experienceNote": "Expériences antérieures (2013–2018) — Publicis, Wibilong, ByAgency, Neuradom : développement front-end en agence et startup (HTML/CSS/JS, responsive, e-commerce).",
     "projects": [
       {
         "name": "Dripflow",

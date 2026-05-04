@@ -362,9 +362,30 @@
           "Campaign landing pages · Foundation diagnostic quiz · A/B tests via ABTASTY · Target2Sell"
         ],
         "tags": "A/B Testing · Quiz · E-commerce · ABTASTY · Sass"
+      },
+      {
+        "company": "Shareweez",
+        "date": "Jan. 2018 – Jan. 2019",
+        "role": "Front-End Developer",
+        "bullets": [
+          "Development of UI components and interactive interfaces for a web application managing employee savings",
+          "Implementation of responsive and accessible user interfaces with React and Semantic UI",
+          "Collaboration with backend teams to integrate REST APIs and ensure smooth data rendering"
+        ],
+        "tags": "React · React Semantic UI · JavaScript · HTML5 · CSS3 · SASS · Webpack"
+      },
+      {
+        "company": "QuickSign · Freelance",
+        "date": "Jan. 2018 – Apr. 2018",
+        "role": "Web Integrator | Front-End Developer",
+        "bullets": [
+          "Integration of digital subscription flows for a B2B electronic signature solution",
+          "Development of responsive interfaces tailored to the UX constraints of a legal and security-sensitive context"
+        ],
+        "tags": "HTML5 · CSS3 · SASS · JavaScript · jQuery · Webpack · Git"
       }
     ],
-    "experienceNote": "Earlier experience (2013–2018) — Shareweez, Quicksign, Publicis, Wibilong, ByAgency, Neuradom: front-end development in agency and startup contexts (HTML/CSS/JS, responsive, e-commerce).",
+    "experienceNote": "Earlier experience (2013–2018) — Publicis, Wibilong, ByAgency, Neuradom: front-end development in agency and startup contexts (HTML/CSS/JS, responsive, e-commerce).",
     "projects": [
       {
         "name": "Dripflow",
