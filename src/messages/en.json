@@ -394,26 +394,45 @@
           "UX/UI design of the application and game interfaces in Unity, and production of video tutorials"
         ],
         "tags": "HTML5 · CSS3 · SASS · JavaScript · Webpack · Unity · Photoshop · Illustrator · After Effects"
+      },
+      {
+        "company": "Publicis",
+        "date": "Feb. 2016 – Mar. 2016",
+        "role": "Web Integrator | Front-End Developer",
+        "bullets": [
+          "Integration of responsive HTML/CSS interfaces and cross-browser optimization for the Legrand.fr e-commerce redesign."
+        ],
+        "tags": "HTML5 · CSS3 · SASS · JavaScript · jQuery · Git"
+      },
+      {
+        "company": "ByAgency Interactive",
+        "date": "Jul. 2013 – Nov. 2013",
+        "role": "Web Integrator | Front-End Developer",
+        "bullets": [
+          "Development of showcase and community websites for pharma and FMCG clients (Mundipharma, Syntholkine, Tropicana) — HTML5/CSS3/jQuery integration, responsive design, cross-browser compatibility, SEO optimisations and PHP/JS debugging"
+        ],
+        "tags": "HTML5 · CSS3 · SASS · JavaScript · jQuery · Git · SEO"
       }
     ],
-    "experienceNote": "Earlier experience (2013–2018) — Publicis, Wibilong, ByAgency: front-end development in agency and startup contexts (HTML/CSS/JS, responsive, e-commerce).",
+    "experienceNote": "Earlier experience — Wibilong: front-end development in agency contexts (HTML/CSS/JS, responsive).",
     "projects": [
       {
         "name": "Dripflow",
-        "date": "Ongoing",
-        "role": "AI-powered Instagram content pipeline",
+        "date": "",
+        "role": "AI-powered Instagram content generation and publishing pipeline",
         "bullets": [
-          "Reference image → Claude Sonnet generates prompts → fal.ai generates images → selection → captions in 3 tones → publish via Instagram Graph API (Meta)",
-          "Human-in-the-loop approval workflow for managing a virtual influencer account"
+          "End-to-end pipeline: prompt generation via Claude Sonnet, image creation via fal.ai, captions in 3 tones, automated publishing via Instagram Graph API (Meta)",
+          "Human-in-the-loop approval workflow to manage a virtual influencer account semi-autonomously"
         ],
         "tags": "Next.js · Claude SDK · fal.ai · Instagram Graph API · Prisma · TypeScript"
       },
       {
         "name": "FitnessPal",
-        "date": "2025",
-        "role": "Workout tracking app — AI-assisted live coding",
+        "date": "",
+        "role": "Full-stack workout tracking application",
         "bullets": [
-          "PPL/Cardio 4-day programme, exercise cards, calendar history, light/dark theme, Google auth"
+          "Full-featured app: PPL/Cardio 4-day programmes, exercise cards, calendar history and light/dark theme",
+          "Google OAuth authentication, Supabase data persistence and autonomous deployment"
         ],
         "tags": "React · TypeScript · Supabase · Google OAuth · Vite"
       }

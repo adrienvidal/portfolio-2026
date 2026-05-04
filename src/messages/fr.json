@@ -410,26 +410,45 @@
           "Conception UX/UI des interfaces de l'application et des jeux sous Unity, et production de tutoriels vidéo"
         ],
         "tags": "HTML5 · CSS3 · SASS · JavaScript · Webpack · Unity · Photoshop · Illustrator · After Effects"
+      },
+      {
+        "company": "Publicis",
+        "date": "Févr. 2016 – Mars 2016",
+        "role": "Intégrateur web | Développeur Front-End",
+        "bullets": [
+          "Intégration des interfaces HTML/CSS responsive et optimisation cross-browser pour la refonte e-commerce de Legrand.fr"
+        ],
+        "tags": "HTML5 · CSS3 · SASS · JavaScript · jQuery · Git"
+      },
+      {
+        "company": "ByAgency Interactive",
+        "date": "Juil. 2013 – Nov. 2013",
+        "role": "Intégrateur web | Développeur Front-End",
+        "bullets": [
+          "Développement de sites vitrines et communautaires pour des clients pharma et grande conso (Mundipharma, Syntholkine, Tropicana) — intégration HTML5/CSS3/jQuery, responsive design, compatibilité cross-browser, optimisations SEO et debug PHP/JS"
+        ],
+        "tags": "HTML5 · CSS3 · SASS · JavaScript · jQuery · Git · SEO"
       }
     ],
-    "experienceNote": "Expériences antérieures (2013–2018) — Publicis, Wibilong, ByAgency : développement front-end en agence et startup (HTML/CSS/JS, responsive, e-commerce).",
+    "experienceNote": "Expériences antérieures — Wibilong : développement front-end en agence (HTML/CSS/JS, responsive).",
     "projects": [
       {
         "name": "Dripflow",
         "date": "",
-        "role": "Pipeline de contenu Instagram automatisé par l'IA",
+        "role": "Pipeline IA de génération et publication de contenu Instagram",
         "bullets": [
-          "Image de référence → Claude Sonnet génère des prompts → fal.ai génère les images → sélection → captions en 3 tons → publication via Instagram Graph API (Meta)",
-          "Workflow d'approbation humain-dans-la-boucle pour gérer un compte d'influenceur(euse) virtuel(le)"
+          "Développement d'un pipeline end-to-end : génération de prompts via Claude Sonnet, création d'images via fal.ai, rédaction de captions en 3 tons, publication automatisée via l'Instagram Graph API (Meta)",
+          "Architecture avec workflow d'approbation humain-dans-la-boucle pour piloter un compte d'influenceur virtuel de façon semi-autonome"
         ],
         "tags": "Next.js · Claude SDK · fal.ai · Instagram Graph API · Prisma · TypeScript"
       },
       {
         "name": "FitnessPal",
         "date": "",
-        "role": "App de suivi d'entraînement — live coding assisté par IA",
+        "role": "Application de suivi d'entraînement full-stack",
         "bullets": [
-          "Programme PPL/Cardio 4 jours, fiches exercice, historique calendrier, thème clair/sombre, auth Google"
+          "Développement d'une app complète : programmes PPL/Cardio 4 jours, fiches exercice, historique calendrier et thème clair/sombre",
+          "Authentification Google OAuth, persistance des données via Supabase et déploiement autonome"
         ],
         "tags": "React · TypeScript · Supabase · Google OAuth · Vite"
       }
