@@ -417,24 +417,14 @@
     "experienceNote": "Earlier experience — Wibilong: front-end development in agency contexts (HTML/CSS/JS, responsive).",
     "projects": [
       {
-        "name": "Dripflow",
-        "date": "",
-        "role": "AI-powered Instagram content generation and publishing pipeline",
+        "name": "Viloris",
+        "date": "2025 – Present",
+        "role": "Founder — AI & Automation Agency · viloris.io",
         "bullets": [
-          "End-to-end pipeline: prompt generation via Claude Sonnet, image creation via fal.ai, captions in 3 tones, automated publishing via Instagram Graph API (Meta)",
-          "Human-in-the-loop approval workflow to manage a virtual influencer account semi-autonomously"
+          "Custom web development (showcase sites, React/Next.js applications) and AI pipeline design (content generation, data processing, autonomous agents) for freelancers and SMBs",
+          "Integration of LLM APIs (Claude, OpenAI) and third-party services to build intelligent workflows that eliminate repetitive manual tasks"
         ],
-        "tags": "Next.js · Claude SDK · fal.ai · Instagram Graph API · Prisma · TypeScript"
-      },
-      {
-        "name": "FitnessPal",
-        "date": "",
-        "role": "Full-stack workout tracking application",
-        "bullets": [
-          "Full-featured app: PPL/Cardio 4-day programmes, exercise cards, calendar history and light/dark theme",
-          "Google OAuth authentication, Supabase data persistence and autonomous deployment"
-        ],
-        "tags": "React · TypeScript · Supabase · Google OAuth · Vite"
+        "tags": "Next.js · Claude SDK · OpenAI · TypeScript · Supabase · REST API · n8n"
       }
     ],
     "languages": [

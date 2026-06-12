@@ -433,24 +433,14 @@
     "experienceNote": "Expériences antérieures — Wibilong : développement front-end en agence (HTML/CSS/JS, responsive).",
     "projects": [
       {
-        "name": "Dripflow",
-        "date": "",
-        "role": "Pipeline IA de génération et publication de contenu Instagram",
+        "name": "Viloris",
+        "date": "2025 – Présent",
+        "role": "Fondateur — Agence IA & Automatisations · viloris.io",
         "bullets": [
-          "Développement d'un pipeline end-to-end : génération de prompts via Claude Sonnet, création d'images via fal.ai, rédaction de captions en 3 tons, publication automatisée via l'Instagram Graph API (Meta)",
-          "Architecture avec workflow d'approbation humain-dans-la-boucle pour piloter un compte d'influenceur virtuel de façon semi-autonome"
+          "Développement web sur-mesure (sites vitrine, applications React/Next.js) et conception de pipelines IA (génération de contenu, traitement de données, agents autonomes) pour des clients indépendants et PME",
+          "Intégration d'APIs LLM (Claude, OpenAI) et de services tiers pour créer des workflows intelligents réduisant les tâches manuelles répétitives"
         ],
-        "tags": "Next.js · Claude SDK · fal.ai · Instagram Graph API · Prisma · TypeScript"
-      },
-      {
-        "name": "FitnessPal",
-        "date": "",
-        "role": "Application de suivi d'entraînement full-stack",
-        "bullets": [
-          "Développement d'une app complète : programmes PPL/Cardio 4 jours, fiches exercice, historique calendrier et thème clair/sombre",
-          "Authentification Google OAuth, persistance des données via Supabase et déploiement autonome"
-        ],
-        "tags": "React · TypeScript · Supabase · Google OAuth · Vite"
+        "tags": "Next.js · Claude SDK · OpenAI · TypeScript · Supabase · API REST · n8n"
       }
     ],
     "languages": [

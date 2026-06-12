@@ -81,7 +81,7 @@ export function CVDesign({ data }: { data: CVDesignData }) {
         <div className="cv-design__sidebar-section">
           <div className="cv-design__sidebar-title">{data.sections.education}</div>
           {data.education.map((e, i) => (
-            <div key={i} style={i > 0 ? { marginTop: '3mm' } : undefined}>
+            <div key={i} className="cv-design__education-item">
               <div className="cv-design__contact-item cv-design__contact-item--light">{e.degree}</div>
               <div className="cv-design__contact-item">{e.school} — {e.year}</div>
             </div>
