@@ -284,7 +284,7 @@
   },
 
   "footer": {
-    "subtitle": "Développeur React & TypeScript freelance"
+    "subtitle": "Développeur full-stack IA freelance"
   },
 
   "blog": {
@@ -310,7 +310,7 @@
   "cvData": {
     "downloadPdf": "Télécharger PDF",
     "name": "Adrien Vidal",
-    "role": "Développeur React & TypeScript",
+    "role": "Développeur Full-Stack IA",
     "contact": {
       "location": "Paris 20e",
       "email": "adriensg.vidal@gmail.com",
@@ -323,28 +323,41 @@
     "skills": [
       {
         "cat": "Front-end",
-        "val": "React, Next.js, TypeScript, JavaScript ES6+, HTML5, CSS3, SCSS"
+        "val": "TypeScript, React 19, Next.js (App Router, Server Components), JavaScript ES6+, Tailwind CSS, SCSS, shadcn/ui, Radix, Framer Motion, GSAP"
       },
-      { "cat": "Animation", "val": "Framer Motion, GSAP" },
       {
-        "cat": "IA & APIs",
-        "val": "Claude SDK, OpenAI, fal.ai, Instagram Graph API, API REST"
+        "cat": "Back-end & données",
+        "val": "Node.js, routes API Next.js, API REST, GraphQL, PostgreSQL, Prisma, Supabase (auth, stockage, row level security), SQLite, pgvector"
       },
-      { "cat": "Base de données", "val": "Supabase, Prisma, SQLite" },
       {
-        "cat": "Outils",
-        "val": "Vite.js, Webpack, Git (Azure · GitLab · Bitbucket), Figma"
+        "cat": "IA & LLM",
+        "val": "SDK Anthropic (Claude), OpenAI, AI SDK Vercel, prompt engineering, sorties structurées validées (zod), RAG (embeddings Cohere, pgvector), fal.ai, MCP, n8n"
+      },
+      {
+        "cat": "Qualité & méthode",
+        "val": "Vitest, Playwright, Testing Library, ESLint, TypeScript strict, Git (GitLab · Azure DevOps · Bitbucket · GitHub), CI/CD Vercel, Agile/SCRUM, Figma"
       },
       {
         "cat": "Optimisation",
-        "val": "SEO, Accessibilité ARIA/WCAG, Performance Web, Core Web Vitals"
-      },
-      { "cat": "CMS", "val": "Shopify, FreeMarker, Twig" }
+        "val": "SEO technique, accessibilité WCAG/ARIA, Core Web Vitals, performance web"
+      }
     ],
     "experiences": [
       {
+        "company": "Viloris.io (Webnrolls)",
+        "date": "2026 – Présent",
+        "role": "Développeur Full-Stack — Projets IA et applications sur mesure",
+        "bullets": [
+          "CRM sur mesure pour un cabinet d'expertise comptable (500 dossiers clients, 20 utilisateurs) en remplacement d'un fichier Excel partagé — mission au forfait portée seule, du cadrage du besoin à la mise en production",
+          "Back-end : PostgreSQL sur Supabase, schéma et migrations Prisma, droits par profil en row level security, historique des modifications en déclencheurs Postgres, relances d'échéances en tâches planifiées Vercel",
+          "Front-end : Next.js 16 (App Router, Server Components), React 19, TypeScript strict, Tailwind 4 et shadcn/ui, écrans desktop et mobile dessinés puis validés en revue avec la cliente",
+          "Qualité et conformité : tests unitaires, d'intégration et de bout en bout, typage et lint bloquants, détection de secrets, derrière une commande de vérification unique. Contrat de sous-traitance RGPD, hébergement en Union européenne, aucune donnée réelle en développement ni dans les journaux"
+        ],
+        "tags": "Next.js 16 · React 19 · TypeScript · Prisma · Supabase · PostgreSQL · Tailwind · Vitest · Playwright · Vercel"
+      },
+      {
         "company": "Chanel",
-        "date": "Avr. 2023 – Présent",
+        "date": "Avr. 2023 – Févr. 2026",
         "role": "Développeur Front-End — Expériences immersives & campagnes digitales",
         "bullets": [
           "Développement d'expériences immersives : transformation de concepts créatifs et designs haute-fidélité en interfaces web fluides et performantes (pixel perfect) pour le site e-commerce mondial — Coco Crush, Chance, Gabrielle, Sublimage, Haute Horlogerie",
@@ -448,26 +461,59 @@
         "tags": "HTML5 · CSS3 · SASS · JavaScript · jQuery · Git · SEO"
       }
     ],
-    "experienceNote": "Expériences antérieures — Wibilong : développement front-end en agence (HTML/CSS/JS, responsive).",
+    "experienceNote": "Développeur indépendant depuis 2015 : micro-entreprise, puis EURL Webnrolls depuis 2024, marque Viloris.io. Les missions ci-dessus ont été menées à ce titre. Expériences antérieures — Wibilong : développement front-end en agence (HTML/CSS/JS, responsive).",
     "projects": [
       {
-        "name": "Viloris",
-        "date": "2025 – Présent",
-        "role": "Fondateur — Agence IA & Automatisations · viloris.io",
+        "name": "Bookvox",
+        "date": "En ligne chez un premier client",
+        "role": "Génération de contenu social pour auteurs de roman",
         "bullets": [
-          "Développement web sur-mesure (sites vitrine, applications React/Next.js) et conception de pipelines IA (génération de contenu, traitement de données, agents autonomes) pour des clients indépendants et PME",
-          "Intégration d'APIs LLM (Claude, OpenAI) et de services tiers pour créer des workflows intelligents réduisant les tâches manuelles répétitives"
+          "Génération de publications avec Claude Sonnet, description automatique des visuels avec Claude Haiku, recherche documentaire RAG sur les documents de référence de l'auteur (embeddings Cohere multilingues, pgvector)",
+          "Multi-tenant isolé par espace de travail en row level security, publication OAuth sur cinq réseaux avec jetons chiffrés en AES-256-GCM, calendrier éditorial en glisser-déposer, suivi de progression en temps réel"
         ],
-        "tags": "Next.js · Claude SDK · OpenAI · TypeScript · Supabase · API REST · n8n"
+        "tags": "Next.js 15 · TypeScript · Supabase · pgvector · Claude · Cohere · n8n · Playwright"
+      },
+      {
+        "name": "Content Studio",
+        "date": "Outil interne Viloris.io, en service",
+        "role": "Trois agents LLM spécialisés dans une application web",
+        "bullets": [
+          "Chaîne de production de publications LinkedIn : trois agents (stratège, rédacteur, directeur artistique) exécutés dans l'application, prompts système assemblés en TypeScript et versionnés avec le code, contexte de marque en base plutôt qu'en fichiers",
+          "Sorties structurées validées par schéma (zod), diffusion en flux vers l'interface via l'AI SDK Vercel, génération d'images par fal.ai, persistance Prisma sur PostgreSQL"
+        ],
+        "tags": "AI SDK Vercel · Claude · fal.ai · Next.js · Prisma · zod · Vitest · Testing Library"
+      },
+      {
+        "name": "Agents d'exploitation internes",
+        "date": "2026",
+        "role": "Quatre agents branchés sur les outils de l'entreprise",
+        "bullets": [
+          "Agents secrétariat, direction financière, commercial et R&D branchés sur Google Workspace, Airtable et n8n par le protocole MCP — traitement quotidien de la correspondance, de la comptabilité et du suivi du pipeline commercial"
+        ],
+        "tags": "MCP · n8n · Google Workspace · Airtable · Claude"
       }
     ],
     "languages": [
-      { "name": "Français", "level": "natif" },
-      { "name": "Anglais", "level": "courant" }
+      {
+        "name": "Français",
+        "level": "natif"
+      },
+      {
+        "name": "Anglais",
+        "level": "courant"
+      }
     ],
     "education": [
-      { "degree": "Intégrateur Front-End", "school": "IFOCOP Paris", "year": "2013" },
-      { "degree": "Modern React Front to Back", "school": "Udemy", "year": "2020" }
+      {
+        "degree": "Intégrateur Front-End",
+        "school": "IFOCOP Paris",
+        "year": "2013"
+      },
+      {
+        "degree": "Modern React Front to Back",
+        "school": "Udemy",
+        "year": "2020"
+      }
     ],
     "educationDegree": "Intégrateur / Développeur Front-End — IFOCOP Paris (2013)",
     "educationSub": "Modern React Front to Back — Udemy, Brad Traversy (2020)",
@@ -481,14 +527,14 @@
       "languages": "Langues",
       "education": "Formation",
       "experience": "Expériences",
-      "projects": "Projets personnels"
+      "projects": "Réalisations IA"
     }
   },
 
   "cvSimple": {
     "sections": {
       "experience": "Expériences",
-      "projects": "Projets personnels",
+      "projects": "Réalisations IA",
       "skills": "Compétences",
       "educationLanguages": "Formation & Langues"
     }
