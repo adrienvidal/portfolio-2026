@@ -103,7 +103,7 @@ export type OtherMissionStaticItem = {
 
 export const otherMissionsStaticData: OtherMissionStaticItem[] = [
   {
-    tags: ['Next.js 16', 'React 19', 'Prisma', 'Supabase', 'PostgreSQL', 'Playwright']
+    tags: ['Next.js 16', 'React 19', 'Prisma', 'PostgreSQL']
   },
   {
     tags: ['React', 'FreeMarker', 'API Rest', 'tailwindcss'],

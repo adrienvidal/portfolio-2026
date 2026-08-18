@@ -180,7 +180,7 @@
     "seeLess": "Voir moins",
     "items": [
       {
-        "name": "Cabinet d'expertise comptable",
+        "name": "Cabinet comptable",
         "description": "CRM sur mesure en remplacement d'un fichier Excel partagé — 500 dossiers clients, 20 utilisateurs. Conçu, développé et mis en production seul : PostgreSQL sur Supabase, droits par profil, historique des modifications, relances d'échéances automatiques, tests à quatre niveaux, hébergement en Union européenne. Livré en première version, développement en cours."
       },
       {
