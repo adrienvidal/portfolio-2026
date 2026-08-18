@@ -1,8 +1,8 @@
 {
   "meta": {
     "home": {
-      "title": "Adrien Vidal — Développeur Web Freelance",
-      "description": "Adrien conçoit des landing pages React / Next premium orientées conversion avec IA, UX et exécution rapide. Parlons de votre projet."
+      "title": "Adrien Vidal — Développeur Full-Stack IA (React, Next.js, TypeScript)",
+      "description": "Applications web et features IA livrées en production : React, Next.js, TypeScript, PostgreSQL, LLM intégrés au produit. Douze ans d'interfaces exigeantes, en forfait."
     },
     "projects": {
       "title": "Projets — Adrien Vidal",
@@ -14,7 +14,7 @@
     },
     "lab": {
       "title": "Lab — Adrien Vidal",
-      "description": "Projets personnels : outils, expérimentations et prototypes construits pour des besoins réels."
+      "description": "Ce que je construis en dehors des missions : outils et applications, dont certaines tournent chez de vrais utilisateurs."
     }
   },
 
@@ -34,11 +34,11 @@
   },
 
   "hero": {
-    "title": "Je construis des landing pages et campagnes qui convertissent",
-    "sub": "En forfait, à périmètre défini, pour des équipes marketing et des startups qui veulent aller vite sans sacrifier la qualité.",
+    "title": "Je construis des applications et des features IA qui tiennent en production",
+    "sub": "Douze ans d'interfaces exigeantes, aujourd'hui de la base PostgreSQL à l'interface React. En forfait, à périmètre défini, tests et documentation compris.",
     "ctaPrimary": "Travaillons ensemble",
     "ctaSecondary": "Voir mes services",
-    "avatarAlt": "Portrait d'Adrien, développeur front-end freelance"
+    "avatarAlt": "Portrait d'Adrien, développeur full-stack freelance"
   },
 
   "clients": {
