@@ -1,155 +1,76 @@
-# CLAUDE.md
+# Portfolio 2026
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+## Session Continuity
 
-## Commands
+En début de session :
 
-```bash
-npm run dev       # Start dev server (Next.js 15 — Turbopack by default)
-npm run build     # Build for production (next build)
-npm run start     # Start production server
-npm run lint      # Run ESLint (next lint)
-```
+- Lire le fichier de la dernière session dans `.claude/sessions/`
+- Identifier où on s'est arrêté et les blockers en cours
+- Résumer en 3 lignes avant de commencer
 
-## Architecture
+En fin de session :
 
-Portfolio built with React 19 + TypeScript + Next.js 15 (App Router), using file-based routing with `next-intl` for i18n.
+- Sauvegarder un résumé dans `.claude/sessions/[date]_[sujet].md`
+- Inclure : Réalisé, Reste à faire, Blockers, Décisions
+- Si un fichier existe déjà pour aujourd'hui, le compléter plutôt que le remplacer
 
-**Routes:**
-- `/` — Home (`src/app/[locale]/page.tsx` renders all sections sequentially)
-- `/projets` — Full projects list (`src/app/[locale]/projets/page.tsx`)
-- `/lab` — Lab page (`src/app/[locale]/lab/page.tsx`)
-- `/blog` — Blog index (`src/app/[locale]/blog/page.tsx`)
-- `/blog/[slug]` — Article (`src/app/[locale]/blog/[slug]/page.tsx`)
-- `/cv` — CV hub (`src/app/[locale]/cv/page.tsx`) — lists available CVs (design, simple); each card links to `/cv/design` and `/cv/simple`. i18n namespace: `cv`.
-- `/cv/design` — CV design page (`src/app/[locale]/cv/design/page.tsx`) renders `CVDesign` component
-- `/cv/simple` — CV simple page (`src/app/[locale]/cv/simple/page.tsx`) renders `CVSimple` component
+Format du nom de fichier : `YYYY-MM-DD_sujet-en-kebab-case.md`
+Exemple : `2026-03-10_audit-cabinet-merlin.md`
 
-All routes are nested under `[locale]` — Next.js resolves `/fr/...` and `/en/...` automatically. `fr` is the default locale (no prefix in URLs by default).
+Règles :
 
-**Layouts:**
-- `src/app/layout.tsx` — root layout: sets `<html lang>` via `getLocale()`, loads global SCSS and fonts
-- `src/app/[locale]/layout.tsx` — locale layout: wraps with `NextIntlClientProvider`, calls `setRequestLocale`
+- Toujours lire AVANT d'agir – ne pas redemander ce qui est déjà documenté
+- Les blockers non résolus de la session précédente deviennent la priorité
+- Quand un blocker est levé, le noter explicitement dans "Réalisé"
 
-**Home section order** (top → bottom):
-`Nav` → `Hero` → `Clients` → `Services` → `Process` → `About` → `Projects` → `Reservation` → `Footer`
+Ajoute une instruction dans MEMORY.md pour que tu pense à chercher le fichier claude/sessions du jour automatiquement en début de session.
 
-The `Reservation` section has one sub-component: `ContactForm`.
+### Archivage des sessions
 
-> Note: `Testimonials` component exists in `src/components/Testimonials/` and is rendered in `src/app/[locale]/page.tsx`.
+Le dossier `.claude/sessions/` ne garde visibles à la racine que les sessions utiles à la reprise. Les autres vont dans `.claude/sessions/archive/`.
 
-**Projects:**
-- Home displays 6 Chanel projects (via `HOME_ORDER` in `src/data/static.tsx`) with a "Voir tous les projets →" link to `/projets`
-- `/projets` has Nav + Footer; renders all Chanel projects + "Autres missions" section
-- Both home and `/projets` render an "Autres missions" section below the grid (Fnac Darty, Prisma Media, Yves Rocher) — static data from `otherMissionsStaticData` in `src/data/static.tsx`, translated copy from `src/messages/*.json`
-- Each project item supports an optional `video` (Cloudinary URL) rendered as slide 0 in `ProjectCard`. The video plays on hover and pauses/resets on mouse leave. `images[0]` is used as `poster`. Cloudinary URLs are automatically transformed with `f_auto,q_auto` via `toAutoVideo()` in `ProjectCard.tsx`. Videos are never committed to the repo.
+- **Garder actives** : les 3 sessions les plus récentes, plus toute session rattachée à un dossier ou un deal encore ouvert.
+- **Archiver, ne pas supprimer** : déplacer via `git mv` vers `archive/` (réversible, tracé dans git). Une session est archivable quand elle est close et que son contenu vit déjà ailleurs (code, règles, fiche client, playbook, CRM, git).
+- **Filet anti-oubli, impératif** : avant d'archiver une session, reporter chacun de ses « Reste à faire » encore ouverts dans `.claude/sessions/reste-a-faire.md` (le backlog vivant, jamais archivé). Ne jamais archiver une session tant qu'un item ouvert n'a pas été soit fait, soit reporté dans ce backlog. Cocher puis retirer un item du backlog quand il est fait.
+- **Quand** : en fin de session, après avoir sauvegardé le résumé du jour, vérifier si d'anciennes sessions sont devenues archivables et les déplacer.
+- **Ne jamais toucher** au « Reste à faire » de la session active la plus récente : c'est la liste de priorités vivante.
+- **Hygiène de fond** au passage : corriger une contradiction à sa source (pas seulement dans le dernier fichier), refermer un « Reste à faire » qu'une session ultérieure a accompli, signaler une info devenue fausse (par exemple un agent supprimé depuis).
+- **Toute suppression ou déplacement se confirme avec Adrien** avant d'agir (cf. règle d'autonomie de l'orchestrateur).
 
-**Lab (`/lab`):**
-- Displays personal projects in a 2-column card grid (1 column on mobile)
-- Each item has a `status` field (`live`, `wip`, `archived`) — labels sourced from `lab.statusLabels`
-- Each item can have:
-  - `images` (string[]) — collage cover + lightbox slides
-  - `video` (string) — single autoplay cover (desktop + mobile)
-  - `videoDesk` + `videoMob` (strings) — responsive autoplay covers (different source per breakpoint, 900px)
-  - none of the above — placeholder
-- When media is present, clicking the cover opens `Lightbox` (portal, keyboard nav ←/→/Escape, touch swipe)
-- `Lightbox` is a generic component at `src/components/Lightbox/` — accepts a `MediaItem[]` (`{ type: 'image' | 'video', src: string }`)
-- Lab assets live in `public/lab/<project-name>/` as `.webp` files (videos hosted on Cloudinary — never commit `.mp4` to the repo)
+Rappel : les fichiers de session sont un journal de passation, pas la mémoire vivante.
 
-## i18n
+Ajoute une instruction dans MEMORY.md pour que tu pense à chercher le fichier claude/sessions du jour automatiquement en début de session.
 
-The project uses **next-intl** with two locales: `fr` (default) and `en`.
+## Méthode de développement
 
-**Key files:**
-- `src/i18n/routing.ts` — defines locales and defaultLocale
-- `src/i18n/request.ts` — loads the right `messages/*.json` per request
-- `src/i18n/navigation.ts` — exports locale-aware `Link`, `useRouter`, `usePathname`, `redirect`
-- `src/messages/fr.json` and `src/messages/en.json` — all translated copy
+Tout travail de construction — dérouler une tâche du plan, ajouter une commande,
+reprendre le fil en début de session — passe par le skill `lean-development` dès
+qu'il s'applique. Il fixe la façon d'avancer sans brûler le contexte : lectures
+ciblées plutôt que fichiers entiers, sous-agents seulement quand ils paient,
+passes de revue non multipliées. L'invoquer au début du travail, pas une fois le
+contexte déjà saturé.
 
-**Rules:**
-- Server components use `getTranslations(namespace)` and `setRequestLocale(locale)` from `next-intl/server`
-- Client components use `useTranslations(namespace)` and `useLocale()` from `next-intl`
-- Never import `Link` from `next/link` — always use `Link` from `@/i18n/navigation` so links stay locale-aware
-- The `Nav` component is a client component (uses `useTranslations`, `useLocale`, `useRouter`, `usePathname`)
+## Workflow git : une branche et une PR par lot
 
-## Server vs Client components
+Un **lot** est un groupe de tâches du plan qui livre quelque chose de vérifiable
+seul. On ne travaille jamais directement sur `main`.
 
-- Pages (`src/app/[locale]/*/page.tsx`) are **Server Components** by default — good for SEO
-- Components with state or browser APIs must have `'use client'` at the top
-- Current client components: `Nav`, `Reservation`, `ProjectCard`, `Lab/page`, `Lightbox`
-- `ContactForm` is a child of `Reservation` — it doesn't need `'use client'` explicitly
+Pour chaque lot :
 
-## Styling
+1. **Brancher depuis `main` à jour** — `git switch main && git pull && git switch -c <branche>`
+2. **Dérouler les tâches du lot**, avec un commit par tâche comme le prévoit le
+   plan. Les commits intermédiaires restent fins ; c'est la PR qui fait l'unité
+   de revue. Écrire le test d'abord là où un bug coûte cher et où la logique est
+   subtile — vérification anti-invention, parsing, machine à états, calculs de
+   fenêtre. Ailleurs, un test ciblé après coup suffit.
+3. **Vérifier avant d'ouvrir** — `npm test` au vert sur la totalité de la suite,
+   pas seulement sur les tests du lot.
+4. **Ouvrir la PR** — `gh pr create --base main --title "<lot> — <résumé>"`. Le
+   corps décrit ce que le lot livre, ce qu'il ne livre pas encore, et comment le
+   vérifier à la main s'il y a une commande à lancer.
+5. **Attendre la revue.** Ne pas fusionner soi-même sans accord explicite.
+6. **Après fusion** — revenir sur `main`, `git pull`, supprimer la branche
+   locale, et n'entamer le lot suivant qu'à partir de là.
 
-- **Sass (SCSS)** — each component has a co-located `.scss` file
-- Global styles live in `src/styles/`: `_variables.scss` (design tokens), `_reset.scss`, and `main.scss` (shared utility classes). Imported in `src/app/layout.tsx`.
-- Page-level SCSS files are co-located with their page: `src/app/[locale]/blog/blog.scss`, `src/app/[locale]/blog/[slug]/article.scss`, `src/app/[locale]/projets/allProjects.scss`, `src/app/[locale]/lab/lab.scss`, `src/app/[locale]/cv/cv-hub.scss`
-- Design tokens are defined as both CSS custom properties (`var(--blue)`) and Sass variables (`$blue`) in `_variables.scss`
-- Shared layout classes: `.section`, `.section-bg`, `.section-bg-inner`, `.section-title`, `.section-sub`, `.btn-blue`, `.btn-white`
-- Breakpoint: `900px` for mobile layout adjustments
-
-## Component conventions
-
-Each component lives in its own directory under `src/components/<Name>/` with `<Name>.tsx` and `<Name>.scss`. Sub-components (e.g. `ServiceCard`, `ProcessStep`, `TestimonialCard`, `ProjectCard`) are also colocated in the same directory as their parent.
-
-## Images
-
-All `<img>` tags use `next/image` (`Image` from `'next/image'`). Strategies used:
-- Fixed dimensions (`width` + `height`) for known-size images (Hero avatar: 340×340)
-- `fill` prop for images inside a `position: relative` container (ProjectCard, Lab collage, LabLightbox)
-- Always include a `sizes` prop when using `fill`
-- Add `priority` on above-the-fold images (Hero)
-
-Project images live in `public/projects/<project-name>/` as `.webp` files.
-Lab assets live in `public/lab/<project-name>/` as `.webp` files. Videos are hosted on Cloudinary and referenced by URL in `src/data/static.tsx` or `src/messages/*.json` — never commit `.mp4` to the repo (`.gitignore`).
-
-When adding new images (PNG/JPG), convert them to WebP using the sharp script:
-
-```bash
-node scripts/optimize-images.mjs
-```
-
-The script converts all PNG/JPG in `public/**` to WebP (quality 85), deletes the originals, and logs the size savings.
-
-## SEO / Metadata
-
-Each page exports `metadata` (static) or `generateMetadata` (dynamic) from Next.js:
-
-```ts
-// Static (most pages)
-export const metadata: Metadata = { title: '...', description: '...' }
-
-// Dynamic (blog/[slug])
-export async function generateMetadata({ params }): Promise<Metadata> { ... }
-```
-
-Blog article slugs are pre-generated via `generateStaticParams` in `src/app/[locale]/blog/[slug]/page.tsx`.
-
-## Blog / MDX
-
-- Article metadata (slug, title, date, description, tags) is defined in `src/data/articles.ts`
-- MDX files live in `src/articles/*.mdx`
-- `@next/mdx` handles compilation (configured in `next.config.ts`)
-- To add a new article:
-  1. Create `src/articles/<slug>.mdx`
-  2. Add metadata to `src/data/articles.ts`
-  3. Add the import to the `articleModules` map in `src/app/[locale]/blog/[slug]/page.tsx`
-
-## API
-
-- `src/app/api/reservation/route.ts` — POST endpoint called by the `ContactForm`. Sends a booking confirmation email via **Resend** (`resend` npm package). Requires `RESEND_API_KEY` in `.env.local`.
-
-## Content
-
-Content is split between two sources — never hardcode copy inside components:
-
-**`src/data/static.tsx`** — locale-agnostic data (images, videos, SVG icon paths, links, tags):
-- `projectsStaticData` — Chanel project cards (images, video, tags, link)
-- `otherMissionsStaticData` — client list (Fnac Darty, Prisma Media, Yves Rocher); tags, link, site
-- `clientLogos` — logo strip on the home page
-- `serviceIcons`, `processIcons` — SVG path nodes
-- `HOME_ORDER`, `PROJECTS_SEE_ALL_HREF`, `LAB_HREF` — constants
-
-**`src/messages/fr.json` / `src/messages/en.json`** — all translated copy (labels, titles, descriptions, CTA text). Organized by namespace matching component names (`nav`, `hero`, `services`, `process`, `projects`, `otherMissions`, `about`, `reservation`, `footer`, `blog`, `lab`, `meta`).
-
-Lab items are defined entirely in the messages files under the `lab` namespace — each item has a `status` (`live`/`wip`/`archived`) and supports `images` (collage + lightbox), `video` (single autoplay cover), `videoDesk`+`videoMob` (responsive autoplay covers), or neither.
+Un lot qui grossit en cours de route ne se découpe pas après coup : on le termine
+et on ouvre la PR. C'est le découpage suivant qu'on ajuste.
