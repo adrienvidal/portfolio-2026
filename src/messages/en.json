@@ -245,7 +245,7 @@
 
   "lab": {
     "title": "Lab",
-    "sub": "Personal projects — tools, experiments, stuff built for a real need or just to see.",
+    "sub": "What I build outside client work: tools, applications and experiments — some of them running for real users.",
     "backLabel": "← Back",
     "visuals": "{count} visuals",
     "statusLabels": {
@@ -255,12 +255,20 @@
     },
     "items": [
       {
-        "title": "FitnessPal",
-        "description": "Complete workout tracking app, built with AI-assisted live coding. PPL/Cardio 4-day program, exercise cards with muscle illustrations, weight tracking, session history by calendar, light/dark theme, Google authentication. A concrete example of what an AI workflow can deliver quickly without sacrificing quality."
+        "title": "Bookvox",
+        "description": "Social content generation app for novel authors, live with a first client and under continuous development. The author uploads their visuals and reference documents; the app automatically describes images with Claude Haiku, indexes documents for vector search (multilingual Cohere embeddings, pgvector) and generates posts with Claude Sonnet while staying true to the author's voice. Human validation before publishing, drag-and-drop editorial calendar, OAuth publishing to five networks with AES-256-GCM encrypted tokens. Multi-tenant isolation per workspace via row level security."
+      },
+      {
+        "title": "Content Studio",
+        "description": "LinkedIn post production chain driven by three specialised LLM agents: a strategist that frames the request and proposes angles, a writer that drafts the post, and an art director that reviews and iterates on the visuals. System prompts are assembled in TypeScript and versioned with the code, brand context lives in the database rather than in files, and outputs are schema-validated before reaching the interface. Streaming via the Vercel AI SDK, image generation with fal.ai, Prisma persistence on PostgreSQL."
       },
       {
         "title": "Dripflow",
         "description": "Automated Instagram content pipeline powered by AI. Upload a reference image → Claude Sonnet generates optimized Midjourney prompts → human approval workflow → image generation via fal.ai → visual selection → caption generation in 3 tones (mysterious, casual, artistic) → carousel assembly → automatic publication on Instagram via the Instagram Graph API (Meta). Designed to manage a virtual influencer account."
+      },
+      {
+        "title": "FitnessPal",
+        "description": "Complete workout tracking app, built with AI-assisted live coding. PPL/Cardio 4-day program, exercise cards with muscle illustrations, weight tracking, session history by calendar, light/dark theme, Google authentication. A concrete example of what an AI workflow can deliver quickly without sacrificing quality."
       }
     ]
   },
