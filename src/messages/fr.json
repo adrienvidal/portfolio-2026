@@ -50,6 +50,26 @@
     "sub": "Des interfaces qui vont plus loin que la page statique.",
     "items": [
       {
+        "title": "Applications métier sur mesure",
+        "items": [
+          "Base PostgreSQL, droits par profil, historique des modifications",
+          "Authentification, rôles, tâches planifiées",
+          "Tests unitaires, d'intégration et de bout en bout",
+          "Hébergement en Union européenne, conformité RGPD"
+        ],
+        "proof": "Quand un fichier Excel partagé ne suffit plus et qu'un logiciel du marché ne colle pas"
+      },
+      {
+        "title": "Intégration IA dans votre produit",
+        "items": [
+          "Génération de contenu (Claude, OpenAI)",
+          "Recommandation et personnalisation produit",
+          "Pipeline IA avec workflow d'approbation humain",
+          "Automatisation et publication via API (Meta, etc.)"
+        ],
+        "proof": "Pour ajouter une feature IA concrète sans recruter un profil ML ou data"
+      },
+      {
         "title": "Landing pages & campagnes premium",
         "items": [
           "Structure pensée pour guider vers l'action",
@@ -68,16 +88,6 @@
           "Animations avancées (GSAP, Framer Motion)"
         ],
         "proof": "Quand une landing page classique ne suffit plus pour engager votre audience"
-      },
-      {
-        "title": "Intégration IA dans votre produit",
-        "items": [
-          "Génération de contenu (Claude, OpenAI)",
-          "Recommandation et personnalisation produit",
-          "Pipeline IA avec workflow d'approbation humain",
-          "Automatisation et publication via API (Meta, etc.)"
-        ],
-        "proof": "Pour ajouter une feature IA concrète sans recruter un profil ML ou data"
       }
     ]
   },

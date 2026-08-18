@@ -50,6 +50,26 @@
     "sub": "Interfaces that go beyond the static page.",
     "items": [
       {
+        "title": "Custom business applications",
+        "items": [
+          "PostgreSQL database, per-profile permissions, change history",
+          "Authentication, roles, scheduled jobs",
+          "Unit, integration, and end-to-end tests",
+          "Hosting in the European Union, GDPR compliance"
+        ],
+        "proof": "When a shared spreadsheet is no longer enough and off-the-shelf software doesn't fit"
+      },
+      {
+        "title": "AI integration in your product",
+        "items": [
+          "Content generation (Claude, OpenAI)",
+          "Product recommendation and personalization",
+          "AI pipeline with human approval workflow",
+          "Automation and publishing via API (Meta, etc.)"
+        ],
+        "proof": "To add a concrete AI feature without hiring an ML or data profile"
+      },
+      {
         "title": "Landing pages & premium campaigns",
         "items": [
           "Structure designed to guide toward action",
@@ -68,16 +88,6 @@
           "Advanced animations (GSAP, Framer Motion)"
         ],
         "proof": "When a classic landing page is no longer enough to engage your audience"
-      },
-      {
-        "title": "AI integration in your product",
-        "items": [
-          "Content generation (Claude, OpenAI)",
-          "Product recommendation and personalization",
-          "AI pipeline with human approval workflow",
-          "Automation and publishing via API (Meta, etc.)"
-        ],
-        "proof": "To add a concrete AI feature without hiring an ML or data profile"
       }
     ]
   },

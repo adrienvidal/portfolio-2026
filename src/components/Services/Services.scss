@@ -5,6 +5,10 @@
   margin-bottom: 20px;
 }
 
+.services-grid--half {
+  grid-template-columns: repeat(2, 1fr);
+}
+
 .services-row2 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
