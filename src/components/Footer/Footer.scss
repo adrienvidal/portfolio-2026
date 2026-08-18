@@ -19,6 +19,14 @@
     a {
       color: var(--gray);
       text-decoration: none;
+      // L'icone seule offrait 16x22 a la frappe (WCAG 2.5.8 demande 24x24).
+      // Les marges negatives absorbent l'agrandissement, la mise en page ne bouge pas.
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      margin: -11px 0;
 
       &:hover {
         color: var(--ink);

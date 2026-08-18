@@ -37,8 +37,8 @@ export default function ContactForm({ data, onChange, step }: ContactFormProps) 
     return (
       <div>
         <div className="resa-form__group">
-          <label className="resa-form__label">{t('budgetLabel')}</label>
-          <div className="resa-form__radio-row">
+          <span className="resa-form__label" id="f-budget-label">{t('budgetLabel')}</span>
+          <div className="resa-form__radio-row" role="radiogroup" aria-labelledby="f-budget-label">
             {budgetOptions.map((val) => (
               <label key={val} className="resa-form__radio-opt">
                 <input type="radio" name="budget" value={val} checked={data.budget === val} onChange={() => onChange({ ...data, budget: val })} />
@@ -49,8 +49,8 @@ export default function ContactForm({ data, onChange, step }: ContactFormProps) 
         </div>
 
         <div className="resa-form__group">
-          <label className="resa-form__label">{t('delaiLabel')}</label>
-          <div className="resa-form__radio-row">
+          <span className="resa-form__label" id="f-delai-label">{t('delaiLabel')}</span>
+          <div className="resa-form__radio-row" role="radiogroup" aria-labelledby="f-delai-label">
             {delaiOptions.map((val) => (
               <label key={val} className="resa-form__radio-opt">
                 <input type="radio" name="delai" value={val} checked={data.delai === val} onChange={() => onChange({ ...data, delai: val })} />

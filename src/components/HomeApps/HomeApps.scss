@@ -35,7 +35,7 @@
     }
 
     &:focus-visible {
-      outline: 2px solid var(--blue-ink);
+      outline: 2px solid var(--blue-text);
       outline-offset: 3px;
     }
   }
@@ -102,7 +102,7 @@
   &__tag {
     font-size: 11px;
     font-weight: 600;
-    color: var(--blue-ink);
+    color: var(--blue-text);
     background: var(--blue-pale);
     border-radius: 4px;
     padding: 3px 9px;
