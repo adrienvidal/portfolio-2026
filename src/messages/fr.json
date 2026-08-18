@@ -47,7 +47,7 @@
 
   "services": {
     "title": "Ce que je fais pour vous",
-    "sub": "Des interfaces qui vont plus loin que la page statique.",
+    "sub": "Quatre façons de travailler ensemble, de l'application métier à la page de campagne.",
     "items": [
       {
         "title": "Applications métier sur mesure",
@@ -99,12 +99,12 @@
       {
         "label": "Étape 1",
         "title": "Call découverte — 30 min",
-        "desc": "On cadre ensemble votre objectif business, vos contraintes et ce que doit produire la page. Pas de brief écrit obligatoire."
+        "desc": "On cadre ensemble votre objectif, vos contraintes et ce qui doit exister à la fin : une application, une feature, une page. Pas de brief écrit obligatoire."
       },
       {
         "label": "Étape 2",
-        "title": "Proposition & wireframe sous 48h",
-        "desc": "Vous recevez une structure de page commentée et un chiffrage clair. Vous validez, on démarre."
+        "title": "Proposition chiffrée sous 48h",
+        "desc": "Vous recevez le périmètre découpé, ce qui est inclus et ce qui ne l'est pas, et un chiffrage ferme. Vous validez, on démarre."
       },
       {
         "label": "Étape 3",
@@ -221,12 +221,12 @@
 
   "about": {
     "title": "À propos",
-    "bio": "Douze ans de développement front-end, dont onze en indépendant. J'ai travaillé sur des environnements où la qualité perçue et la performance ne se négocient pas : Chanel, Fnac Darty, Prisma Media.\n\nAujourd'hui je construis des applications complètes, de la base PostgreSQL à l'interface React, avec des modèles de langage intégrés au produit plutôt que posés par-dessus. Je livre en forfait, à périmètre défini, avec tests et documentation.\n\nJe travaille à distance. Un brief en deux paragraphes suffit pour démarrer."
+    "bio": "Douze ans de développement web, dont onze en indépendant. J'ai commencé par des interfaces où la qualité perçue et la performance ne se négocient pas : Chanel, Fnac Darty, Prisma Media.\n\nAujourd'hui je construis des applications complètes, de la base PostgreSQL à l'interface React, avec des modèles de langage intégrés au produit plutôt que posés par-dessus. Je livre en forfait, à périmètre défini, avec tests et documentation.\n\nJe travaille à distance. Un brief en deux paragraphes suffit pour démarrer."
   },
 
   "testimonials": {
     "title": "Ils m'ont fait confiance",
-    "sub": "Des équipes marketing, e-commerce et médias avec qui j'ai travaillé.",
+    "sub": "Des personnes avec qui j'ai travaillé, côté technique comme côté métier.",
     "items": [
       {
         "quote": "Il est intervenu sur des projets de A à Z, dans un contexte exigeant, avec des contraintes fortes de pixel perfect et de performance. Les livraisons ont toujours été réalisées dans les délais, avec un bon niveau de qualité.",
@@ -270,7 +270,7 @@
       "entrepriseOptional": "(optionnel)",
       "entreprisePlaceholder": "Nom de votre entreprise",
       "besoinLabel": "De quoi avez-vous besoin ?",
-      "besoinPlaceholder": "Ex : on lance une campagne paid dans 3 semaines et notre landing page actuelle ne convertit pas…",
+      "besoinPlaceholder": "Ex : nos équipes suivent les dossiers clients dans un fichier Excel partagé, on voudrait une vraie application…",
       "budgetLabel": "Budget envisagé",
       "budgetOptions": ["< 1 000 €", "1 000 – 3 000 €", "3 000 – 6 000 €", "> 6 000 €"],
       "delaiLabel": "Délai souhaité",

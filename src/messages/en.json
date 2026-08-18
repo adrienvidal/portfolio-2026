@@ -47,7 +47,7 @@
 
   "services": {
     "title": "What I do for you",
-    "sub": "Interfaces that go beyond the static page.",
+    "sub": "Four ways to work together, from internal applications to campaign pages.",
     "items": [
       {
         "title": "Custom business applications",
@@ -99,12 +99,12 @@
       {
         "label": "Step 1",
         "title": "Discovery call — 30 min",
-        "desc": "We define your business objective, constraints, and what the page needs to deliver. No written brief required."
+        "desc": "We define your objective, your constraints, and what has to exist at the end: an application, a feature, a page. No written brief required."
       },
       {
         "label": "Step 2",
-        "title": "Proposal & wireframe in 48h",
-        "desc": "You receive an annotated page structure and clear pricing. You approve, we start."
+        "title": "Costed proposal in 48h",
+        "desc": "You receive the scope broken down, what is included and what is not, and a firm price. You approve, we start."
       },
       {
         "label": "Step 3",
@@ -221,12 +221,12 @@
 
   "about": {
     "title": "About",
-    "bio": "Twelve years of front-end development, eleven of them freelance. I've worked in environments where perceived quality and performance are not up for negotiation: Chanel, Fnac Darty, Prisma Media.\n\nToday I build complete applications, from the PostgreSQL database to the React interface, with language models built into the product rather than bolted on top. I deliver fixed-scope, with tests and documentation.\n\nI work remotely. A two-paragraph brief is enough to get started."
+    "bio": "Twelve years of web development, eleven of them freelance. I've worked in environments where perceived quality and performance are not up for negotiation: Chanel, Fnac Darty, Prisma Media.\n\nToday I build complete applications, from the PostgreSQL database to the React interface, with language models built into the product rather than bolted on top. I deliver fixed-scope, with tests and documentation.\n\nI work remotely. A two-paragraph brief is enough to get started."
   },
 
   "testimonials": {
     "title": "They trusted me",
-    "sub": "Marketing, e-commerce and media teams I've worked with.",
+    "sub": "People I've worked with, on the technical side as well as the business side.",
     "items": [
       {
         "quote": "He handled projects end to end, in a demanding environment with strict pixel-perfect and performance constraints. Deliveries were always on time, with a consistently high level of quality.",
@@ -270,7 +270,7 @@
       "entrepriseOptional": "(optional)",
       "entreprisePlaceholder": "Company name",
       "besoinLabel": "What do you need?",
-      "besoinPlaceholder": "E.g.: we're launching a paid campaign in 3 weeks and our current landing page isn't converting…",
+      "besoinPlaceholder": "E.g.: our teams track client files in a shared Excel sheet, we'd like a real application…",
       "budgetLabel": "Estimated budget",
       "budgetOptions": ["< €1,000", "€1,000 – €3,000", "€3,000 – €6,000", "> €6,000"],
       "delaiLabel": "Desired timeline",
