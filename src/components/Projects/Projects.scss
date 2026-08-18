@@ -171,6 +171,9 @@
     font-weight: 600;
     color: var(--blue-text);
     text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
 
     &:hover {
       text-decoration: underline;
@@ -254,6 +257,10 @@
     text-decoration: none;
     white-space: nowrap;
     flex-shrink: 0;
+    // 19px de haut avant : sous le minimum de 24x24 (WCAG 2.5.8).
+    display: inline-flex;
+    align-items: center;
+    min-height: 24px;
 
     &:hover {
       color: var(--blue-text);
@@ -292,6 +299,16 @@
       width: 100%;
     }
 
+    // Sur une colonne, plus rien ne doit refuser de retrecir : c'est le
+    // `flex-shrink: 0` des tags qui poussait la page a 345px de large dans un
+    // viewport de 305px, d'ou 40px de defilement horizontal sous ~340px.
+    &__desc,
+    &__tags,
+    &__link {
+      flex-shrink: 1;
+      min-width: 0;
+    }
+
     &__desc {
       display: -webkit-box;
       -webkit-line-clamp: 2;
@@ -309,7 +326,9 @@
       width: 100%;
       background: none;
       border: none;
-      padding: 0;
+      // Hauteur de frappe : le libelle seul faisait 14px de haut.
+      padding: 12px 0;
+      min-height: 44px;
       font-size: 12px;
       font-weight: 600;
       color: var(--blue-text);
@@ -324,5 +343,25 @@
     &__link {
       order: 2;
     }
+  }
+}
+
+// Mouvement reduit : on supprime le deplacement de la carte et l'echelle de la
+// vignette, en gardant l'ombre au survol — elle porte un retour d'etat utile.
+@media (prefers-reduced-motion: reduce) {
+  .project-card {
+    transition: box-shadow 0.2s ease;
+
+    &:hover {
+      transform: none;
+    }
+  }
+
+  .project-card__collage-img {
+    transition: none;
+  }
+
+  .project-card:hover .project-card__collage-img {
+    transform: none;
   }
 }

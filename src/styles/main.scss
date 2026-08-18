@@ -36,7 +36,7 @@
 .btn-blue {
   display: inline-flex;
   align-items: center;
-  background: var(--blue);
+  background: var(--blue-dark);
   color: #fff;
   font-family: 'Inter', sans-serif;
   font-size: 15px;
@@ -49,7 +49,7 @@
   transition: background 0.2s;
 
   &:hover {
-    background: var(--blue-dark);
+    background: var(--blue-text);
   }
 }
 
@@ -70,6 +70,21 @@
 
   &:hover {
     border-color: #94a3b8;
+  }
+}
+
+// La barre de navigation est collante sur 64px : sans cette marge, chaque
+// ancre du menu deposait le titre de section derriere la barre.
+[id] {
+  scroll-margin-top: 80px;
+}
+
+// Mouvement reduit : on retire les deplacements et mises a l'echelle
+// decoratifs, en gardant les transitions de couleur, qui portent un retour
+// d'etat utile (survol, focus, champ actif).
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
   }
 }
 

@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useTranslations, useLocale } from 'next-intl'
 import { Link, useRouter, usePathname } from '@/i18n/navigation'
 import './Nav.scss'
@@ -18,6 +18,24 @@ export default function Nav({ dark = false }: { dark?: boolean }) {
   const router = useRouter()
   const pathname = usePathname()
   const [isOpen, setIsOpen] = useState(false)
+
+  // Sans ce verrou, la page defilait derriere le tiroir plein ecran : on
+  // ouvrait le menu, on faisait glisser par reflexe, et on se retrouvait
+  // ailleurs en refermant.
+  useEffect(() => {
+    if (!isOpen) return
+    // On verrouille `documentElement` autant que `body` : c'est lui l'element
+    // qui defile, et ne poser la regle que sur `body` la laisse dependre de la
+    // propagation d'overflow, qui varie selon les navigateurs.
+    const root = document.documentElement
+    const previous = { root: root.style.overflow, body: document.body.style.overflow }
+    root.style.overflow = 'hidden'
+    document.body.style.overflow = 'hidden'
+    return () => {
+      root.style.overflow = previous.root
+      document.body.style.overflow = previous.body
+    }
+  }, [isOpen])
 
   const isHome = pathname === '/'
   const anchor = (hash: string) => isHome ? hash : `/${hash}`

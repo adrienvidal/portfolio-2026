@@ -43,7 +43,7 @@
     transition: background 0.3s;
 
     &--filled {
-      background: var(--blue);
+      background: var(--blue-dark);
     }
   }
 
@@ -62,14 +62,14 @@
     transition: all 0.2s;
 
     &--active {
-      border-color: var(--blue);
-      background: var(--blue);
+      border-color: var(--blue-dark);
+      background: var(--blue-dark);
       color: #fff;
     }
 
     &--done {
-      border-color: var(--blue);
-      background: var(--blue);
+      border-color: var(--blue-dark);
+      background: var(--blue-dark);
       color: #fff;
       opacity: 0.4;
     }
@@ -148,15 +148,37 @@
   }
 
   &__radio-opt {
+    // `display: none` sortait les 7 boutons radio de l'ordre de tabulation ET
+    // de l'arbre d'accessibilite : budget et delai etaient impossibles a
+    // renseigner au clavier ou au lecteur d'ecran (WCAG 2.1.1, niveau A).
+    // Ce masquage-ci les garde focusables.
     input {
-      display: none;
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      overflow: hidden;
+      clip-path: inset(50%);
+      white-space: nowrap;
+      border: 0;
 
       &:checked + .resa-form__radio-box {
         border-color: var(--blue);
-        color: var(--blue);
+        color: var(--blue-text);
         background: var(--blue-pale);
       }
+
+      &:focus-visible + .resa-form__radio-box {
+        outline: 2px solid var(--blue-text);
+        outline-offset: 2px;
+      }
     }
+  }
+
+  &__radio-opt {
+    position: relative;
+    display: block;
   }
 
   &__radio-box {
@@ -191,7 +213,7 @@
 .btn-next {
   flex: 1;
   padding: 12px 20px;
-  background: var(--blue);
+  background: var(--blue-dark);
   border: none;
   border-radius: var(--radius-sm);
   font-family: 'Inter', sans-serif;
@@ -253,5 +275,20 @@
     &__inner {
       max-width: 100%;
     }
+  }
+
+  // Safari iOS zoome la page des qu'un champ focalise est sous 16px, et ne
+  // dezoome pas ensuite. Le formulaire de contact se remplissait de travers.
+  .resa-form__input,
+  .resa-form__radio-box {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 420px) {
+  // A deux colonnes, « < 1 000 € » tenait sur une ligne et « 1 000 - 3 000 € »
+  // sur deux : la grille partait en escalier.
+  .resa-form__radio-row {
+    grid-template-columns: 1fr;
   }
 }

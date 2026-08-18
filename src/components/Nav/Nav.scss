@@ -22,6 +22,9 @@
     font-size: 18px;
     color: var(--ink);
     text-decoration: none;
+    // Le logo et le CTA ne doivent jamais se couper : c'est ce qui cassait
+    // la barre entre 901 et 935px avant le palier ci-dessous.
+    white-space: nowrap;
   }
 
   &__links {
@@ -66,8 +69,9 @@
   }
 
   &__cta {
-    background: var(--blue) !important;
+    background: var(--blue-dark) !important;
     color: #fff !important;
+    white-space: nowrap;
     padding: 8px 18px;
     border-radius: var(--radius-sm);
     font-size: 14px !important;
@@ -121,7 +125,9 @@
   font-size: 12px;
   font-weight: 600;
   color: var(--gray);
-  padding: 4px 8px;
+  // 32x21 avant : sous le minimum de 24x24 (WCAG 2.5.8).
+  min-height: 24px;
+  padding: 4px 10px;
   cursor: pointer;
   letter-spacing: 0.05em;
   transition: color 0.2s, border-color 0.2s;
@@ -239,6 +245,34 @@
   }
 }
 
+// Palier intermediaire. Au-dessus de 900px la barre repassait en mode desktop
+// alors qu'elle demande ~1000px : le logo se coupait en deux, « EN » chevauchait
+// « Services » et le texte du CTA sortait de sa pilule. On resserre plutot que
+// de basculer en burger des 1024px, ce qui priverait les petits portables du
+// menu complet.
+@media (min-width: 901px) and (max-width: 1080px) {
+  .nav {
+    padding: 0 24px;
+
+    &__links {
+      gap: 20px;
+
+      a {
+        font-size: 13px;
+      }
+    }
+
+    &__cta {
+      padding: 8px 14px !important;
+      font-size: 13px !important;
+    }
+  }
+
+  .nav__lab {
+    padding: 4px 10px !important;
+  }
+}
+
 @media (max-width: 900px) {
   .nav {
     padding: 0 24px;
@@ -250,11 +284,17 @@
     &__burger {
       display: flex;
       flex-direction: column;
+      justify-content: center;
+      align-items: center;
       gap: 5px;
       background: none;
       border: none;
       cursor: pointer;
-      padding: 4px;
+      // 44x44 : seule porte d'entree de la navigation mobile (WCAG 2.5.8).
+      width: 44px;
+      height: 44px;
+      margin-right: -10px;
+      padding: 0;
 
       span {
         display: block;
