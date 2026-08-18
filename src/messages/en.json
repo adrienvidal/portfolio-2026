@@ -196,7 +196,7 @@
 
   "about": {
     "title": "About",
-    "bio": "I've been a front-end developer for 10 years, specializing in React and TypeScript. I've worked in demanding environments — Chanel, Fnac Darty, Prisma — where perceived quality and performance are non-negotiable.\n\nToday I work freelance with startups and product teams that want to go beyond the static page: interactive experiences, AI integrations, premium digital campaigns. I don't wait for a perfect Jira ticket to start: a two-paragraph brief is enough.\n\nI work remotely, in fast-paced mode, with an AI workflow that lets me deliver quickly without sacrificing quality."
+    "bio": "Twelve years of front-end development, eleven of them freelance. I've worked in environments where perceived quality and performance are not up for negotiation: Chanel, Fnac Darty, Prisma Media.\n\nToday I build complete applications, from the PostgreSQL database to the React interface, with language models built into the product rather than bolted on top. I deliver fixed-scope, with tests and documentation.\n\nI work remotely. A two-paragraph brief is enough to get started."
   },
 
   "testimonials": {
