@@ -1,3 +1,11 @@
+// La grille Chanel suit le bloc Applications : plus d'air au-dessus du titre
+// qu'en dessous, pour que les deux blocs se lisent comme deux registres distincts.
+.projects-title {
+  margin-top: 88px;
+  padding-top: 56px;
+  border-top: 1px solid var(--border);
+}
+
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -259,6 +267,11 @@
 }
 
 @media (max-width: 900px) {
+  .projects-title {
+    margin-top: 56px;
+    padding-top: 40px;
+  }
+
   .projects-grid {
     grid-template-columns: 1fr;
   }

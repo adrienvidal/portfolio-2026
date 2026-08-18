@@ -114,8 +114,29 @@
     ]
   },
 
+  "homeApps": {
+    "title": "Applications en production",
+    "sub": "Deux applications IA en service, construites de la base de données à l'interface.",
+    "missionLabel": "Ce que ça fait",
+    "productionLabel": "En production",
+    "visualsLabel": "{count} visuels",
+    "items": [
+      {
+        "title": "Bookvox",
+        "mission": "Génération de contenu social pour auteurs de roman, en ligne chez un premier client. L'application décrit les visuels déposés avec Claude Haiku, indexe les documents de référence en recherche vectorielle (embeddings Cohere multilingues, pgvector) et rédige les publications avec Claude Sonnet dans la voix de l'auteur.",
+        "production": "Validation humaine avant publication, calendrier éditorial en glisser-déposer, publication OAuth sur cinq réseaux avec jetons chiffrés en AES-256-GCM, multi-tenant isolé par espace de travail en row level security."
+      },
+      {
+        "title": "Content Studio",
+        "mission": "Chaîne de production de publications LinkedIn pilotée par trois agents LLM spécialisés : un stratège qui cadre la demande et propose des angles, un rédacteur qui écrit le post, un directeur artistique qui juge les visuels et les fait itérer.",
+        "production": "Prompts système assemblés en TypeScript et versionnés avec le code, contexte de marque en base plutôt qu'en fichiers, sorties validées par schéma avant d'atteindre l'interface. Diffusion en flux via l'AI SDK Vercel, images fal.ai, persistance Prisma sur PostgreSQL."
+      }
+    ]
+  },
+
   "projects": {
-    "title": "Projets récents",
+    "title": "Interfaces et campagnes premium",
+    "sub": "Campagnes et expériences interactives livrées pour Chanel, sur des contraintes de pixel perfect et de performance.",
     "roleLabel": "Mission :",
     "resultLabel": "Ce que ça a changé :",
     "linkLabel": "Voir le projet →",

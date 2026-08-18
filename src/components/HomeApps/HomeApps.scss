@@ -1,0 +1,149 @@
+.home-apps {
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+  }
+}
+
+.app-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+  align-items: center;
+  gap: 40px;
+
+  // Les deux applications alternent : la seconde présente sa capture à droite.
+  &:nth-child(even) &__media {
+    order: 2;
+  }
+
+  &__media {
+    position: relative;
+    // Ratio exact des captures (1800x997) : rien n'est rogné.
+    aspect-ratio: 1800 / 997;
+    width: 100%;
+    padding: 0;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--bg2);
+    cursor: zoom-in;
+    transition: border-color 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+
+    &:hover {
+      border-color: var(--gray2);
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--blue-ink);
+      outline-offset: 3px;
+    }
+  }
+
+  &__img {
+    object-fit: cover;
+    object-position: top center;
+    transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  &__media:hover &__img {
+    transform: scale(1.02);
+  }
+
+  &__count {
+    position: absolute;
+    right: 12px;
+    bottom: 12px;
+    padding: 4px 10px;
+    border-radius: 999px;
+    background: rgba(15, 23, 42, 0.82);
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    backdrop-filter: blur(4px);
+  }
+
+  &__title {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--ink);
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+    margin-bottom: 16px;
+    text-wrap: balance;
+  }
+
+  &__line {
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--ink2);
+    text-wrap: pretty;
+    margin-bottom: 14px;
+  }
+
+  &__label {
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--gray);
+    letter-spacing: 0.04em;
+    margin-bottom: 3px;
+  }
+
+  &__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    list-style: none;
+    margin-top: 20px;
+  }
+
+  &__tag {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--blue-ink);
+    background: var(--blue-pale);
+    border-radius: 4px;
+    padding: 3px 9px;
+    letter-spacing: 0.02em;
+  }
+}
+
+@media (max-width: 900px) {
+  .home-apps__list {
+    gap: 48px;
+  }
+
+  .app-row {
+    grid-template-columns: 1fr;
+    gap: 20px;
+
+    // Sur une colonne, la capture passe toujours en premier.
+    &:nth-child(even) &__media {
+      order: 0;
+    }
+
+    &__title {
+      font-size: 20px;
+      margin-bottom: 12px;
+    }
+
+    &__line {
+      font-size: 14px;
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .app-row {
+    &__media,
+    &__img {
+      transition: none;
+    }
+
+    &__media:hover &__img {
+      transform: none;
+    }
+  }
+}

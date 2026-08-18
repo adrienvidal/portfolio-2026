@@ -114,8 +114,29 @@
     ]
   },
 
+  "homeApps": {
+    "title": "Applications in production",
+    "sub": "Two AI applications in service, built from the database to the interface.",
+    "missionLabel": "What it does",
+    "productionLabel": "In production",
+    "visualsLabel": "{count} screens",
+    "items": [
+      {
+        "title": "Bookvox",
+        "mission": "Social content generation for novel authors, live with a first client. The app describes uploaded visuals with Claude Haiku, indexes reference documents for vector search (multilingual Cohere embeddings, pgvector) and drafts posts with Claude Sonnet in the author's own voice.",
+        "production": "Human validation before publishing, drag-and-drop editorial calendar, OAuth publishing to five networks with AES-256-GCM encrypted tokens, multi-tenant isolation per workspace via row level security."
+      },
+      {
+        "title": "Content Studio",
+        "mission": "LinkedIn post production chain driven by three specialised LLM agents: a strategist that frames the request and proposes angles, a writer that drafts the post, and an art director that reviews the visuals and iterates on them.",
+        "production": "System prompts assembled in TypeScript and versioned with the code, brand context in the database rather than in files, outputs schema-validated before reaching the interface. Streaming via the Vercel AI SDK, fal.ai image generation, Prisma persistence on PostgreSQL."
+      }
+    ]
+  },
+
   "projects": {
-    "title": "Recent projects",
+    "title": "Premium interfaces and campaigns",
+    "sub": "Campaigns and interactive experiences delivered for Chanel, under pixel-perfect and performance constraints.",
     "roleLabel": "Mission:",
     "resultLabel": "What it changed:",
     "linkLabel": "See the project →",

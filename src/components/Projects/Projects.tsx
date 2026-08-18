@@ -1,6 +1,7 @@
 import { getTranslations } from 'next-intl/server'
 import { Link } from '@/i18n/navigation'
 import { projectsStaticData, otherMissionsStaticData, HOME_ORDER, PROJECTS_SEE_ALL_HREF, LAB_HREF } from '@/data/static'
+import HomeApps from '@/components/HomeApps/HomeApps'
 import ProjectCard from './ProjectCard'
 import OtherMissionItem from './OtherMissionItem'
 import './Projects.scss'
@@ -20,8 +21,10 @@ export default async function Projects() {
 
   return (
     <div className="section" id="projets">
-      <h2 className="section-title">{t('title')}</h2>
-      <p className="section-sub"></p>
+      <HomeApps />
+
+      <h2 className="section-title projects-title">{t('title')}</h2>
+      <p className="section-sub">{t('sub')}</p>
       <div className="projects-grid">
         {HOME_ORDER.map(i => items[i]).map((p) => (
           <ProjectCard

@@ -27,6 +27,11 @@ export const clientLogos = [
 
 // ─── Projects Static Data (images, videos, links, tags) ───────────────────────
 export const HOME_ORDER = [0, 1, 2, 3, 4, 5]
+
+// Applications remontées du Lab vers l'accueil : index dans `labStaticData`,
+// appariés au même index dans `homeApps.items` des deux locales.
+// Les visuels et les tags restent la propriété du Lab, ils ne sont pas dupliqués ici.
+export const HOME_APPS_ORDER = [0, 1]
 export const PROJECTS_SEE_ALL_HREF = '/projets'
 export const LAB_HREF = '/lab'
 
