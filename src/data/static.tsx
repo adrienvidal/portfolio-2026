@@ -119,16 +119,20 @@ export type LabStaticItem = {
   videoMob?: string
 }
 
+// L'ordre de ce tableau doit rester identique à `lab.items` dans fr.json et en.json
+// (appariement par index dans LabClient) — même ordre, même longueur dans les trois fichiers.
 export const labStaticData: LabStaticItem[] = [
   {
+    // Bookvox — visuels à ajouter dans public/lab/bookvox/*.webp
     status: 'live',
-    tags: ['React', 'TypeScript', 'Supabase', 'Google OAuth'],
-    link: 'https://github.com/adrienvidal/fitness-app',
-    images: [
-      '/lab/fitnesspal/finesspal-mob1.webp',
-      '/lab/fitnesspal/finesspal-mob2.webp',
-      '/lab/fitnesspal/finesspal-mob3.webp'
-    ]
+    tags: ['Next.js', 'TypeScript', 'Supabase', 'pgvector', 'Claude', 'Cohere', 'n8n'],
+    link: null
+  },
+  {
+    // Content Studio — visuels à ajouter dans public/lab/content-studio/*.webp
+    status: 'live',
+    tags: ['Next.js', 'AI SDK Vercel', 'Claude', 'fal.ai', 'Prisma', 'zod'],
+    link: null
   },
   {
     status: 'wip',
@@ -143,6 +147,16 @@ export const labStaticData: LabStaticItem[] = [
       '/lab/dripflow/dripflow-mob4.webp',
       '/lab/dripflow/dripflow-mob5.webp',
       '/lab/dripflow/dripflow-mob6.webp'
+    ]
+  },
+  {
+    status: 'live',
+    tags: ['React', 'TypeScript', 'Supabase', 'Google OAuth'],
+    link: 'https://github.com/adrienvidal/fitness-app',
+    images: [
+      '/lab/fitnesspal/finesspal-mob1.webp',
+      '/lab/fitnesspal/finesspal-mob2.webp',
+      '/lab/fitnesspal/finesspal-mob3.webp'
     ]
   }
 ]
