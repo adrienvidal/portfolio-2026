@@ -63,3 +63,82 @@ Aucun.
 ## À ne jamais faire sur ce chantier (brief §3.5)
 
 - Ne pas publier `crm-comptable.vercel.app`, ne pas nommer le cabinet d'expertise comptable, aucune capture contenant des données ressemblant à un fichier client.
+
+---
+
+# 2026-08-18 (suite) — Audits, alignement de l'accueil, et directions d'identité visuelle
+
+Session enchaînée après la clôture ci-dessus. Trois PR fusionnées, deux audits, et un travail de direction visuelle non tranché.
+
+## Réalisé
+
+### Outillage
+
+- **Skill Impeccable mis à jour v3.9.1 → v4.1.1.** Le schéma de `PRODUCT.md` a changé au passage (`Platform`, `Positioning`, `Operating Context`, `Evidence on Hand`…), et la v4 sépare strictement produit et monde visuel : `PRODUCT.md` n'a plus le droit de contenir de direction esthétique.
+- **`PRODUCT.md` créé, puis refait proprement en v4** après un entretien réel avec Adrien. Décisions enregistrées : audience principale = recruteurs et donneurs d'ordre IA ; positionnement = « douze ans d'exigence d'interfaces premium appliqués aux produits IA » ; **aucune identité visuelle n'est figée** (la rampe Tailwind et Inter sont un héritage de scaffolding, pas une contrainte) ; WCAG 2.1 AA.
+- `.impeccable/live/config.json` écrit (Next.js App Router, ancre `</body>` dans `src/app/layout.tsx`, aucun CSP détecté).
+
+### Audit visuel de la landing page — 23/40
+
+Archivé dans `.impeccable/critique/2026-08-18T15-17-52Z__src-app-locale-page-tsx.md`. Constat central : le contenu portait le positionnement, l'habillage non. Six cartes Chanel comme seule preuve visuelle, palette Tailwind par défaut, Inter, zéro motion.
+
+### Lot 4 — PR #3, fusionnée (`6b1c28d`)
+
+Bookvox et Content Studio remontés **en tête de `#projets`**, en lignes alternées plutôt qu'en cartes (les captures desktop 16:9 meurent à un tiers de largeur). Nouveau composant `HomeApps` + `AppRow`, visuels et tags lus depuis `labStaticData` via `HOME_APPS_ORDER` — pas de duplication. La grille Chanel devient « Interfaces et campagnes premium ». Token `--blue-ink` ajouté — **retiré au lot 6**, fondu dans `--blue-text` dont la valeur a été corrigée.
+
+**Bug attrapé** : `visualsLabel` est une chaîne ICU ; `t()` sans la variable `count` levait un `FORMATTING_ERROR` côté serveur.
+
+### Lot 5 — PR #4, fusionnée (`06e8bc2`)
+
+Sept chaînes purgées du vocabulaire « landing page », miroir EN. La bio ouvrait toujours sur « développement front-end » alors que la session précédente la notait comme réécrite — contradiction directe avec le titre du site et l'intitulé du CV. Corrigée en « développement web », suivie de « j'ai **commencé** par des interfaces… » pour poser l'arc vers l'applicatif.
+
+### Audit technique responsive & accessibilité — 10/20
+
+Déclenché par Adrien (« le responsive est cassé »). Le vrai point de rupture n'était pas le mobile mais **la bande 901–935px** : le site n'a que deux breakpoints (900 et 400), donc au-dessus de 900 la nav desktop revenait alors qu'elle demande ~1000px — logo coupé en deux, « EN » chevauchant « Services », texte du CTA sortant de sa pilule.
+
+### Lot 6 — PR #5, fusionnée (`f707ee7`)
+
+Deux [P0] et cinq [P1] :
+
+- Palier de nav 901–1080px + `white-space: nowrap` sur logo et CTA (garde-fou structurel).
+- Les 7 radios du formulaire étaient en `display: none` → hors ordre de tabulation **et** de l'arbre d'accessibilité. Budget et délai étaient impossibles à renseigner au clavier (**WCAG 2.1.1, niveau A**). Masquage focusable + `role="radiogroup"`.
+- **Échec de contraste non relevé à l'audit** : `--blue` en fond de texte blanc = 3,68:1 — le bouton principal, le bouton d'envoi et la pastille d'étape échouaient tous. Fonds passés à `--blue-dark` (5,17:1), textes à `--blue-text` (6,70:1), `--gray2` à `#5b6a80` (5,50:1).
+- 40px de scroll horizontal sous 340px (`flex-shrink: 0` sur `.other-missions__tags`), verrou de défilement du tiroir mobile, cibles tactiles, champs à 16px (zoom iOS), `prefers-reduced-motion`, `scroll-margin-top`.
+
+Balayage automatisé sur 16 largeurs : **aucune anomalie**. Contraste : **0 échec** (6 avant le lot).
+
+### Directions d'identité visuelle — six maquettes, aucune retenue
+
+Trois sages (Signalétique / Tableau d'exploitation / Dossier), puis trois audacieuses après qu'Adrien ait demandé plus de risque, en s'appuyant sur une veille Awwwards et tendances 2026. Le tirage `concept-seed` a été utilisé pour casser le réflexe de classement, en registre normal puis `--register bolder`.
+
+**Retenue : direction F « Vue éclatée »** — la pile applicative s'écarte sous le pointeur, quatre plaques nommées (Données / Back-end / IA / Interface React), la vraie capture posée sur celle du dessus. La démonstration technique *est* la proposition de valeur.
+
+Home complète produite avec le contenu et les visuels réels, conservée dans **`docs/previews/home-direction-f.html`** (41 Ko, chemins relatifs vers `public/`, s'ouvre directement dans un navigateur).
+
+## Reste à faire
+
+- **Trancher l'identité visuelle.** La direction F est maquettée mais **rien n'est codé dans l'application**. Décider si on la déroule, et à quel niveau (CSS 3D comme la maquette, ou WebGL avec le budget de performance que ça implique).
+- **Le portrait** : quatre fichiers `adrien-profil*.webp` dans `public/`, deux ambiances différentes utilisées aujourd'hui sur le hero et « À propos ». Non tranché.
+- **`public/clients/prismamedia.webp` n'a pas de canal alpha** (fond blanc incrusté) — invisible sur tout fond sombre. À réexporter avec transparence quelle que soit la direction retenue.
+- **Lien CV absent** de la nav et du footer : `nav.links.cv` existe dans les deux locales mais n'est jamais rendu dans `Nav.tsx`. La page `/cv` reste injoignable depuis l'accueil.
+- « Ils m'ont fait confiance » apparaît deux fois sur la page (`clients.label` + `testimonials.title`).
+- Titres du Lab désalignés vers 905px (les 7 tags de Bookvox passent sur deux lignes).
+- **Plafond de la grille de budget** à « > 6 000 € » — décision commerciale, posée deux fois, jamais tranchée.
+- Reliquats du brief initial : double source du CV (site + PDF), décalage `github.com/adrienvidal`, branches `dev` et `preprod` mortes.
+
+## Blockers
+
+Aucun.
+
+## Décisions
+
+- **Direction F retenue** parmi six. Motif : c'est la seule où la prouesse technique démontre la promesse du hero au lieu de l'illustrer.
+- **Registre audacieux assumé** : chez un développeur front-end, la prouesse technique est le message. Garde-fou tenu, tiré de la veille Awwwards — la 3D ne doit jamais écraser le travail qu'elle encadre ; logos clients et captures restent lisibles.
+- **Terminal à phosphore vert écarté** alors que le tirage le proposait : c'est le réflexe de catégorie « portfolio de dev », et il ne prouve rien.
+- Le fond sombre de F est un choix assumé malgré des captures claires : elles sont serties dans un châssis clair et deviennent la source lumineuse de la page.
+- Maquettes conservées **en HTML autonome, hors application** : pas de branche de refonte ouverte tant que la direction n'est pas validée.
+- **Piège de la pile de PR évité** cette fois : #4 reciblée sur `main` **avant** la fusion de #3, conformément à la note de la session précédente. À refaire ainsi.
+
+## Limite rencontrée
+
+L'outil Artifact **ne sait pas supprimer** un artifact publié. Les maquettes A/B/C et D/E/F restent en ligne (privées) ; leur suppression passe par la galerie `claude.ai/code/artifacts`. Les fichiers locaux correspondants ont été supprimés.
