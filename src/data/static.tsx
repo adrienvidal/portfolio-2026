@@ -130,6 +130,9 @@ export type LabStaticItem = {
   tags: string[]
   link: string | null
   images?: string[]
+  /** 'collage' (defaut) convient aux captures mobiles en portrait ; 'single'
+   *  aux captures desktop en 16:9, illisibles decoupees en colonnes etroites. */
+  coverLayout?: 'collage' | 'single'
   video?: string
   videoDesk?: string
   videoMob?: string
@@ -139,16 +142,28 @@ export type LabStaticItem = {
 // (appariement par index dans LabClient) — même ordre, même longueur dans les trois fichiers.
 export const labStaticData: LabStaticItem[] = [
   {
-    // Bookvox — visuels à ajouter dans public/lab/bookvox/*.webp
     status: 'live',
     tags: ['Next.js', 'TypeScript', 'Supabase', 'pgvector', 'Claude', 'Cohere', 'n8n'],
-    link: null
+    link: null,
+    coverLayout: 'single',
+    images: [
+      '/lab/bookvox/bookvox-desk1.webp',
+      '/lab/bookvox/bookvox-desk2.webp'
+    ]
   },
   {
-    // Content Studio — visuels à ajouter dans public/lab/content-studio/*.webp
     status: 'live',
     tags: ['Next.js', 'AI SDK Vercel', 'Claude', 'fal.ai', 'Prisma', 'zod'],
-    link: null
+    link: null,
+    coverLayout: 'single',
+    images: [
+      '/lab/content-studio/content-studio-desk1.webp',
+      '/lab/content-studio/content-studio-desk2.webp',
+      '/lab/content-studio/content-studio-desk3.webp',
+      '/lab/content-studio/content-studio-desk4.webp',
+      '/lab/content-studio/content-studio-desk5.webp',
+      '/lab/content-studio/content-studio-desk6.webp'
+    ]
   },
   {
     status: 'wip',

@@ -41,3 +41,6 @@ lerna-debug.log*
 *.njsproj
 *.sln
 *.sw?
+
+# Dossier de dépôt temporaire (captures brutes avant conversion WebP)
+temp/

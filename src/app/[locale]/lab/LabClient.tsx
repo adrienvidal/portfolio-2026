@@ -38,6 +38,11 @@ function LabCover({ item, poster }: { item: LabItemFull; poster?: string }) {
     )
   }
   if (item.images && item.images.length > 0) {
+    if (item.coverLayout === 'single') {
+      return (
+        <Image fill src={item.images[0]} alt={`${item.title} screen 1`} className="lab__cover-single" sizes="(max-width: 900px) 100vw, 50vw" />
+      )
+    }
     return (
       <div className="lab__cover-collage">
         {item.images.slice(0, 3).map((src, i) => (
