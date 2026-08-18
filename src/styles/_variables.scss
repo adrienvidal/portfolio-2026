@@ -10,6 +10,8 @@
   --blue-dark: #2563eb;
   --blue-pale: #eff6ff;
   --blue-text: #3b82f6;
+  /* Bleu lisible sur --bg et --blue-pale (6,2:1) — le --blue-text n'y passe pas. */
+  --blue-ink: #1d4ed8;
   --radius: 12px;
   --radius-sm: 8px;
 }
@@ -24,5 +26,6 @@ $bg2: #f8fafc;
 $blue: #3b82f6;
 $blue-dark: #2563eb;
 $blue-pale: #eff6ff;
+$blue-ink: #1d4ed8;
 $radius: 12px;
 $radius-sm: 8px;
