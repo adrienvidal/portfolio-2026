@@ -93,7 +93,18 @@ export const projectsStaticData = [
 ]
 
 // ─── Other Missions Static Data (tags, links) ─────────────────────────────────
-export const otherMissionsStaticData = [
+// `link` et `site` sont optionnels : le CRM du cabinet comptable n'a pas de
+// démonstration publiable (comptes de test, données clients).
+export type OtherMissionStaticItem = {
+  tags: string[]
+  link?: string
+  site?: string
+}
+
+export const otherMissionsStaticData: OtherMissionStaticItem[] = [
+  {
+    tags: ['Next.js 16', 'React 19', 'Prisma', 'Supabase', 'PostgreSQL', 'Playwright']
+  },
   {
     tags: ['React', 'FreeMarker', 'API Rest', 'tailwindcss'],
     link: 'https://www.darty.fr',

@@ -174,11 +174,15 @@
   },
 
   "otherMissions": {
-    "title": "Contributions",
-    "subtitle": "Team contributions to high-traffic existing sites",
+    "title": "Other engagements",
+    "subtitle": "Team redesigns on high-traffic sites, and business applications built end to end",
     "seeMore": "See more",
     "seeLess": "See less",
     "items": [
+      {
+        "name": "Accounting firm",
+        "description": "Custom CRM replacing a shared spreadsheet — 500 client files, 20 users. Designed, built, and shipped to production single-handedly: PostgreSQL on Supabase, per-profile permissions, change history, automated deadline reminders, four levels of testing, hosting in the European Union. First version delivered, development ongoing."
+      },
       {
         "name": "Fnac Darty",
         "description": "Front-end development within the Darty Commerciality team — redesign of the product page, product list, and push pages. Design of cross-sell highlight components: insurance, warranties, associated services. Brand page integration."

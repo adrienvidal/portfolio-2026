@@ -174,11 +174,15 @@
   },
 
   "otherMissions": {
-    "title": "Contributions",
-    "subtitle": "Interventions en équipe sur des sites existants à fort trafic",
+    "title": "Autres missions",
+    "subtitle": "Refontes en équipe sur des sites à fort trafic, et applications métier construites de bout en bout",
     "seeMore": "Voir plus",
     "seeLess": "Voir moins",
     "items": [
+      {
+        "name": "Cabinet d'expertise comptable",
+        "description": "CRM sur mesure en remplacement d'un fichier Excel partagé — 500 dossiers clients, 20 utilisateurs. Conçu, développé et mis en production seul : PostgreSQL sur Supabase, droits par profil, historique des modifications, relances d'échéances automatiques, tests à quatre niveaux, hébergement en Union européenne. Livré en première version, développement en cours."
+      },
       {
         "name": "Fnac Darty",
         "description": "Développement front-end au sein de l'équipe Darty Commercialité — refonte de la page produit, liste produit et pages push. Conception des composants de mise en avant cross-sell : assurances, garanties, services associés. Intégration de la page marque."

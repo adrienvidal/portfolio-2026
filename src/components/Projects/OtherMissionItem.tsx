@@ -7,8 +7,8 @@ interface OtherMissionItemProps {
   name: string
   description: string
   tags: string[]
-  link: string
-  site: string
+  link?: string
+  site?: string
 }
 
 export default function OtherMissionItem({ name, description, tags, link, site }: OtherMissionItemProps) {
@@ -33,9 +33,11 @@ export default function OtherMissionItem({ name, description, tags, link, site }
           <span key={tag} className="other-missions__tag">{tag}</span>
         ))}
       </div>
-      <a className="other-missions__link" href={link} target="_blank" rel="noopener noreferrer">
-        {site}
-      </a>
+      {link && site && (
+        <a className="other-missions__link" href={link} target="_blank" rel="noopener noreferrer">
+          {site}
+        </a>
+      )}
     </li>
   )
 }
