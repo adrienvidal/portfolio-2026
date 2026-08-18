@@ -4,7 +4,7 @@ Brief de référence : `docs/brief-alignement-portfolio-2026.md` (commité par A
 
 ## Réalisées
 
-### Lot 1 — branche `lab-bookvox-content-studio`, PR #1 (en attente de revue)
+### Lot 1 — PR #1, fusionnée dans `main` le 18/08/2026
 
 - Étape 1 du brief (§3.4) en **variante sans visuels**, choix d'Adrien parmi trois options.
 - `fr.json` / `en.json` : Bookvox et Content Studio ajoutés, ordre Bookvox → Content Studio → Dripflow → FitnessPal.
@@ -12,7 +12,7 @@ Brief de référence : `docs/brief-alignement-portfolio-2026.md` (commité par A
 - Sous-titre du Lab corrigé (« projets perso » était faux, Bookvox tourne chez un client).
 - Commentaire ajouté sur l'appariement par index entre les trois fichiers.
 
-### Lot 2 — branche `content-alignement-ia`, PR #2, basée sur `lab-bookvox-content-studio`
+### Lot 2 — PR #2, fusionnée dans `main` le 18/08/2026
 
 Étapes 2 à 6 du brief, un commit par étape.
 
@@ -35,7 +35,13 @@ Brief de référence : `docs/brief-alignement-portfolio-2026.md` (commité par A
 
 ## Reste à faire
 
-- Fusionner les PR dans l'ordre : **#1 d'abord**, #2 est basée dessus.
+Rien sur le brief : les six étapes sont livrées et fusionnées dans `main`.
+
+Pistes ouvertes, hors périmètre du brief :
+
+- Le CV du site et le PDF de `webnrolls-viloris` sont désormais alignés mais restent deux sources à maintenir en parallèle. L'option B du brief (réduire `/cv` à un téléchargement) n'a pas été tranchée.
+- `github.com/adrienvidal` reste le maillon décalé du CV : les trois projets cités y sont privés, le visiteur tombe sur fitness-app, jdr-book, job-hunter. Le brief le constate sans le traiter.
+- Le dépôt a des branches `dev` et `preprod` qui n'ont pas bougé depuis `41cc2ee` / `1aa13c1` — à vérifier si elles servent encore.
 
 ## Blockers
 
@@ -52,7 +58,7 @@ Aucun.
 - **Captures Bookvox publiées telles quelles**, avec le compte « LeHussardDePierre », ses chiffres d'engagement et les noms d'assets de l'univers du client. Adrien a confirmé avoir l'accord du client (question posée le 18/08/2026 avant le push, dépôt et site publics).
 - Ligne CRM des missions : nom raccourci en « Cabinet comptable » et quatre tags — le nom complet décalait la colonne description et six tags débordaient sur la colonne du lien.
 - Pas de test automatisé : le projet n'a pas de `npm test`, les six étapes sont du contenu. `npm run build` + contrôle visuel.
-- Deux branches empilées plutôt qu'une seule PR géante, pour garder l'étape 1 revuable seule.
+- Deux branches empilées plutôt qu'une seule PR géante, pour garder l'étape 1 revuable seule. **Piège rencontré à la fusion** : `gh pr merge 1 --delete-branch` supprime la branche qui sert de base à la PR #2, ce qui ferme #2 au lieu de la recibler. Il a fallu recréer la branche de base, rouvrir #2, la recibler sur `main`, puis supprimer la branche. Pour une prochaine pile de PR : recibler la PR enfant sur `main` **avant** de fusionner la parente.
 
 ## À ne jamais faire sur ce chantier (brief §3.5)
 
