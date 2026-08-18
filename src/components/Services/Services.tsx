@@ -12,15 +12,17 @@ export default async function Services() {
     icon: serviceIcons[i]
   }))
 
-  const row1 = items.slice(0, 3)
-  const row2 = items.slice(3)
+  // 4 services se lisent mieux en 2x2 qu'en 3 + 1 orphelin sur une demi-largeur
+  const splitAt = items.length === 4 ? 2 : 3
+  const row1 = items.slice(0, splitAt)
+  const row2 = items.slice(splitAt)
 
   return (
     <div className="section-bg" id="services">
       <div className="section-bg-inner">
         <h2 className="section-title">{t('title')}</h2>
         <p className="section-sub">{t('sub')}</p>
-        <div className="services-grid">
+        <div className={`services-grid${row1.length === 2 ? ' services-grid--half' : ''}`}>
           {row1.map((s) => <ServiceCard key={s.title} {...s} />)}
         </div>
         <div className="services-row2">

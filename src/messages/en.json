@@ -1,8 +1,8 @@
 {
   "meta": {
     "home": {
-      "title": "Adrien Vidal — Freelance Web Developer",
-      "description": "Adrien builds premium React / Next landing pages focused on conversion, with AI, UX, and fast execution. Let's talk about your project."
+      "title": "Adrien Vidal — Full-Stack AI Developer (React, Next.js, TypeScript)",
+      "description": "Web applications and AI features shipped to production: React, Next.js, TypeScript, PostgreSQL, LLMs built into the product. Twelve years of demanding interfaces, fixed-scope."
     },
     "projects": {
       "title": "Projects — Adrien Vidal",
@@ -14,7 +14,7 @@
     },
     "lab": {
       "title": "Lab — Adrien Vidal",
-      "description": "Personal projects: tools, experiments, and prototypes built for real needs."
+      "description": "What I build outside client work: tools and applications, some of them running for real users."
     }
   },
 
@@ -34,11 +34,11 @@
   },
 
   "hero": {
-    "title": "I build landing pages and campaigns that convert",
-    "sub": "Fixed-scope packages for marketing teams and startups who want to move fast without sacrificing quality.",
+    "title": "I build web applications and AI features that hold up in production",
+    "sub": "Twelve years of demanding interfaces, now from the PostgreSQL database to the React interface. Fixed-scope packages, tests and documentation included.",
     "ctaPrimary": "Let's work together",
     "ctaSecondary": "See my services",
-    "avatarAlt": "Portrait of Adrien, freelance front-end developer"
+    "avatarAlt": "Portrait of Adrien, freelance full-stack developer"
   },
 
   "clients": {
@@ -49,6 +49,26 @@
     "title": "What I do for you",
     "sub": "Interfaces that go beyond the static page.",
     "items": [
+      {
+        "title": "Custom business applications",
+        "items": [
+          "PostgreSQL database, per-profile permissions, change history",
+          "Authentication, roles, scheduled jobs",
+          "Unit, integration, and end-to-end tests",
+          "Hosting in the European Union, GDPR compliance"
+        ],
+        "proof": "When a shared spreadsheet is no longer enough and off-the-shelf software doesn't fit"
+      },
+      {
+        "title": "AI integration in your product",
+        "items": [
+          "Content generation (Claude, OpenAI)",
+          "Product recommendation and personalization",
+          "AI pipeline with human approval workflow",
+          "Automation and publishing via API (Meta, etc.)"
+        ],
+        "proof": "To add a concrete AI feature without hiring an ML or data profile"
+      },
       {
         "title": "Landing pages & premium campaigns",
         "items": [
@@ -68,16 +88,6 @@
           "Advanced animations (GSAP, Framer Motion)"
         ],
         "proof": "When a classic landing page is no longer enough to engage your audience"
-      },
-      {
-        "title": "AI integration in your product",
-        "items": [
-          "Content generation (Claude, OpenAI)",
-          "Product recommendation and personalization",
-          "AI pipeline with human approval workflow",
-          "Automation and publishing via API (Meta, etc.)"
-        ],
-        "proof": "To add a concrete AI feature without hiring an ML or data profile"
       }
     ]
   },
@@ -164,11 +174,15 @@
   },
 
   "otherMissions": {
-    "title": "Contributions",
-    "subtitle": "Team contributions to high-traffic existing sites",
+    "title": "Other engagements",
+    "subtitle": "Team redesigns on high-traffic sites, and business applications built end to end",
     "seeMore": "See more",
     "seeLess": "See less",
     "items": [
+      {
+        "name": "Accounting firm",
+        "description": "Custom CRM replacing a shared spreadsheet — 500 client files, 20 users. Designed, built, and shipped to production single-handedly: PostgreSQL on Supabase, per-profile permissions, change history, automated deadline reminders, four levels of testing, hosting in the European Union. First version delivered, development ongoing."
+      },
       {
         "name": "Fnac Darty",
         "description": "Front-end development within the Darty Commerciality team — redesign of the product page, product list, and push pages. Design of cross-sell highlight components: insurance, warranties, associated services. Brand page integration."
@@ -186,7 +200,7 @@
 
   "about": {
     "title": "About",
-    "bio": "I've been a front-end developer for 10 years, specializing in React and TypeScript. I've worked in demanding environments — Chanel, Fnac Darty, Prisma — where perceived quality and performance are non-negotiable.\n\nToday I work freelance with startups and product teams that want to go beyond the static page: interactive experiences, AI integrations, premium digital campaigns. I don't wait for a perfect Jira ticket to start: a two-paragraph brief is enough.\n\nI work remotely, in fast-paced mode, with an AI workflow that lets me deliver quickly without sacrificing quality."
+    "bio": "Twelve years of front-end development, eleven of them freelance. I've worked in environments where perceived quality and performance are not up for negotiation: Chanel, Fnac Darty, Prisma Media.\n\nToday I build complete applications, from the PostgreSQL database to the React interface, with language models built into the product rather than bolted on top. I deliver fixed-scope, with tests and documentation.\n\nI work remotely. A two-paragraph brief is enough to get started."
   },
 
   "testimonials": {
@@ -274,7 +288,7 @@
   },
 
   "footer": {
-    "subtitle": "React & TypeScript Freelance Developer"
+    "subtitle": "Freelance full-stack AI developer"
   },
 
   "blog": {
@@ -300,7 +314,7 @@
   "cvData": {
     "downloadPdf": "Download PDF",
     "name": "Adrien Vidal",
-    "role": "React & TypeScript Developer",
+    "role": "Full-Stack AI Developer",
     "contact": {
       "location": "Paris",
       "email": "adriensg.vidal@gmail.com",
@@ -311,18 +325,43 @@
       "githubUrl": "https://github.com/adrienvidal"
     },
     "skills": [
-      { "cat": "Front-end", "val": "React, Next.js, TypeScript, JavaScript ES6+, HTML5, CSS3, SCSS" },
-      { "cat": "Animation", "val": "Framer Motion, GSAP" },
-      { "cat": "AI & APIs", "val": "Claude SDK, OpenAI, fal.ai, Instagram Graph API, REST API" },
-      { "cat": "Database", "val": "Supabase, Prisma, SQLite" },
-      { "cat": "Tools", "val": "Vite.js, Webpack, Git (Azure · GitLab · Bitbucket), Figma" },
-      { "cat": "Optimisation", "val": "SEO, ARIA/WCAG Accessibility, Web Performance, Core Web Vitals" },
-      { "cat": "CMS", "val": "Shopify, FreeMarker, Twig" }
+      {
+        "cat": "Front-end",
+        "val": "TypeScript, React 19, Next.js (App Router, Server Components), JavaScript ES6+, Tailwind CSS, SCSS, shadcn/ui, Radix, Framer Motion, GSAP"
+      },
+      {
+        "cat": "Back-end & data",
+        "val": "Node.js, Next.js API routes, REST APIs, GraphQL, PostgreSQL, Prisma, Supabase (auth, storage, row level security), SQLite, pgvector"
+      },
+      {
+        "cat": "AI & LLM",
+        "val": "Anthropic SDK (Claude), OpenAI, Vercel AI SDK, prompt engineering, schema-validated structured outputs (zod), RAG (Cohere embeddings, pgvector), fal.ai, MCP, n8n"
+      },
+      {
+        "cat": "Quality & method",
+        "val": "Vitest, Playwright, Testing Library, ESLint, strict TypeScript, Git (GitLab · Azure DevOps · Bitbucket · GitHub), Vercel CI/CD, Agile/SCRUM, Figma"
+      },
+      {
+        "cat": "Optimization",
+        "val": "Technical SEO, WCAG/ARIA accessibility, Core Web Vitals, web performance"
+      }
     ],
     "experiences": [
       {
+        "company": "Viloris.io (Webnrolls)",
+        "date": "2026 – Present",
+        "role": "Full-Stack Developer — AI projects and custom applications",
+        "bullets": [
+          "Custom CRM for an accounting firm (500 client files, 20 users) replacing a shared spreadsheet — fixed-scope engagement carried end to end alone, from requirements to production",
+          "Back-end: PostgreSQL on Supabase, Prisma schema and migrations, per-profile permissions via row level security, change history via Postgres triggers, deadline reminders as Vercel scheduled jobs",
+          "Front-end: Next.js 16 (App Router, Server Components), React 19, strict TypeScript, Tailwind 4 and shadcn/ui, desktop and mobile screens designed then validated in review with the client",
+          "Quality and compliance: unit, integration, and end-to-end tests, blocking type-check and lint, secret detection, all behind a single verification command. GDPR subcontracting agreement, hosting in the European Union, no real data in development or in logs"
+        ],
+        "tags": "Next.js 16 · React 19 · TypeScript · Prisma · Supabase · PostgreSQL · Tailwind · Vitest · Playwright · Vercel"
+      },
+      {
         "company": "Chanel",
-        "date": "Apr. 2023 – Present",
+        "date": "Apr. 2023 – Feb. 2026",
         "role": "Front-End Developer — Immersive Experiences & Digital Campaigns",
         "bullets": [
           "Immersive pages for Coco Crush, Chance, Gabrielle, Sublimage, Allure Sport, Haute Horlogerie collections",
@@ -335,7 +374,7 @@
       },
       {
         "company": "Prisma Media",
-        "date": "Dec. 2021",
+        "date": "Dec. 2021 – Apr. 2023",
         "role": "Front-End Developer — Women's Vertical (femmeactuelle.fr · cuisineactuelle.fr)",
         "bullets": [
           "Home, Article, Author, Recipe Book page redesigns",
@@ -345,7 +384,7 @@
       },
       {
         "company": "Fnac Darty",
-        "date": "Nov. 2020",
+        "date": "Nov. 2020 – Dec. 2021",
         "role": "Front-End Developer — Darty Commerce Team",
         "bullets": [
           "Product page, product list and push page redesign",
@@ -364,7 +403,7 @@
       },
       {
         "company": "Yves Rocher",
-        "date": "Jan. 2019",
+        "date": "Jan. 2019 – Jun. 2020",
         "role": "Front-End Developer",
         "bullets": [
           "Campaign landing pages · Foundation diagnostic quiz · A/B tests via ABTASTY · Target2Sell"
@@ -373,7 +412,7 @@
       },
       {
         "company": "Shareweez",
-        "date": "Jan. 2018 – Jan. 2019",
+        "date": "Oct. 2018 – Jan. 2019",
         "role": "Front-End Developer",
         "bullets": [
           "Development of UI components and interactive interfaces for a web application managing employee savings",
@@ -422,26 +461,59 @@
         "tags": "HTML5 · CSS3 · SASS · JavaScript · jQuery · Git · SEO"
       }
     ],
-    "experienceNote": "Earlier experience — Wibilong: front-end development in agency contexts (HTML/CSS/JS, responsive).",
+    "experienceNote": "Freelance developer since 2015: sole proprietorship, then Webnrolls (EURL) since 2024, trading as Viloris.io. The engagements above were carried out under that structure. Earlier experience — Wibilong: front-end development in agency (HTML/CSS/JS, responsive).",
     "projects": [
       {
-        "name": "Viloris",
-        "date": "2025 – Present",
-        "role": "Founder — AI & Automation Agency · viloris.io",
+        "name": "Bookvox",
+        "date": "Live with a first client",
+        "role": "Social content generation for novel authors",
         "bullets": [
-          "Custom web development (showcase sites, React/Next.js applications) and AI pipeline design (content generation, data processing, autonomous agents) for freelancers and SMBs",
-          "Integration of LLM APIs (Claude, OpenAI) and third-party services to build intelligent workflows that eliminate repetitive manual tasks"
+          "Post generation with Claude Sonnet, automatic visual description with Claude Haiku, RAG document search over the author's reference material (multilingual Cohere embeddings, pgvector)",
+          "Multi-tenant isolation per workspace via row level security, OAuth publishing to five networks with AES-256-GCM encrypted tokens, drag-and-drop editorial calendar, real-time progress tracking"
         ],
-        "tags": "Next.js · Claude SDK · OpenAI · TypeScript · Supabase · REST API · n8n"
+        "tags": "Next.js 15 · TypeScript · Supabase · pgvector · Claude · Cohere · n8n · Playwright"
+      },
+      {
+        "name": "Content Studio",
+        "date": "Viloris.io internal tool, in service",
+        "role": "Three specialised LLM agents inside a web application",
+        "bullets": [
+          "LinkedIn post production chain: three agents (strategist, writer, art director) running inside the app, system prompts assembled in TypeScript and versioned with the code, brand context in the database rather than in files",
+          "Schema-validated structured outputs (zod), streaming to the interface via the Vercel AI SDK, image generation with fal.ai, Prisma persistence on PostgreSQL"
+        ],
+        "tags": "Vercel AI SDK · Claude · fal.ai · Next.js · Prisma · zod · Vitest · Testing Library"
+      },
+      {
+        "name": "Internal operations agents",
+        "date": "2026",
+        "role": "Four agents wired into the company's tooling",
+        "bullets": [
+          "Back-office, finance, sales, and R&D agents wired into Google Workspace, Airtable, and n8n through the MCP protocol — handling day-to-day correspondence, bookkeeping, and sales pipeline tracking"
+        ],
+        "tags": "MCP · n8n · Google Workspace · Airtable · Claude"
       }
     ],
     "languages": [
-      { "name": "French", "level": "Native" },
-      { "name": "English", "level": "Fluent" }
+      {
+        "name": "French",
+        "level": "Native"
+      },
+      {
+        "name": "English",
+        "level": "Fluent"
+      }
     ],
     "education": [
-      { "degree": "Front-End Developer", "school": "IFOCOP Paris", "year": "2013" },
-      { "degree": "Modern React Front to Back", "school": "Udemy", "year": "2020" }
+      {
+        "degree": "Front-End Developer",
+        "school": "IFOCOP Paris",
+        "year": "2013"
+      },
+      {
+        "degree": "Modern React Front to Back",
+        "school": "Udemy",
+        "year": "2020"
+      }
     ],
     "educationDegree": "Front-End Developer — IFOCOP Paris (2013)",
     "educationSub": "Modern React Front to Back — Udemy, Brad Traversy (2020)",
@@ -455,14 +527,14 @@
       "languages": "Languages",
       "education": "Education",
       "experience": "Experience",
-      "projects": "Personal Projects"
+      "projects": "AI work"
     }
   },
 
   "cvSimple": {
     "sections": {
       "experience": "Experience",
-      "projects": "Personal Projects",
+      "projects": "AI work",
       "skills": "Skills",
       "educationLanguages": "Education & Languages"
     }
