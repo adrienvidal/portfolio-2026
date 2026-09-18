@@ -309,7 +309,15 @@
   },
 
   "footer": {
-    "subtitle": "Freelance full-stack AI developer"
+    "subtitle": "Freelance full-stack AI developer",
+    "cgv": "Terms of sale"
+  },
+
+  "cgv": {
+    "title": "Terms of sale",
+    "description": "Terms of sale of Webnrolls (Viloris.io): consulting, training, design and maintenance of digital tools.",
+    "back": "← Home",
+    "notice": "These terms are written in French and governed by French law (art. 15.5). No translation is provided; the French text below is the only binding version."
   },
 
   "blog": {
