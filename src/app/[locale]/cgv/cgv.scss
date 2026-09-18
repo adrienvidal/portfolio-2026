@@ -1,0 +1,11 @@
+@use '../../../styles/variables' as *;
+
+.cgv {
+  &__notice {
+    font-size: 0.9rem;
+    color: $gray;
+    border-left: 3px solid $border;
+    padding-left: 12px;
+    margin: 0 0 32px;
+  }
+}

@@ -309,7 +309,14 @@
   },
 
   "footer": {
-    "subtitle": "Développeur full-stack IA freelance"
+    "subtitle": "Développeur full-stack IA freelance",
+    "cgv": "CGV"
+  },
+
+  "cgv": {
+    "title": "Conditions générales de vente",
+    "description": "Conditions générales de vente de Webnrolls (Viloris.io) : conseil, formation, conception et maintenance d'outils numériques.",
+    "back": "← Accueil"
   },
 
   "blog": {

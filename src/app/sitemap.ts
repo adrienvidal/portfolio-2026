@@ -3,7 +3,7 @@ import { articles } from '@/data/articles'
 
 const BASE = 'https://adrienvidal.com'
 
-const staticRoutes = ['/', '/projets', '/blog', '/lab']
+const staticRoutes = ['/', '/projets', '/blog', '/lab', '/cgv']
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticEntries: MetadataRoute.Sitemap = staticRoutes.map((path) => ({

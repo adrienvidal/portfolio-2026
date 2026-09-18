@@ -1,5 +1,6 @@
 import React from 'react'
 import { useTranslations } from 'next-intl'
+import { Link } from '@/i18n/navigation'
 import './Footer.scss'
 
 const icons: Record<string, React.ReactElement> = {
@@ -29,6 +30,8 @@ export default function Footer() {
         © 2026 Adrien Vidal
         <span className="footer__sep"> — </span>
         <span className="footer__subtitle">{t('subtitle')}</span>
+        <span className="footer__sep"> — </span>
+        <Link href="/cgv" className="footer__legal-link">{t('cgv')}</Link>
       </div>
       <div className="footer__right">
         {socialLinks.map(({ label, href }) => (
